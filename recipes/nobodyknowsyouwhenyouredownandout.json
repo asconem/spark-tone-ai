@@ -1,0 +1,81 @@
+{
+  "song": "nobodyknowsyouwhenyouredownandout.wav",
+  "date": "2026-03-10T17:44:12.365030",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.498,
+    "mids": 0.667,
+    "presence": 0.275,
+    "air": 0.392,
+    "width": 0.859,
+    "bpm": 152.0
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 4 (Neck+Mid)",
+    "volume": 8,
+    "tone": 7
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": "Tube Drive",
+    "amp": "Lux Verb",
+    "mod_eq": "Guitar EQ",
+    "delay": "Echo Tape",
+    "reverb": "Plate Rich"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": {
+      "OVERDRIVE": 1.3,
+      "TONE": 4.1,
+      "LEVEL": 7.4
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 1.5,
+      "MIDDLE": 7.174315318471017,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -1.0,
+      "200HZ": -0.4,
+      "400HZ": 1.0,
+      "800HZ": 1.3,
+      "1600HZ": 0.9,
+      "3200HZ": -0.4,
+      "LEVEL": -0.1
+    },
+    "delay": {
+      "SUSTAIN": 3.7,
+      "VOLUME": 3.2,
+      "TONE": 3.9,
+      "SHORT/LONG": "1/8d",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 4.5,
+      "TIME": 5.0,
+      "DAMPING": 5.0,
+      "DWELL": 5.5,
+      "LOW_CUT": 4.0,
+      "HIGH_CUT": 5.5
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "\ud83d\udd2c",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83c\udfa8"
+  }
+}

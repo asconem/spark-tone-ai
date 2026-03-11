@@ -1,0 +1,41 @@
+════════════════════════════════════════════════════════════
+SECTION 3/6: CLEAN (1:11 — 2:00)
+════════════════════════════════════════════════════════════
+🎸 SPARK 2 RECIPE: sevennationarmy.wav
+📅 Date: 2026-03-10 18:09:07
+🎯 DSP Analysis: Gain 0.00 | Presence 0.26 | Air 0.38 | Mids 0.67 | Width 0.43 | BPM 123
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 5 (Neck)
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[COMP/WAH] LA COMP 🔬
+   • GAIN: 7.4              • LIMIT_COMPRESS_TOGGLE: Compress
+   • PEAK_REDUCTION: 6.2 
+--------------------------------------------------
+[DRIVE] J.H. OCTAVE FUZZ 🎨
+   • FUZZ: 7.0              • LEVEL: 8.0          
+--------------------------------------------------
+[AMP] J.H. SUN 100S 🎨
+   • BASS: 5.0              • GAIN: 2.0           
+   • MIDDLE: 6.2            • TREBLE: 1.5         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -4.6            • 1600HZ: 1.0         
+   • 200HZ: -2.9            • 3200HZ: -0.9        
+   • 400HZ: 1.0             • 800HZ: 1.4          
+--------------------------------------------------
+[DELAY] VINTAGE DELAY 🔬
+   • BPM_MODE: On           • ECHO: 6.0           
+   • INTENSITY: 4.6         • REPEAT_RATE: 1/4    
+--------------------------------------------------
+[REVERB] HALL NATURAL 🔬
+   • DAMPING: 5.3           • DWELL: 7.0          
+   • HIGH_CUT: 5.3          • LEVEL: 8.0          
+   • LOW_CUT: 3.0           • TIME: 4.3           
+--------------------------------------------------

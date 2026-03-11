@@ -1,0 +1,91 @@
+{
+  "song": "superbug.wav",
+  "date": "2026-03-10T18:27:00.637561",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 0.0,
+    "mids": 0.769,
+    "presence": 0.282,
+    "air": 0.338,
+    "width": 0.622,
+    "bpm": 129.2
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": "LA Comp",
+    "drive": "Tube Drive",
+    "amp": "American High Gain",
+    "mod_eq": "Guitar EQ",
+    "delay": "Vintage Delay",
+    "reverb": "Hall Ambient"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": {
+      "GAIN": 7.4,
+      "PEAK_REDUCTION": 6.2
+    },
+    "drive": {
+      "OVERDRIVE": 6.0,
+      "TONE": 7.0,
+      "LEVEL": 6.0
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 1.5,
+      "MIDDLE": 7.68739174824058,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -4.0,
+      "200HZ": -2.4,
+      "400HZ": 1.6,
+      "800HZ": 1.8,
+      "1600HZ": 1.7,
+      "3200HZ": -1.8,
+      "LEVEL": 0.3
+    },
+    "delay": {
+      "REPEAT_RATE": "1/4",
+      "ECHO": 6.0,
+      "INTENSITY": 4.6,
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 8.5,
+      "TIME": 5.0,
+      "DAMPING": 5.0,
+      "DWELL": 7.0,
+      "LOW_CUT": 3.0,
+      "HIGH_CUT": 5.6
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "\ud83d\udd2c",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  },
+  "section": {
+    "label": "Clean",
+    "type": "loud",
+    "start": 193.0,
+    "end": 211.0,
+    "index": 3,
+    "total_sections": 6
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "song": "stonecoldcrazy.wav",
+  "date": "2026-03-10T18:19:46.315650",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.845,
+    "mids": 0.442,
+    "presence": 0.218,
+    "air": 0.565,
+    "width": 0.863,
+    "bpm": 123.0
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": "Noise Gate",
+    "comp_wah": null,
+    "drive": "Booster",
+    "amp": "SwitchAxe",
+    "mod_eq": "Phaser",
+    "delay": "Digital Delay",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": {
+      "THRESHOLD": 3.4,
+      "DECAY": 2.7
+    },
+    "comp_wah": null,
+    "drive": {
+      "GAIN": 8.5
+    },
+    "amp": {
+      "GAIN": 2.953408139436753,
+      "TREBLE": 6.8,
+      "MIDDLE": 3.8,
+      "BASS": 5.4,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "SPEED": 1.0,
+      "INTENSITY": 7.5
+    },
+    "delay": {
+      "E_LEVEL": 2.6,
+      "F_BACK": 3.8,
+      "D_TIME": "1/8",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 4.0,
+      "TIME": 3.4,
+      "DAMPING": 6.4,
+      "DWELL": 2.8,
+      "LOW_CUT": 6.4,
+      "HIGH_CUT": 4.0
+    }
+  },
+  "sources": {
+    "gate": "\ud83d\udd2c",
+    "comp_wah": "",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83d\udd2c",
+    "mod_eq": "\ud83c\udfa8",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  }
+}

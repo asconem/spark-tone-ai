@@ -1,0 +1,75 @@
+{
+  "song": "helpontheway_slipknot.wav",
+  "date": "2026-03-10T16:56:42.178703",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.485,
+    "mids": 0.649,
+    "presence": 0.283,
+    "air": 0.413,
+    "width": 0.48,
+    "bpm": 99.4
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 4 (Neck+Mid)",
+    "volume": 10,
+    "tone": 6
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": "Tube Drive",
+    "amp": "Black Duo",
+    "mod_eq": "Phaser",
+    "delay": "Echo Tape",
+    "reverb": "Room Studio A"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": {
+      "OVERDRIVE": 6.5,
+      "LEVEL": 8.0
+    },
+    "amp": {
+      "GAIN": 3.853228208134932,
+      "TREBLE": 1.5,
+      "MIDDLE": 8.2,
+      "BASS": 4.8,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "SPEED": 2.0,
+      "INTENSITY": 4.0
+    },
+    "delay": {
+      "SUSTAIN": 3.7,
+      "VOLUME": 3.2,
+      "TONE": 4.2,
+      "SHORT/LONG": "1/8d",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 4.8,
+      "TIME": 4.3,
+      "DAMPING": 5.5,
+      "DWELL": 4.6,
+      "LOW_CUT": 4.9,
+      "HIGH_CUT": 5.1
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83c\udfa8",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  }
+}

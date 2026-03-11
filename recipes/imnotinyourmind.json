@@ -1,0 +1,80 @@
+{
+  "song": "imnotinyourmind.wav",
+  "date": "2026-03-10T17:12:25.638859",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.516,
+    "mids": 0.652,
+    "presence": 0.391,
+    "air": 0.39,
+    "width": 0.742,
+    "bpm": 123.0
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": "Fuzz Face",
+    "amp": "Blues Boy",
+    "mod_eq": "Guitar EQ",
+    "delay": "Echo Tape",
+    "reverb": "Room Studio A"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": {
+      "FUZZ": 7.0,
+      "VOLUME": 7.0
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 1.5,
+      "MIDDLE": 6.521935761458405,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -2.4,
+      "200HZ": -1.5,
+      "400HZ": 0.8,
+      "800HZ": 1.2,
+      "1600HZ": 0.5,
+      "3200HZ": -0.8,
+      "LEVEL": 0.2
+    },
+    "delay": {
+      "SUSTAIN": 3.6,
+      "VOLUME": 3.1,
+      "TONE": 3.9,
+      "SHORT/LONG": "1/8d",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 3.5,
+      "TIME": 3.0,
+      "DAMPING": 5.0,
+      "DWELL": 4.0,
+      "LOW_CUT": 5.0,
+      "HIGH_CUT": 5.0
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83c\udfa8"
+  }
+}

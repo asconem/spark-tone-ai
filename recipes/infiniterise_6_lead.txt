@@ -1,0 +1,35 @@
+════════════════════════════════════════════════════════════
+SECTION 6/6: LEAD (8:40 — 10:10)
+════════════════════════════════════════════════════════════
+🎸 SPARK 2 RECIPE: infiniterise.wav
+📅 Date: 2026-03-10 17:15:28
+🎯 DSP Analysis: Gain 0.95 | Presence 0.24 | Air 0.52 | Mids 0.50 | Width 0.55 | BPM 108
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 2 (Bridge+Mid)
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[GATE] NOISE GATE 🔬
+   • DECAY: 1.8             • THRESHOLD: 4.4      
+--------------------------------------------------
+[DRIVE] BLACK OP 🔬
+   • DISTORTION: 8.0        • FILTER: 4.6         
+   • VOLUME: 4.5         
+--------------------------------------------------
+[AMP] SILVER 120 🎨
+   • BASS: 5.0              • GAIN: 7.0           
+   • MIDDLE: 7.0            • TREBLE: 3.5         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] VIBRATO 🎨
+   • DEPTH: 5.1             • SPEED: 4.0          
+--------------------------------------------------
+[REVERB] ROOM STUDIO A 🎨
+   • DAMPING: 6.5           • DWELL: 4.5          
+   • HIGH_CUT: 5.0          • LEVEL: 5.0          
+   • LOW_CUT: 5.0           • TIME: 4.5           
+--------------------------------------------------

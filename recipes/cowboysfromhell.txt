@@ -1,0 +1,35 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): cowboysfromhell.wav
+📅 Date: 2026-03-10 16:36:32
+🎯 DSP Analysis: Gain 0.67 | Presence 0.20 | Air 0.61 | Mids 0.34 | Width 0.89 | BPM 112
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[DRIVE] SAB DRIVER 🔬
+   • DRIVE: 3.0             • HP_LP_SWITCH: LP    
+   • TONE: 7.9              • VOLUME: 6.0         
+--------------------------------------------------
+[AMP] SLO 100 🎨
+   • BASS: 5.0              • GAIN: 2.0           
+   • MIDDLE: 3.4            • TREBLE: 8.7         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -0.5            • 1600HZ: -1.6        
+   • 200HZ: -0.1            • 3200HZ: 4.9         
+   • 400HZ: -0.9            • 800HZ: -0.3         
+--------------------------------------------------
+[DELAY] VINTAGE DELAY 🔬
+   • BPM_MODE: On           • ECHO: 3.3           
+   • INTENSITY: 3.9         • REPEAT_RATE: 1/8d   
+--------------------------------------------------
+[REVERB] PLATE SHORT 🔬
+   • DAMPING: 6.7           • DWELL: 3.7          
+   • HIGH_CUT: 3.7          • LEVEL: 5.2          
+   • LOW_CUT: 5.7           • TIME: 3.4           
+--------------------------------------------------

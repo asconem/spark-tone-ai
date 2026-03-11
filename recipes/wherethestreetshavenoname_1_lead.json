@@ -1,0 +1,94 @@
+{
+  "song": "wherethestreetshavenoname.wav",
+  "date": "2026-03-10T18:46:05.779703",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 0.916,
+    "mids": 0.451,
+    "presence": 0.238,
+    "air": 0.574,
+    "width": 0.612,
+    "bpm": 99.4
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 1 (Bridge)",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": "Noise Gate",
+    "comp_wah": "Red Comp",
+    "drive": "Black Op",
+    "amp": "AC Boost",
+    "mod_eq": "Guitar EQ",
+    "delay": "Digital Delay",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": {
+      "THRESHOLD": 3.9,
+      "DECAY": 2.3
+    },
+    "comp_wah": {
+      "OUTPUT": 7.0,
+      "SENSITIVITY": 5.0
+    },
+    "drive": {
+      "DISTORTION": 6.5,
+      "FILTER": 3.8,
+      "VOLUME": 5.0
+    },
+    "amp": {
+      "GAIN": 2.658885064399774,
+      "TREBLE": 5.4731622098702495,
+      "MIDDLE": 2.5137619291540174,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": 0.5,
+      "200HZ": 0.5,
+      "400HZ": -0.5,
+      "800HZ": 0.0,
+      "1600HZ": -1.5,
+      "3200HZ": 3.6,
+      "LEVEL": -0.2
+    },
+    "delay": {
+      "E_LEVEL": 7.0,
+      "F_BACK": 6.0,
+      "D_TIME": 50,
+      "MODE": "500ms"
+    },
+    "reverb": {
+      "LEVEL": 2.5,
+      "TIME": 2.8,
+      "DAMPING": 6.4,
+      "DWELL": 2.4,
+      "LOW_CUT": 6.7,
+      "HIGH_CUT": 4.0
+    }
+  },
+  "sources": {
+    "gate": "\ud83d\udd2c",
+    "comp_wah": "\ud83c\udfa8",
+    "drive": "\ud83d\udd2c",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83c\udfa8",
+    "reverb": "\ud83d\udd2c"
+  },
+  "section": {
+    "label": "Lead",
+    "type": "quiet",
+    "start": 0.0,
+    "end": 106.0,
+    "index": 0,
+    "total_sections": 4
+  }
+}

@@ -1,0 +1,41 @@
+════════════════════════════════════════════════════════════
+SECTION 2/4: LEAD (0:07 — 0:23)
+════════════════════════════════════════════════════════════
+🎸 SPARK 2 RECIPE: smellsliketeenspirit.wav
+📅 Date: 2026-03-10 18:13:50
+🎯 DSP Analysis: Gain 0.97 | Presence 0.27 | Air 0.57 | Mids 0.38 | Width 0.93 | BPM 129
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 10
+   • TONE: 10
+--------------------------------------------------
+[GATE] NOISE GATE 🎨
+   • DECAY: 5.0             • THRESHOLD: 3.0      
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🎨
+   • LEVEL: 9.0             • OVERDRIVE: 9.5      
+   • TONE: 5.0           
+--------------------------------------------------
+[AMP] BLACK DUO 🎨
+   • BASS: 5.4              • GAIN: 8.7           
+   • MIDDLE: 5.1            • TREBLE: 6.9         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] CHORUS 🎨
+   • DEPTH: 4.5             • E_LEVEL: 5.0        
+   • RATE: 2.5              • TONE: 5.0           
+--------------------------------------------------
+[DELAY] DIGITAL DELAY 🔬
+   • BPM_MODE: On           • D_TIME: 1/8         
+   • E_LEVEL: 2.1           • F_BACK: 3.6         
+   • MODE: 50ms          
+--------------------------------------------------
+[REVERB] PLATE SHORT 🔬
+   • DAMPING: 6.4           • DWELL: 2.2          
+   • HIGH_CUT: 4.0          • LEVEL: 3.4          
+   • LOW_CUT: 6.9           • TIME: 3.4           
+--------------------------------------------------

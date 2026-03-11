@@ -1,0 +1,42 @@
+════════════════════════════════════════════════════════════
+SECTION 4/6: CLEAN (3:13 — 3:31)
+════════════════════════════════════════════════════════════
+🎸 SPARK 2 RECIPE: superbug.wav
+📅 Date: 2026-03-10 18:27:00
+🎯 DSP Analysis: Gain 0.00 | Presence 0.28 | Air 0.34 | Mids 0.77 | Width 0.62 | BPM 129
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[COMP/WAH] LA COMP 🔬
+   • GAIN: 7.4              • LIMIT_COMPRESS_TOGGLE: Compress
+   • PEAK_REDUCTION: 6.2 
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🎨
+   • LEVEL: 6.0             • OVERDRIVE: 6.0      
+   • TONE: 7.0           
+--------------------------------------------------
+[AMP] AMERICAN HIGH GAIN 🎨
+   • BASS: 5.0              • GAIN: 2.0           
+   • MIDDLE: 7.7            • TREBLE: 1.5         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -4.0            • 1600HZ: 1.7         
+   • 200HZ: -2.4            • 3200HZ: -1.8        
+   • 400HZ: 1.6             • 800HZ: 1.8          
+--------------------------------------------------
+[DELAY] VINTAGE DELAY 🔬
+   • BPM_MODE: On           • ECHO: 6.0           
+   • INTENSITY: 4.6         • REPEAT_RATE: 1/4    
+--------------------------------------------------
+[REVERB] HALL AMBIENT 🔬
+   • DAMPING: 5.0           • DWELL: 7.0          
+   • HIGH_CUT: 5.6          • LEVEL: 8.5          
+   • LOW_CUT: 3.0           • TIME: 5.0           
+--------------------------------------------------

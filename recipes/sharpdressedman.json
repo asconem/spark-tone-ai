@@ -1,0 +1,81 @@
+{
+  "song": "sharpdressedman.wav",
+  "date": "2026-03-10T18:10:49.401130",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.752,
+    "mids": 0.47,
+    "presence": 0.248,
+    "air": 0.516,
+    "width": 0.418,
+    "bpm": 123.0
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": "Noise Gate",
+    "comp_wah": "LA Comp",
+    "drive": "Tube Drive",
+    "amp": "Plexiglas",
+    "mod_eq": "Chorus",
+    "delay": "Digital Delay",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": {
+      "THRESHOLD": 2.4,
+      "DECAY": 3.6
+    },
+    "comp_wah": {
+      "GAIN": 5.0,
+      "PEAK_REDUCTION": 7.0
+    },
+    "drive": {
+      "OVERDRIVE": 8.0,
+      "LEVEL": 7.0
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 8.1,
+      "MIDDLE": 3.7,
+      "BASS": 5.1,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "DEPTH": 1.5,
+      "RATE": 2.0,
+      "E_LEVEL": 3.0
+    },
+    "delay": {
+      "E_LEVEL": 3.0,
+      "F_BACK": 3.8,
+      "D_TIME": "1/8",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 3.1,
+      "TIME": 3.7,
+      "DAMPING": 6.1,
+      "DWELL": 3.2,
+      "LOW_CUT": 6.0,
+      "HIGH_CUT": 4.4
+    }
+  },
+  "sources": {
+    "gate": "\ud83d\udd2c",
+    "comp_wah": "\ud83c\udfa8",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83c\udfa8",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  }
+}

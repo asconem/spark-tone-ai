@@ -1,0 +1,92 @@
+{
+  "song": "heartshapedbox.wav",
+  "date": "2026-03-10T16:54:12.422969",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.439,
+    "mids": 0.611,
+    "presence": 0.282,
+    "air": 0.423,
+    "width": 0.591,
+    "bpm": 99.4
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 10,
+    "tone": 6
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": "Sustain Comp",
+    "drive": "Tube Drive",
+    "amp": "Black Duo",
+    "mod_eq": "Guitar EQ",
+    "delay": "Echo Tape",
+    "reverb": "Chamber"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": {
+      "LEVEL": 7.0,
+      "TONE": 5.0,
+      "ATTACK": 3.9,
+      "SUSTAIN": 5.8
+    },
+    "drive": {
+      "OVERDRIVE": 9.0,
+      "LEVEL": 10.0
+    },
+    "amp": {
+      "GAIN": 3.3892881530431227,
+      "TREBLE": 1.5,
+      "MIDDLE": 7.610563326632887,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100Hz": 0.0,
+      "200Hz": 2.0,
+      "400Hz": 4.0,
+      "800Hz": 5.0,
+      "1600Hz": 3.0,
+      "3200Hz": 2.0
+    },
+    "delay": {
+      "SUSTAIN": 3.7,
+      "VOLUME": 3.4,
+      "TONE": 4.3,
+      "SHORT/LONG": "1/8d",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 5.5,
+      "TIME": 4.3,
+      "DAMPING": 5.5,
+      "DWELL": 4.8,
+      "LOW_CUT": 4.8,
+      "HIGH_CUT": 5.0
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "\ud83d\udd2c",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83c\udfa8",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  },
+  "section": {
+    "label": "Crunch",
+    "type": "quiet",
+    "start": 86.0,
+    "end": 131.5,
+    "index": 1,
+    "total_sections": 4
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "song": "lonelysteelsheetflyer.wav",
+  "date": "2026-03-10T17:34:25.903573",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.646,
+    "mids": 0.5,
+    "presence": 0.203,
+    "air": 0.523,
+    "width": 0.476,
+    "bpm": 112.3
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 2 (Bridge+Mid)",
+    "volume": 10,
+    "tone": 7
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": "Over Drive",
+    "amp": "Silver 120",
+    "mod_eq": "Vibrato",
+    "delay": "Vintage Delay",
+    "reverb": "Room Studio A"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": {
+      "DRIVE": 4.5,
+      "TONE": 6.4,
+      "LEVEL": 8.5
+    },
+    "amp": {
+      "GAIN": 7.0,
+      "TREBLE": 3.5,
+      "MIDDLE": 7.0,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "SPEED": 3.4,
+      "DEPTH": 4.9
+    },
+    "delay": {
+      "REPEAT_RATE": "1/8d",
+      "ECHO": 3.4,
+      "INTENSITY": 4.0,
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 5.0,
+      "TIME": 4.5,
+      "DAMPING": 6.5,
+      "DWELL": 4.5,
+      "LOW_CUT": 5.0,
+      "HIGH_CUT": 5.0
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "\ud83d\udd2c",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83c\udfa8",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83c\udfa8"
+  }
+}

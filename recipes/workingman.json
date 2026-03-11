@@ -1,0 +1,76 @@
+{
+  "song": "workingman.wav",
+  "date": "2026-03-10T18:55:59.841993",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.529,
+    "mids": 0.556,
+    "presence": 0.266,
+    "air": 0.473,
+    "width": 0.644,
+    "bpm": 152.0
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": "Tube Drive",
+    "amp": "Plexiglas",
+    "mod_eq": "Flanger",
+    "delay": "Echo Tape",
+    "reverb": "Room Studio A"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": {
+      "OVERDRIVE": 7.0,
+      "LEVEL": 8.0
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 6.4,
+      "MIDDLE": 4.7,
+      "BASS": 4.9,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "RATE": 2.5,
+      "DEPTH": 7.0,
+      "MIX": 5.0
+    },
+    "delay": {
+      "SUSTAIN": 3.6,
+      "VOLUME": 3.1,
+      "TONE": 5.0,
+      "SHORT/LONG": "1/8d",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 5.1,
+      "TIME": 4.3,
+      "DAMPING": 5.8,
+      "DWELL": 4.4,
+      "LOW_CUT": 5.1,
+      "HIGH_CUT": 4.7
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83c\udfa8",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  }
+}

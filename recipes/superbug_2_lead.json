@@ -1,0 +1,86 @@
+{
+  "song": "superbug.wav",
+  "date": "2026-03-10T18:26:46.200867",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 0.821,
+    "mids": 0.68,
+    "presence": 0.315,
+    "air": 0.406,
+    "width": 0.651,
+    "bpm": 89.1
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": "Noise Gate",
+    "comp_wah": null,
+    "drive": "SAB Driver",
+    "amp": "Treadplate",
+    "mod_eq": "Guitar EQ",
+    "delay": null,
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": {
+      "THRESHOLD": 2.6,
+      "DECAY": 3.4
+    },
+    "comp_wah": null,
+    "drive": {
+      "DRIVE": 3.0,
+      "TONE": 4.3,
+      "VOLUME": 6.0
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 4.686827616712284,
+      "MIDDLE": 8.79775618843908,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": 0.4,
+      "200HZ": 0.5,
+      "400HZ": 1.1,
+      "800HZ": 1.4,
+      "1600HZ": 1.0,
+      "3200HZ": -0.3,
+      "LEVEL": -0.3
+    },
+    "delay": null,
+    "reverb": {
+      "LEVEL": 3.3,
+      "TIME": 3.1,
+      "DAMPING": 5.4,
+      "DWELL": 2.9,
+      "LOW_CUT": 6.3,
+      "HIGH_CUT": 5.2
+    }
+  },
+  "sources": {
+    "gate": "\ud83d\udd2c",
+    "comp_wah": "",
+    "drive": "\ud83d\udd2c",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "",
+    "reverb": "\ud83d\udd2c"
+  },
+  "section": {
+    "label": "Lead",
+    "type": "quiet",
+    "start": 84.5,
+    "end": 131.5,
+    "index": 1,
+    "total_sections": 6
+  }
+}

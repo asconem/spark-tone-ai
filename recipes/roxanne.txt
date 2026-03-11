@@ -1,0 +1,37 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): roxanne.wav
+📅 Date: 2026-03-10 18:03:29
+🎯 DSP Analysis: Gain 0.66 | Presence 0.32 | Air 0.42 | Mids 0.65 | Width 0.50 | BPM 136
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 4 (Neck+Mid)
+   • VOLUME: 8
+   • TONE: 7
+--------------------------------------------------
+[COMP/WAH] RED COMP 🎨
+   • OUTPUT: 6.0            • SENSITIVITY: 3.5    
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🔬
+   • LEVEL: 9.0             • OVERDRIVE: 2.5      
+   • TONE: 4.6           
+--------------------------------------------------
+[AMP] SILVER 120 🎨
+   • BASS: 5.0              • GAIN: 6.1           
+   • MIDDLE: 7.8            • TREBLE: 1.6         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] CHORUS 🎨
+   • DEPTH: 4.0             • E_LEVEL: 3.0        
+   • RATE: 2.5              • TONE: 6.0           
+--------------------------------------------------
+[DELAY] DIGITAL DELAY 🎨
+   • BPM_MODE: Off          • E_LEVEL: 2.0           • F_BACK: 2.5         
+   • MODE: 200ms         
+--------------------------------------------------
+[REVERB] PLATE SHORT 🔬
+   • DAMPING: 5.5           • DWELL: 3.7          
+   • HIGH_CUT: 5.0          • LEVEL: 3.7          
+   • LOW_CUT: 5.6           • TIME: 3.7           
+--------------------------------------------------

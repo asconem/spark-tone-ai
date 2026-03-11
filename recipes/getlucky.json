@@ -1,0 +1,84 @@
+{
+  "song": "getlucky.wav",
+  "date": "2026-03-10T16:45:00.185234",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 0.731,
+    "mids": 0.502,
+    "presence": 0.251,
+    "air": 0.499,
+    "width": 0.327,
+    "bpm": 152.0
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 4 (Neck+Mid)",
+    "volume": 8,
+    "tone": 7
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": "Noise Gate",
+    "comp_wah": "LA Comp",
+    "drive": "Over Drive",
+    "amp": "Silver 120",
+    "mod_eq": "Chorus",
+    "delay": "Vintage Delay",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": {
+      "THRESHOLD": 1.5,
+      "DECAY": 4.4
+    },
+    "comp_wah": {
+      "GAIN": 6.0,
+      "PEAK_REDUCTION": 5.0,
+      "LIMIT_COMPRESS_TOGGLE": "Compress"
+    },
+    "drive": {
+      "DRIVE": 4.5,
+      "TONE": 6.0,
+      "LEVEL": 8.5
+    },
+    "amp": {
+      "GAIN": 6.808890291051764,
+      "TREBLE": 3.0,
+      "MIDDLE": 6.0,
+      "BASS": 5.1,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "E_LEVEL": 3.0,
+      "RATE": 2.5,
+      "DEPTH": 4.0,
+      "TONE": 6.0
+    },
+    "delay": {
+      "REPEAT_RATE": "1/8d",
+      "ECHO": 3.1,
+      "INTENSITY": 3.9,
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 3.2,
+      "TIME": 3.2,
+      "DAMPING": 6.0,
+      "DWELL": 3.3,
+      "LOW_CUT": 5.9,
+      "HIGH_CUT": 4.5
+    }
+  },
+  "sources": {
+    "gate": "\ud83d\udd2c",
+    "comp_wah": "\ud83c\udfa8",
+    "drive": "\ud83d\udd2c",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83c\udfa8",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "song": "godisintherhythm.wav",
+  "date": "2026-03-10T16:48:22.134018",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.484,
+    "mids": 0.596,
+    "presence": 0.258,
+    "air": 0.439,
+    "width": 0.593,
+    "bpm": 136.0
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 4 (Neck+Mid)",
+    "volume": 10,
+    "tone": 7
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": "Tube Drive",
+    "amp": "Silver 120",
+    "mod_eq": "Guitar EQ",
+    "delay": "Echo Tape",
+    "reverb": "Room Studio A"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": {
+      "OVERDRIVE": 1.7,
+      "TONE": 6.2,
+      "LEVEL": 7.2
+    },
+    "amp": {
+      "GAIN": 7.0,
+      "TREBLE": 3.5,
+      "MIDDLE": 7.0,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -1.1,
+      "200HZ": -0.5,
+      "400HZ": 0.6,
+      "800HZ": 1.0,
+      "1600HZ": 0.4,
+      "3200HZ": 0.7,
+      "LEVEL": -0.1
+    },
+    "delay": {
+      "SUSTAIN": 3.7,
+      "VOLUME": 3.3,
+      "TONE": 4.5,
+      "SHORT/LONG": "1/8d",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 5.0,
+      "TIME": 4.5,
+      "DAMPING": 6.5,
+      "DWELL": 4.5,
+      "LOW_CUT": 5.0,
+      "HIGH_CUT": 5.0
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83c\udfa8"
+  }
+}

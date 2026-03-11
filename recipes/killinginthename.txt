@@ -1,0 +1,39 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): killinginthename.wav
+📅 Date: 2026-03-10 17:24:12
+🎯 DSP Analysis: Gain 0.83 | Presence 0.26 | Air 0.54 | Mids 0.43 | Width 0.91 | BPM 123
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 1 (Bridge)
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[GATE] NOISE GATE 🔬
+   • DECAY: 3.0             • THRESHOLD: 3.1      
+--------------------------------------------------
+[DRIVE] BLACK OP 🔬
+   • DISTORTION: 4.4        • FILTER: 4.4         
+   • VOLUME: 5.6         
+--------------------------------------------------
+[AMP] PLEXIGLAS 🎨
+   • BASS: 5.0              • GAIN: 2.0           
+   • MIDDLE: 3.3            • TREBLE: 8.2         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -0.0            • 1600HZ: -1.6        
+   • 200HZ: 0.1             • 3200HZ: 2.8         
+   • 400HZ: -0.6            • 800HZ: -0.0         
+--------------------------------------------------
+[DELAY] ECHO TAPE 🔬
+   • BPM_MODE: On           • SHORT/LONG: 1/8     
+   • SUSTAIN: 3.2           • TONE: 5.9           
+   • VOLUME: 2.2         
+--------------------------------------------------
+[REVERB] PLATE SHORT 🔬
+   • DAMPING: 6.2           • DWELL: 2.9          
+   • HIGH_CUT: 4.2          • LEVEL: 4.3          
+   • LOW_CUT: 6.3           • TIME: 3.4           
+--------------------------------------------------

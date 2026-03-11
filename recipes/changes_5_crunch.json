@@ -1,0 +1,85 @@
+{
+  "song": "changes.wav",
+  "date": "2026-03-10T16:29:30.310844",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.353,
+    "mids": 0.575,
+    "presence": 0.269,
+    "air": 0.479,
+    "width": 0.588,
+    "bpm": 112.3
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 1 (Bridge)",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": "J.H. Octave Fuzz",
+    "amp": "J.H. Super 100",
+    "mod_eq": "J.H. Legendary Vibe",
+    "delay": "Echo Tape",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": {
+      "FUZZ": 7.0,
+      "LEVEL": 8.0
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 5.1,
+      "MIDDLE": 4.9,
+      "BASS": 4.5,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "SPEED": 4.5,
+      "INTENSITY": 6.5,
+      "MIX": 7.5,
+      "SWEEP": 5.5
+    },
+    "delay": {
+      "SUSTAIN": 3.9,
+      "VOLUME": 3.7,
+      "TONE": 5.1,
+      "SHORT/LONG": "1/8d",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 3.5,
+      "TIME": 4.0,
+      "DAMPING": 5.5,
+      "DWELL": 3.5,
+      "LOW_CUT": 5.0,
+      "HIGH_CUT": 5.0
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83c\udfa8",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83c\udfa8"
+  },
+  "section": {
+    "label": "Crunch",
+    "type": "loud",
+    "start": 122.0,
+    "end": 138.5,
+    "index": 4,
+    "total_sections": 7
+  }
+}

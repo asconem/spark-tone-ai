@@ -1,0 +1,94 @@
+{
+  "song": "marsfortherich.wav",
+  "date": "2026-03-10T17:40:44.237428",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.0,
+    "mids": 0.613,
+    "presence": 0.303,
+    "air": 0.427,
+    "width": 0.615,
+    "bpm": 112.3
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": "Noise Gate",
+    "comp_wah": "LA Comp",
+    "drive": "Tube Drive",
+    "amp": "Plexiglas",
+    "mod_eq": "Guitar EQ",
+    "delay": "Vintage Delay",
+    "reverb": "Hall Ambient"
+  },
+  "settings": {
+    "gate": {
+      "THRESHOLD": 6.0,
+      "DECAY": 1.0
+    },
+    "comp_wah": {
+      "GAIN": 7.4,
+      "PEAK_REDUCTION": 6.2
+    },
+    "drive": {
+      "OVERDRIVE": 8.0,
+      "LEVEL": 10.0,
+      "TONE": 6.5
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 4.39932804370112,
+      "MIDDLE": 5.129494716133368,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -4.0,
+      "200HZ": -2.4,
+      "400HZ": 0.7,
+      "800HZ": 1.1,
+      "1600HZ": 0.5,
+      "3200HZ": 0.4,
+      "LEVEL": 0.3
+    },
+    "delay": {
+      "REPEAT_RATE": "1/4",
+      "ECHO": 6.0,
+      "INTENSITY": 4.6,
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 8.5,
+      "TIME": 4.6,
+      "DAMPING": 5.6,
+      "DWELL": 7.0,
+      "LOW_CUT": 3.0,
+      "HIGH_CUT": 5.0
+    }
+  },
+  "sources": {
+    "gate": "\ud83c\udfa8",
+    "comp_wah": "\ud83d\udd2c",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  },
+  "section": {
+    "label": "Clean",
+    "type": "quiet",
+    "start": 233.0,
+    "end": 251.72,
+    "index": 1,
+    "total_sections": 2
+  }
+}

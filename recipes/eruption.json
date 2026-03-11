@@ -1,0 +1,82 @@
+{
+  "song": "eruption.wav",
+  "date": "2026-03-10T16:39:40.492848",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.755,
+    "mids": 0.485,
+    "presence": 0.258,
+    "air": 0.538,
+    "width": 0.586,
+    "bpm": 152.0
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 10,
+    "tone": 10
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": "Noise Gate",
+    "comp_wah": null,
+    "drive": "Tube Drive",
+    "amp": "Plexiglas",
+    "mod_eq": "Guitar EQ",
+    "delay": "Echo Tape",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": {
+      "THRESHOLD": 3.3,
+      "DECAY": 1.0
+    },
+    "comp_wah": null,
+    "drive": {
+      "OVERDRIVE": 1.7,
+      "TONE": 6.5,
+      "LEVEL": 8.0
+    },
+    "amp": {
+      "GAIN": 7.7,
+      "BASS": 6.0,
+      "MIDDLE": 4.1,
+      "TREBLE": 9.2,
+      "VOLUME": 7.8
+    },
+    "mod_eq": {
+      "100HZ": 0.5,
+      "200HZ": 0.6,
+      "400HZ": -0.1,
+      "800HZ": 0.4,
+      "1600HZ": -0.5,
+      "3200HZ": 3.2,
+      "LEVEL": -0.3
+    },
+    "delay": {
+      "VOLUME": 1.0,
+      "SUSTAIN": 2.0,
+      "TONE": 5.0
+    },
+    "reverb": {
+      "LEVEL": 3.4,
+      "TIME": 3.7,
+      "DAMPING": 6.2,
+      "DWELL": 3.2,
+      "LOW_CUT": 6.0,
+      "HIGH_CUT": 4.2
+    }
+  },
+  "sources": {
+    "gate": "\ud83c\udfa8",
+    "comp_wah": "",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83c\udfa8",
+    "reverb": "\ud83d\udd2c"
+  }
+}

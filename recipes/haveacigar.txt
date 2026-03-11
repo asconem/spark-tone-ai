@@ -1,0 +1,34 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): haveacigar.wav
+📅 Date: 2026-03-10 16:52:54
+🎯 DSP Analysis: Gain 0.67 | Presence 0.25 | Air 0.49 | Mids 0.55 | Width 0.48 | BPM 123
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 5 (Neck)
+   • VOLUME: 10
+   • TONE: 7
+--------------------------------------------------
+[DRIVE] GUITAR MUFF 🎨
+   • SUSTAIN: 9.0           • TONE: 4.5           
+   • VOLUME: 7.0         
+--------------------------------------------------
+[AMP] J.H. TONE CITY 100 🎨
+   • BASS: 4.6              • GAIN: 2.0           
+   • MIDDLE: 5.3            • TREBLE: 4.4         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] FLANGER 🎨
+   • DEPTH: 6.0             • MIX: 4.0            
+   • RATE: 0.2           
+--------------------------------------------------
+[DELAY] MULTI HEAD 🎨
+   • BPM_MODE: Off          • ECHO_VOL: 4.5       
+   • INTENSITY: 5.5         • MODE_SELECTOR: Head 0+2
+--------------------------------------------------
+[REVERB] PLATE SHORT 🔬
+   • DAMPING: 5.9           • DWELL: 3.7          
+   • HIGH_CUT: 4.6          • LEVEL: 3.7          
+   • LOW_CUT: 5.7           • TIME: 3.7           
+--------------------------------------------------

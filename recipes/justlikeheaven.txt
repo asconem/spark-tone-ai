@@ -1,0 +1,38 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): justlikeheaven.wav
+📅 Date: 2026-03-10 17:16:49
+🎯 DSP Analysis: Gain 0.78 | Presence 0.25 | Air 0.56 | Mids 0.41 | Width 0.82 | BPM 152
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 1 (Bridge)
+   • VOLUME: 8
+   • TONE: 7
+--------------------------------------------------
+[GATE] NOISE GATE 🔬
+   • DECAY: 3.3             • THRESHOLD: 2.8      
+--------------------------------------------------
+[DRIVE] BLACK OP 🔬
+   • DISTORTION: 7.5        • FILTER: 4.1         
+   • VOLUME: 4.7         
+--------------------------------------------------
+[AMP] SILVER 120 🎨
+   • BASS: 4.9              • GAIN: 4.3           
+   • MIDDLE: 4.9            • TREBLE: 5.1         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] CHORUS 🎨
+   • DEPTH: 5.0             • E_LEVEL: 6.0        
+   • RATE: 4.0              • TONE: 6.0           
+--------------------------------------------------
+[DELAY] DIGITAL DELAY 🔬
+   • BPM_MODE: On           • D_TIME: 1/8         
+   • E_LEVEL: 2.9           • F_BACK: 3.8         
+   • MODE: 50ms          
+--------------------------------------------------
+[REVERB] PLATE SHORT 🔬
+   • DAMPING: 6.3           • DWELL: 3.1          
+   • HIGH_CUT: 4.1          • LEVEL: 4.2          
+   • LOW_CUT: 6.1           • TIME: 3.7           
+--------------------------------------------------

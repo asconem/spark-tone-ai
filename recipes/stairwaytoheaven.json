@@ -1,0 +1,77 @@
+{
+  "song": "stairwaytoheaven.wav",
+  "date": "2026-03-10T18:18:36.892833",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.493,
+    "mids": 0.64,
+    "presence": 0.294,
+    "air": 0.416,
+    "width": 0.937,
+    "bpm": 143.6
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": "Booster",
+    "amp": "Plexiglas",
+    "mod_eq": "Guitar EQ",
+    "delay": "Echo Tape",
+    "reverb": "Room Studio A"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": {
+      "GAIN": 6.0
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 4.049490250928896,
+      "MIDDLE": 5.396789291148773,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -0.5,
+      "200HZ": -0.0,
+      "400HZ": 0.8,
+      "800HZ": 1.2,
+      "1600HZ": 0.7,
+      "3200HZ": 0.6,
+      "LEVEL": -0.2
+    },
+    "delay": {
+      "SUSTAIN": 0.0,
+      "VOLUME": 3.0,
+      "TONE": 6.0
+    },
+    "reverb": {
+      "LEVEL": 6.5,
+      "TIME": 4.0,
+      "DAMPING": 5.5,
+      "DWELL": 4.5,
+      "LOW_CUT": 5.0,
+      "HIGH_CUT": 5.1
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83c\udfa8",
+    "reverb": "\ud83d\udd2c"
+  }
+}

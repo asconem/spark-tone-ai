@@ -1,0 +1,83 @@
+{
+  "song": "rainingblood.wav",
+  "date": "2026-03-10T17:59:51.535552",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 0.907,
+    "mids": 0.441,
+    "presence": 0.228,
+    "air": 0.55,
+    "width": 0.768,
+    "bpm": 86.1
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": "Noise Gate",
+    "comp_wah": null,
+    "drive": "Black Op",
+    "amp": "Treadplate",
+    "mod_eq": "Guitar EQ",
+    "delay": "Digital Delay",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": {
+      "THRESHOLD": 4.0,
+      "DECAY": 2.2
+    },
+    "comp_wah": null,
+    "drive": {
+      "DISTORTION": 3.0,
+      "FILTER": 4.2,
+      "VOLUME": 6.0
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 9.6522203383695,
+      "MIDDLE": 6.4146930141162795,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": 0.4,
+      "200HZ": 0.4,
+      "400HZ": -0.6,
+      "800HZ": -0.0,
+      "1600HZ": -1.6,
+      "3200HZ": 3.0,
+      "LEVEL": -0.1
+    },
+    "delay": {
+      "E_LEVEL": 2.4,
+      "F_BACK": 3.7,
+      "D_TIME": "1/8",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 3.2,
+      "TIME": 3.1,
+      "DAMPING": 6.3,
+      "DWELL": 2.5,
+      "LOW_CUT": 6.6,
+      "HIGH_CUT": 4.2
+    }
+  },
+  "sources": {
+    "gate": "\ud83d\udd2c",
+    "comp_wah": "",
+    "drive": "\ud83d\udd2c",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  }
+}

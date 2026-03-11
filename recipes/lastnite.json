@@ -1,0 +1,83 @@
+{
+  "song": "lastnite.wav",
+  "date": "2026-03-10T17:25:21.867005",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 0.663,
+    "mids": 0.454,
+    "presence": 0.276,
+    "air": 0.514,
+    "width": 0.628,
+    "bpm": 103.4
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 1 (Bridge)",
+    "volume": 10,
+    "tone": 7
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": "Red Comp",
+    "drive": "Black Op",
+    "amp": "Lux Verb",
+    "mod_eq": "Guitar EQ",
+    "delay": "Vintage Delay",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": {
+      "OUTPUT": 7.0,
+      "SENSITIVITY": 8.0
+    },
+    "drive": {
+      "DISTORTION": 7.0,
+      "FILTER": 6.0,
+      "VOLUME": 6.0
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 4.915691126322379,
+      "MIDDLE": 5.0442028948961495,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -1.0,
+      "200HZ": -0.5,
+      "400HZ": -0.5,
+      "800HZ": 0.1,
+      "1600HZ": -1.5,
+      "3200HZ": 2.2,
+      "LEVEL": 0.1
+    },
+    "delay": {
+      "REPEAT_RATE": "1/8d",
+      "ECHO": 3.3,
+      "INTENSITY": 3.9,
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 4.2,
+      "TIME": 3.9,
+      "DAMPING": 6.1,
+      "DWELL": 3.7,
+      "LOW_CUT": 5.7,
+      "HIGH_CUT": 4.4
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "\ud83c\udfa8",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  }
+}

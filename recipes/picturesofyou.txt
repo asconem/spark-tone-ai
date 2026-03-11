@@ -1,0 +1,35 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): picturesofyou.wav
+📅 Date: 2026-03-10 17:53:35
+🎯 DSP Analysis: Gain 0.62 | Presence 0.29 | Air 0.49 | Mids 0.51 | Width 0.52 | BPM 117
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 5 (Neck)
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[DRIVE] OVER DRIVE 🔬
+   • DRIVE: 4.5             • LEVEL: 8.5          
+   • TONE: 5.7           
+--------------------------------------------------
+[AMP] SILVER 120 🎨
+   • BASS: 4.9              • GAIN: 5.7           
+   • MIDDLE: 6.1            • TREBLE: 2.4         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] CHORUS 🎨
+   • DEPTH: 6.0             • E_LEVEL: 7.0        
+   • RATE: 4.0              • TONE: 7.0           
+--------------------------------------------------
+[DELAY] ECHO FILT 🎨
+   • BPM_MODE: Off          • DELAY: 300.0        
+   • FEEDBACK: 5.0          • LEVEL: 4.0          
+   • TONE: 6.0           
+--------------------------------------------------
+[REVERB] PLATE SHORT 🔬
+   • DAMPING: 5.9           • DWELL: 3.9          
+   • HIGH_CUT: 4.6          • LEVEL: 4.1          
+   • LOW_CUT: 5.5           • TIME: 4.1           
+--------------------------------------------------

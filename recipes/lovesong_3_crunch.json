@@ -1,0 +1,82 @@
+{
+  "song": "lovesong.wav",
+  "date": "2026-03-10T17:35:42.855453",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 0.392,
+    "mids": 0.486,
+    "presence": 0.204,
+    "air": 0.531,
+    "width": 0.546,
+    "bpm": 143.6
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 4 (Neck+Mid)",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": null,
+    "amp": "Silver 120",
+    "mod_eq": "Chorus",
+    "delay": "Echo Tape",
+    "reverb": "Chamber"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": null,
+    "amp": {
+      "GAIN": 8.416987294955256,
+      "TREBLE": 4.5,
+      "MIDDLE": 5.8,
+      "BASS": 4.9,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "E_LEVEL": 7.0,
+      "RATE": 4.0,
+      "DEPTH": 6.0,
+      "TONE": 7.0
+    },
+    "delay": {
+      "SUSTAIN": 3.8,
+      "VOLUME": 3.5,
+      "TONE": 5.8,
+      "SHORT/LONG": "1/8d",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 5.6,
+      "TIME": 4.7,
+      "DAMPING": 6.2,
+      "DWELL": 5.0,
+      "LOW_CUT": 4.6,
+      "HIGH_CUT": 4.3
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83c\udfa8",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  },
+  "section": {
+    "label": "Crunch",
+    "type": "loud",
+    "start": 133.0,
+    "end": 150.5,
+    "index": 2,
+    "total_sections": 4
+  }
+}

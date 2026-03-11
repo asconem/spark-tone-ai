@@ -1,0 +1,41 @@
+════════════════════════════════════════════════════════════
+SECTION 1/7: CRUNCH (0:00 — 1:15)
+════════════════════════════════════════════════════════════
+🎸 SPARK 2 RECIPE: whoknows.wav
+📅 Date: 2026-03-10 18:49:01
+🎯 DSP Analysis: Gain 0.40 | Presence 0.25 | Air 0.42 | Mids 0.63 | Width 0.48 | BPM 112
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 1 (Bridge)
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[COMP/WAH] SUSTAIN COMP 🔬
+   • ATTACK: 3.5            • LEVEL: 7.5          
+   • SUSTAIN: 6.5           • TONE: 5.0           
+--------------------------------------------------
+[DRIVE] J.H. OCTAVE FUZZ 🎨
+   • FUZZ: 7.0              • LEVEL: 8.0          
+--------------------------------------------------
+[AMP] J.H. SUPER 100 🎨
+   • BASS: 4.6              • GAIN: 2.0           
+   • MIDDLE: 5.5            • TREBLE: 2.9         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] J.H. LEGENDARY VIBE 🎨
+   • INTENSITY: 6.5         • MIX: 7.5            
+   • SPEED: 4.5             • SWEEP: 5.5          
+--------------------------------------------------
+[DELAY] ECHO TAPE 🔬
+   • BPM_MODE: On           • SHORT/LONG: 1/8d    
+   • SUSTAIN: 3.8           • TONE: 4.3           
+   • VOLUME: 3.5         
+--------------------------------------------------
+[REVERB] PLATE SHORT 🎨
+   • DAMPING: 5.5           • DWELL: 3.5          
+   • HIGH_CUT: 5.0          • LEVEL: 3.5          
+   • LOW_CUT: 5.0           • TIME: 4.0           
+--------------------------------------------------

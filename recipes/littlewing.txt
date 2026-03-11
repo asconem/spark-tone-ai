@@ -1,0 +1,39 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): littlewing.wav
+📅 Date: 2026-03-10 17:31:11
+🎯 DSP Analysis: Gain 0.49 | Presence 0.26 | Air 0.37 | Mids 0.72 | Width 0.73 | BPM 136
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 4 (Neck+Mid)
+   • VOLUME: 8
+   • TONE: 7
+--------------------------------------------------
+[COMP/WAH] SUSTAIN COMP 🎨
+   • ATTACK: 3.5            • LEVEL: 6.5          
+   • SUSTAIN: 7.0           • TONE: 6.0           
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🔬
+   • LEVEL: 7.0             • OVERDRIVE: 1.0      
+   • TONE: 3.7           
+--------------------------------------------------
+[AMP] JM45 🔬
+   • BASS: 4.8              • GAIN: 2.0           
+   • MIDDLE: 7.0            • TREBLE: 1.6         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] UNIVIBE 🎨
+   • INTENSITY: 5.5         • MODE_SWITCH: Vibrato
+   • SPEED: 3.5          
+--------------------------------------------------
+[DELAY] ECHO TAPE 🔬
+   • BPM_MODE: On           • SHORT/LONG: 1/8d    
+   • SUSTAIN: 3.7           • TONE: 3.6           
+   • VOLUME: 3.2         
+--------------------------------------------------
+[REVERB] PLATE RICH 🎨
+   • DAMPING: 4.5           • DWELL: 5.0          
+   • HIGH_CUT: 5.0          • LEVEL: 6.5          
+   • LOW_CUT: 5.0           • TIME: 5.5           
+--------------------------------------------------

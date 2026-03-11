@@ -1,0 +1,37 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): wholelottalove.wav
+📅 Date: 2026-03-10 18:52:04
+🎯 DSP Analysis: Gain 0.70 | Presence 0.27 | Air 0.47 | Mids 0.55 | Width 0.85 | BPM 117
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[GATE] NOISE GATE 🔬
+   • DECAY: 4.6             • THRESHOLD: 1.5      
+--------------------------------------------------
+[DRIVE] BOOSTER 🎨
+   • GAIN: 6.0           
+--------------------------------------------------
+[AMP] PLEXIGLAS 🎨
+   • BASS: 5.0              • GAIN: 4.0           
+   • MIDDLE: 4.5            • TREBLE: 5.9         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: 0.7             • 1600HZ: -0.0        
+   • 200HZ: 0.8             • 3200HZ: 2.0         
+   • 400HZ: 0.3             • 800HZ: 0.7          
+--------------------------------------------------
+[DELAY] ECHO TAPE 🎨
+   • BPM_MODE: Off          • SUSTAIN: 0.0           • TONE: 6.0           
+   • VOLUME: 3.0         
+--------------------------------------------------
+[REVERB] PLATE SHORT 🔬
+   • DAMPING: 5.8           • DWELL: 3.5          
+   • HIGH_CUT: 4.7          • LEVEL: 4.9          
+   • LOW_CUT: 5.8           • TIME: 3.6           
+--------------------------------------------------

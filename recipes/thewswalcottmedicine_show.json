@@ -1,0 +1,84 @@
+{
+  "song": "thewswalcottmedicine show.wav",
+  "date": "2026-03-10T20:01:36.084333",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 0.511,
+    "mids": 0.658,
+    "presence": 0.29,
+    "air": 0.412,
+    "width": 0.797,
+    "bpm": 99.4
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 1 (Bridge)",
+    "volume": 8,
+    "tone": 7
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": "Red Comp",
+    "drive": "Clone Drive",
+    "amp": "Lux Verb",
+    "mod_eq": "Guitar EQ",
+    "delay": "Digital Delay",
+    "reverb": "Room Studio A"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": {
+      "OUTPUT": 6.5,
+      "SENSITIVITY": 4.0
+    },
+    "drive": {
+      "GAIN": 2.5,
+      "TREBLE": 6.0,
+      "OUTPUT": 5.5
+    },
+    "amp": {
+      "GAIN": 2.106686768771502,
+      "TREBLE": 1.5,
+      "MIDDLE": 7.079971063270065,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -0.9,
+      "200HZ": -0.4,
+      "400HZ": 0.9,
+      "800HZ": 1.3,
+      "1600HZ": 0.9,
+      "3200HZ": 0.2,
+      "LEVEL": -0.2
+    },
+    "delay": {
+      "E_LEVEL": 3.0,
+      "F_BACK": 2.5,
+      "D_TIME": 50,
+      "MODE": "500ms",
+      "BPM_MODE": "Off"
+    },
+    "reverb": {
+      "LEVEL": 5.9,
+      "TIME": 4.3,
+      "DAMPING": 5.5,
+      "DWELL": 4.4,
+      "LOW_CUT": 5.0,
+      "HIGH_CUT": 5.1
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "\ud83c\udfa8",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83c\udfa8",
+    "reverb": "\ud83d\udd2c"
+  }
+}

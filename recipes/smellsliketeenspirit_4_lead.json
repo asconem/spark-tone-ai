@@ -1,0 +1,85 @@
+{
+  "song": "smellsliketeenspirit.wav",
+  "date": "2026-03-10T18:13:50.490339",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.863,
+    "mids": 0.358,
+    "presence": 0.26,
+    "air": 0.59,
+    "width": 0.884,
+    "bpm": 115.2
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 10,
+    "tone": 10
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": "Noise Gate",
+    "comp_wah": null,
+    "drive": "Tube Drive",
+    "amp": "Black Duo",
+    "mod_eq": "Chorus",
+    "delay": "Digital Delay",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": {
+      "THRESHOLD": 3.0
+    },
+    "comp_wah": null,
+    "drive": {
+      "OVERDRIVE": 9.5,
+      "LEVEL": 9.0
+    },
+    "amp": {
+      "GAIN": 7.628428786130334,
+      "TREBLE": 7.7,
+      "MIDDLE": 4.9,
+      "BASS": 5.3,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "DEPTH": 4.5,
+      "RATE": 2.5,
+      "E_LEVEL": 5.0
+    },
+    "delay": {
+      "E_LEVEL": 2.5,
+      "F_BACK": 3.7,
+      "D_TIME": "1/8",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 3.9,
+      "TIME": 3.5,
+      "DAMPING": 6.5,
+      "DWELL": 2.7,
+      "LOW_CUT": 6.5,
+      "HIGH_CUT": 3.9
+    }
+  },
+  "sources": {
+    "gate": "\ud83c\udfa8",
+    "comp_wah": "",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83c\udfa8",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  },
+  "section": {
+    "label": "Lead",
+    "type": "quiet",
+    "start": 66.5,
+    "end": 301.13,
+    "index": 3,
+    "total_sections": 4
+  }
+}

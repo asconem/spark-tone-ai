@@ -1,0 +1,35 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): redhouse.wav
+📅 Date: 2026-03-10 18:01:13
+🎯 DSP Analysis: Gain 0.49 | Presence 0.23 | Air 0.44 | Mids 0.57 | Width 0.80 | BPM 112
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 5 (Neck)
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[DRIVE] J.H. AXLE FUZZ 🎨
+   • DRIVE: 3.0             • VOLUME: 6.0         
+--------------------------------------------------
+[AMP] J.H. BASS MASTER 🎨
+   • BASS: 5.0              • GAIN: 2.0           
+   • MIDDLE: 4.2            • TREBLE: 3.9         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -2.1            • 1600HZ: 0.2         
+   • 200HZ: -1.2            • 3200HZ: 0.3         
+   • 400HZ: 0.4             • 800HZ: 0.8          
+--------------------------------------------------
+[DELAY] ECHO TAPE 🔬
+   • BPM_MODE: On           • SHORT/LONG: 1/8d    
+   • SUSTAIN: 3.7           • TONE: 4.6           
+   • VOLUME: 3.2         
+--------------------------------------------------
+[REVERB] ROOM STUDIO A 🔬
+   • DAMPING: 5.6           • DWELL: 4.6          
+   • HIGH_CUT: 4.9          • LEVEL: 6.0          
+   • LOW_CUT: 5.0           • TIME: 3.8           
+--------------------------------------------------

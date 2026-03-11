@@ -1,0 +1,80 @@
+{
+  "song": "cowboysfromhell.wav",
+  "date": "2026-03-10T16:36:32.691861",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 0.667,
+    "mids": 0.344,
+    "presence": 0.201,
+    "air": 0.611,
+    "width": 0.891,
+    "bpm": 112.3
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": "SAB Driver",
+    "amp": "SLO 100",
+    "mod_eq": "Guitar EQ",
+    "delay": "Vintage Delay",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": {
+      "DRIVE": 3.0,
+      "TONE": 7.9,
+      "VOLUME": 6.0
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 8.744335990913342,
+      "MIDDLE": 3.4437058873085706,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -0.5,
+      "200HZ": -0.1,
+      "400HZ": -0.9,
+      "800HZ": -0.3,
+      "1600HZ": -1.6,
+      "3200HZ": 4.9,
+      "LEVEL": -0.1
+    },
+    "delay": {
+      "REPEAT_RATE": "1/8d",
+      "ECHO": 3.3,
+      "INTENSITY": 3.9,
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 5.2,
+      "TIME": 3.4,
+      "DAMPING": 6.7,
+      "DWELL": 3.7,
+      "LOW_CUT": 5.7,
+      "HIGH_CUT": 3.7
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "\ud83d\udd2c",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  }
+}

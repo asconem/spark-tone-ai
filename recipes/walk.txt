@@ -1,0 +1,39 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): walk.wav
+📅 Date: 2026-03-10 18:44:34
+🎯 DSP Analysis: Gain 1.00 | Presence 0.23 | Air 0.63 | Mids 0.29 | Width 0.86 | BPM 185
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[GATE] NOISE GATE 🔬
+   • DECAY: 1.1             • THRESHOLD: 5.3      
+--------------------------------------------------
+[DRIVE] BLACK OP 🔬
+   • DISTORTION: 3.5        • FILTER: 3.0         
+   • VOLUME: 5.9         
+--------------------------------------------------
+[AMP] INSANE 6508 🎨
+   • BASS: 5.0              • GAIN: 2.0           
+   • MIDDLE: 2.9            • TREBLE: 10.0        
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: 1.0             • 1600HZ: -2.8        
+   • 200HZ: 0.8             • 3200HZ: 5.1         
+   • 400HZ: -1.5            • 800HZ: -0.8         
+--------------------------------------------------
+[DELAY] DIGITAL DELAY 🔬
+   • BPM_MODE: On           • D_TIME: 1/8         
+   • E_LEVEL: 2.0           • F_BACK: 3.6         
+   • MODE: 50ms          
+--------------------------------------------------
+[REVERB] PLATE SHORT 🔬
+   • DAMPING: 6.8           • DWELL: 2.0          
+   • HIGH_CUT: 3.6          • LEVEL: 3.0          
+   • LOW_CUT: 7.0           • TIME: 2.9           
+--------------------------------------------------

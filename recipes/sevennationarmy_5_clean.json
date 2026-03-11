@@ -1,0 +1,91 @@
+{
+  "song": "sevennationarmy.wav",
+  "date": "2026-03-10T18:09:22.546772",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 0.0,
+    "mids": 0.596,
+    "presence": 0.253,
+    "air": 0.42,
+    "width": 0.352,
+    "bpm": 123.0
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 5 (Neck)",
+    "volume": 10,
+    "tone": 7
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": "LA Comp",
+    "drive": "Guitar Muff",
+    "amp": "American Deluxe",
+    "mod_eq": "Guitar EQ",
+    "delay": "Vintage Delay",
+    "reverb": "Hall Natural"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": {
+      "GAIN": 7.4,
+      "PEAK_REDUCTION": 6.2
+    },
+    "drive": {
+      "SUSTAIN": 8.0,
+      "TONE": 4.0,
+      "VOLUME": 7.5
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 2.6681010296928798,
+      "MIDDLE": 4.962018308287522,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -6.2,
+      "200HZ": -4.1,
+      "400HZ": -0.1,
+      "800HZ": 0.4,
+      "1600HZ": -1.7,
+      "3200HZ": -0.4,
+      "LEVEL": 1.0
+    },
+    "delay": {
+      "REPEAT_RATE": "1/4",
+      "ECHO": 6.0,
+      "INTENSITY": 4.6,
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 8.0,
+      "TIME": 3.9,
+      "DAMPING": 5.5,
+      "DWELL": 7.0,
+      "LOW_CUT": 3.0,
+      "HIGH_CUT": 5.1
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "\ud83d\udd2c",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  },
+  "section": {
+    "label": "Clean",
+    "type": "quiet",
+    "start": 166.0,
+    "end": 206.0,
+    "index": 4,
+    "total_sections": 6
+  }
+}

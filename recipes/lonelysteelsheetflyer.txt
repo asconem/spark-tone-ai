@@ -1,0 +1,33 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): lonelysteelsheetflyer.wav
+📅 Date: 2026-03-10 17:34:25
+🎯 DSP Analysis: Gain 0.65 | Presence 0.20 | Air 0.52 | Mids 0.50 | Width 0.48 | BPM 112
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 2 (Bridge+Mid)
+   • VOLUME: 10
+   • TONE: 7
+--------------------------------------------------
+[DRIVE] OVER DRIVE 🔬
+   • DRIVE: 4.5             • LEVEL: 8.5          
+   • TONE: 6.4           
+--------------------------------------------------
+[AMP] SILVER 120 🎨
+   • BASS: 5.0              • GAIN: 7.0           
+   • MIDDLE: 7.0            • TREBLE: 3.5         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] VIBRATO 🎨
+   • DEPTH: 4.9             • SPEED: 3.4          
+--------------------------------------------------
+[DELAY] VINTAGE DELAY 🔬
+   • BPM_MODE: On           • ECHO: 3.4           
+   • INTENSITY: 4.0         • REPEAT_RATE: 1/8d   
+--------------------------------------------------
+[REVERB] ROOM STUDIO A 🎨
+   • DAMPING: 6.5           • DWELL: 4.5          
+   • HIGH_CUT: 5.0          • LEVEL: 5.0          
+   • LOW_CUT: 5.0           • TIME: 4.5           
+--------------------------------------------------

@@ -1,0 +1,38 @@
+════════════════════════════════════════════════════════════
+SECTION 2/4: DRIVE (0:16 — 2:13)
+════════════════════════════════════════════════════════════
+🎸 SPARK 2 RECIPE: lovesong.wav
+📅 Date: 2026-03-10 17:35:36
+🎯 DSP Analysis: Gain 0.62 | Presence 0.22 | Air 0.55 | Mids 0.47 | Width 0.74 | BPM 122
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 5 (Neck)
+   • VOLUME: 8
+   • TONE: 7
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🎨
+   • LEVEL: 7.0             • OVERDRIVE: 3.0      
+   • TONE: 6.0           
+--------------------------------------------------
+[AMP] SILVER 120 🎨
+   • BASS: 5.0              • GAIN: 5.7           
+   • MIDDLE: 5.6            • TREBLE: 5.0         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] CHORUS 🎨
+   • DEPTH: 6.0             • E_LEVEL: 7.0        
+   • RATE: 4.0              • TONE: 6.0           
+--------------------------------------------------
+[DELAY] DIGITAL DELAY 🎨
+   • BPM_MODE: Off          • D_TIME: 50.0        
+   • E_LEVEL: 4.0           • F_BACK: 3.0         
+   • MODE: 200ms         
+--------------------------------------------------
+[REVERB] PLATE SHORT 🔬
+   • DAMPING: 6.3           • DWELL: 3.9          
+   • HIGH_CUT: 4.2          • LEVEL: 4.9          
+   • LOW_CUT: 5.5           • TIME: 3.4           
+--------------------------------------------------

@@ -1,0 +1,35 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): workingman.wav
+📅 Date: 2026-03-10 18:55:59
+🎯 DSP Analysis: Gain 0.53 | Presence 0.27 | Air 0.47 | Mids 0.56 | Width 0.64 | BPM 152
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🎨
+   • LEVEL: 8.0             • OVERDRIVE: 7.0      
+   • TONE: 5.0           
+--------------------------------------------------
+[AMP] PLEXIGLAS 🎨
+   • BASS: 4.9              • GAIN: 2.0           
+   • MIDDLE: 4.7            • TREBLE: 6.4         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] FLANGER 🎨
+   • DEPTH: 7.0             • MIX: 5.0            
+   • RATE: 2.5           
+--------------------------------------------------
+[DELAY] ECHO TAPE 🔬
+   • BPM_MODE: On           • SHORT/LONG: 1/8d    
+   • SUSTAIN: 3.6           • TONE: 5.0           
+   • VOLUME: 3.1         
+--------------------------------------------------
+[REVERB] ROOM STUDIO A 🔬
+   • DAMPING: 5.8           • DWELL: 4.4          
+   • HIGH_CUT: 4.7          • LEVEL: 5.1          
+   • LOW_CUT: 5.1           • TIME: 4.3           
+--------------------------------------------------

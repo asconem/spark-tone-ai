@@ -1,0 +1,82 @@
+{
+  "song": "ilookedaway.wav",
+  "date": "2026-03-10T17:08:20.533837",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.433,
+    "mids": 0.76,
+    "presence": 0.291,
+    "air": 0.354,
+    "width": 0.732,
+    "bpm": 117.5
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 4 (Neck+Mid)",
+    "volume": 8,
+    "tone": 7
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": "Sustain Comp",
+    "drive": null,
+    "amp": "Lux Verb",
+    "mod_eq": "Guitar EQ",
+    "delay": "Echo Tape",
+    "reverb": "Plate Rich"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": {
+      "LEVEL": 6.7,
+      "TONE": 5.0,
+      "ATTACK": 4.1,
+      "SUSTAIN": 5.3
+    },
+    "drive": null,
+    "amp": {
+      "GAIN": 5.334377644032205,
+      "TREBLE": 1.5,
+      "MIDDLE": 8.0977781579326,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -0.4,
+      "200HZ": 0.1,
+      "400HZ": 1.6,
+      "800HZ": 1.8,
+      "1600HZ": 1.7,
+      "3200HZ": -0.6,
+      "LEVEL": -0.4
+    },
+    "delay": {
+      "SUSTAIN": 3.7,
+      "VOLUME": 3.4,
+      "TONE": 3.4,
+      "SHORT/LONG": "1/8d",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 4.5,
+      "TIME": 5.0,
+      "DAMPING": 5.0,
+      "DWELL": 5.5,
+      "LOW_CUT": 4.0,
+      "HIGH_CUT": 5.5
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "\ud83d\udd2c",
+    "drive": "",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83c\udfa8"
+  }
+}

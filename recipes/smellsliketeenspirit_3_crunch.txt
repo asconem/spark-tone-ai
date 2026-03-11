@@ -1,0 +1,41 @@
+════════════════════════════════════════════════════════════
+SECTION 3/4: CRUNCH (0:23 — 1:06)
+════════════════════════════════════════════════════════════
+🎸 SPARK 2 RECIPE: smellsliketeenspirit.wav
+📅 Date: 2026-03-10 18:13:50
+🎯 DSP Analysis: Gain 0.51 | Presence 0.27 | Air 0.56 | Mids 0.43 | Width 0.80 | BPM 117
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 10
+   • TONE: 10
+--------------------------------------------------
+[GATE] NOISE GATE 🎨
+   • DECAY: 5.0             • THRESHOLD: 3.0      
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🎨
+   • LEVEL: 9.0             • OVERDRIVE: 9.5      
+   • TONE: 5.0           
+--------------------------------------------------
+[AMP] BLACK DUO 🎨
+   • BASS: 4.8              • GAIN: 4.1           
+   • MIDDLE: 5.7            • TREBLE: 6.5         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] CHORUS 🎨
+   • DEPTH: 4.5             • E_LEVEL: 5.0        
+   • RATE: 2.5              • TONE: 5.0           
+--------------------------------------------------
+[DELAY] ECHO TAPE 🔬
+   • BPM_MODE: On           • SHORT/LONG: 1/8d    
+   • SUSTAIN: 3.6           • TONE: 6.2           
+   • VOLUME: 3.2         
+--------------------------------------------------
+[REVERB] ROOM STUDIO A 🔬
+   • DAMPING: 6.4           • DWELL: 4.5          
+   • HIGH_CUT: 4.1          • LEVEL: 5.9          
+   • LOW_CUT: 5.0           • TIME: 4.3           
+--------------------------------------------------

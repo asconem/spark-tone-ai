@@ -1,0 +1,87 @@
+{
+  "song": "sevennationarmy.wav",
+  "date": "2026-03-10T18:09:14.767393",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 0.597,
+    "mids": 0.41,
+    "presence": 0.292,
+    "air": 0.522,
+    "width": 0.585,
+    "bpm": 117.5
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 1 (Bridge)",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": "J.H. Octave Fuzz",
+    "amp": "Checkmate",
+    "mod_eq": "Guitar EQ",
+    "delay": "Vintage Delay",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": {
+      "FUZZ": 6.0,
+      "LEVEL": 7.0
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 2.7034346746873297,
+      "MIDDLE": 4.096803081220876,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -1.0,
+      "200HZ": -0.5,
+      "400HZ": -0.5,
+      "800HZ": 0.0,
+      "1600HZ": -1.1,
+      "3200HZ": 2.6,
+      "LEVEL": 0.0
+    },
+    "delay": {
+      "REPEAT_RATE": "1/8d",
+      "ECHO": 3.6,
+      "INTENSITY": 4.0,
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 4.5,
+      "TIME": 4.0,
+      "DAMPING": 6.1,
+      "DWELL": 4.0,
+      "LOW_CUT": 5.4,
+      "HIGH_CUT": 4.3
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  },
+  "section": {
+    "label": "Drive",
+    "type": "loud",
+    "start": 120.0,
+    "end": 166.0,
+    "index": 3,
+    "total_sections": 6
+  }
+}

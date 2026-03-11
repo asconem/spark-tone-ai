@@ -1,0 +1,38 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): eruption.wav
+📅 Date: 2026-03-10 16:39:40
+🎯 DSP Analysis: Gain 0.75 | Presence 0.26 | Air 0.54 | Mids 0.48 | Width 0.59 | BPM 152
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 10
+   • TONE: 10
+--------------------------------------------------
+[GATE] NOISE GATE 🎨
+   • DECAY: 1.0             • THRESHOLD: 3.3      
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🎨
+   • LEVEL: 8.0             • OVERDRIVE: 1.7      
+   • TONE: 6.5           
+--------------------------------------------------
+[AMP] PLEXIGLAS 🎨
+   • BASS: 6.0              • GAIN: 7.7           
+   • MIDDLE: 4.1            • TREBLE: 9.2         
+   • VOLUME: 7.8         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: 0.5             • 1600HZ: -0.5        
+   • 200HZ: 0.6             • 3200HZ: 3.2         
+   • 400HZ: -0.1            • 800HZ: 0.4          
+--------------------------------------------------
+[DELAY] ECHO TAPE 🎨
+   • BPM_MODE: Off          • SUSTAIN: 2.0           • TONE: 5.0           
+   • VOLUME: 1.0         
+--------------------------------------------------
+[REVERB] PLATE SHORT 🔬
+   • DAMPING: 6.2           • DWELL: 3.2          
+   • HIGH_CUT: 4.2          • LEVEL: 3.4          
+   • LOW_CUT: 6.0           • TIME: 3.7           
+--------------------------------------------------

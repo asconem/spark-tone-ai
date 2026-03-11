@@ -1,0 +1,76 @@
+{
+  "song": "sultansofswing.wav",
+  "date": "2026-03-10T18:23:18.839069",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.44,
+    "mids": 0.547,
+    "presence": 0.226,
+    "air": 0.494,
+    "width": 0.791,
+    "bpm": 99.4
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 2 (Bridge+Mid)",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": "Red Comp",
+    "drive": null,
+    "amp": "Black Duo",
+    "mod_eq": "Guitar EQ",
+    "delay": "Echo Tape",
+    "reverb": "Room Studio A"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": {
+      "OUTPUT": 7.0,
+      "SENSITIVITY": 8.5
+    },
+    "drive": null,
+    "amp": {
+      "GAIN": 8.39809167851681,
+      "TREBLE": 3.2080089549678203,
+      "MIDDLE": 6.972112129727873,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -0.4,
+      "200HZ": 0.2,
+      "400HZ": 0.3,
+      "800HZ": 0.7,
+      "1600HZ": -0.0,
+      "3200HZ": 2.8,
+      "LEVEL": -0.3
+    },
+    "delay": {
+      "SUSTAIN": 3.7,
+      "VOLUME": 3.4,
+      "TONE": 5.3,
+      "SHORT/LONG": "1/8d",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 3.0,
+      "TIME": 3.0
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "\ud83c\udfa8",
+    "drive": "",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83c\udfa8"
+  }
+}

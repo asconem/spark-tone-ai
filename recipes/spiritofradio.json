@@ -1,0 +1,72 @@
+{
+  "song": "spiritofradio.wav",
+  "date": "2026-03-10T18:36:21.663729",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.582,
+    "mids": 0.64,
+    "presence": 0.278,
+    "air": 0.405,
+    "width": 0.932,
+    "bpm": 136.0
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": "Booster",
+    "amp": "J.H. Tone City 100",
+    "mod_eq": "Chorus",
+    "delay": "Echo Tape",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": {
+      "GAIN": 2.0
+    },
+    "amp": {
+      "GAIN": 3.317166133912388,
+      "TREBLE": 1.6,
+      "MIDDLE": 6.6,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "DEPTH": 7.5,
+      "RATE": 2.0,
+      "E_LEVEL": 6.0
+    },
+    "delay": {
+      "SUSTAIN": 3.0,
+      "VOLUME": 4.0
+    },
+    "reverb": {
+      "LEVEL": 5.9,
+      "TIME": 4.3,
+      "DAMPING": 5.4,
+      "DWELL": 4.1,
+      "LOW_CUT": 5.3,
+      "HIGH_CUT": 5.2
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83c\udfa8",
+    "delay": "\ud83c\udfa8",
+    "reverb": "\ud83d\udd2c"
+  }
+}

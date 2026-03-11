@@ -1,0 +1,35 @@
+════════════════════════════════════════════════════════════
+SECTION 4/4: CRUNCH (4:52 — 5:36)
+════════════════════════════════════════════════════════════
+🎸 SPARK 2 RECIPE: wherethestreetshavenoname.wav
+📅 Date: 2026-03-10 18:46:32
+🎯 DSP Analysis: Gain 0.41 | Presence 0.22 | Air 0.57 | Mids 0.45 | Width 0.41 | BPM 83
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 1 (Bridge)
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[AMP] AC BOOST 🎨
+   • BASS: 5.0              • GAIN: 5.6           
+   • MIDDLE: 2.5            • TREBLE: 5.3         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -0.6            • 1600HZ: -0.8        
+   • 200HZ: 0.0             • 3200HZ: 4.7         
+   • 400HZ: -0.3            • 800HZ: 0.3          
+--------------------------------------------------
+[DELAY] MULTI HEAD 🎨
+   • BPM_MODE: Off          • ECHO_VOL: 7.0       
+   • INTENSITY: 8.5         • MODE_SELECTOR: Head 0+1+2
+   • REPEAT_RATE: 380.0  
+--------------------------------------------------
+[REVERB] CHAMBER 🔬
+   • DAMPING: 6.4           • DWELL: 5.0          
+   • HIGH_CUT: 4.0          • LEVEL: 5.3          
+   • LOW_CUT: 4.6           • TIME: 4.6           
+--------------------------------------------------

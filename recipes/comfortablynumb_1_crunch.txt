@@ -1,0 +1,41 @@
+════════════════════════════════════════════════════════════
+SECTION 1/3: CRUNCH (0:00 — 4:30)
+════════════════════════════════════════════════════════════
+🎸 SPARK 2 RECIPE: comfortablynumb.wav
+📅 Date: 2026-03-10 16:35:13
+🎯 DSP Analysis: Gain 0.42 | Presence 0.24 | Air 0.45 | Mids 0.60 | Width 0.66 | BPM 128
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 5 (Neck)
+   • VOLUME: 10
+   • TONE: 7
+--------------------------------------------------
+[COMP/WAH] SUSTAIN COMP 🔬
+   • ATTACK: 4.4            • LEVEL: 6.3          
+   • SUSTAIN: 4.7           • TONE: 5.0           
+--------------------------------------------------
+[DRIVE] GUITAR MUFF 🎨
+   • SUSTAIN: 9.0           • TONE: 4.5           
+   • VOLUME: 7.0         
+--------------------------------------------------
+[AMP] J.H. TONE CITY 100 🎨
+   • BASS: 4.2              • GAIN: 2.0           
+   • MIDDLE: 5.9            • TREBLE: 2.7         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] FLANGER 🎨
+   • DEPTH: 6.0             • MIX: 4.0            
+   • RATE: 0.2           
+--------------------------------------------------
+[DELAY] MULTI HEAD 🎨
+   • BPM_MODE: Off          • ECHO_VOL: 4.5       
+   • INTENSITY: 5.5         • MODE_SELECTOR: Head 0+2
+--------------------------------------------------
+[REVERB] CHAMBER 🔬
+   • DAMPING: 5.7           • DWELL: 4.9          
+   • HIGH_CUT: 4.9          • LEVEL: 5.9          
+   • LOW_CUT: 4.7           • TIME: 4.5           
+--------------------------------------------------

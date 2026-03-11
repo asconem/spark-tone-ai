@@ -1,0 +1,39 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): slowjam1.wav
+📅 Date: 2026-03-10 18:12:30
+🎯 DSP Analysis: Gain 0.51 | Presence 0.29 | Air 0.39 | Mids 0.69 | Width 0.75 | BPM 117
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 8
+   • TONE: 7
+--------------------------------------------------
+[COMP/WAH] LA COMP 🎨
+   • GAIN: 5.0              • LIMIT_COMPRESS_TOGGLE: Compress
+   • PEAK_REDUCTION: 4.0 
+--------------------------------------------------
+[DRIVE] CLONE DRIVE 🎨
+   • GAIN: 3.0              • OUTPUT: 7.0         
+   • TREBLE: 6.0         
+--------------------------------------------------
+[AMP] ODS 50 🎨
+   • BASS: 4.8              • GAIN: 4.6           
+   • MIDDLE: 4.7            • TREBLE: 1.4         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] CHORUS 🎨
+   • DEPTH: 3.0             • E_LEVEL: 4.0        
+   • RATE: 3.0              • TONE: 6.0           
+--------------------------------------------------
+[DELAY] ECHO TAPE 🎨
+   • BPM_MODE: Off          • SHORT/LONG: 300.0   
+   • SUSTAIN: 4.0           • TONE: 7.0           
+   • VOLUME: 3.0         
+--------------------------------------------------
+[REVERB] ROOM STUDIO A 🔬
+   • DAMPING: 5.3           • DWELL: 4.4          
+   • HIGH_CUT: 5.3          • LEVEL: 5.7          
+   • LOW_CUT: 5.1           • TIME: 4.1           
+--------------------------------------------------

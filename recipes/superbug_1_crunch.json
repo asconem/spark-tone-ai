@@ -1,0 +1,94 @@
+{
+  "song": "superbug.wav",
+  "date": "2026-03-10T18:26:40.365353",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 0.373,
+    "mids": 0.693,
+    "presence": 0.298,
+    "air": 0.394,
+    "width": 0.743,
+    "bpm": 136.0
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": "Sustain Comp",
+    "drive": "Tube Drive",
+    "amp": "Insane 6508",
+    "mod_eq": "Guitar EQ",
+    "delay": "Echo Tape",
+    "reverb": "Chamber"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": {
+      "LEVEL": 7.5,
+      "TONE": 5.0,
+      "ATTACK": 3.5,
+      "SUSTAIN": 6.5
+    },
+    "drive": {
+      "OVERDRIVE": 4.0,
+      "TONE": 6.0,
+      "LEVEL": 7.0
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 3.272273229242293,
+      "MIDDLE": 6.9326411739923,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -1.8,
+      "200HZ": -0.9,
+      "400HZ": 1.2,
+      "800HZ": 1.5,
+      "1600HZ": 1.1,
+      "3200HZ": -0.4,
+      "LEVEL": -0.1
+    },
+    "delay": {
+      "SUSTAIN": 3.8,
+      "VOLUME": 3.6,
+      "TONE": 3.9,
+      "SHORT/LONG": "1/8d",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 6.6,
+      "TIME": 4.2,
+      "DAMPING": 5.4,
+      "DWELL": 5.1,
+      "LOW_CUT": 4.5,
+      "HIGH_CUT": 5.2
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "\ud83d\udd2c",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  },
+  "section": {
+    "label": "Crunch",
+    "type": "quiet",
+    "start": 0.0,
+    "end": 84.5,
+    "index": 0,
+    "total_sections": 6
+  }
+}

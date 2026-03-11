@@ -1,0 +1,38 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): cellophane.wav
+📅 Date: 2026-03-10 16:28:14
+🎯 DSP Analysis: Gain 0.77 | Presence 0.26 | Air 0.48 | Mids 0.55 | Width 0.86 | BPM 123
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[GATE] NOISE GATE 🔬
+   • DECAY: 3.8             • THRESHOLD: 2.2      
+--------------------------------------------------
+[DRIVE] FUZZ FACE 🎨
+   • FUZZ: 7.0              • VOLUME: 7.0         
+--------------------------------------------------
+[AMP] BLUES BOY 🎨
+   • BASS: 5.0              • GAIN: 2.2           
+   • MIDDLE: 5.5            • TREBLE: 4.1         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -0.8            • 1600HZ: -0.3        
+   • 200HZ: -0.5            • 3200HZ: 1.4         
+   • 400HZ: 0.2             • 800HZ: 0.7          
+--------------------------------------------------
+[DELAY] DIGITAL DELAY 🔬
+   • BPM_MODE: On           • D_TIME: 1/8         
+   • E_LEVEL: 2.9           • F_BACK: 3.8         
+   • MODE: 50ms          
+--------------------------------------------------
+[REVERB] ROOM STUDIO A 🎨
+   • DAMPING: 5.0           • DWELL: 4.0          
+   • HIGH_CUT: 5.0          • LEVEL: 3.5          
+   • LOW_CUT: 5.0           • TIME: 3.0           
+--------------------------------------------------

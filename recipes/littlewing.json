@@ -1,0 +1,81 @@
+{
+  "song": "littlewing.wav",
+  "date": "2026-03-10T17:31:11.396901",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.492,
+    "mids": 0.715,
+    "presence": 0.262,
+    "air": 0.368,
+    "width": 0.73,
+    "bpm": 136.0
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 4 (Neck+Mid)",
+    "volume": 8,
+    "tone": 7
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": "Sustain Comp",
+    "drive": "Tube Drive",
+    "amp": "JM45",
+    "mod_eq": "UniVibe",
+    "delay": "Echo Tape",
+    "reverb": "Plate Rich"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": {
+      "LEVEL": 6.5,
+      "ATTACK": 3.5,
+      "SUSTAIN": 7.0,
+      "TONE": 6.0
+    },
+    "drive": {
+      "OVERDRIVE": 1.0,
+      "TONE": 3.7,
+      "LEVEL": 7.0
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 1.6,
+      "MIDDLE": 7.0,
+      "BASS": 4.8,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "SPEED": 3.5,
+      "INTENSITY": 5.5
+    },
+    "delay": {
+      "SUSTAIN": 3.7,
+      "VOLUME": 3.2,
+      "TONE": 3.6,
+      "SHORT/LONG": "1/8d",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 6.5,
+      "TIME": 5.5,
+      "DAMPING": 4.5,
+      "DWELL": 5.0,
+      "LOW_CUT": 5.0,
+      "HIGH_CUT": 5.0
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "\ud83c\udfa8",
+    "drive": "\ud83d\udd2c",
+    "amp": "\ud83d\udd2c",
+    "mod_eq": "\ud83c\udfa8",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83c\udfa8"
+  }
+}

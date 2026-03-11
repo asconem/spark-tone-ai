@@ -1,0 +1,35 @@
+════════════════════════════════════════════════════════════
+SECTION 7/7: LEAD (11:52 — 12:40)
+════════════════════════════════════════════════════════════
+🎸 SPARK 2 RECIPE: machinegun.wav
+📅 Date: 2026-03-10 17:39:25
+🎯 DSP Analysis: Gain 1.00 | Presence 0.19 | Air 0.57 | Mids 0.40 | Width 0.85 | BPM 123
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 1 (Bridge)
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[GATE] NOISE GATE 🔬
+   • DECAY: 1.3             • THRESHOLD: 5.0      
+--------------------------------------------------
+[DRIVE] J.H. OCTAVE FUZZ 🎨
+   • FUZZ: 7.0              • LEVEL: 8.0          
+--------------------------------------------------
+[AMP] J.H. SUPER 100 🎨
+   • BASS: 5.3              • GAIN: 2.0           
+   • MIDDLE: 2.9            • TREBLE: 8.7         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] J.H. LEGENDARY VIBE 🎨
+   • INTENSITY: 6.5         • MIX: 7.5            
+   • SPEED: 4.5             • SWEEP: 5.5          
+--------------------------------------------------
+[REVERB] PLATE SHORT 🎨
+   • DAMPING: 5.5           • DWELL: 3.5          
+   • HIGH_CUT: 5.0          • LEVEL: 3.5          
+   • LOW_CUT: 5.0           • TIME: 4.0           
+--------------------------------------------------

@@ -1,0 +1,87 @@
+{
+  "song": "changes.wav",
+  "date": "2026-03-10T16:29:30.291927",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 1.0,
+    "mids": 0.397,
+    "presence": 0.195,
+    "air": 0.594,
+    "width": 0.89,
+    "bpm": 117.5
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 1 (Bridge)",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": "Noise Gate",
+    "comp_wah": null,
+    "drive": "J.H. Octave Fuzz",
+    "amp": "J.H. Super 100",
+    "mod_eq": "J.H. Legendary Vibe",
+    "delay": "Digital Delay",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": {
+      "THRESHOLD": 5.7,
+      "DECAY": 0.7
+    },
+    "comp_wah": null,
+    "drive": {
+      "FUZZ": 7.0,
+      "LEVEL": 8.0
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 9.8,
+      "MIDDLE": 2.8,
+      "BASS": 5.3,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "SPEED": 4.5,
+      "INTENSITY": 6.5,
+      "MIX": 7.5,
+      "SWEEP": 5.5
+    },
+    "delay": {
+      "E_LEVEL": 2.0,
+      "F_BACK": 3.6,
+      "D_TIME": "1/8",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 3.5,
+      "TIME": 4.0,
+      "DAMPING": 5.5,
+      "DWELL": 3.5,
+      "LOW_CUT": 5.0,
+      "HIGH_CUT": 5.0
+    }
+  },
+  "sources": {
+    "gate": "\ud83d\udd2c",
+    "comp_wah": "",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83c\udfa8",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83c\udfa8"
+  },
+  "section": {
+    "label": "Lead",
+    "type": "quiet",
+    "start": 0.0,
+    "end": 5.5,
+    "index": 0,
+    "total_sections": 7
+  }
+}

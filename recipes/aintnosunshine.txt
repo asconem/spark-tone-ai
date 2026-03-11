@@ -1,0 +1,36 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): aintnosunshine.wav
+📅 Date: 2026-03-10 16:17:37
+🎯 DSP Analysis: Gain 0.39 | Presence 0.23 | Air 0.42 | Mids 0.63 | Width 0.59 | BPM 129
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 5 (Neck)
+   • VOLUME: 8
+   • TONE: 7
+--------------------------------------------------
+[COMP/WAH] LA COMP 🎨
+   • GAIN: 3.0              • LIMIT_COMPRESS_TOGGLE: Compress
+   • PEAK_REDUCTION: 2.0 
+--------------------------------------------------
+[AMP] AMERICAN DELUXE 🎨
+   • BASS: 5.0              • GAIN: 4.4           
+   • MIDDLE: 5.3            • TREBLE: 2.5         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -0.7            • 1600HZ: 0.6         
+   • 200HZ: -0.1            • 3200HZ: 0.9         
+   • 400HZ: 0.8             • 800HZ: 1.1          
+--------------------------------------------------
+[DELAY] ECHO TAPE 🔬
+   • BPM_MODE: On           • SHORT/LONG: 1/8d    
+   • SUSTAIN: 3.8           • TONE: 4.2           
+   • VOLUME: 3.6         
+--------------------------------------------------
+[REVERB] CHAMBER 🔬
+   • DAMPING: 5.5           • DWELL: 5.1          
+   • HIGH_CUT: 5.1          • LEVEL: 5.8          
+   • LOW_CUT: 4.5           • TIME: 4.2           
+--------------------------------------------------

@@ -1,0 +1,80 @@
+{
+  "song": "underthebridge.wav",
+  "date": "2026-03-10T18:41:21.158969",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 0.651,
+    "mids": 0.385,
+    "presence": 0.228,
+    "air": 0.581,
+    "width": 0.557,
+    "bpm": 117.5
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 5 (Neck)",
+    "volume": 8,
+    "tone": 7
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": "Red Comp",
+    "drive": "SAB Driver",
+    "amp": "Lux Verb",
+    "mod_eq": "Chorus",
+    "delay": "Vintage Delay",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": {
+      "OUTPUT": 6.0,
+      "SENSITIVITY": 4.0
+    },
+    "drive": {
+      "DRIVE": 5.1,
+      "TONE": 7.4,
+      "VOLUME": 5.4
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 8.2,
+      "MIDDLE": 4.2,
+      "BASS": 4.9,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "E_LEVEL": 3.0,
+      "RATE": 2.5,
+      "DEPTH": 3.5,
+      "TONE": 6.0
+    },
+    "delay": {
+      "REPEAT_RATE": "1/8d",
+      "ECHO": 3.4,
+      "INTENSITY": 3.9,
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 4.0,
+      "TIME": 3.8,
+      "DAMPING": 6.5,
+      "DWELL": 3.7,
+      "LOW_CUT": 5.6,
+      "HIGH_CUT": 3.9
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "\ud83c\udfa8",
+    "drive": "\ud83d\udd2c",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83c\udfa8",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  }
+}

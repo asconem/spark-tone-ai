@@ -1,0 +1,36 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): crossroads.wav
+📅 Date: 2026-03-10 16:37:56
+🎯 DSP Analysis: Gain 0.50 | Presence 0.26 | Air 0.41 | Mids 0.65 | Width 0.77 | BPM 129
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🔬
+   • LEVEL: 7.0             • OVERDRIVE: 1.0      
+   • TONE: 4.5           
+--------------------------------------------------
+[AMP] PLEXIGLAS 🎨
+   • BASS: 5.0              • GAIN: 2.0           
+   • MIDDLE: 5.5            • TREBLE: 3.9         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -1.0            • 1600HZ: 0.8         
+   • 200HZ: -0.4            • 3200HZ: 0.1         
+   • 400HZ: 0.9             • 800HZ: 1.2          
+--------------------------------------------------
+[DELAY] ECHO TAPE 🔬
+   • BPM_MODE: On           • SHORT/LONG: 1/8d    
+   • SUSTAIN: 3.6           • TONE: 4.2           
+   • VOLUME: 3.2         
+--------------------------------------------------
+[REVERB] ROOM STUDIO A 🔬
+   • DAMPING: 5.5           • DWELL: 4.5          
+   • HIGH_CUT: 5.1          • LEVEL: 5.8          
+   • LOW_CUT: 5.0           • TIME: 3.9           
+--------------------------------------------------

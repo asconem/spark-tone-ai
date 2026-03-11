@@ -1,0 +1,34 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): satanspeedsup.wav
+📅 Date: 2026-03-10 18:05:34
+🎯 DSP Analysis: Gain 0.64 | Presence 0.26 | Air 0.35 | Mids 0.75 | Width 0.60 | BPM 117
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[DRIVE] FUZZ FACE 🎨
+   • FUZZ: 7.0              • VOLUME: 7.0         
+--------------------------------------------------
+[AMP] BLUES BOY 🎨
+   • BASS: 5.0              • GAIN: 2.0           
+   • MIDDLE: 7.5            • TREBLE: 1.5         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -1.6            • 1600HZ: 1.3         
+   • 200HZ: -1.0            • 3200HZ: -1.7        
+   • 400HZ: 1.4             • 800HZ: 1.7          
+--------------------------------------------------
+[DELAY] VINTAGE DELAY 🔬
+   • BPM_MODE: On           • ECHO: 3.5           
+   • INTENSITY: 4.0         • REPEAT_RATE: 1/8d   
+--------------------------------------------------
+[REVERB] ROOM STUDIO A 🎨
+   • DAMPING: 5.0           • DWELL: 4.0          
+   • HIGH_CUT: 5.0          • LEVEL: 3.5          
+   • LOW_CUT: 5.0           • TIME: 3.0           
+--------------------------------------------------

@@ -1,0 +1,81 @@
+{
+  "song": "backinblack.wav",
+  "date": "2026-03-10T16:23:11.940476",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.722,
+    "mids": 0.528,
+    "presence": 0.288,
+    "air": 0.483,
+    "width": 0.859,
+    "bpm": 129.2
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": "Noise Gate",
+    "comp_wah": null,
+    "drive": "Booster",
+    "amp": "Plexiglas",
+    "mod_eq": "Guitar EQ",
+    "delay": "Vintage Delay",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": {
+      "THRESHOLD": 2.0,
+      "DECAY": 4.0
+    },
+    "comp_wah": null,
+    "drive": {
+      "GAIN": 3.0
+    },
+    "amp": {
+      "GAIN": 4.22126580898222,
+      "TREBLE": 6.347638207662816,
+      "MIDDLE": 4.280721215342705,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": 0.8,
+      "200HZ": 0.9,
+      "400HZ": 0.2,
+      "800HZ": 0.6,
+      "1600HZ": -0.2,
+      "3200HZ": 2.3,
+      "LEVEL": -0.4
+    },
+    "delay": {
+      "REPEAT_RATE": "1/8d",
+      "ECHO": 3.1,
+      "INTENSITY": 3.9,
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 4.7,
+      "TIME": 3.8,
+      "DAMPING": 5.9,
+      "DWELL": 3.4,
+      "LOW_CUT": 5.9,
+      "HIGH_CUT": 4.6
+    }
+  },
+  "sources": {
+    "gate": "\ud83d\udd2c",
+    "comp_wah": "",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  }
+}

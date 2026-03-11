@@ -1,0 +1,80 @@
+{
+  "song": "cochise.wav",
+  "date": "2026-03-10T16:33:25.661480",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 0.558,
+    "mids": 0.522,
+    "presence": 0.28,
+    "air": 0.48,
+    "width": 0.723,
+    "bpm": 107.7
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": "Tube Drive",
+    "amp": "Plexiglas",
+    "mod_eq": "Guitar EQ",
+    "delay": "Vintage Delay",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": {
+      "OVERDRIVE": 1.0,
+      "TONE": 5.6,
+      "LEVEL": 7.0
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 6.228117665527862,
+      "MIDDLE": 4.222702803823029,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -0.7,
+      "200HZ": -0.2,
+      "400HZ": 0.1,
+      "800HZ": 0.6,
+      "1600HZ": -0.2,
+      "3200HZ": 1.7,
+      "LEVEL": -0.1
+    },
+    "delay": {
+      "REPEAT_RATE": "1/8d",
+      "ECHO": 3.8,
+      "INTENSITY": 4.0,
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 5.3,
+      "TIME": 4.0,
+      "DAMPING": 5.9,
+      "DWELL": 4.2,
+      "LOW_CUT": 5.2,
+      "HIGH_CUT": 4.6
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "\ud83d\udd2c",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  }
+}

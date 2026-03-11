@@ -1,0 +1,86 @@
+{
+  "song": "heartshapedbox.wav",
+  "date": "2026-03-10T16:54:12.419891",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.644,
+    "mids": 0.544,
+    "presence": 0.287,
+    "air": 0.46,
+    "width": 0.64,
+    "bpm": 99.4
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 10,
+    "tone": 6
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": "Tube Drive",
+    "amp": "Black Duo",
+    "mod_eq": "Guitar EQ",
+    "delay": "Vintage Delay",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": {
+      "OVERDRIVE": 9.0,
+      "LEVEL": 10.0
+    },
+    "amp": {
+      "GAIN": 5.437377873484804,
+      "TREBLE": 2.0489468023889983,
+      "MIDDLE": 6.9419027317536806,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100Hz": 0.0,
+      "200Hz": 2.0,
+      "400Hz": 4.0,
+      "800Hz": 5.0,
+      "1600Hz": 3.0,
+      "3200Hz": 2.0
+    },
+    "delay": {
+      "REPEAT_RATE": "1/8d",
+      "ECHO": 3.4,
+      "INTENSITY": 4.0,
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 4.4,
+      "TIME": 3.9,
+      "DAMPING": 5.8,
+      "DWELL": 3.8,
+      "LOW_CUT": 5.6,
+      "HIGH_CUT": 4.8
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83c\udfa8",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  },
+  "section": {
+    "label": "Drive",
+    "type": "quiet",
+    "start": 0.0,
+    "end": 86.0,
+    "index": 0,
+    "total_sections": 4
+  }
+}

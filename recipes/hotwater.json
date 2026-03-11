@@ -1,0 +1,80 @@
+{
+  "song": "hotwater.wav",
+  "date": "2026-03-10T17:00:52.371801",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.467,
+    "mids": 0.8,
+    "presence": 0.26,
+    "air": 0.311,
+    "width": 0.801,
+    "bpm": 117.5
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": "Fuzz Face",
+    "amp": "Blues Boy",
+    "mod_eq": "Guitar EQ",
+    "delay": "Echo Tape",
+    "reverb": "Room Studio A"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": {
+      "FUZZ": 7.0,
+      "VOLUME": 7.0
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 1.5,
+      "MIDDLE": 8.001065038988315,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -2.6,
+      "200HZ": -1.7,
+      "400HZ": 1.7,
+      "800HZ": 1.9,
+      "1600HZ": 1.7,
+      "3200HZ": -2.8,
+      "LEVEL": 0.1
+    },
+    "delay": {
+      "SUSTAIN": 3.7,
+      "VOLUME": 3.3,
+      "TONE": 3.0,
+      "SHORT/LONG": "1/8d",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 3.5,
+      "TIME": 3.0,
+      "DAMPING": 5.0,
+      "DWELL": 4.0,
+      "LOW_CUT": 5.0,
+      "HIGH_CUT": 5.0
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83c\udfa8"
+  }
+}

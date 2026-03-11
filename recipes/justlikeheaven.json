@@ -1,0 +1,80 @@
+{
+  "song": "justlikeheaven.wav",
+  "date": "2026-03-10T17:16:49.954634",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 0.777,
+    "mids": 0.41,
+    "presence": 0.254,
+    "air": 0.555,
+    "width": 0.82,
+    "bpm": 152.0
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 1 (Bridge)",
+    "volume": 8,
+    "tone": 7
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": "Noise Gate",
+    "comp_wah": null,
+    "drive": "Black Op",
+    "amp": "Silver 120",
+    "mod_eq": "Chorus",
+    "delay": "Digital Delay",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": {
+      "THRESHOLD": 2.8,
+      "DECAY": 3.3
+    },
+    "comp_wah": null,
+    "drive": {
+      "DISTORTION": 7.5,
+      "FILTER": 4.1,
+      "VOLUME": 4.7
+    },
+    "amp": {
+      "GAIN": 4.273778354211338,
+      "TREBLE": 5.1,
+      "MIDDLE": 4.9,
+      "BASS": 4.9,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "E_LEVEL": 6.0,
+      "RATE": 4.0,
+      "DEPTH": 5.0,
+      "TONE": 6.0
+    },
+    "delay": {
+      "E_LEVEL": 2.9,
+      "F_BACK": 3.8,
+      "D_TIME": "1/8",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 4.2,
+      "TIME": 3.7,
+      "DAMPING": 6.3,
+      "DWELL": 3.1,
+      "LOW_CUT": 6.1,
+      "HIGH_CUT": 4.1
+    }
+  },
+  "sources": {
+    "gate": "\ud83d\udd2c",
+    "comp_wah": "",
+    "drive": "\ud83d\udd2c",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83c\udfa8",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  }
+}

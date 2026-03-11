@@ -1,0 +1,33 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): spiritofradio.wav
+📅 Date: 2026-03-10 18:36:21
+🎯 DSP Analysis: Gain 0.58 | Presence 0.28 | Air 0.41 | Mids 0.64 | Width 0.93 | BPM 136
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[DRIVE] BOOSTER 🎨
+   • GAIN: 2.0           
+--------------------------------------------------
+[AMP] J.H. TONE CITY 100 🎨
+   • BASS: 5.0              • GAIN: 3.3           
+   • MIDDLE: 6.6            • TREBLE: 1.6         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] CHORUS 🎨
+   • DEPTH: 7.5             • E_LEVEL: 6.0        
+   • RATE: 2.0              • TONE: 5.0           
+--------------------------------------------------
+[DELAY] ECHO TAPE 🎨
+   • BPM_MODE: Off          • SUSTAIN: 3.0           • TONE: 5.0           
+   • VOLUME: 4.0         
+--------------------------------------------------
+[REVERB] PLATE SHORT 🔬
+   • DAMPING: 5.4           • DWELL: 4.1          
+   • HIGH_CUT: 5.2          • LEVEL: 5.9          
+   • LOW_CUT: 5.3           • TIME: 4.3           
+--------------------------------------------------

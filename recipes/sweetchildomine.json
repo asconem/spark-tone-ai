@@ -1,0 +1,76 @@
+{
+  "song": "sweetchildomine.wav",
+  "date": "2026-03-10T18:29:20.143266",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.527,
+    "mids": 0.528,
+    "presence": 0.253,
+    "air": 0.505,
+    "width": 0.708,
+    "bpm": 123.0
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": "Tube Drive",
+    "amp": "Plexiglas",
+    "mod_eq": "Guitar EQ",
+    "delay": "Echo Tape",
+    "reverb": "Plate Long"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": {
+      "OVERDRIVE": 5.0,
+      "LEVEL": 8.0,
+      "TONE": 2.0
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 7.088980140838866,
+      "MIDDLE": 4.283442112476271,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -0.8,
+      "200HZ": -0.3,
+      "400HZ": 0.2,
+      "800HZ": 0.6,
+      "1600HZ": -0.2,
+      "3200HZ": 2.4,
+      "LEVEL": -0.2
+    },
+    "delay": {
+      "SUSTAIN": 3.6,
+      "VOLUME": 3.1,
+      "TONE": 5.4,
+      "SHORT/LONG": "1/8d",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 4.0
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83c\udfa8"
+  }
+}

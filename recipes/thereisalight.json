@@ -1,0 +1,80 @@
+{
+  "song": "thereisalight.wav",
+  "date": "2026-03-10T18:37:36.685695",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 0.447,
+    "mids": 0.57,
+    "presence": 0.262,
+    "air": 0.489,
+    "width": 0.632,
+    "bpm": 136.0
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 1 (Bridge)",
+    "volume": 8,
+    "tone": 9
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": "Red Comp",
+    "drive": null,
+    "amp": "AC Boost",
+    "mod_eq": "Guitar EQ",
+    "delay": "Echo Tape",
+    "reverb": "Chamber"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": {
+      "OUTPUT": 6.0,
+      "SENSITIVITY": 4.0
+    },
+    "drive": null,
+    "amp": {
+      "GAIN": 5.965893957040146,
+      "TREBLE": 2.557302860563807,
+      "MIDDLE": 3.703272136966682,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -0.3,
+      "200HZ": 0.2,
+      "400HZ": 0.4,
+      "800HZ": 0.9,
+      "1600HZ": 0.2,
+      "3200HZ": 2.7,
+      "LEVEL": -0.3
+    },
+    "delay": {
+      "SUSTAIN": 3.7,
+      "VOLUME": 3.4,
+      "TONE": 5.2,
+      "SHORT/LONG": "1/8d",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 5.6,
+      "TIME": 4.5,
+      "DAMPING": 5.9,
+      "DWELL": 4.8,
+      "LOW_CUT": 4.8,
+      "HIGH_CUT": 4.6
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "\ud83c\udfa8",
+    "drive": "",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  }
+}

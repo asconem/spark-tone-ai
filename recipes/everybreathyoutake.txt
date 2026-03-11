@@ -1,0 +1,39 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): everybreathyoutake.wav
+📅 Date: 2026-03-10 16:41:03
+🎯 DSP Analysis: Gain 0.53 | Presence 0.26 | Air 0.38 | Mids 0.68 | Width 0.78 | BPM 117
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 4 (Neck+Mid)
+   • VOLUME: 8
+   • TONE: 7
+--------------------------------------------------
+[COMP/WAH] LA COMP 🎨
+   • GAIN: 4.0              • LIMIT_COMPRESS_TOGGLE: Compress
+   • PEAK_REDUCTION: 3.0 
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🔬
+   • LEVEL: 8.9             • OVERDRIVE: 2.4      
+   • TONE: 3.9           
+--------------------------------------------------
+[AMP] SILVER 120 🎨
+   • BASS: 4.9              • GAIN: 4.8           
+   • MIDDLE: 8.1            • TREBLE: 1.3         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] CHORUS 🎨
+   • DEPTH: 3.5             • E_LEVEL: 3.0        
+   • RATE: 2.5              • TONE: 6.0           
+--------------------------------------------------
+[DELAY] ECHO TAPE 🔬
+   • BPM_MODE: On           • SHORT/LONG: 1/8d    
+   • SUSTAIN: 3.6           • TONE: 3.7           
+   • VOLUME: 3.1         
+--------------------------------------------------
+[REVERB] ROOM STUDIO A 🔬
+   • DAMPING: 5.3           • DWELL: 4.3          
+   • HIGH_CUT: 5.3          • LEVEL: 5.7          
+   • LOW_CUT: 5.1           • TIME: 4.2           
+--------------------------------------------------

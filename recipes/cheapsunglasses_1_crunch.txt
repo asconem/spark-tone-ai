@@ -1,0 +1,39 @@
+════════════════════════════════════════════════════════════
+SECTION 1/5: CRUNCH (0:00 — 1:05)
+════════════════════════════════════════════════════════════
+🎸 SPARK 2 RECIPE: cheapsunglasses.wav
+📅 Date: 2026-03-10 16:30:41
+🎯 DSP Analysis: Gain 0.48 | Presence 0.28 | Air 0.38 | Mids 0.67 | Width 0.93 | BPM 157
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[DRIVE] OVER DRIVE 🎨
+   • DRIVE: 6.0             • LEVEL: 6.0          
+   • TONE: 7.0           
+--------------------------------------------------
+[AMP] PLEXIGLAS 🎨
+   • BASS: 5.0              • GAIN: 2.0           
+   • MIDDLE: 5.7            • TREBLE: 2.9         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -1.4            • 1600HZ: 0.9         
+   • 200HZ: -0.7            • 3200HZ: -0.7        
+   • 400HZ: 1.0             • 800HZ: 1.3          
+--------------------------------------------------
+[DELAY] ECHO TAPE 🔬
+   • BPM_MODE: On           • SHORT/LONG: 1/8d    
+   • SUSTAIN: 3.7           • TONE: 3.8           
+   • VOLUME: 3.3         
+--------------------------------------------------
+[REVERB] ROOM STUDIO A 🔬
+   • DAMPING: 5.3           • DWELL: 4.6          
+   • HIGH_CUT: 5.3          • LEVEL: 6.6          
+   • LOW_CUT: 4.9           • TIME: 4.0           
+--------------------------------------------------

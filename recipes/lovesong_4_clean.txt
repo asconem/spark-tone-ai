@@ -1,0 +1,36 @@
+════════════════════════════════════════════════════════════
+SECTION 4/4: CLEAN (2:30 — 3:29)
+════════════════════════════════════════════════════════════
+🎸 SPARK 2 RECIPE: lovesong.wav
+📅 Date: 2026-03-10 17:35:50
+🎯 DSP Analysis: Gain 0.34 | Presence 0.22 | Air 0.50 | Mids 0.51 | Width 0.68 | BPM 144
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 4 (Neck+Mid)
+   • VOLUME: 8
+   • TONE: 8
+--------------------------------------------------
+[COMP/WAH] RED COMP 🔬
+   • OUTPUT: 7.0            • SENSITIVITY: 7.0    
+--------------------------------------------------
+[AMP] BLACK DUO 🎨
+   • BASS: 4.8              • GAIN: 7.4           
+   • MIDDLE: 6.6            • TREBLE: 4.2         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] CHORUS 🎨
+   • DEPTH: 5.0             • E_LEVEL: 6.0        
+   • RATE: 4.0              • TONE: 7.0           
+--------------------------------------------------
+[DELAY] VINTAGE DELAY 🔬
+   • BPM_MODE: On           • ECHO: 4.6           
+   • INTENSITY: 4.3         • REPEAT_RATE: 1/4    
+--------------------------------------------------
+[REVERB] CHAMBER 🔬
+   • DAMPING: 6.0           • DWELL: 5.3          
+   • HIGH_CUT: 4.5          • LEVEL: 6.5          
+   • LOW_CUT: 4.4           • TIME: 4.0           
+--------------------------------------------------

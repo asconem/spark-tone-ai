@@ -1,0 +1,35 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): howsoonisnow.wav
+📅 Date: 2026-03-10 17:07:22
+🎯 DSP Analysis: Gain 0.53 | Presence 0.28 | Air 0.48 | Mids 0.57 | Width 0.73 | BPM 129
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 5 (Neck)
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🔬
+   • LEVEL: 7.7             • OVERDRIVE: 1.5      
+   • TONE: 5.5           
+--------------------------------------------------
+[AMP] AC BOOST 🎨
+   • BASS: 4.9              • GAIN: 2.0           
+   • MIDDLE: 3.9            • TREBLE: 2.5         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] TREMOLO 🎨
+   • DEPTH: 8.0             • LEVEL: 8.0          
+   • SPEED: 6.0          
+--------------------------------------------------
+[DELAY] ECHO TAPE 🔬
+   • BPM_MODE: On           • SHORT/LONG: 1/8d    
+   • SUSTAIN: 3.6           • TONE: 5.0           
+   • VOLUME: 3.1         
+--------------------------------------------------
+[REVERB] ROOM STUDIO A 🔬
+   • DAMPING: 5.9           • DWELL: 4.4          
+   • HIGH_CUT: 4.7          • LEVEL: 5.5          
+   • LOW_CUT: 5.1           • TIME: 4.1           
+--------------------------------------------------

@@ -1,0 +1,33 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): powertolove.wav
+📅 Date: 2026-03-10 17:56:01
+🎯 DSP Analysis: Gain 0.64 | Presence 0.25 | Air 0.47 | Mids 0.58 | Width 0.52 | BPM 172
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 1 (Bridge)
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[DRIVE] J.H. OCTAVE FUZZ 🎨
+   • FUZZ: 7.0              • LEVEL: 8.0          
+--------------------------------------------------
+[AMP] J.H. SUPER 100 🎨
+   • BASS: 4.9              • GAIN: 2.0           
+   • MIDDLE: 5.0            • TREBLE: 4.6         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] J.H. LEGENDARY VIBE 🎨
+   • INTENSITY: 6.5         • MIX: 7.5            
+   • SPEED: 4.5             • SWEEP: 5.5          
+--------------------------------------------------
+[DELAY] VINTAGE DELAY 🔬
+   • BPM_MODE: On           • ECHO: 3.4           
+   • INTENSITY: 4.0         • REPEAT_RATE: 1/8d   
+--------------------------------------------------
+[REVERB] PLATE SHORT 🎨
+   • DAMPING: 5.5           • DWELL: 3.5          
+   • HIGH_CUT: 5.0          • LEVEL: 3.5          
+   • LOW_CUT: 5.0           • TIME: 4.0           
+--------------------------------------------------

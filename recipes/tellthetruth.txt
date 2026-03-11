@@ -1,0 +1,36 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): tellthetruth.wav
+📅 Date: 2026-03-10 18:31:32
+🎯 DSP Analysis: Gain 0.51 | Presence 0.31 | Air 0.35 | Mids 0.76 | Width 0.68 | BPM 103
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 4 (Neck+Mid)
+   • VOLUME: 8
+   • TONE: 7
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🔬
+   • LEVEL: 7.4             • OVERDRIVE: 1.3      
+   • TONE: 3.4           
+--------------------------------------------------
+[AMP] LUX VERB 🎨
+   • BASS: 5.0              • GAIN: 2.0           
+   • MIDDLE: 8.1            • TREBLE: 1.5         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -0.9            • 1600HZ: 1.6         
+   • 200HZ: -0.3            • 3200HZ: -1.4        
+   • 400HZ: 1.5             • 800HZ: 1.8          
+--------------------------------------------------
+[DELAY] ECHO TAPE 🔬
+   • BPM_MODE: On           • SHORT/LONG: 1/8d    
+   • SUSTAIN: 3.6           • TONE: 3.4           
+   • VOLUME: 3.2         
+--------------------------------------------------
+[REVERB] PLATE RICH 🎨
+   • DAMPING: 5.0           • DWELL: 5.5          
+   • HIGH_CUT: 5.5          • LEVEL: 4.5          
+   • LOW_CUT: 4.0           • TIME: 5.0           
+--------------------------------------------------

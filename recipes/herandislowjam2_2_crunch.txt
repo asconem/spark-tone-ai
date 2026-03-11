@@ -1,0 +1,38 @@
+════════════════════════════════════════════════════════════
+SECTION 2/5: CRUNCH (1:20 — 5:05)
+════════════════════════════════════════════════════════════
+🎸 SPARK 2 RECIPE: herandislowjam2.wav
+📅 Date: 2026-03-10 16:58:53
+🎯 DSP Analysis: Gain 0.48 | Presence 0.30 | Air 0.40 | Mids 0.65 | Width 0.89 | BPM 117
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[DRIVE] FUZZ FACE 🎨
+   • FUZZ: 7.0              • VOLUME: 7.0         
+--------------------------------------------------
+[AMP] BLUES BOY 🎨
+   • BASS: 5.0              • GAIN: 2.0           
+   • MIDDLE: 6.5            • TREBLE: 1.5         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -2.6            • 1600HZ: 0.5         
+   • 200HZ: -1.6            • 3200HZ: -0.5        
+   • 400HZ: 0.8             • 800HZ: 1.2          
+--------------------------------------------------
+[DELAY] ECHO TAPE 🔬
+   • BPM_MODE: On           • SHORT/LONG: 1/8d    
+   • SUSTAIN: 3.7           • TONE: 4.0           
+   • VOLUME: 3.3         
+--------------------------------------------------
+[REVERB] ROOM STUDIO A 🎨
+   • DAMPING: 5.0           • DWELL: 4.0          
+   • HIGH_CUT: 5.0          • LEVEL: 3.5          
+   • LOW_CUT: 5.0           • TIME: 3.0           
+--------------------------------------------------

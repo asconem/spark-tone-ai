@@ -1,0 +1,42 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): sharpdressedman.wav
+📅 Date: 2026-03-10 18:10:49
+🎯 DSP Analysis: Gain 0.75 | Presence 0.25 | Air 0.52 | Mids 0.47 | Width 0.42 | BPM 123
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[GATE] NOISE GATE 🔬
+   • DECAY: 3.6             • THRESHOLD: 2.4      
+--------------------------------------------------
+[COMP/WAH] LA COMP 🎨
+   • GAIN: 5.0              • LIMIT_COMPRESS_TOGGLE: Compress
+   • PEAK_REDUCTION: 7.0 
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🎨
+   • LEVEL: 7.0             • OVERDRIVE: 8.0      
+   • TONE: 5.0           
+--------------------------------------------------
+[AMP] PLEXIGLAS 🎨
+   • BASS: 5.1              • GAIN: 2.0           
+   • MIDDLE: 3.7            • TREBLE: 8.1         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] CHORUS 🎨
+   • DEPTH: 1.5             • E_LEVEL: 3.0        
+   • RATE: 2.0              • TONE: 5.0           
+--------------------------------------------------
+[DELAY] DIGITAL DELAY 🔬
+   • BPM_MODE: On           • D_TIME: 1/8         
+   • E_LEVEL: 3.0           • F_BACK: 3.8         
+   • MODE: 50ms          
+--------------------------------------------------
+[REVERB] PLATE SHORT 🔬
+   • DAMPING: 6.1           • DWELL: 3.2          
+   • HIGH_CUT: 4.4          • LEVEL: 3.1          
+   • LOW_CUT: 6.0           • TIME: 3.7           
+--------------------------------------------------

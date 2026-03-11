@@ -1,0 +1,85 @@
+{
+  "song": "comfortablynumb.wav",
+  "date": "2026-03-10T16:35:13.280748",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.833,
+    "mids": 0.531,
+    "presence": 0.217,
+    "air": 0.504,
+    "width": 0.964,
+    "bpm": 123.0
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 5 (Neck)",
+    "volume": 10,
+    "tone": 7
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": "Noise Gate",
+    "comp_wah": null,
+    "drive": "Guitar Muff",
+    "amp": "J.H. Tone City 100",
+    "mod_eq": "Flanger",
+    "delay": "Multi Head",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": {
+      "THRESHOLD": 3.1,
+      "DECAY": 2.9
+    },
+    "comp_wah": null,
+    "drive": {
+      "SUSTAIN": 9.0,
+      "TONE": 4.5,
+      "VOLUME": 7.0
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 5.0,
+      "MIDDLE": 5.1,
+      "BASS": 4.8,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "RATE": 0.2,
+      "DEPTH": 6.0,
+      "MIX": 4.0
+    },
+    "delay": {
+      "INTENSITY": 5.5,
+      "ECHO_VOL": 4.5
+    },
+    "reverb": {
+      "LEVEL": 4.4,
+      "TIME": 3.3,
+      "DAMPING": 6.0,
+      "DWELL": 2.8,
+      "LOW_CUT": 6.3,
+      "HIGH_CUT": 4.5
+    }
+  },
+  "sources": {
+    "gate": "\ud83d\udd2c",
+    "comp_wah": "",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83c\udfa8",
+    "delay": "\ud83c\udfa8",
+    "reverb": "\ud83d\udd2c"
+  },
+  "section": {
+    "label": "Lead",
+    "type": "quiet",
+    "start": 365.0,
+    "end": 382.28,
+    "index": 2,
+    "total_sections": 3
+  }
+}

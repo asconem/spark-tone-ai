@@ -1,0 +1,77 @@
+{
+  "song": "picturesofyou.wav",
+  "date": "2026-03-10T17:53:35.604244",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 0.615,
+    "mids": 0.505,
+    "presence": 0.286,
+    "air": 0.485,
+    "width": 0.516,
+    "bpm": 117.5
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 5 (Neck)",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": "Over Drive",
+    "amp": "Silver 120",
+    "mod_eq": "Chorus",
+    "delay": "Echo Filt",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": {
+      "DRIVE": 4.5,
+      "TONE": 5.7,
+      "LEVEL": 8.5
+    },
+    "amp": {
+      "GAIN": 5.651516912479657,
+      "TREBLE": 2.4,
+      "MIDDLE": 6.1,
+      "BASS": 4.9,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "E_LEVEL": 7.0,
+      "RATE": 4.0,
+      "DEPTH": 6.0,
+      "TONE": 7.0
+    },
+    "delay": {
+      "DELAY": 300.0,
+      "FEEDBACK": 5.0,
+      "LEVEL": 4.0,
+      "TONE": 6.0
+    },
+    "reverb": {
+      "LEVEL": 4.1,
+      "TIME": 4.1,
+      "DAMPING": 5.9,
+      "DWELL": 3.9,
+      "LOW_CUT": 5.5,
+      "HIGH_CUT": 4.6
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "\ud83d\udd2c",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83c\udfa8",
+    "delay": "\ud83c\udfa8",
+    "reverb": "\ud83d\udd2c"
+  }
+}

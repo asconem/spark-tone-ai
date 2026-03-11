@@ -1,0 +1,80 @@
+{
+  "song": "whydoeslovegottobesosad.wav",
+  "date": "2026-03-10T18:53:38.728658",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.598,
+    "mids": 0.565,
+    "presence": 0.336,
+    "air": 0.449,
+    "width": 0.684,
+    "bpm": 123.0
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 4 (Neck+Mid)",
+    "volume": 8,
+    "tone": 7
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": "Tube Drive",
+    "amp": "Lux Verb",
+    "mod_eq": "Guitar EQ",
+    "delay": "Vintage Delay",
+    "reverb": "Plate Rich"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": {
+      "OVERDRIVE": 1.6,
+      "TONE": 5.1,
+      "LEVEL": 7.8
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 2.6792939624292873,
+      "MIDDLE": 6.151332548568819,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -0.4,
+      "200HZ": -0.0,
+      "400HZ": 0.4,
+      "800HZ": 0.8,
+      "1600HZ": 0.1,
+      "3200HZ": 1.0,
+      "LEVEL": -0.2
+    },
+    "delay": {
+      "REPEAT_RATE": "1/8d",
+      "ECHO": 3.6,
+      "INTENSITY": 4.0,
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 4.5,
+      "TIME": 5.0,
+      "DAMPING": 5.0,
+      "DWELL": 5.5,
+      "LOW_CUT": 4.0,
+      "HIGH_CUT": 5.5
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "\ud83d\udd2c",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83c\udfa8"
+  }
+}

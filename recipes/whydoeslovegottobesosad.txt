@@ -1,0 +1,35 @@
+ 🎸 SPARK 2 RECIPE (HYBRID MODE): whydoeslovegottobesosad.wav
+📅 Date: 2026-03-10 18:53:38
+🎯 DSP Analysis: Gain 0.60 | Presence 0.34 | Air 0.45 | Mids 0.57 | Width 0.68 | BPM 123
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 4 (Neck+Mid)
+   • VOLUME: 8
+   • TONE: 7
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🔬
+   • LEVEL: 7.8             • OVERDRIVE: 1.6      
+   • TONE: 5.1           
+--------------------------------------------------
+[AMP] LUX VERB 🎨
+   • BASS: 5.0              • GAIN: 2.0           
+   • MIDDLE: 6.2            • TREBLE: 2.7         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -0.4            • 1600HZ: 0.1         
+   • 200HZ: -0.0            • 3200HZ: 1.0         
+   • 400HZ: 0.4             • 800HZ: 0.8          
+--------------------------------------------------
+[DELAY] VINTAGE DELAY 🔬
+   • BPM_MODE: On           • ECHO: 3.6           
+   • INTENSITY: 4.0         • REPEAT_RATE: 1/8d   
+--------------------------------------------------
+[REVERB] PLATE RICH 🎨
+   • DAMPING: 5.0           • DWELL: 5.5          
+   • HIGH_CUT: 5.5          • LEVEL: 4.5          
+   • LOW_CUT: 4.0           • TIME: 5.0           
+--------------------------------------------------

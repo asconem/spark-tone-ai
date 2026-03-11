@@ -1,0 +1,37 @@
+════════════════════════════════════════════════════════════
+SECTION 5/6: LEAD (3:31 — 4:58)
+════════════════════════════════════════════════════════════
+🎸 SPARK 2 RECIPE: superbug.wav
+📅 Date: 2026-03-10 18:27:07
+🎯 DSP Analysis: Gain 0.87 | Presence 0.32 | Air 0.39 | Mids 0.71 | Width 0.64 | BPM 136
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[GATE] NOISE GATE 🔬
+   • DECAY: 2.8             • THRESHOLD: 3.3      
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🎨
+   • LEVEL: 5.0             • OVERDRIVE: 6.0      
+   • TONE: 7.0           
+--------------------------------------------------
+[AMP] INSANE 6508 🎨
+   • BASS: 5.0              • GAIN: 2.0           
+   • MIDDLE: 7.1            • TREBLE: 3.2         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: 1.2             • 1600HZ: 1.3         
+   • 200HZ: 1.1             • 3200HZ: -0.5        
+   • 400HZ: 1.2             • 800HZ: 1.5          
+--------------------------------------------------
+[REVERB] PLATE SHORT 🔬
+   • DAMPING: 5.3           • DWELL: 2.6          
+   • HIGH_CUT: 5.3          • LEVEL: 2.9          
+   • LOW_CUT: 6.5           • TIME: 2.8           
+--------------------------------------------------

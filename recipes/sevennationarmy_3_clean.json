@@ -1,0 +1,90 @@
+{
+  "song": "sevennationarmy.wav",
+  "date": "2026-03-10T18:09:07.209134",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 0.0,
+    "mids": 0.674,
+    "presence": 0.262,
+    "air": 0.381,
+    "width": 0.435,
+    "bpm": 123.0
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 5 (Neck)",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": "LA Comp",
+    "drive": "J.H. Octave Fuzz",
+    "amp": "J.H. Sun 100S",
+    "mod_eq": "Guitar EQ",
+    "delay": "Vintage Delay",
+    "reverb": "Hall Natural"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": {
+      "GAIN": 7.4,
+      "PEAK_REDUCTION": 6.2
+    },
+    "drive": {
+      "FUZZ": 7.0,
+      "LEVEL": 8.0
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 1.5,
+      "MIDDLE": 6.23695055081488,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -4.6,
+      "200HZ": -2.9,
+      "400HZ": 1.0,
+      "800HZ": 1.4,
+      "1600HZ": 1.0,
+      "3200HZ": -0.9,
+      "LEVEL": 0.4
+    },
+    "delay": {
+      "REPEAT_RATE": "1/4",
+      "ECHO": 6.0,
+      "INTENSITY": 4.6,
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 8.0,
+      "TIME": 4.3,
+      "DAMPING": 5.3,
+      "DWELL": 7.0,
+      "LOW_CUT": 3.0,
+      "HIGH_CUT": 5.3
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "\ud83d\udd2c",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  },
+  "section": {
+    "label": "Clean",
+    "type": "quiet",
+    "start": 71.0,
+    "end": 120.0,
+    "index": 2,
+    "total_sections": 6
+  }
+}

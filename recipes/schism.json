@@ -1,0 +1,83 @@
+{
+  "song": "schism.wav",
+  "date": "2026-03-10T18:07:50.270146",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 0.609,
+    "mids": 0.414,
+    "presence": 0.271,
+    "air": 0.549,
+    "width": 0.705,
+    "bpm": 107.7
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 8,
+    "tone": 6
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": "LA Comp",
+    "drive": "Tube Drive",
+    "amp": "SLO 100",
+    "mod_eq": "Guitar EQ",
+    "delay": "Echo Filt",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": {
+      "GAIN": 6.9,
+      "PEAK_REDUCTION": 5.6
+    },
+    "drive": {
+      "OVERDRIVE": 3.0,
+      "TONE": 4.0,
+      "LEVEL": 6.0
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 6.604235366644959,
+      "MIDDLE": 4.143269316017922,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -0.3,
+      "200HZ": 0.0,
+      "400HZ": -0.5,
+      "800HZ": 0.1,
+      "1600HZ": -1.1,
+      "3200HZ": 3.5,
+      "LEVEL": -0.1
+    },
+    "delay": {
+      "DELAY": 400.0,
+      "FEEDBACK": 2.0,
+      "LEVEL": 3.0,
+      "TONE": 6.0
+    },
+    "reverb": {
+      "LEVEL": 4.9,
+      "TIME": 3.9,
+      "DAMPING": 6.3,
+      "DWELL": 4.0,
+      "LOW_CUT": 5.4,
+      "HIGH_CUT": 4.2
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "\ud83d\udd2c",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83c\udfa8",
+    "reverb": "\ud83d\udd2c"
+  }
+}

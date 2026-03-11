@@ -1,0 +1,37 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): paranoid.wav
+📅 Date: 2026-03-10 17:50:50
+🎯 DSP Analysis: Gain 0.63 | Presence 0.24 | Air 0.45 | Mids 0.57 | Width 0.93 | BPM 161
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 10
+   • TONE: 6
+--------------------------------------------------
+[GATE] NOISE GATE 🎨
+   • DECAY: 1.0             • THRESHOLD: 3.5      
+--------------------------------------------------
+[DRIVE] BOOSTER 🎨
+   • GAIN: 9.0           
+--------------------------------------------------
+[AMP] PLEXIGLAS 🎨
+   • BASS: 5.0              • GAIN: 3.3           
+   • MIDDLE: 4.7            • TREBLE: 5.3         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: 0.3             • 1600HZ: 0.2         
+   • 200HZ: 0.5             • 3200HZ: 1.5         
+   • 400HZ: 0.4             • 800HZ: 0.8          
+--------------------------------------------------
+[DELAY] VINTAGE DELAY 🔬
+   • BPM_MODE: On           • ECHO: 3.5           
+   • INTENSITY: 4.0         • REPEAT_RATE: 1/8d   
+--------------------------------------------------
+[REVERB] PLATE SHORT 🔬
+   • DAMPING: 5.7           • DWELL: 3.9          
+   • HIGH_CUT: 4.8          • LEVEL: 5.7          
+   • LOW_CUT: 5.5           • TIME: 4.0           
+--------------------------------------------------

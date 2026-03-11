@@ -1,0 +1,35 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): cochise.wav
+📅 Date: 2026-03-10 16:33:25
+🎯 DSP Analysis: Gain 0.56 | Presence 0.28 | Air 0.48 | Mids 0.52 | Width 0.72 | BPM 108
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🔬
+   • LEVEL: 7.0             • OVERDRIVE: 1.0      
+   • TONE: 5.6           
+--------------------------------------------------
+[AMP] PLEXIGLAS 🎨
+   • BASS: 5.0              • GAIN: 2.0           
+   • MIDDLE: 4.2            • TREBLE: 6.2         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -0.7            • 1600HZ: -0.2        
+   • 200HZ: -0.2            • 3200HZ: 1.7         
+   • 400HZ: 0.1             • 800HZ: 0.6          
+--------------------------------------------------
+[DELAY] VINTAGE DELAY 🔬
+   • BPM_MODE: On           • ECHO: 3.8           
+   • INTENSITY: 4.0         • REPEAT_RATE: 1/8d   
+--------------------------------------------------
+[REVERB] PLATE SHORT 🔬
+   • DAMPING: 5.9           • DWELL: 4.2          
+   • HIGH_CUT: 4.6          • LEVEL: 5.3          
+   • LOW_CUT: 5.2           • TIME: 4.0           
+--------------------------------------------------

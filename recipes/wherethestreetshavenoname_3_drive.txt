@@ -1,0 +1,41 @@
+════════════════════════════════════════════════════════════
+SECTION 3/4: DRIVE (4:34 — 4:52)
+════════════════════════════════════════════════════════════
+🎸 SPARK 2 RECIPE: wherethestreetshavenoname.wav
+📅 Date: 2026-03-10 18:46:22
+🎯 DSP Analysis: Gain 0.55 | Presence 0.26 | Air 0.52 | Mids 0.53 | Width 0.66 | BPM 123
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 1 (Bridge)
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[COMP/WAH] RED COMP 🎨
+   • OUTPUT: 7.0            • SENSITIVITY: 6.0    
+--------------------------------------------------
+[DRIVE] CLONE DRIVE 🎨
+   • GAIN: 3.0              • OUTPUT: 6.0         
+   • TREBLE: 7.0         
+--------------------------------------------------
+[AMP] AC BOOST 🎨
+   • BASS: 4.9              • GAIN: 3.0           
+   • MIDDLE: 3.4            • TREBLE: 4.2         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] CHORUS 🎨
+   • DEPTH: 2.5             • E_LEVEL: 4.0        
+   • RATE: 3.0              • TONE: 6.0           
+--------------------------------------------------
+[DELAY] DIGITAL DELAY 🎨
+   • BPM_MODE: Off          • D_TIME: 50.0        
+   • E_LEVEL: 6.0           • F_BACK: 4.0         
+   • MODE: 500ms         
+--------------------------------------------------
+[REVERB] PLATE SHORT 🔬
+   • DAMPING: 6.1           • DWELL: 4.2          
+   • HIGH_CUT: 4.4          • LEVEL: 5.1          
+   • LOW_CUT: 5.2           • TIME: 4.4           
+--------------------------------------------------

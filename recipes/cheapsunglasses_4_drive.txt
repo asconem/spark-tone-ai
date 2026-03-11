@@ -1,0 +1,38 @@
+════════════════════════════════════════════════════════════
+SECTION 4/5: DRIVE (2:09 — 2:44)
+════════════════════════════════════════════════════════════
+🎸 SPARK 2 RECIPE: cheapsunglasses.wav
+📅 Date: 2026-03-10 16:30:41
+🎯 DSP Analysis: Gain 0.61 | Presence 0.22 | Air 0.48 | Mids 0.57 | Width 0.56 | BPM 129
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[DRIVE] OVER DRIVE 🎨
+   • DRIVE: 6.0             • LEVEL: 6.0          
+   • TONE: 7.0           
+--------------------------------------------------
+[AMP] PLEXIGLAS 🎨
+   • BASS: 5.0              • GAIN: 2.0           
+   • MIDDLE: 4.7            • TREBLE: 6.1         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -0.6            • 1600HZ: 0.2         
+   • 200HZ: -0.2            • 3200HZ: 1.7         
+   • 400HZ: 0.4             • 800HZ: 0.8          
+--------------------------------------------------
+[DELAY] VINTAGE DELAY 🔬
+   • BPM_MODE: On           • ECHO: 3.6           
+   • INTENSITY: 4.0         • REPEAT_RATE: 1/8d   
+--------------------------------------------------
+[REVERB] PLATE SHORT 🔬
+   • DAMPING: 5.9           • DWELL: 4.0          
+   • HIGH_CUT: 4.7          • LEVEL: 4.3          
+   • LOW_CUT: 5.4           • TIME: 3.7           
+--------------------------------------------------

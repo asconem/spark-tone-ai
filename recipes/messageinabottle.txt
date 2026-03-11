@@ -1,0 +1,38 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): messageinabottle.wav
+📅 Date: 2026-03-10 17:42:34
+🎯 DSP Analysis: Gain 0.60 | Presence 0.30 | Air 0.46 | Mids 0.58 | Width 0.78 | BPM 152
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 4 (Neck+Mid)
+   • VOLUME: 9
+   • TONE: 8
+--------------------------------------------------
+[COMP/WAH] SUSTAIN COMP 🎨
+   • ATTACK: 3.0            • LEVEL: 6.0          
+   • SUSTAIN: 4.0           • TONE: 7.0           
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🔬
+   • LEVEL: 9.0             • OVERDRIVE: 2.5      
+   • TONE: 5.3           
+--------------------------------------------------
+[AMP] SILVER 120 🎨
+   • BASS: 4.9              • GAIN: 5.5           
+   • MIDDLE: 6.9            • TREBLE: 1.8         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] CHORUS 🎨
+   • DEPTH: 5.0             • E_LEVEL: 7.0        
+   • RATE: 4.0              • TONE: 6.0           
+--------------------------------------------------
+[DELAY] VINTAGE DELAY 🔬
+   • BPM_MODE: On           • ECHO: 3.6           
+   • INTENSITY: 4.0         • REPEAT_RATE: 1/8d   
+--------------------------------------------------
+[REVERB] PLATE SHORT 🔬
+   • DAMPING: 5.8           • DWELL: 4.0          
+   • HIGH_CUT: 4.8          • LEVEL: 5.3          
+   • LOW_CUT: 5.4           • TIME: 4.1           
+--------------------------------------------------

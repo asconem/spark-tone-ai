@@ -1,0 +1,38 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): lastnite.wav
+📅 Date: 2026-03-10 17:25:21
+🎯 DSP Analysis: Gain 0.66 | Presence 0.28 | Air 0.51 | Mids 0.45 | Width 0.63 | BPM 103
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 1 (Bridge)
+   • VOLUME: 10
+   • TONE: 7
+--------------------------------------------------
+[COMP/WAH] RED COMP 🎨
+   • OUTPUT: 7.0            • SENSITIVITY: 8.0    
+--------------------------------------------------
+[DRIVE] BLACK OP 🎨
+   • DISTORTION: 7.0        • FILTER: 6.0         
+   • VOLUME: 6.0         
+--------------------------------------------------
+[AMP] LUX VERB 🎨
+   • BASS: 5.0              • GAIN: 2.0           
+   • MIDDLE: 5.0            • TREBLE: 4.9         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -1.0            • 1600HZ: -1.5        
+   • 200HZ: -0.5            • 3200HZ: 2.2         
+   • 400HZ: -0.5            • 800HZ: 0.1          
+--------------------------------------------------
+[DELAY] VINTAGE DELAY 🔬
+   • BPM_MODE: On           • ECHO: 3.3           
+   • INTENSITY: 3.9         • REPEAT_RATE: 1/8d   
+--------------------------------------------------
+[REVERB] PLATE SHORT 🔬
+   • DAMPING: 6.1           • DWELL: 3.7          
+   • HIGH_CUT: 4.4          • LEVEL: 4.2          
+   • LOW_CUT: 5.7           • TIME: 3.9           
+--------------------------------------------------

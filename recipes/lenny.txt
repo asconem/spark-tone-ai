@@ -1,0 +1,36 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): lenny.wav
+📅 Date: 2026-03-10 17:29:18
+🎯 DSP Analysis: Gain 0.36 | Presence 0.25 | Air 0.45 | Mids 0.54 | Width 0.75 | BPM 117
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 4 (Neck+Mid)
+   • VOLUME: 10
+   • TONE: 7
+--------------------------------------------------
+[COMP/WAH] OPTICAL COMP 🎨
+   • COMP: 3.0              • PAD_SWITCH: -15dB   
+   • VOLUME: 6.0         
+--------------------------------------------------
+[AMP] ODS 50 🎨
+   • BASS: 5.0              • GAIN: 7.1           
+   • MIDDLE: 2.9            • TREBLE: 2.2         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -0.9            • 1600HZ: -0.0        
+   • 200HZ: -0.2            • 3200HZ: 1.7         
+   • 400HZ: 0.3             • 800HZ: 0.7          
+--------------------------------------------------
+[DELAY] ECHO TAPE 🔬
+   • BPM_MODE: On           • SHORT/LONG: 1/8d    
+   • SUSTAIN: 3.9           • TONE: 4.7           
+   • VOLUME: 3.7         
+--------------------------------------------------
+[REVERB] PLATE RICH 🎨
+   • DAMPING: 5.0           • DWELL: 5.0          
+   • HIGH_CUT: 5.0          • LEVEL: 5.5          
+   • LOW_CUT: 5.0           • TIME: 6.0           
+--------------------------------------------------

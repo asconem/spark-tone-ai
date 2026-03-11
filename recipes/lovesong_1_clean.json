@@ -1,0 +1,84 @@
+{
+  "song": "lovesong.wav",
+  "date": "2026-03-10T17:35:28.235390",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 0.0,
+    "mids": 0.604,
+    "presence": 0.219,
+    "air": 0.437,
+    "width": 0.69,
+    "bpm": 136.0
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 5 (Neck)",
+    "volume": 8,
+    "tone": 7
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": "LA Comp",
+    "drive": null,
+    "amp": "Silver 120",
+    "mod_eq": "Chorus",
+    "delay": "Vintage Delay",
+    "reverb": "Hall Ambient"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": {
+      "GAIN": 7.4,
+      "PEAK_REDUCTION": 6.2
+    },
+    "drive": null,
+    "amp": {
+      "GAIN": 4.5,
+      "TREBLE": 1.9,
+      "MIDDLE": 7.2,
+      "BASS": 4.4,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "E_LEVEL": 6.0,
+      "RATE": 3.5,
+      "DEPTH": 4.0,
+      "TONE": 6.0
+    },
+    "delay": {
+      "REPEAT_RATE": "1/4",
+      "ECHO": 6.0,
+      "INTENSITY": 4.6,
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 8.8,
+      "TIME": 4.6,
+      "DAMPING": 5.6,
+      "DWELL": 7.0,
+      "LOW_CUT": 3.0,
+      "HIGH_CUT": 4.9
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "\ud83d\udd2c",
+    "drive": "",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83c\udfa8",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  },
+  "section": {
+    "label": "Clean",
+    "type": "quiet",
+    "start": 0.0,
+    "end": 16.0,
+    "index": 0,
+    "total_sections": 4
+  }
+}

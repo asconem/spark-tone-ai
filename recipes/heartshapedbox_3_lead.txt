@@ -1,0 +1,42 @@
+════════════════════════════════════════════════════════════
+SECTION 3/4: LEAD (2:11 — 2:31)
+════════════════════════════════════════════════════════════
+🎸 SPARK 2 RECIPE: heartshapedbox.wav
+📅 Date: 2026-03-10 16:54:12
+🎯 DSP Analysis: Gain 0.76 | Presence 0.28 | Air 0.48 | Mids 0.51 | Width 0.69 | BPM 103
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 10
+   • TONE: 6
+--------------------------------------------------
+[GATE] NOISE GATE 🔬
+   • DECAY: 3.4             • THRESHOLD: 2.7      
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🎨
+   • LEVEL: 10.0            • OVERDRIVE: 9.0      
+   • TONE: 5.0           
+--------------------------------------------------
+[AMP] BLACK DUO 🎨
+   • BASS: 5.0              • GAIN: 6.6           
+   • MIDDLE: 6.6            • TREBLE: 2.7         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🎨
+   • 100HZ: 0.0             • 1600HZ: 3.0         
+   • 200HZ: 2.0             • 3200HZ: 2.0         
+   • 400HZ: 4.0             • 800HZ: 5.0          
+--------------------------------------------------
+[DELAY] DIGITAL DELAY 🔬
+   • BPM_MODE: On           • D_TIME: 1/8         
+   • E_LEVEL: 3.0           • F_BACK: 3.8         
+   • MODE: 50ms          
+--------------------------------------------------
+[REVERB] PLATE SHORT 🔬
+   • DAMPING: 5.9           • DWELL: 3.2          
+   • HIGH_CUT: 4.6          • LEVEL: 3.8          
+   • LOW_CUT: 6.0           • TIME: 3.8           
+--------------------------------------------------

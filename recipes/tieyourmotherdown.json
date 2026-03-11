@@ -1,0 +1,72 @@
+{
+  "song": "tieyourmotherdown.wav",
+  "date": "2026-03-10T18:39:59.753303",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.548,
+    "mids": 0.657,
+    "presence": 0.258,
+    "air": 0.424,
+    "width": 0.823,
+    "bpm": 136.0
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": "Booster",
+    "amp": "Plexiglas",
+    "mod_eq": "Phaser",
+    "delay": "Echo Tape",
+    "reverb": "Room Studio A"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": {
+      "GAIN": 7.5
+    },
+    "amp": {
+      "GAIN": 2.476547751448759,
+      "TREBLE": 4.5,
+      "MIDDLE": 5.8,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "SPEED": 1.5,
+      "INTENSITY": 6.0
+    },
+    "delay": {
+      "SUSTAIN": 3.0,
+      "VOLUME": 4.0,
+      "TONE": 6.5
+    },
+    "reverb": {
+      "LEVEL": 5.7,
+      "TIME": 4.1,
+      "DAMPING": 5.5,
+      "DWELL": 4.3,
+      "LOW_CUT": 5.2,
+      "HIGH_CUT": 5.0
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83d\udd2c",
+    "mod_eq": "\ud83c\udfa8",
+    "delay": "\ud83c\udfa8",
+    "reverb": "\ud83d\udd2c"
+  }
+}

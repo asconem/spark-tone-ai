@@ -1,0 +1,82 @@
+{
+  "song": "messageinabottle.wav",
+  "date": "2026-03-10T17:42:34.553373",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 0.597,
+    "mids": 0.575,
+    "presence": 0.299,
+    "air": 0.463,
+    "width": 0.783,
+    "bpm": 152.0
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 4 (Neck+Mid)",
+    "volume": 9,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": "Sustain Comp",
+    "drive": "Tube Drive",
+    "amp": "Silver 120",
+    "mod_eq": "Chorus",
+    "delay": "Vintage Delay",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": {
+      "LEVEL": 6.0,
+      "TONE": 7.0,
+      "ATTACK": 3.0,
+      "SUSTAIN": 4.0
+    },
+    "drive": {
+      "OVERDRIVE": 2.5,
+      "TONE": 5.3,
+      "LEVEL": 9.0
+    },
+    "amp": {
+      "GAIN": 5.465036817245828,
+      "TREBLE": 1.8,
+      "MIDDLE": 6.9,
+      "BASS": 4.9,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "E_LEVEL": 7.0,
+      "RATE": 4.0,
+      "DEPTH": 5.0,
+      "TONE": 6.0
+    },
+    "delay": {
+      "REPEAT_RATE": "1/8d",
+      "ECHO": 3.6,
+      "INTENSITY": 4.0,
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 5.3,
+      "TIME": 4.1,
+      "DAMPING": 5.8,
+      "DWELL": 4.0,
+      "LOW_CUT": 5.4,
+      "HIGH_CUT": 4.8
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "\ud83c\udfa8",
+    "drive": "\ud83d\udd2c",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83c\udfa8",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "song": "wholelottalove.wav",
+  "date": "2026-03-10T18:52:04.790293",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.701,
+    "mids": 0.547,
+    "presence": 0.271,
+    "air": 0.471,
+    "width": 0.854,
+    "bpm": 117.5
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": "Noise Gate",
+    "comp_wah": null,
+    "drive": "Booster",
+    "amp": "Plexiglas",
+    "mod_eq": "Guitar EQ",
+    "delay": "Echo Tape",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": {
+      "THRESHOLD": 1.5,
+      "DECAY": 4.6
+    },
+    "comp_wah": null,
+    "drive": {
+      "GAIN": 6.0
+    },
+    "amp": {
+      "GAIN": 4.014726932557395,
+      "TREBLE": 5.935798034828693,
+      "MIDDLE": 4.470455661870723,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": 0.7,
+      "200HZ": 0.8,
+      "400HZ": 0.3,
+      "800HZ": 0.7,
+      "1600HZ": -0.0,
+      "3200HZ": 2.0,
+      "LEVEL": -0.4
+    },
+    "delay": {
+      "SUSTAIN": 0.0,
+      "VOLUME": 3.0,
+      "TONE": 6.0
+    },
+    "reverb": {
+      "LEVEL": 4.9,
+      "TIME": 3.6,
+      "DAMPING": 5.8,
+      "DWELL": 3.5,
+      "LOW_CUT": 5.8,
+      "HIGH_CUT": 4.7
+    }
+  },
+  "sources": {
+    "gate": "\ud83d\udd2c",
+    "comp_wah": "",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83c\udfa8",
+    "reverb": "\ud83d\udd2c"
+  }
+}

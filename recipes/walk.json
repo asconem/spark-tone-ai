@@ -1,0 +1,83 @@
+{
+  "song": "walk.wav",
+  "date": "2026-03-10T18:44:34.710553",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 1.0,
+    "mids": 0.286,
+    "presence": 0.235,
+    "air": 0.634,
+    "width": 0.863,
+    "bpm": 184.6
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": "Noise Gate",
+    "comp_wah": null,
+    "drive": "Black Op",
+    "amp": "Insane 6508",
+    "mod_eq": "Guitar EQ",
+    "delay": "Digital Delay",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": {
+      "THRESHOLD": 5.3,
+      "DECAY": 1.1
+    },
+    "comp_wah": null,
+    "drive": {
+      "DISTORTION": 3.5,
+      "FILTER": 3.0,
+      "VOLUME": 5.9
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 10.0,
+      "MIDDLE": 2.8613195502850806,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": 1.0,
+      "200HZ": 0.8,
+      "400HZ": -1.5,
+      "800HZ": -0.8,
+      "1600HZ": -2.8,
+      "3200HZ": 5.1,
+      "LEVEL": -0.2
+    },
+    "delay": {
+      "E_LEVEL": 2.0,
+      "F_BACK": 3.6,
+      "D_TIME": "1/8",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 3.0,
+      "TIME": 2.9,
+      "DAMPING": 6.8,
+      "DWELL": 2.0,
+      "LOW_CUT": 7.0,
+      "HIGH_CUT": 3.6
+    }
+  },
+  "sources": {
+    "gate": "\ud83d\udd2c",
+    "comp_wah": "",
+    "drive": "\ud83d\udd2c",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "song": "voodoochild.wav",
+  "date": "2026-03-10T18:42:54.393711",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.655,
+    "mids": 0.591,
+    "presence": 0.241,
+    "air": 0.469,
+    "width": 0.696,
+    "bpm": 172.3
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 5 (Neck)",
+    "volume": 10,
+    "tone": 10
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": "J.H. Octave Fuzz",
+    "amp": "J.H. Super 100",
+    "mod_eq": "J.H. Legendary Vibe",
+    "delay": "Vintage Delay",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": {
+      "FUZZ": 7.5,
+      "LEVEL": 8.5
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 4.7,
+      "MIDDLE": 5.1,
+      "BASS": 4.9,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "SPEED": 4.5,
+      "INTENSITY": 6.5,
+      "SWEEP": 5.5,
+      "MIX": 7.0
+    },
+    "delay": {
+      "REPEAT_RATE": "1/8d",
+      "ECHO": 3.4,
+      "INTENSITY": 3.9,
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 4.5,
+      "TIME": 4.0,
+      "DAMPING": 5.8,
+      "DWELL": 3.7,
+      "LOW_CUT": 5.6,
+      "HIGH_CUT": 4.7
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83d\udd2c",
+    "mod_eq": "\ud83c\udfa8",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  }
+}

@@ -1,0 +1,43 @@
+════════════════════════════════════════════════════════════
+SECTION 1/6: CRUNCH (0:00 — 1:24)
+════════════════════════════════════════════════════════════
+🎸 SPARK 2 RECIPE: superbug.wav
+📅 Date: 2026-03-10 18:26:40
+🎯 DSP Analysis: Gain 0.37 | Presence 0.30 | Air 0.39 | Mids 0.69 | Width 0.74 | BPM 136
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[COMP/WAH] SUSTAIN COMP 🔬
+   • ATTACK: 3.5            • LEVEL: 7.5          
+   • SUSTAIN: 6.5           • TONE: 5.0           
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🎨
+   • LEVEL: 7.0             • OVERDRIVE: 4.0      
+   • TONE: 6.0           
+--------------------------------------------------
+[AMP] INSANE 6508 🎨
+   • BASS: 5.0              • GAIN: 2.0           
+   • MIDDLE: 6.9            • TREBLE: 3.3         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -1.8            • 1600HZ: 1.1         
+   • 200HZ: -0.9            • 3200HZ: -0.4        
+   • 400HZ: 1.2             • 800HZ: 1.5          
+--------------------------------------------------
+[DELAY] ECHO TAPE 🔬
+   • BPM_MODE: On           • SHORT/LONG: 1/8d    
+   • SUSTAIN: 3.8           • TONE: 3.9           
+   • VOLUME: 3.6         
+--------------------------------------------------
+[REVERB] CHAMBER 🔬
+   • DAMPING: 5.4           • DWELL: 5.1          
+   • HIGH_CUT: 5.2          • LEVEL: 6.6          
+   • LOW_CUT: 4.5           • TIME: 4.2           
+--------------------------------------------------

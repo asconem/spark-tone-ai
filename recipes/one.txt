@@ -1,0 +1,39 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): one.wav
+📅 Date: 2026-03-10 17:49:49
+🎯 DSP Analysis: Gain 0.79 | Presence 0.24 | Air 0.61 | Mids 0.34 | Width 0.86 | BPM 99
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[GATE] NOISE GATE 🔬
+   • DECAY: 3.4             • THRESHOLD: 2.7      
+--------------------------------------------------
+[DRIVE] BLACK OP 🔬
+   • DISTORTION: 4.2        • FILTER: 3.2         
+   • VOLUME: 5.7         
+--------------------------------------------------
+[AMP] PLEXIGLAS 🎨
+   • BASS: 5.0              • GAIN: 2.0           
+   • MIDDLE: 2.4            • TREBLE: 10.0        
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -0.3            • 1600HZ: -2.4        
+   • 200HZ: -0.1            • 3200HZ: 4.4         
+   • 400HZ: -1.2            • 800HZ: -0.5         
+--------------------------------------------------
+[DELAY] DIGITAL DELAY 🔬
+   • BPM_MODE: On           • D_TIME: 1/8         
+   • E_LEVEL: 2.9           • F_BACK: 3.8         
+   • MODE: 50ms          
+--------------------------------------------------
+[REVERB] PLATE SHORT 🔬
+   • DAMPING: 6.6           • DWELL: 3.1          
+   • HIGH_CUT: 3.8          • LEVEL: 4.3          
+   • LOW_CUT: 6.1           • TIME: 3.5           
+--------------------------------------------------

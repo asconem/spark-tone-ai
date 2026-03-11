@@ -1,0 +1,39 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): rainingblood.wav
+📅 Date: 2026-03-10 17:59:51
+🎯 DSP Analysis: Gain 0.91 | Presence 0.23 | Air 0.55 | Mids 0.44 | Width 0.77 | BPM 86
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[GATE] NOISE GATE 🔬
+   • DECAY: 2.2             • THRESHOLD: 4.0      
+--------------------------------------------------
+[DRIVE] BLACK OP 🔬
+   • DISTORTION: 3.0        • FILTER: 4.2         
+   • VOLUME: 6.0         
+--------------------------------------------------
+[AMP] TREADPLATE 🎨
+   • BASS: 5.0              • GAIN: 2.0           
+   • MIDDLE: 6.4            • TREBLE: 9.7         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: 0.4             • 1600HZ: -1.6        
+   • 200HZ: 0.4             • 3200HZ: 3.0         
+   • 400HZ: -0.6            • 800HZ: -0.0         
+--------------------------------------------------
+[DELAY] DIGITAL DELAY 🔬
+   • BPM_MODE: On           • D_TIME: 1/8         
+   • E_LEVEL: 2.4           • F_BACK: 3.7         
+   • MODE: 50ms          
+--------------------------------------------------
+[REVERB] PLATE SHORT 🔬
+   • DAMPING: 6.3           • DWELL: 2.5          
+   • HIGH_CUT: 4.2          • LEVEL: 3.2          
+   • LOW_CUT: 6.6           • TIME: 3.1           
+--------------------------------------------------

@@ -1,0 +1,83 @@
+{
+  "song": "infiniterise.wav",
+  "date": "2026-03-10T17:15:28.850363",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.563,
+    "mids": 0.542,
+    "presence": 0.238,
+    "air": 0.481,
+    "width": 0.563,
+    "bpm": 117.5
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 2 (Bridge+Mid)",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": "Tube Drive",
+    "amp": "Silver 120",
+    "mod_eq": "Vibrato",
+    "delay": "Vintage Delay",
+    "reverb": "Room Studio A"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": {
+      "OVERDRIVE": 2.5,
+      "TONE": 5.6,
+      "LEVEL": 9.0
+    },
+    "amp": {
+      "GAIN": 7.0,
+      "TREBLE": 3.5,
+      "MIDDLE": 7.0,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "SPEED": 4.0,
+      "DEPTH": 5.1
+    },
+    "delay": {
+      "REPEAT_RATE": "1/8d",
+      "ECHO": 3.7,
+      "INTENSITY": 4.0,
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 5.0,
+      "TIME": 4.5,
+      "DAMPING": 6.5,
+      "DWELL": 4.5,
+      "LOW_CUT": 5.0,
+      "HIGH_CUT": 5.0
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "\ud83d\udd2c",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83c\udfa8",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83c\udfa8"
+  },
+  "section": {
+    "label": "Drive",
+    "type": "quiet",
+    "start": 101.0,
+    "end": 189.0,
+    "index": 2,
+    "total_sections": 6
+  }
+}

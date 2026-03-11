@@ -1,0 +1,36 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): keytothehighway.wav
+📅 Date: 2026-03-10 17:22:20
+🎯 DSP Analysis: Gain 0.48 | Presence 0.27 | Air 0.40 | Mids 0.67 | Width 0.77 | BPM 129
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 4 (Neck+Mid)
+   • VOLUME: 8
+   • TONE: 7
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🔬
+   • LEVEL: 7.3             • OVERDRIVE: 1.2      
+   • TONE: 4.3           
+--------------------------------------------------
+[AMP] LUX VERB 🎨
+   • BASS: 5.0              • GAIN: 2.0           
+   • MIDDLE: 7.2            • TREBLE: 1.5         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -1.1            • 1600HZ: 1.0         
+   • 200HZ: -0.5            • 3200HZ: -0.2        
+   • 400HZ: 1.0             • 800HZ: 1.4          
+--------------------------------------------------
+[DELAY] ECHO TAPE 🔬
+   • BPM_MODE: On           • SHORT/LONG: 1/8d    
+   • SUSTAIN: 3.7           • TONE: 4.0           
+   • VOLUME: 3.3         
+--------------------------------------------------
+[REVERB] PLATE RICH 🎨
+   • DAMPING: 5.0           • DWELL: 5.5          
+   • HIGH_CUT: 5.5          • LEVEL: 4.5          
+   • LOW_CUT: 4.0           • TIME: 5.0           
+--------------------------------------------------

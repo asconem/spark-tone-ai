@@ -1,0 +1,35 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): sunshineofyourlove.wav
+📅 Date: 2026-03-10 18:24:45
+🎯 DSP Analysis: Gain 0.52 | Presence 0.26 | Air 0.49 | Mids 0.52 | Width 0.86 | BPM 117
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 7
+   • TONE: 2
+--------------------------------------------------
+[DRIVE] BOOSTER 🎨
+   • GAIN: 8.0           
+--------------------------------------------------
+[AMP] PLEXIGLAS 🎨
+   • BASS: 5.0              • GAIN: 2.2           
+   • MIDDLE: 4.2            • TREBLE: 6.5         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -0.4            • 1600HZ: -0.2        
+   • 200HZ: 0.1             • 3200HZ: 2.4         
+   • 400HZ: 0.1             • 800HZ: 0.6          
+--------------------------------------------------
+[DELAY] ECHO TAPE 🔬
+   • BPM_MODE: On           • SHORT/LONG: 1/8d    
+   • SUSTAIN: 3.6           • TONE: 5.2           
+   • VOLUME: 3.1         
+--------------------------------------------------
+[REVERB] ROOM STUDIO A 🎨
+   • DAMPING: 5.0           • DWELL: 5.0          
+   • HIGH_CUT: 5.0          • LEVEL: 3.0          
+   • LOW_CUT: 5.0           • TIME: 5.0           
+--------------------------------------------------

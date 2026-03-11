@@ -1,0 +1,82 @@
+{
+  "song": "bellbottomblues.wav",
+  "date": "2026-03-10T16:24:50.755084",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.444,
+    "mids": 0.721,
+    "presence": 0.286,
+    "air": 0.375,
+    "width": 0.649,
+    "bpm": 136.0
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 4 (Neck+Mid)",
+    "volume": 8,
+    "tone": 7
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": "Sustain Comp",
+    "drive": null,
+    "amp": "Lux Verb",
+    "mod_eq": "Guitar EQ",
+    "delay": "Echo Tape",
+    "reverb": "Plate Rich"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": {
+      "LEVEL": 6.3,
+      "TONE": 5.0,
+      "ATTACK": 4.4,
+      "SUSTAIN": 4.7
+    },
+    "drive": null,
+    "amp": {
+      "GAIN": 5.437756126024263,
+      "TREBLE": 1.5,
+      "MIDDLE": 7.712263738824015,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -0.3,
+      "200HZ": 0.2,
+      "400HZ": 1.3,
+      "800HZ": 1.6,
+      "1600HZ": 1.4,
+      "3200HZ": -0.1,
+      "LEVEL": -0.3
+    },
+    "delay": {
+      "SUSTAIN": 3.7,
+      "VOLUME": 3.4,
+      "TONE": 3.7,
+      "SHORT/LONG": "1/8d",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 4.5,
+      "TIME": 5.0,
+      "DAMPING": 5.0,
+      "DWELL": 5.5,
+      "LOW_CUT": 4.0,
+      "HIGH_CUT": 5.5
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "\ud83d\udd2c",
+    "drive": "",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83c\udfa8"
+  }
+}

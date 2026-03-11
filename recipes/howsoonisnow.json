@@ -1,0 +1,77 @@
+{
+  "song": "howsoonisnow.wav",
+  "date": "2026-03-10T17:07:22.075227",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 0.526,
+    "mids": 0.574,
+    "presence": 0.282,
+    "air": 0.475,
+    "width": 0.73,
+    "bpm": 129.2
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 5 (Neck)",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": "Tube Drive",
+    "amp": "AC Boost",
+    "mod_eq": "Tremolo",
+    "delay": "Echo Tape",
+    "reverb": "Room Studio A"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": {
+      "OVERDRIVE": 1.5,
+      "TONE": 5.5,
+      "LEVEL": 7.7
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 2.5,
+      "MIDDLE": 3.9,
+      "BASS": 4.9,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "SPEED": 6.0,
+      "LEVEL": 8.0,
+      "DEPTH": 8.0
+    },
+    "delay": {
+      "SUSTAIN": 3.6,
+      "VOLUME": 3.1,
+      "TONE": 5.0,
+      "SHORT/LONG": "1/8d",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 5.5,
+      "TIME": 4.1,
+      "DAMPING": 5.9,
+      "DWELL": 4.4,
+      "LOW_CUT": 5.1,
+      "HIGH_CUT": 4.7
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "\ud83d\udd2c",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83c\udfa8",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  }
+}

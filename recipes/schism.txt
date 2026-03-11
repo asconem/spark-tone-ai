@@ -1,0 +1,40 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): schism.wav
+📅 Date: 2026-03-10 18:07:50
+🎯 DSP Analysis: Gain 0.61 | Presence 0.27 | Air 0.55 | Mids 0.41 | Width 0.71 | BPM 108
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 8
+   • TONE: 6
+--------------------------------------------------
+[COMP/WAH] LA COMP 🔬
+   • GAIN: 6.9              • LIMIT_COMPRESS_TOGGLE: Compress
+   • PEAK_REDUCTION: 5.6 
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🎨
+   • LEVEL: 6.0             • OVERDRIVE: 3.0      
+   • TONE: 4.0           
+--------------------------------------------------
+[AMP] SLO 100 🎨
+   • BASS: 5.0              • GAIN: 2.0           
+   • MIDDLE: 4.1            • TREBLE: 6.6         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -0.3            • 1600HZ: -1.1        
+   • 200HZ: 0.0             • 3200HZ: 3.5         
+   • 400HZ: -0.5            • 800HZ: 0.1          
+--------------------------------------------------
+[DELAY] ECHO FILT 🎨
+   • BPM_MODE: Off          • DELAY: 400.0        
+   • FEEDBACK: 2.0          • LEVEL: 3.0          
+   • TONE: 6.0           
+--------------------------------------------------
+[REVERB] PLATE SHORT 🔬
+   • DAMPING: 6.3           • DWELL: 4.0          
+   • HIGH_CUT: 4.2          • LEVEL: 4.9          
+   • LOW_CUT: 5.4           • TIME: 3.9           
+--------------------------------------------------

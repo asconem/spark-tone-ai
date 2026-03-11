@@ -1,0 +1,40 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): gravity.wav
+📅 Date: 2026-03-10 16:49:50
+🎯 DSP Analysis: Gain 0.39 | Presence 0.25 | Air 0.36 | Mids 0.71 | Width 0.48 | BPM 112
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 5 (Neck)
+   • VOLUME: 8
+   • TONE: 7
+--------------------------------------------------
+[COMP/WAH] LA COMP 🎨
+   • GAIN: 4.0              • LIMIT_COMPRESS_TOGGLE: Compress
+   • PEAK_REDUCTION: 3.0 
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🎨
+   • LEVEL: 5.0             • OVERDRIVE: 3.0      
+   • TONE: 6.0           
+--------------------------------------------------
+[AMP] TWO STONE SP50 🎨
+   • BASS: 5.0              • GAIN: 2.0           
+   • MIDDLE: 4.6            • TREBLE: 1.5         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -1.7            • 1600HZ: 1.2         
+   • 200HZ: -0.8            • 3200HZ: -1.3        
+   • 400HZ: 1.2             • 800HZ: 1.5          
+--------------------------------------------------
+[DELAY] ECHO TAPE 🔬
+   • BPM_MODE: On           • SHORT/LONG: 1/8d    
+   • SUSTAIN: 3.8           • TONE: 3.4           
+   • VOLUME: 3.5         
+--------------------------------------------------
+[REVERB] CHAMBER 🔬
+   • DAMPING: 5.1           • DWELL: 5.0          
+   • HIGH_CUT: 5.5          • LEVEL: 5.5          
+   • LOW_CUT: 4.6           • TIME: 4.2           
+--------------------------------------------------

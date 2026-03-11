@@ -1,0 +1,85 @@
+{
+  "song": "lovesong.wav",
+  "date": "2026-03-10T17:35:36.113697",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 0.616,
+    "mids": 0.468,
+    "presence": 0.217,
+    "air": 0.548,
+    "width": 0.738,
+    "bpm": 122.1
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 5 (Neck)",
+    "volume": 8,
+    "tone": 7
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": "Tube Drive",
+    "amp": "Silver 120",
+    "mod_eq": "Chorus",
+    "delay": "Digital Delay",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": {
+      "OVERDRIVE": 3.0,
+      "TONE": 6.0,
+      "LEVEL": 7.0
+    },
+    "amp": {
+      "GAIN": 5.660018251212465,
+      "TREBLE": 5.0,
+      "MIDDLE": 5.6,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "E_LEVEL": 7.0,
+      "RATE": 4.0,
+      "DEPTH": 6.0,
+      "TONE": 6.0
+    },
+    "delay": {
+      "E_LEVEL": 4.0,
+      "F_BACK": 3.0,
+      "D_TIME": 50,
+      "MODE": "200ms"
+    },
+    "reverb": {
+      "LEVEL": 4.9,
+      "TIME": 3.4,
+      "DAMPING": 6.3,
+      "DWELL": 3.9,
+      "LOW_CUT": 5.5,
+      "HIGH_CUT": 4.2
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83c\udfa8",
+    "delay": "\ud83c\udfa8",
+    "reverb": "\ud83d\udd2c"
+  },
+  "section": {
+    "label": "Drive",
+    "type": "quiet",
+    "start": 16.0,
+    "end": 133.0,
+    "index": 1,
+    "total_sections": 4
+  }
+}

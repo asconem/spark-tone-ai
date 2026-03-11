@@ -1,0 +1,84 @@
+{
+  "song": "lovesong.wav",
+  "date": "2026-03-10T17:35:50.199581",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 0.338,
+    "mids": 0.509,
+    "presence": 0.221,
+    "air": 0.501,
+    "width": 0.683,
+    "bpm": 143.6
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 4 (Neck+Mid)",
+    "volume": 8,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": "Red Comp",
+    "drive": null,
+    "amp": "Black Duo",
+    "mod_eq": "Chorus",
+    "delay": "Vintage Delay",
+    "reverb": "Chamber"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": {
+      "OUTPUT": 7.0,
+      "SENSITIVITY": 7.0
+    },
+    "drive": null,
+    "amp": {
+      "GAIN": 7.380215366352539,
+      "TREBLE": 4.2,
+      "MIDDLE": 6.6,
+      "BASS": 4.8,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "E_LEVEL": 6.0,
+      "RATE": 4.0,
+      "DEPTH": 5.0,
+      "TONE": 7.0
+    },
+    "delay": {
+      "REPEAT_RATE": "1/4",
+      "ECHO": 4.6,
+      "INTENSITY": 4.3,
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 6.5,
+      "TIME": 4.0,
+      "DAMPING": 6.0,
+      "DWELL": 5.3,
+      "LOW_CUT": 4.4,
+      "HIGH_CUT": 4.5
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "\ud83d\udd2c",
+    "drive": "",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83c\udfa8",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  },
+  "section": {
+    "label": "Clean",
+    "type": "quiet",
+    "start": 150.5,
+    "end": 209.57,
+    "index": 3,
+    "total_sections": 4
+  }
+}

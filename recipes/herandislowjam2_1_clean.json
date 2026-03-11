@@ -1,0 +1,90 @@
+{
+  "song": "herandislowjam2.wav",
+  "date": "2026-03-10T16:58:53.891581",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.15,
+    "mids": 0.622,
+    "presence": 0.273,
+    "air": 0.43,
+    "width": 0.628,
+    "bpm": 123.0
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": "LA Comp",
+    "drive": "Fuzz Face",
+    "amp": "Blues Boy",
+    "mod_eq": "Guitar EQ",
+    "delay": "Vintage Delay",
+    "reverb": "Room Studio A"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": {
+      "GAIN": 7.4,
+      "PEAK_REDUCTION": 6.2
+    },
+    "drive": {
+      "FUZZ": 7.0,
+      "VOLUME": 7.0
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 2.5194277411712287,
+      "MIDDLE": 6.2226073631131795,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -4.5,
+      "200HZ": -3.0,
+      "400HZ": 0.6,
+      "800HZ": 1.0,
+      "1600HZ": 0.3,
+      "3200HZ": 0.2,
+      "LEVEL": 0.4
+    },
+    "delay": {
+      "REPEAT_RATE": "1/4",
+      "ECHO": 5.4,
+      "INTENSITY": 4.4,
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 3.5,
+      "TIME": 3.0,
+      "DAMPING": 5.0,
+      "DWELL": 4.0,
+      "LOW_CUT": 5.0,
+      "HIGH_CUT": 5.0
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "\ud83d\udd2c",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83c\udfa8"
+  },
+  "section": {
+    "label": "Clean",
+    "type": "quiet",
+    "start": 0.0,
+    "end": 80.0,
+    "index": 0,
+    "total_sections": 5
+  }
+}

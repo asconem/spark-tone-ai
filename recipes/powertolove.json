@@ -1,0 +1,76 @@
+{
+  "song": "powertolove.wav",
+  "date": "2026-03-10T17:56:01.116484",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.644,
+    "mids": 0.582,
+    "presence": 0.249,
+    "air": 0.467,
+    "width": 0.523,
+    "bpm": 172.3
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 1 (Bridge)",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": "J.H. Octave Fuzz",
+    "amp": "J.H. Super 100",
+    "mod_eq": "J.H. Legendary Vibe",
+    "delay": "Vintage Delay",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": {
+      "FUZZ": 7.0,
+      "LEVEL": 8.0
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 4.6,
+      "MIDDLE": 5.0,
+      "BASS": 4.9,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "SPEED": 4.5,
+      "INTENSITY": 6.5,
+      "MIX": 7.5,
+      "SWEEP": 5.5
+    },
+    "delay": {
+      "REPEAT_RATE": "1/8d",
+      "ECHO": 3.4,
+      "INTENSITY": 4.0,
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 3.5,
+      "TIME": 4.0,
+      "DAMPING": 5.5,
+      "DWELL": 3.5,
+      "LOW_CUT": 5.0,
+      "HIGH_CUT": 5.0
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83c\udfa8",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83c\udfa8"
+  }
+}

@@ -1,0 +1,45 @@
+════════════════════════════════════════════════════════════
+SECTION 2/2: CLEAN (3:53 — 4:11)
+════════════════════════════════════════════════════════════
+🎸 SPARK 2 RECIPE: marsfortherich.wav
+📅 Date: 2026-03-10 17:40:44
+🎯 DSP Analysis: Gain 0.00 | Presence 0.30 | Air 0.43 | Mids 0.61 | Width 0.62 | BPM 112
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[GATE] NOISE GATE 🎨
+   • DECAY: 1.0             • THRESHOLD: 6.0      
+--------------------------------------------------
+[COMP/WAH] LA COMP 🔬
+   • GAIN: 7.4              • LIMIT_COMPRESS_TOGGLE: Compress
+   • PEAK_REDUCTION: 6.2 
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🎨
+   • LEVEL: 10.0            • OVERDRIVE: 8.0      
+   • TONE: 6.5           
+--------------------------------------------------
+[AMP] PLEXIGLAS 🎨
+   • BASS: 5.0              • GAIN: 2.0           
+   • MIDDLE: 5.1            • TREBLE: 4.4         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -4.0            • 1600HZ: 0.5         
+   • 200HZ: -2.4            • 3200HZ: 0.4         
+   • 400HZ: 0.7             • 800HZ: 1.1          
+--------------------------------------------------
+[DELAY] VINTAGE DELAY 🔬
+   • BPM_MODE: On           • ECHO: 6.0           
+   • INTENSITY: 4.6         • REPEAT_RATE: 1/4    
+--------------------------------------------------
+[REVERB] HALL AMBIENT 🔬
+   • DAMPING: 5.6           • DWELL: 7.0          
+   • HIGH_CUT: 5.0          • LEVEL: 8.5          
+   • LOW_CUT: 3.0           • TIME: 4.6           
+--------------------------------------------------

@@ -1,0 +1,36 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): theriver.wav
+📅 Date: 2026-03-10 18:34:56
+🎯 DSP Analysis: Gain 0.48 | Presence 0.26 | Air 0.45 | Mids 0.57 | Width 0.56 | BPM 172
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 4 (Neck+Mid)
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🔬
+   • LEVEL: 8.7             • OVERDRIVE: 2.3      
+   • TONE: 5.1           
+--------------------------------------------------
+[AMP] SILVER 120 🎨
+   • BASS: 5.0              • GAIN: 7.0           
+   • MIDDLE: 7.0            • TREBLE: 3.5         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -1.1            • 1600HZ: 0.2         
+   • 200HZ: -0.5            • 3200HZ: 1.0         
+   • 400HZ: 0.4             • 800HZ: 0.9          
+--------------------------------------------------
+[DELAY] ECHO TAPE 🔬
+   • BPM_MODE: On           • SHORT/LONG: 1/8d    
+   • SUSTAIN: 3.7           • TONE: 4.7           
+   • VOLUME: 3.3         
+--------------------------------------------------
+[REVERB] ROOM STUDIO A 🎨
+   • DAMPING: 6.5           • DWELL: 4.5          
+   • HIGH_CUT: 5.0          • LEVEL: 5.0          
+   • LOW_CUT: 5.0           • TIME: 4.5           
+--------------------------------------------------

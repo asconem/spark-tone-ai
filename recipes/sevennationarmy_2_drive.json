@@ -1,0 +1,88 @@
+{
+  "song": "sevennationarmy.wav",
+  "date": "2026-03-10T18:08:59.713595",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 0.562,
+    "mids": 0.467,
+    "presence": 0.325,
+    "air": 0.482,
+    "width": 0.877,
+    "bpm": 80.7
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 5 (Neck)",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": "Guitar Muff",
+    "amp": "Lux Verb",
+    "mod_eq": "Guitar EQ",
+    "delay": "Vintage Delay",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": {
+      "SUSTAIN": 8.5,
+      "TONE": 3.0,
+      "VOLUME": 7.5
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 3.794171063618669,
+      "MIDDLE": 5.16900001484064,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -2.8,
+      "200HZ": -1.9,
+      "400HZ": -0.9,
+      "800HZ": -0.3,
+      "1600HZ": -2.7,
+      "3200HZ": 1.2,
+      "LEVEL": 0.6
+    },
+    "delay": {
+      "REPEAT_RATE": "1/8d",
+      "ECHO": 3.8,
+      "INTENSITY": 4.0,
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 5.9,
+      "TIME": 4.2,
+      "DAMPING": 5.9,
+      "DWELL": 4.2,
+      "LOW_CUT": 5.2,
+      "HIGH_CUT": 4.6
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  },
+  "section": {
+    "label": "Drive",
+    "type": "loud",
+    "start": 48.5,
+    "end": 71.0,
+    "index": 1,
+    "total_sections": 6
+  }
+}

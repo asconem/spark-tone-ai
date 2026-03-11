@@ -1,0 +1,76 @@
+{
+  "song": "lenny.wav",
+  "date": "2026-03-10T17:29:18.333371",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.356,
+    "mids": 0.544,
+    "presence": 0.246,
+    "air": 0.449,
+    "width": 0.753,
+    "bpm": 117.5
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 4 (Neck+Mid)",
+    "volume": 10,
+    "tone": 7
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": "Optical Comp",
+    "drive": null,
+    "amp": "ODS 50",
+    "mod_eq": "Guitar EQ",
+    "delay": "Echo Tape",
+    "reverb": "Plate Rich"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": {
+      "VOLUME": 6.0,
+      "COMP": 3.0
+    },
+    "drive": null,
+    "amp": {
+      "GAIN": 7.058878056780235,
+      "TREBLE": 2.1562240575851344,
+      "MIDDLE": 2.942603245151872,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -0.9,
+      "200HZ": -0.2,
+      "400HZ": 0.3,
+      "800HZ": 0.7,
+      "1600HZ": -0.0,
+      "3200HZ": 1.7,
+      "LEVEL": -0.1
+    },
+    "delay": {
+      "SUSTAIN": 3.9,
+      "VOLUME": 3.7,
+      "TONE": 4.7,
+      "SHORT/LONG": "1/8d",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 5.5,
+      "TIME": 6.0
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "\ud83c\udfa8",
+    "drive": "",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83c\udfa8"
+  }
+}

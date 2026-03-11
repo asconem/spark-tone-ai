@@ -1,0 +1,89 @@
+{
+  "song": "superbug.wav",
+  "date": "2026-03-10T18:26:53.190086",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 0.459,
+    "mids": 0.689,
+    "presence": 0.31,
+    "air": 0.402,
+    "width": 0.728,
+    "bpm": 89.1
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": "Tube Drive",
+    "amp": "Insane",
+    "mod_eq": "Guitar EQ",
+    "delay": "Echo Tape",
+    "reverb": "Room Studio A"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": {
+      "OVERDRIVE": 6.0,
+      "TONE": 7.0,
+      "LEVEL": 7.0
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 1.5,
+      "MIDDLE": 7.385195698779571,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -1.2,
+      "200HZ": -0.6,
+      "400HZ": 1.1,
+      "800HZ": 1.4,
+      "1600HZ": 1.1,
+      "3200HZ": -0.2,
+      "LEVEL": -0.1
+    },
+    "delay": {
+      "SUSTAIN": 3.7,
+      "VOLUME": 3.3,
+      "TONE": 4.0,
+      "SHORT/LONG": "1/8d",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 5.9,
+      "TIME": 4.1,
+      "DAMPING": 5.4,
+      "DWELL": 4.7,
+      "LOW_CUT": 4.8,
+      "HIGH_CUT": 5.2
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  },
+  "section": {
+    "label": "Crunch",
+    "type": "quiet",
+    "start": 131.5,
+    "end": 193.0,
+    "index": 2,
+    "total_sections": 6
+  }
+}

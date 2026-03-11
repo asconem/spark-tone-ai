@@ -1,0 +1,81 @@
+{
+  "song": "theriver.wav",
+  "date": "2026-03-10T18:34:56.177821",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.483,
+    "mids": 0.571,
+    "presence": 0.259,
+    "air": 0.449,
+    "width": 0.557,
+    "bpm": 172.3
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 4 (Neck+Mid)",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": "Tube Drive",
+    "amp": "Silver 120",
+    "mod_eq": "Guitar EQ",
+    "delay": "Echo Tape",
+    "reverb": "Room Studio A"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": {
+      "OVERDRIVE": 2.3,
+      "TONE": 5.1,
+      "LEVEL": 8.7
+    },
+    "amp": {
+      "GAIN": 7.0,
+      "TREBLE": 3.5,
+      "MIDDLE": 7.0,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -1.1,
+      "200HZ": -0.5,
+      "400HZ": 0.4,
+      "800HZ": 0.9,
+      "1600HZ": 0.2,
+      "3200HZ": 1.0,
+      "LEVEL": -0.1
+    },
+    "delay": {
+      "SUSTAIN": 3.7,
+      "VOLUME": 3.3,
+      "TONE": 4.7,
+      "SHORT/LONG": "1/8d",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 5.0,
+      "TIME": 4.5,
+      "DAMPING": 6.5,
+      "DWELL": 4.5,
+      "LOW_CUT": 5.0,
+      "HIGH_CUT": 5.0
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "\ud83d\udd2c",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83c\udfa8"
+  }
+}

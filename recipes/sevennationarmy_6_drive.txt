@@ -1,0 +1,38 @@
+════════════════════════════════════════════════════════════
+SECTION 6/6: DRIVE (3:26 — 3:52)
+════════════════════════════════════════════════════════════
+🎸 SPARK 2 RECIPE: sevennationarmy.wav
+📅 Date: 2026-03-10 18:09:29
+🎯 DSP Analysis: Gain 0.62 | Presence 0.32 | Air 0.48 | Mids 0.48 | Width 0.83 | BPM 123
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 5 (Neck)
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[DRIVE] GUITAR MUFF 🎨
+   • SUSTAIN: 6.0           • TONE: 4.0           
+   • VOLUME: 7.0         
+--------------------------------------------------
+[AMP] LUX VERB 🎨
+   • BASS: 5.0              • GAIN: 2.0           
+   • MIDDLE: 5.3            • TREBLE: 3.7         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -2.5            • 1600HZ: -2.6        
+   • 200HZ: -1.7            • 3200HZ: 1.1         
+   • 400HZ: -0.8            • 800HZ: -0.2         
+--------------------------------------------------
+[DELAY] VINTAGE DELAY 🔬
+   • BPM_MODE: On           • ECHO: 3.5           
+   • INTENSITY: 4.0         • REPEAT_RATE: 1/8d   
+--------------------------------------------------
+[REVERB] PLATE SHORT 🔬
+   • DAMPING: 5.9           • DWELL: 3.9          
+   • HIGH_CUT: 4.7          • LEVEL: 5.3          
+   • LOW_CUT: 5.5           • TIME: 3.9           
+--------------------------------------------------

@@ -1,0 +1,41 @@
+════════════════════════════════════════════════════════════
+SECTION 2/4: LEAD (0:51 — 1:57)
+════════════════════════════════════════════════════════════
+🎸 SPARK 2 RECIPE: iminyourmindfuzz.wav
+📅 Date: 2026-03-10 17:09:10
+🎯 DSP Analysis: Gain 0.95 | Presence 0.23 | Air 0.52 | Mids 0.48 | Width 0.87 | BPM 144
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[GATE] NOISE GATE 🔬
+   • DECAY: 1.4             • THRESHOLD: 4.9      
+--------------------------------------------------
+[DRIVE] FUZZ FACE 🎨
+   • FUZZ: 7.0              • VOLUME: 7.0         
+--------------------------------------------------
+[AMP] BLUES BOY 🎨
+   • BASS: 5.0              • GAIN: 4.0           
+   • MIDDLE: 4.8            • TREBLE: 5.6         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: 0.2             • 1600HZ: -0.9        
+   • 200HZ: 0.2             • 3200HZ: 2.4         
+   • 400HZ: -0.2            • 800HZ: 0.3          
+--------------------------------------------------
+[DELAY] DIGITAL DELAY 🔬
+   • BPM_MODE: On           • D_TIME: 1/8         
+   • E_LEVEL: 2.2           • F_BACK: 3.7         
+   • MODE: 50ms          
+--------------------------------------------------
+[REVERB] ROOM STUDIO A 🎨
+   • DAMPING: 5.0           • DWELL: 4.0          
+   • HIGH_CUT: 5.0          • LEVEL: 3.5          
+   • LOW_CUT: 5.0           • TIME: 3.0           
+--------------------------------------------------

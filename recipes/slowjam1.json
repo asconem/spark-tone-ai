@@ -1,0 +1,81 @@
+{
+  "song": "slowjam1.wav",
+  "date": "2026-03-10T18:12:30.775079",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 0.514,
+    "mids": 0.687,
+    "presence": 0.289,
+    "air": 0.386,
+    "width": 0.751,
+    "bpm": 117.5
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 8,
+    "tone": 7
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": "LA Comp",
+    "drive": "Clone Drive",
+    "amp": "ODS 50",
+    "mod_eq": "Chorus",
+    "delay": "Echo Tape",
+    "reverb": "Room Studio A"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": {
+      "GAIN": 5.0,
+      "PEAK_REDUCTION": 4.0,
+      "LIMIT_COMPRESS_TOGGLE": "Compress"
+    },
+    "drive": {
+      "GAIN": 3.0,
+      "TREBLE": 6.0,
+      "OUTPUT": 7.0
+    },
+    "amp": {
+      "GAIN": 4.638376158236954,
+      "TREBLE": 1.4,
+      "MIDDLE": 4.7,
+      "BASS": 4.8,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "E_LEVEL": 4.0,
+      "RATE": 3.0,
+      "DEPTH": 3.0,
+      "TONE": 6.0
+    },
+    "delay": {
+      "SUSTAIN": 4.0,
+      "VOLUME": 3.0,
+      "TONE": 7.0,
+      "SHORT/LONG": 300.0
+    },
+    "reverb": {
+      "LEVEL": 5.7,
+      "TIME": 4.1,
+      "DAMPING": 5.3,
+      "DWELL": 4.4,
+      "LOW_CUT": 5.1,
+      "HIGH_CUT": 5.3
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "\ud83c\udfa8",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83c\udfa8",
+    "delay": "\ud83c\udfa8",
+    "reverb": "\ud83d\udd2c"
+  }
+}

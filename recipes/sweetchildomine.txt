@@ -1,0 +1,36 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): sweetchildomine.wav
+📅 Date: 2026-03-10 18:29:20
+🎯 DSP Analysis: Gain 0.53 | Presence 0.25 | Air 0.50 | Mids 0.53 | Width 0.71 | BPM 123
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🎨
+   • LEVEL: 8.0             • OVERDRIVE: 5.0      
+   • TONE: 2.0           
+--------------------------------------------------
+[AMP] PLEXIGLAS 🎨
+   • BASS: 5.0              • GAIN: 2.0           
+   • MIDDLE: 4.3            • TREBLE: 7.1         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -0.8            • 1600HZ: -0.2        
+   • 200HZ: -0.3            • 3200HZ: 2.4         
+   • 400HZ: 0.2             • 800HZ: 0.6          
+--------------------------------------------------
+[DELAY] ECHO TAPE 🔬
+   • BPM_MODE: On           • SHORT/LONG: 1/8d    
+   • SUSTAIN: 3.6           • TONE: 5.4           
+   • VOLUME: 3.1         
+--------------------------------------------------
+[REVERB] PLATE LONG 🎨
+   • DAMPING: 5.0           • DWELL: 5.0          
+   • HIGH_CUT: 5.0          • LEVEL: 4.0          
+   • LOW_CUT: 5.0           • TIME: 5.0           
+--------------------------------------------------

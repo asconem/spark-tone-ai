@@ -1,0 +1,32 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): tieyourmotherdown.wav
+📅 Date: 2026-03-10 18:39:59
+🎯 DSP Analysis: Gain 0.55 | Presence 0.26 | Air 0.42 | Mids 0.66 | Width 0.82 | BPM 136
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[DRIVE] BOOSTER 🎨
+   • GAIN: 7.5           
+--------------------------------------------------
+[AMP] PLEXIGLAS 🔬
+   • BASS: 5.0              • GAIN: 2.5           
+   • MIDDLE: 5.8            • TREBLE: 4.5         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] PHASER 🎨
+   • INTENSITY: 6.0         • SPEED: 1.5          
+--------------------------------------------------
+[DELAY] ECHO TAPE 🎨
+   • BPM_MODE: Off          • SUSTAIN: 3.0           • TONE: 6.5           
+   • VOLUME: 4.0         
+--------------------------------------------------
+[REVERB] ROOM STUDIO A 🔬
+   • DAMPING: 5.5           • DWELL: 4.3          
+   • HIGH_CUT: 5.0          • LEVEL: 5.7          
+   • LOW_CUT: 5.2           • TIME: 4.1           
+--------------------------------------------------

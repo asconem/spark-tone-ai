@@ -1,0 +1,74 @@
+{
+  "song": "sunshineofyourlove.wav",
+  "date": "2026-03-10T18:24:45.306577",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.52,
+    "mids": 0.525,
+    "presence": 0.256,
+    "air": 0.488,
+    "width": 0.865,
+    "bpm": 117.5
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 7,
+    "tone": 2
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": "Booster",
+    "amp": "Plexiglas",
+    "mod_eq": "Guitar EQ",
+    "delay": "Echo Tape",
+    "reverb": "Room Studio A"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": {
+      "GAIN": 8.0
+    },
+    "amp": {
+      "GAIN": 2.197131634603844,
+      "TREBLE": 6.515400454085103,
+      "MIDDLE": 4.247157463976082,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -0.4,
+      "200HZ": 0.1,
+      "400HZ": 0.1,
+      "800HZ": 0.6,
+      "1600HZ": -0.2,
+      "3200HZ": 2.4,
+      "LEVEL": -0.2
+    },
+    "delay": {
+      "SUSTAIN": 3.6,
+      "VOLUME": 3.1,
+      "TONE": 5.2,
+      "SHORT/LONG": "1/8d",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 3.0
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83c\udfa8"
+  }
+}

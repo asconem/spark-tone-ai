@@ -1,0 +1,85 @@
+{
+  "song": "wherethestreetshavenoname.wav",
+  "date": "2026-03-10T18:46:32.714444",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 0.408,
+    "mids": 0.454,
+    "presence": 0.225,
+    "air": 0.569,
+    "width": 0.407,
+    "bpm": 83.4
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 1 (Bridge)",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": null,
+    "amp": "AC Boost",
+    "mod_eq": "Guitar EQ",
+    "delay": "Multi Head",
+    "reverb": "Chamber"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": null,
+    "amp": {
+      "GAIN": 5.577924367897301,
+      "TREBLE": 5.308991543984083,
+      "MIDDLE": 2.544024178340427,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -0.6,
+      "200HZ": 0.0,
+      "400HZ": -0.3,
+      "800HZ": 0.3,
+      "1600HZ": -0.8,
+      "3200HZ": 4.7,
+      "LEVEL": -0.3
+    },
+    "delay": {
+      "REPEAT_RATE": 380.0,
+      "INTENSITY": 8.5,
+      "ECHO_VOL": 7.0,
+      "MODE_SELECTOR": "Head 0+1+2",
+      "BPM_MODE": "Off"
+    },
+    "reverb": {
+      "LEVEL": 5.3,
+      "TIME": 4.6,
+      "DAMPING": 6.4,
+      "DWELL": 5.0,
+      "LOW_CUT": 4.6,
+      "HIGH_CUT": 4.0
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83c\udfa8",
+    "reverb": "\ud83d\udd2c"
+  },
+  "section": {
+    "label": "Crunch",
+    "type": "loud",
+    "start": 292.5,
+    "end": 336.61,
+    "index": 3,
+    "total_sections": 4
+  }
+}

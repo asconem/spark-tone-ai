@@ -1,0 +1,80 @@
+{
+  "song": "roxanne.wav",
+  "date": "2026-03-10T18:03:29.454297",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 0.661,
+    "mids": 0.655,
+    "presence": 0.321,
+    "air": 0.422,
+    "width": 0.501,
+    "bpm": 136.0
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 4 (Neck+Mid)",
+    "volume": 8,
+    "tone": 7
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": "Red Comp",
+    "drive": "Tube Drive",
+    "amp": "Silver 120",
+    "mod_eq": "Chorus",
+    "delay": "Digital Delay",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": {
+      "OUTPUT": 6.0,
+      "SENSITIVITY": 3.5
+    },
+    "drive": {
+      "OVERDRIVE": 2.5,
+      "TONE": 4.6,
+      "LEVEL": 9.0
+    },
+    "amp": {
+      "GAIN": 6.111569620380013,
+      "TREBLE": 1.6,
+      "MIDDLE": 7.8,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "E_LEVEL": 3.0,
+      "RATE": 2.5,
+      "DEPTH": 4.0,
+      "TONE": 6.0
+    },
+    "delay": {
+      "E_LEVEL": 2.0,
+      "F_BACK": 2.5,
+      "MODE": "200ms",
+      "BPM_MODE": "Off"
+    },
+    "reverb": {
+      "LEVEL": 3.7,
+      "TIME": 3.7,
+      "DAMPING": 5.5,
+      "DWELL": 3.7,
+      "LOW_CUT": 5.6,
+      "HIGH_CUT": 5.0
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "\ud83c\udfa8",
+    "drive": "\ud83d\udd2c",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83c\udfa8",
+    "delay": "\ud83c\udfa8",
+    "reverb": "\ud83d\udd2c"
+  }
+}

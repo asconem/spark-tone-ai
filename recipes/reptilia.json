@@ -1,0 +1,80 @@
+{
+  "song": "reptilia.wav",
+  "date": "2026-03-10T18:02:26.173002",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 0.562,
+    "mids": 0.605,
+    "presence": 0.314,
+    "air": 0.429,
+    "width": 0.375,
+    "bpm": 161.5
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 1 (Bridge)",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": "Tube Drive",
+    "amp": "AC Boost",
+    "mod_eq": "Guitar EQ",
+    "delay": "Vintage Delay",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": {
+      "OVERDRIVE": 1.6,
+      "TONE": 4.7,
+      "LEVEL": 7.8
+    },
+    "amp": {
+      "GAIN": 2.1195201158929287,
+      "TREBLE": 1.5,
+      "MIDDLE": 4.0544348495807565,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -0.6,
+      "200HZ": -0.2,
+      "400HZ": 0.6,
+      "800HZ": 1.0,
+      "1600HZ": 0.4,
+      "3200HZ": 0.5,
+      "LEVEL": -0.1
+    },
+    "delay": {
+      "REPEAT_RATE": "1/8d",
+      "ECHO": 3.8,
+      "INTENSITY": 4.0,
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 4.3,
+      "TIME": 4.1,
+      "DAMPING": 5.6,
+      "DWELL": 4.2,
+      "LOW_CUT": 5.2,
+      "HIGH_CUT": 5.0
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "\ud83d\udd2c",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  }
+}

@@ -1,0 +1,35 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): sultansofswing.wav
+📅 Date: 2026-03-10 18:23:18
+🎯 DSP Analysis: Gain 0.44 | Presence 0.23 | Air 0.49 | Mids 0.55 | Width 0.79 | BPM 99
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 2 (Bridge+Mid)
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[COMP/WAH] RED COMP 🎨
+   • OUTPUT: 7.0            • SENSITIVITY: 8.5    
+--------------------------------------------------
+[AMP] BLACK DUO 🎨
+   • BASS: 5.0              • GAIN: 8.4           
+   • MIDDLE: 7.0            • TREBLE: 3.2         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -0.4            • 1600HZ: -0.0        
+   • 200HZ: 0.2             • 3200HZ: 2.8         
+   • 400HZ: 0.3             • 800HZ: 0.7          
+--------------------------------------------------
+[DELAY] ECHO TAPE 🔬
+   • BPM_MODE: On           • SHORT/LONG: 1/8d    
+   • SUSTAIN: 3.7           • TONE: 5.3           
+   • VOLUME: 3.4         
+--------------------------------------------------
+[REVERB] ROOM STUDIO A 🎨
+   • DAMPING: 5.0           • DWELL: 5.0          
+   • HIGH_CUT: 5.0          • LEVEL: 3.0          
+   • LOW_CUT: 5.0           • TIME: 3.0           
+--------------------------------------------------

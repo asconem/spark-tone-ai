@@ -1,0 +1,36 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): stonecoldcrazy.wav
+📅 Date: 2026-03-10 18:19:46
+🎯 DSP Analysis: Gain 0.85 | Presence 0.22 | Air 0.57 | Mids 0.44 | Width 0.86 | BPM 123
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[GATE] NOISE GATE 🔬
+   • DECAY: 2.7             • THRESHOLD: 3.4      
+--------------------------------------------------
+[DRIVE] BOOSTER 🎨
+   • GAIN: 8.5           
+--------------------------------------------------
+[AMP] SWITCHAXE 🔬
+   • BASS: 5.4              • GAIN: 3.0           
+   • MIDDLE: 3.8            • TREBLE: 6.8         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] PHASER 🎨
+   • INTENSITY: 7.5         • SPEED: 1.0          
+--------------------------------------------------
+[DELAY] DIGITAL DELAY 🔬
+   • BPM_MODE: On           • D_TIME: 1/8         
+   • E_LEVEL: 2.6           • F_BACK: 3.8         
+   • MODE: 50ms          
+--------------------------------------------------
+[REVERB] PLATE SHORT 🔬
+   • DAMPING: 6.4           • DWELL: 2.8          
+   • HIGH_CUT: 4.0          • LEVEL: 4.0          
+   • LOW_CUT: 6.4           • TIME: 3.4           
+--------------------------------------------------

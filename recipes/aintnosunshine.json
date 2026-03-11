@@ -1,0 +1,81 @@
+{
+  "song": "aintnosunshine.wav",
+  "date": "2026-03-10T16:17:37.965775",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+  },
+  "dsp": {
+    "gain": 0.385,
+    "mids": 0.627,
+    "presence": 0.229,
+    "air": 0.416,
+    "width": 0.586,
+    "bpm": 129.2
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 5 (Neck)",
+    "volume": 8,
+    "tone": 7
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": "LA Comp",
+    "drive": null,
+    "amp": "American Deluxe",
+    "mod_eq": "Guitar EQ",
+    "delay": "Echo Tape",
+    "reverb": "Chamber"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": {
+      "GAIN": 3.0,
+      "PEAK_REDUCTION": 2.0,
+      "LIMIT_COMPRESS_TOGGLE": "Compress"
+    },
+    "drive": null,
+    "amp": {
+      "GAIN": 4.3515251157927155,
+      "TREBLE": 2.517647318640473,
+      "MIDDLE": 5.269704663462153,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -0.7,
+      "200HZ": -0.1,
+      "400HZ": 0.8,
+      "800HZ": 1.1,
+      "1600HZ": 0.6,
+      "3200HZ": 0.9,
+      "LEVEL": -0.2
+    },
+    "delay": {
+      "SUSTAIN": 3.8,
+      "VOLUME": 3.6,
+      "TONE": 4.2,
+      "SHORT/LONG": "1/8d",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 5.8,
+      "TIME": 4.2,
+      "DAMPING": 5.5,
+      "DWELL": 5.1,
+      "LOW_CUT": 4.5,
+      "HIGH_CUT": 5.1
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "\ud83c\udfa8",
+    "drive": "",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  }
+}

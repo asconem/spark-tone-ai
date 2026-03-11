@@ -1,0 +1,79 @@
+{
+  "song": "layla.wav",
+  "date": "2026-03-10T17:27:34.190026",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.562,
+    "mids": 0.664,
+    "presence": 0.239,
+    "air": 0.417,
+    "width": 0.706,
+    "bpm": 117.5
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 2 (Bridge+Mid)",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": "Fuzz Face",
+    "amp": "American Deluxe",
+    "mod_eq": "Guitar EQ",
+    "delay": "Vintage Delay",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": {
+      "VOLUME": 8.0,
+      "FUZZ": 4.0
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 2.5561142579910467,
+      "MIDDLE": 5.6425201284053905,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -2.1,
+      "200HZ": -1.3,
+      "400HZ": 0.9,
+      "800HZ": 1.2,
+      "1600HZ": 0.6,
+      "3200HZ": -0.1,
+      "LEVEL": 0.1
+    },
+    "delay": {
+      "REPEAT_RATE": "1/8d",
+      "ECHO": 3.8,
+      "INTENSITY": 4.0,
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 5.2,
+      "TIME": 3.8,
+      "DAMPING": 5.5,
+      "DWELL": 4.2,
+      "LOW_CUT": 5.2,
+      "HIGH_CUT": 5.1
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  }
+}

@@ -1,0 +1,38 @@
+════════════════════════════════════════════════════════════
+SECTION 2/4: CRUNCH (1:46 — 4:34)
+════════════════════════════════════════════════════════════
+🎸 SPARK 2 RECIPE: wherethestreetshavenoname.wav
+📅 Date: 2026-03-10 18:46:13
+🎯 DSP Analysis: Gain 0.50 | Presence 0.26 | Air 0.51 | Mids 0.52 | Width 0.70 | BPM 123
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 1 (Bridge)
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🔬
+   • LEVEL: 7.6             • OVERDRIVE: 1.4      
+   • TONE: 6.2           
+--------------------------------------------------
+[AMP] AC BOOST 🎨
+   • BASS: 5.0              • GAIN: 2.0           
+   • MIDDLE: 3.2            • TREBLE: 3.4         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -1.0            • 1600HZ: -0.2        
+   • 200HZ: -0.4            • 3200HZ: 2.6         
+   • 400HZ: 0.1             • 800HZ: 0.6          
+--------------------------------------------------
+[DELAY] ECHO TAPE 🎨
+   • BPM_MODE: Off          • SUSTAIN: 7.5           • TONE: 6.0           
+   • VOLUME: 8.0         
+--------------------------------------------------
+[REVERB] PLATE RICH 🔬
+   • DAMPING: 6.1           • DWELL: 4.5          
+   • HIGH_CUT: 4.4          • LEVEL: 5.6          
+   • LOW_CUT: 5.0           • TIME: 4.4           
+--------------------------------------------------

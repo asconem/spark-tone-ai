@@ -1,0 +1,34 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): helpontheway_slipknot.wav
+📅 Date: 2026-03-10 16:56:42
+🎯 DSP Analysis: Gain 0.49 | Presence 0.28 | Air 0.41 | Mids 0.65 | Width 0.48 | BPM 99
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 4 (Neck+Mid)
+   • VOLUME: 10
+   • TONE: 6
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🎨
+   • LEVEL: 8.0             • OVERDRIVE: 6.5      
+   • TONE: 5.0           
+--------------------------------------------------
+[AMP] BLACK DUO 🎨
+   • BASS: 4.8              • GAIN: 3.9           
+   • MIDDLE: 8.2            • TREBLE: 1.5         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] PHASER 🎨
+   • INTENSITY: 4.0         • SPEED: 2.0          
+--------------------------------------------------
+[DELAY] ECHO TAPE 🔬
+   • BPM_MODE: On           • SHORT/LONG: 1/8d    
+   • SUSTAIN: 3.7           • TONE: 4.2           
+   • VOLUME: 3.2         
+--------------------------------------------------
+[REVERB] ROOM STUDIO A 🔬
+   • DAMPING: 5.5           • DWELL: 4.6          
+   • HIGH_CUT: 5.1          • LEVEL: 4.8          
+   • LOW_CUT: 4.9           • TIME: 4.3           
+--------------------------------------------------
