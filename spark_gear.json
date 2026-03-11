@@ -1,0 +1,1806 @@
+{
+  "gate": [
+    {
+      "name": "Noise Gate",
+      "type": "Utility",
+      "parameters": {
+        "threshold": {
+          "min": 0.0,
+          "max": 10.0,
+          "default": 5.0
+        },
+        "decay": {
+          "min": 0.0,
+          "max": 10.0,
+          "default": 5.0
+        }
+      },
+      "description": "Standard noise reduction. Use 'Threshold' to cut silence."
+    }
+  ],
+  "compressor": [
+    {
+      "name": "LA Comp",
+      "real_model": "Teletronix LA-2A",
+      "type": "Optical",
+      "parameters": {
+        "gain": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "peak_reduction": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "limit_compress_toggle": {
+          "type": "switch",
+          "values": [
+            "Limit",
+            "Compress"
+          ]
+        }
+      },
+      "sonic_profile": {
+        "sustain": 0.8,
+        "attack": 0.2,
+        "color": "Warm"
+      }
+    },
+    {
+      "name": "Sustain Comp",
+      "real_model": "Boss CS-3",
+      "type": "VCA",
+      "parameters": {
+        "level": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "tone": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "attack": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "sustain": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "sustain": 0.9,
+        "attack": 0.7,
+        "color": "Bright"
+      }
+    },
+    {
+      "name": "Red Comp",
+      "real_model": "MXR Dyna Comp",
+      "type": "OTA",
+      "parameters": {
+        "output": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "sensitivity": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "sustain": 0.6,
+        "attack": 0.9,
+        "color": "Snappy"
+      }
+    },
+    {
+      "name": "Bass Comp",
+      "real_model": "EBS MultiComp",
+      "type": "Bass",
+      "parameters": {
+        "comp": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "gain": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "sustain": 0.5,
+        "attack": 0.4,
+        "color": "Transparent"
+      }
+    },
+    {
+      "name": "Optical Comp",
+      "real_model": "BBE Opto Stomp",
+      "type": "Optical",
+      "parameters": {
+        "volume": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "comp": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "pad_switch": {
+          "type": "switch",
+          "values": [
+            "0dB",
+            "-15dB"
+          ]
+        }
+      },
+      "sonic_profile": {
+        "sustain": 0.6,
+        "attack": 0.3,
+        "color": "Transparent"
+      }
+    }
+  ],
+  "wah": [
+    {
+      "name": "J.H. Legendary Wah",
+      "real_model": "Vox 846",
+      "type": "Filter",
+      "parameters": {
+        "power": {
+          "type": "switch",
+          "values": [
+            "On",
+            "Off"
+          ]
+        },
+        "auto_wah_mode": {
+          "type": "selector",
+          "values": [
+            "1/8 Bar",
+            "1/4 Bar",
+            "1/2 Bar",
+            "1 Bar"
+          ]
+        },
+        "auto_detect_sensitivity": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "bpm_mode": {
+          "type": "switch",
+          "values": [
+            "On",
+            "Off"
+          ]
+        }
+      },
+      "sonic_profile": {
+        "quack": "High",
+        "vocal": true
+      }
+    }
+  ],
+  "drive": [
+    {
+      "name": "Booster",
+      "real_model": "MXR Micro Amp",
+      "type": "Boost",
+      "parameters": {
+        "gain": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "gain_boost": 0.2,
+        "mids": 0.0,
+        "treble": 0.1,
+        "transparent": true
+      }
+    },
+    {
+      "name": "Clone Drive",
+      "real_model": "Klon Centaur",
+      "type": "Overdrive",
+      "parameters": {
+        "gain": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "treble": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "output": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "gain_boost": 0.4,
+        "mids": 0.1,
+        "treble": 0.2,
+        "transparent": true
+      }
+    },
+    {
+      "name": "Tube Drive",
+      "real_model": "Ibanez Tube Screamer",
+      "type": "Overdrive",
+      "parameters": {
+        "overdrive": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "tone": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "level": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "gain_boost": 0.5,
+        "mids": 0.4,
+        "treble": -0.1,
+        "cut_bass": true
+      }
+    },
+    {
+      "name": "Over Drive",
+      "real_model": "Boss OD-3",
+      "type": "Overdrive",
+      "parameters": {
+        "drive": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "tone": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "level": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "gain_boost": 0.5,
+        "mids": 0.1,
+        "treble": 0.0,
+        "flat_response": true
+      }
+    },
+    {
+      "name": "SAB Driver",
+      "real_model": "Wampler Plexi-Drive",
+      "type": "Distortion",
+      "parameters": {
+        "drive": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "tone": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "volume": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "hp_lp_switch": {
+          "type": "switch",
+          "values": [
+            "HP",
+            "LP"
+          ]
+        }
+      },
+      "sonic_profile": {
+        "gain_boost": 0.6,
+        "mids": 0.3,
+        "treble": 0.2,
+        "amp_in_a_box": true
+      }
+    },
+    {
+      "name": "Black Op",
+      "real_model": "ProCo RAT",
+      "type": "Distortion",
+      "parameters": {
+        "distortion": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "filter": {
+          "min": 0.0,
+          "max": 10.0,
+          "note": "Clockwise cuts treble"
+        },
+        "volume": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "gain_boost": 0.8,
+        "mids": -0.2,
+        "treble": 0.1,
+        "hard_clipping": true
+      }
+    },
+    {
+      "name": "Fuzz Face",
+      "real_model": "Dunlop Fuzz Face",
+      "type": "Fuzz",
+      "parameters": {
+        "fuzz": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "volume": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "gain_boost": 0.7,
+        "mids": -0.1,
+        "treble": -0.2,
+        "wooly": true
+      }
+    },
+    {
+      "name": "Guitar Muff",
+      "real_model": "EHX Big Muff",
+      "type": "Fuzz",
+      "parameters": {
+        "sustain": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "tone": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "volume": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "gain_boost": 0.9,
+        "mids": -0.5,
+        "treble": -0.2,
+        "scooped": true
+      }
+    },
+    {
+      "name": "Bass Muff",
+      "real_model": "EHX Bass Big Muff",
+      "type": "Fuzz",
+      "parameters": {
+        "sustain": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "tone": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "volume": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "gain_boost": 0.9,
+        "mids": -0.3,
+        "treble": -0.4,
+        "retains_low_end": true
+      }
+    },
+    {
+      "name": "J.H. Axle Fuzz",
+      "real_model": "Roger Mayer Axis Fuzz",
+      "type": "Fuzz",
+      "parameters": {
+        "drive": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "volume": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "gain_boost": 0.8,
+        "mids": 0.2,
+        "treble": 0.3,
+        "cutting": true
+      }
+    },
+    {
+      "name": "J.H. Super Fuzz",
+      "real_model": "Marshall Supa Fuzz",
+      "type": "Fuzz",
+      "parameters": {
+        "volume": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "filter": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "gain_boost": 0.8,
+        "mids": 0.1,
+        "treble": -0.1,
+        "vintage": true
+      }
+    },
+    {
+      "name": "J.H. Octave Fuzz",
+      "real_model": "Roger Mayer Octavia",
+      "type": "Fuzz",
+      "parameters": {
+        "fuzz": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "level": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "gain_boost": 0.65,
+        "mids": 0.3,
+        "treble": 0.6,
+        "octave_up": true
+      }
+    },
+    {
+      "name": "J.H. Fuzz Zone",
+      "real_model": "Maestro FZ-1",
+      "type": "Fuzz",
+      "parameters": {
+        "volume": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "attack": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "gain_boost": 0.6,
+        "mids": 0.2,
+        "treble": 0.4,
+        "velcro_texture": true
+      }
+    },
+    {
+      "name": "Bassmaster",
+      "real_model": "Maestro Bass Brassmaster",
+      "type": "Fuzz",
+      "parameters": {
+        "brass_vol": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "bass_vol": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "sensitivity": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "gain_boost": 0.8,
+        "mids": 0.4,
+        "treble": 0.2,
+        "blendable": true
+      }
+    }
+  ],
+  "amps": [
+    {
+      "category": "Clean",
+      "models": [
+        {
+          "name": "Silver 120",
+          "real_model": "Roland JC-120",
+          "base_tone": {
+            "gain": 0.05,
+            "treble": 0.85,
+            "mids": 0.4
+          },
+          "type": "Solid State"
+        },
+        {
+          "name": "Black Duo",
+          "real_model": "Fender Twin Reverb",
+          "base_tone": {
+            "gain": 0.1,
+            "treble": 0.75,
+            "mids": 0.35
+          },
+          "type": "Tube"
+        },
+        {
+          "name": "MATCH DC",
+          "real_model": "Matchless DC-30",
+          "base_tone": {
+            "gain": 0.15,
+            "treble": 0.8,
+            "mids": 0.6
+          },
+          "type": "Tube"
+        },
+        {
+          "name": "AD Clean",
+          "real_model": "Orange AD30",
+          "base_tone": {
+            "gain": 0.12,
+            "treble": 0.6,
+            "mids": 0.65
+          },
+          "type": "Tube"
+        },
+        {
+          "name": "ODS 50",
+          "real_model": "Dumble ODS 50 HRM",
+          "base_tone": {
+            "gain": 0.15,
+            "treble": 0.7,
+            "mids": 0.75
+          },
+          "type": "Tube"
+        }
+      ]
+    },
+    {
+      "category": "Glassy",
+      "models": [
+        {
+          "name": "Tweed Bass",
+          "real_model": "Fender Bassman",
+          "base_tone": {
+            "gain": 0.3,
+            "treble": 0.5,
+            "mids": 0.65
+          },
+          "type": "Tube"
+        },
+        {
+          "name": "AC Boost",
+          "real_model": "Vox AC30",
+          "base_tone": {
+            "gain": 0.35,
+            "treble": 0.8,
+            "mids": 0.7
+          },
+          "type": "Tube"
+        },
+        {
+          "name": "Two Stone SP50",
+          "real_model": "Two Rock Studio Pro",
+          "base_tone": {
+            "gain": 0.25,
+            "treble": 0.65,
+            "mids": 0.75
+          },
+          "type": "Tube"
+        },
+        {
+          "name": "Checkmate",
+          "real_model": "Teisco Checkmate",
+          "base_tone": {
+            "gain": 0.4,
+            "treble": 0.9,
+            "mids": 0.5
+          },
+          "type": "Solid State"
+        }
+      ]
+    },
+    {
+      "category": "Crunch",
+      "models": [
+        {
+          "name": "Plexiglas",
+          "real_model": "Marshall Super Lead 100",
+          "base_tone": {
+            "gain": 0.6,
+            "treble": 0.4,
+            "mids": 0.6
+          },
+          "type": "Tube"
+        },
+        {
+          "name": "JM45",
+          "real_model": "Marshall JTM45",
+          "base_tone": {
+            "gain": 0.5,
+            "treble": 0.45,
+            "mids": 0.55
+          },
+          "type": "Tube"
+        },
+        {
+          "name": "American Deluxe",
+          "real_model": "Fender '57 Custom Deluxe",
+          "base_tone": {
+            "gain": 0.45,
+            "treble": 0.55,
+            "mids": 0.6
+          },
+          "type": "Tube"
+        },
+        {
+          "name": "Lux Verb",
+          "real_model": "Fender Deluxe Reverb",
+          "base_tone": {
+            "gain": 0.4,
+            "treble": 0.65,
+            "mids": 0.45
+          },
+          "type": "Tube"
+        },
+        {
+          "name": "Blues Boy",
+          "real_model": "Fender Blues Junior",
+          "base_tone": {
+            "gain": 0.35,
+            "treble": 0.6,
+            "mids": 0.5
+          },
+          "type": "Tube"
+        }
+      ]
+    },
+    {
+      "category": "High Gain",
+      "models": [
+        {
+          "name": "British 30",
+          "real_model": "Orange AD30",
+          "base_tone": {
+            "gain": 0.65,
+            "treble": 0.5,
+            "mids": 0.75
+          },
+          "type": "Tube"
+        },
+        {
+          "name": "American High Gain",
+          "real_model": "Mesa Boogie JP-2C",
+          "base_tone": {
+            "gain": 0.85,
+            "treble": 0.4,
+            "mids": 0.5
+          },
+          "type": "Tube"
+        },
+        {
+          "name": "SLO 100",
+          "real_model": "Soldano SLO-100",
+          "base_tone": {
+            "gain": 0.8,
+            "treble": 0.6,
+            "mids": 0.5
+          },
+          "type": "Tube"
+        },
+        {
+          "name": "RB 101",
+          "real_model": "Bogner Ecstasy 101",
+          "base_tone": {
+            "gain": 0.75,
+            "treble": 0.55,
+            "mids": 0.65
+          },
+          "type": "Tube"
+        },
+        {
+          "name": "YJM100",
+          "real_model": "Marshall YJM100 Signature",
+          "base_tone": {
+            "gain": 0.7,
+            "treble": 0.65,
+            "mids": 0.6
+          },
+          "type": "Tube"
+        }
+      ]
+    },
+    {
+      "category": "Metal",
+      "models": [
+        {
+          "name": "Treadplate",
+          "real_model": "Mesa Boogie Triple Rectifier",
+          "base_tone": {
+            "gain": 0.9,
+            "treble": 0.3,
+            "mids": 0.3
+          },
+          "type": "Tube"
+        },
+        {
+          "name": "Insane",
+          "real_model": "EVH 5150 III",
+          "base_tone": {
+            "gain": 0.95,
+            "treble": 0.7,
+            "mids": 0.45
+          },
+          "type": "Tube"
+        },
+        {
+          "name": "BE 101",
+          "real_model": "Friedman BE100",
+          "base_tone": {
+            "gain": 0.88,
+            "treble": 0.65,
+            "mids": 0.6
+          },
+          "type": "Tube"
+        },
+        {
+          "name": "SwitchAxe",
+          "real_model": "H&K Switch Blade",
+          "base_tone": {
+            "gain": 0.85,
+            "treble": 0.75,
+            "mids": 0.55
+          },
+          "type": "Tube"
+        },
+        {
+          "name": "Rocker V",
+          "real_model": "Orange Rockerverb 50",
+          "base_tone": {
+            "gain": 0.82,
+            "treble": 0.45,
+            "mids": 0.7
+          },
+          "type": "Tube"
+        },
+        {
+          "name": "Insane 6508",
+          "real_model": "Peavey 6505",
+          "base_tone": {
+            "gain": 0.92,
+            "treble": 0.4,
+            "mids": 0.5
+          },
+          "type": "Tube"
+        }
+      ]
+    },
+    {
+      "category": "Jimi Hendrix",
+      "models": [
+        {
+          "name": "J.H. 45/100",
+          "real_model": "Marshall JTM45/100",
+          "base_tone": {
+            "gain": 0.6,
+            "treble": 0.5,
+            "mids": 0.6
+          },
+          "type": "Tube"
+        },
+        {
+          "name": "J.H. Super 100",
+          "real_model": "Marshall Super Lead 100",
+          "base_tone": {
+            "gain": 0.65,
+            "treble": 0.55,
+            "mids": 0.6
+          },
+          "type": "Tube"
+        },
+        {
+          "name": "J.H. Bass Master",
+          "real_model": "Fender 1968 Bassman",
+          "base_tone": {
+            "gain": 0.4,
+            "treble": 0.5,
+            "mids": 0.65
+          },
+          "type": "Tube"
+        },
+        {
+          "name": "J.H. D-Show Master",
+          "real_model": "Fender Dual Showman",
+          "base_tone": {
+            "gain": 0.25,
+            "treble": 0.75,
+            "mids": 0.35
+          },
+          "type": "Tube"
+        },
+        {
+          "name": "J.H. Sun 100S",
+          "real_model": "Sunn 100S",
+          "base_tone": {
+            "gain": 0.5,
+            "treble": 0.6,
+            "mids": 0.55
+          },
+          "type": "Tube"
+        },
+        {
+          "name": "J.H. Tone City 100",
+          "real_model": "Sound City 100",
+          "base_tone": {
+            "gain": 0.55,
+            "treble": 0.65,
+            "mids": 0.5
+          },
+          "type": "Tube"
+        }
+      ]
+    },
+    {
+      "category": "Bass",
+      "models": [
+        {
+          "name": "RB-800",
+          "real_model": "Gallien-Krueger 800RB",
+          "base_tone": {
+            "gain": 0.3,
+            "treble": 0.6,
+            "mids": 0.5
+          },
+          "type": "Solid State"
+        },
+        {
+          "name": "Sunny 3000",
+          "real_model": "Sunn 300T",
+          "base_tone": {
+            "gain": 0.4,
+            "treble": 0.4,
+            "mids": 0.6
+          },
+          "type": "Tube"
+        },
+        {
+          "name": "W600",
+          "real_model": "Eden WTP600",
+          "base_tone": {
+            "gain": 0.2,
+            "treble": 0.7,
+            "mids": 0.4
+          },
+          "type": "Solid State"
+        },
+        {
+          "name": "Hammer 500",
+          "real_model": "Aguilar Tone Hammer 500",
+          "base_tone": {
+            "gain": 0.25,
+            "treble": 0.55,
+            "mids": 0.55
+          },
+          "type": "Solid State"
+        }
+      ]
+    }
+  ],
+  "modulation": [
+    {
+      "name": "Tremolo",
+      "real_model": "Mad Professor Mellow Yellow",
+      "type": "Tremolo",
+      "parameters": {
+        "speed": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "level": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "depth": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "movement": "Amplitude",
+        "vibe": "Vintage"
+      }
+    },
+    {
+      "name": "Chorus",
+      "real_model": "Boss CH-1 Super Chorus",
+      "type": "Chorus",
+      "parameters": {
+        "e_level": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "rate": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "depth": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "tone": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "movement": "Pitch",
+        "width": 0.8,
+        "brightness": 0.5
+      }
+    },
+    {
+      "name": "Cloner Chorus",
+      "real_model": "Electro Harmonix Small Clone",
+      "type": "Chorus",
+      "parameters": {
+        "rate": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "depth_switch": {
+          "type": "switch",
+          "values": [
+            "Low",
+            "High"
+          ]
+        }
+      },
+      "sonic_profile": {
+        "movement": "Pitch",
+        "width": 0.6,
+        "vibe": "Nirvana/Grunge"
+      }
+    },
+    {
+      "name": "Flanger",
+      "real_model": "EHX Electric Mistress",
+      "type": "Flanger",
+      "parameters": {
+        "rate": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "mix": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "depth": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "movement": "Comb Filter",
+        "jet_sound": true
+      }
+    },
+    {
+      "name": "Phaser",
+      "real_model": "MXR Phase 100",
+      "type": "Phaser",
+      "parameters": {
+        "intensity": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "speed": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "movement": "Phase Shift",
+        "swirl": true
+      }
+    },
+    {
+      "name": "Vibrato",
+      "real_model": "BBE Mind Bender",
+      "type": "Vibrato",
+      "parameters": {
+        "speed": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "depth": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "movement": "Pitch",
+        "seasick": true
+      }
+    },
+    {
+      "name": "UniVibe",
+      "real_model": "Shin-ei Uni-Vibe",
+      "type": "Vibe",
+      "parameters": {
+        "speed": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "intensity": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "mode_switch": {
+          "type": "switch",
+          "values": [
+            "Chorus",
+            "Vibrato"
+          ]
+        }
+      },
+      "sonic_profile": {
+        "movement": "Throb",
+        "psychedelic": true
+      }
+    },
+    {
+      "name": "J.H. Legendary Vibe",
+      "real_model": "Roger Mayer Voodoo Vibe",
+      "type": "Vibe",
+      "parameters": {
+        "speed": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "sweep": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "intensity": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "mix": {
+          "min": 0.0,
+          "max": 10.0,
+          "label": "Vibrato/Chorus Mix"
+        }
+      },
+      "sonic_profile": {
+        "movement": "Complex Throb",
+        "hendrix": true
+      }
+    },
+    {
+      "name": "Classic Vibe",
+      "real_model": "Voodoo Lab Micro Vibe",
+      "type": "Vibe",
+      "parameters": {
+        "speed": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "intensity": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "movement": "Throb",
+        "vintage": true
+      }
+    },
+    {
+      "name": "Tremolator",
+      "real_model": "Demeter TRM-1",
+      "type": "Tremolo",
+      "parameters": {
+        "depth": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "speed": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "movement": "Amplitude",
+        "optical": true
+      }
+    },
+    {
+      "name": "Tremolo Square",
+      "real_model": "TC Electronic Pipeline",
+      "type": "Tremolo",
+      "parameters": {
+        "speed": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "level": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "bpm_mode": {
+          "type": "switch",
+          "values": [
+            "On",
+            "Off"
+          ]
+        },
+        "depth": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "movement": "Hard Chop",
+        "modern": true
+      }
+    }
+  ],
+  "eq": [
+    {
+      "name": "Guitar EQ",
+      "real_model": "MXR M109",
+      "type": "6-Band EQ",
+      "parameters": {
+        "100hz": {
+          "min": -10.0,
+          "max": 10.0
+        },
+        "200hz": {
+          "min": -10.0,
+          "max": 10.0
+        },
+        "400hz": {
+          "min": -10.0,
+          "max": 10.0
+        },
+        "800hz": {
+          "min": -10.0,
+          "max": 10.0
+        },
+        "1600hz": {
+          "min": -10.0,
+          "max": 10.0
+        },
+        "3200hz": {
+          "min": -10.0,
+          "max": 10.0
+        }
+      }
+    },
+    {
+      "name": "Bass EQ",
+      "real_model": "MXR Bass EQ",
+      "type": "6-Band EQ",
+      "parameters": {
+        "50hz": {
+          "min": -10.0,
+          "max": 10.0
+        },
+        "120hz": {
+          "min": -10.0,
+          "max": 10.0
+        },
+        "400hz": {
+          "min": -10.0,
+          "max": 10.0
+        },
+        "800hz": {
+          "min": -10.0,
+          "max": 10.0
+        },
+        "4500hz": {
+          "min": -10.0,
+          "max": 10.0
+        },
+        "10000hz": {
+          "min": -10.0,
+          "max": 10.0
+        }
+      }
+    }
+  ],
+  "delay": [
+    {
+      "name": "Digital Delay",
+      "real_model": "Boss DD-3",
+      "type": "Digital",
+      "parameters": {
+        "e_level": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "f_back": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "d_time": {
+          "bpm_off": {"min": 1, "max": 50, "unit": "ms", "step": 1},
+          "bpm_on": {
+            "type": "selector",
+            "values": [
+              "1/32", "1/16", "1/16t", "1/16d",
+              "1/8", "1/8t", "1/8d",
+              "1/4", "1/4t", "1/4d",
+              "1/2", "1/2t", "1/2d",
+              "1"
+            ]
+          }
+        },
+        "mode": {
+          "type": "selector",
+          "values": [
+            "50ms",
+            "200ms",
+            "500ms",
+            "1s"
+          ]
+        },
+        "bpm_mode": {
+          "type": "switch",
+          "values": [
+            "On",
+            "Off"
+          ]
+        }
+      },
+      "sonic_profile": {
+        "repeats": "Clean",
+        "color": "Transparent"
+      }
+    },
+    {
+      "name": "Echo Filt",
+      "real_model": "Marshall Echohead",
+      "type": "Digital",
+      "parameters": {
+        "delay": {
+          "bpm_off": {"min": 100, "max": 1000, "unit": "ms", "step": 1},
+          "bpm_on": {
+            "type": "selector",
+            "values": [
+              "1/32", "1/16", "1/16t", "1/16d",
+              "1/8", "1/8t", "1/8d",
+              "1/4", "1/4t", "1/4d",
+              "1/2", "1/2t", "1/2d",
+              "1"
+            ]
+          }
+        },
+        "feedback": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "level": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "tone": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "bpm_mode": {
+          "type": "switch",
+          "values": [
+            "On",
+            "Off"
+          ]
+        }
+      },
+      "sonic_profile": {
+        "repeats": "Clean",
+        "color": "Dark/Bright Adjustable"
+      }
+    },
+    {
+      "name": "Vintage Delay",
+      "real_model": "Boss DM-3",
+      "type": "Analog",
+      "parameters": {
+        "repeat_rate": {
+          "bpm_off": {"min": 0.0, "max": 10.0},
+          "bpm_on": {
+            "type": "selector",
+            "values": [
+              "1/32", "1/16", "1/16t", "1/16d",
+              "1/8", "1/8t", "1/8d",
+              "1/4", "1/4t", "1/4d",
+              "1/2", "1/2t", "1/2d",
+              "1"
+            ]
+          }
+        },
+        "echo": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "intensity": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "bpm_mode": {
+          "type": "switch",
+          "values": [
+            "On",
+            "Off"
+          ]
+        }
+      },
+      "sonic_profile": {
+        "repeats": "Warm",
+        "degradation": "Medium"
+      }
+    },
+    {
+      "name": "Reverse Delay",
+      "real_model": "Positive Grid Original",
+      "type": "Special",
+      "parameters": {
+        "time": {
+          "bpm_off": {"min": 100, "max": 2000, "unit": "ms", "step": 1},
+          "bpm_on": {
+            "type": "fixed",
+            "value": "1/4"
+          }
+        },
+        "decay": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "mix": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "filter": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "bpm_mode": {
+          "type": "switch",
+          "values": [
+            "On",
+            "Off"
+          ]
+        }
+      },
+      "sonic_profile": {
+        "repeats": "Reverse",
+        "vibe": "Psychedelic"
+      }
+    },
+    {
+      "name": "Multi Head",
+      "real_model": "Roland Space Echo RE-201",
+      "type": "Tape",
+      "parameters": {
+        "repeat_rate": {
+          "bpm_off": {"min": 100, "max": 1000, "unit": "ms", "step": 1},
+          "bpm_on": {
+            "type": "selector",
+            "values": [
+              "1/32", "1/16", "1/16t", "1/16d",
+              "1/8", "1/8t", "1/8d",
+              "1/4", "1/4t", "1/4d",
+              "1/2", "1/2t", "1/2d",
+              "1"
+            ]
+          }
+        },
+        "intensity": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "echo_vol": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "mode_selector": {
+          "type": "selector",
+          "values": [
+            "Head 0+2",
+            "Head 0+1",
+            "Head 1+2",
+            "Head 0+1+2"
+          ]
+        },
+        "bpm_mode": {
+          "type": "switch",
+          "values": [
+            "On",
+            "Off"
+          ]
+        }
+      },
+      "sonic_profile": {
+        "repeats": "Rhythmic",
+        "degradation": "High",
+        "vibe": "Dub/Pink Floyd"
+      }
+    },
+    {
+      "name": "Echo Tape",
+      "real_model": "Maestro Echoplex EP-2",
+      "type": "Tape",
+      "parameters": {
+        "sustain": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "volume": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "tone": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "short/long": {
+          "bpm_off": {"min": 70, "max": 600, "unit": "ms", "step": 1},
+          "bpm_on": {
+            "type": "selector",
+            "values": [
+              "1/32", "1/16", "1/16t", "1/16d",
+              "1/8", "1/8t", "1/8d"
+            ]
+          }
+        },
+        "bpm_mode": {
+          "type": "switch",
+          "values": [
+            "On",
+            "Off"
+          ]
+        }
+      },
+      "sonic_profile": {
+        "repeats": "Dark",
+        "degradation": "High",
+        "flutter": true
+      }
+    }
+  ],
+  "reverb": [
+    {
+      "name": "Room Studio A",
+      "type": "Room",
+      "parameters": {
+        "level": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "damping": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "low_cut": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "high_cut": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "dwell": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "time": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "size": "Small",
+        "decay": "Short",
+        "vibe": "Tight/Intimate"
+      }
+    },
+    {
+      "name": "Room Studio B",
+      "type": "Room",
+      "parameters": {
+        "level": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "damping": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "low_cut": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "high_cut": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "dwell": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "time": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "size": "Small",
+        "decay": "Short",
+        "vibe": "Modern/Bright"
+      }
+    },
+    {
+      "name": "Chamber",
+      "type": "Chamber",
+      "parameters": {
+        "level": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "damping": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "low_cut": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "high_cut": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "dwell": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "time": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "size": "Medium",
+        "decay": "Medium",
+        "vibe": "Vintage Studio"
+      }
+    },
+    {
+      "name": "Hall Natural",
+      "type": "Hall",
+      "parameters": {
+        "level": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "damping": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "low_cut": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "high_cut": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "dwell": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "time": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "size": "Large",
+        "decay": "Long",
+        "vibe": "Realistic"
+      }
+    },
+    {
+      "name": "Hall Medium",
+      "real_model": "EHX Holy Grail",
+      "type": "Hall",
+      "parameters": {
+        "level": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "damping": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "low_cut": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "high_cut": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "dwell": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "time": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "size": "Medium",
+        "decay": "Medium",
+        "vibe": "Classic"
+      }
+    },
+    {
+      "name": "Hall Ambient",
+      "type": "Hall",
+      "parameters": {
+        "level": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "damping": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "low_cut": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "high_cut": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "dwell": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "time": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "size": "Very Large",
+        "decay": "Extra Long",
+        "vibe": "Ethereal"
+      }
+    },
+    {
+      "name": "Plate Short",
+      "type": "Plate",
+      "parameters": {
+        "level": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "damping": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "low_cut": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "high_cut": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "dwell": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "time": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "size": "Medium",
+        "decay": "Short",
+        "vibe": "Bright/Metallic"
+      }
+    },
+    {
+      "name": "Plate Rich",
+      "real_model": "EMT 140",
+      "type": "Plate",
+      "parameters": {
+        "level": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "damping": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "low_cut": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "high_cut": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "dwell": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "time": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "size": "Large",
+        "decay": "Long",
+        "vibe": "Warm/Vintage"
+      }
+    },
+    {
+      "name": "Plate Long",
+      "real_model": "Wampler Reflection",
+      "type": "Plate",
+      "parameters": {
+        "level": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "damping": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "low_cut": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "high_cut": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "dwell": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "time": {
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "sonic_profile": {
+        "size": "Extra Large",
+        "decay": "Long",
+        "vibe": "Lush"
+      }
+    }
+  ]
+}

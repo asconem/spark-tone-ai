@@ -1,0 +1,4092 @@
+{
+  "srv_standard": {
+    "keywords": [
+      "srv",
+      "stevie ray",
+      "pride and joy",
+      "texas flood",
+      "scuttle",
+      "house is rockin",
+      "crossfire"
+    ],
+    "forced_gear": {
+      "amp": "Black Duo",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 1.5,
+        "TONE": 6.0,
+        "LEVEL": 9.5
+      },
+      "reverb": "Hall Medium",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 4 (Neck+Mid)",
+        "volume": 8,
+        "tone": 8
+      }
+    },
+    "description": "Forced Fender Twin + Tube Screamer (Boost Mode) - The Texas Shuffle"
+  },
+  "srv_rotary": {
+    "keywords": [
+      "cold shot",
+      "couldn't stand the weather",
+      "change it"
+    ],
+    "forced_gear": {
+      "amp": "Black Duo",
+      "drive": "Tube Drive",
+      "mod_eq": "Classic Vibe",
+      "mod_settings": {
+        "SPEED": 6.5,
+        "INTENSITY": 7.0
+      },
+      "reverb": "Plate Short",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 4 (Neck+Mid)",
+        "volume": 8,
+        "tone": 7
+      }
+    },
+    "description": "Forced Fender + Uni-Vibe (Simulating the 'Cold Shot' Vibratone)"
+  },
+  "srv_lenny": {
+    "keywords": [
+      "lenny",
+      "riviera paradise",
+      "tin pan alley",
+      "life by the drop"
+    ],
+    "forced_gear": {
+      "amp": "ODS 50",
+      "reverb": "Plate Rich",
+      "reverb_settings": {
+        "LEVEL": 5.5,
+        "TIME": 6.0
+      },
+      "comp_wah": "Optical Comp",
+      "comp_settings": {
+        "VOLUME": 6.0,
+        "COMP": 3.0
+      },
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 4 (Neck+Mid)",
+        "volume": 10,
+        "tone": 7
+      }
+    },
+    "description": "Forced Dumble ODS 50 + High Reverb (The 'Glassy' Clean)"
+  },
+  "evh_brown": {
+    "keywords": [
+      "eruption",
+      "ain't talkin",
+      "running with the devil",
+      "panama",
+      "you really got me",
+      "jamie's cryin"
+    ],
+    "description": "Forced Plexi + Tube Drive boost (The Classic Brown Sound)",
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "amp_settings": {
+        "GAIN": 7.7,
+        "BASS": 6.0,
+        "MIDDLE": 4.1,
+        "TREBLE": 9.2,
+        "VOLUME": 7.8
+      },
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 1.7,
+        "TONE": 6.5,
+        "LEVEL": 8.0
+      },
+      "gate": "Noise Gate",
+      "gate_settings": {
+        "THRESHOLD": 3.3,
+        "DECAY": 1.0
+      },
+      "delay": "Echo Tape",
+      "delay_settings": {
+        "VOLUME": 1.0,
+        "SUSTAIN": 2.0,
+        "TONE": 5.0
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 10
+      }
+    }
+  },
+  "evh_unchained": {
+    "keywords": [
+      "unchained",
+      "hear about it later",
+      "atomic punk",
+      "cradle will rock",
+      "mean street"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "mod_eq": "Flanger",
+      "mod_settings": {
+        "RATE": 2.5,
+        "DEPTH": 8.0,
+        "MIX": 7.5
+      },
+      "delay": "Echo Tape",
+      "reverb": "Plate Short",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Plexi + High-Regen Flanger (The 'Fair Warning' Tone)"
+  },
+  "gilmour_lead": {
+    "keywords": [
+      "comfortably numb",
+      "pink floyd money",
+      "hey you",
+      "sorrow",
+      "fletcher memorial",
+      "have a cigar",
+      "haveacigar",
+      "dark side time",
+      "breathe reprise"
+    ],
+    "forced_gear": {
+      "amp": "J.H. Tone City 100",
+      "drive": "Guitar Muff",
+      "drive_settings": {
+        "SUSTAIN": 9.0,
+        "TONE": 4.5,
+        "VOLUME": 7.0
+      },
+      "mod_eq": "Flanger",
+      "mod_settings": {
+        "RATE": 0.2,
+        "DEPTH": 6.0,
+        "MIX": 4.0
+      },
+      "delay": "Multi Head",
+      "delay_settings": {
+        "INTENSITY": 5.5,
+        "ECHO_VOL": 4.5
+      },
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 5 (Neck)",
+        "volume": 10,
+        "tone": 7
+      }
+    },
+    "description": "Forced Sound City 100 + Big Muff + Slow Flanger (The 'Wall' Lead Tone)"
+  },
+  "gilmour_clean": {
+    "keywords": [
+      "shine on",
+      "breathe",
+      "us and them",
+      "coming back to life",
+      "great gig",
+      "wish you were here"
+    ],
+    "forced_gear": {
+      "amp": "J.H. Tone City 100",
+      "comp_wah": "Sustain Comp",
+      "comp_settings": {
+        "LEVEL": 6.0,
+        "ATTACK": 4.0,
+        "SUSTAIN": 7.5
+      },
+      "mod_eq": "Classic Vibe",
+      "mod_settings": {
+        "SPEED": 3.0,
+        "INTENSITY": 5.0
+      },
+      "delay": "Digital Delay",
+      "delay_settings": {
+        "E_LEVEL": 4.0,
+        "F_BACK": 4.0
+      },
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 5 (Neck)",
+        "volume": 10,
+        "tone": 7
+      }
+    },
+    "description": "Forced Sound City 100 + Compressor + Uni-Vibe (The 'Dark Side' Clean)"
+  },
+  "gilmour_run": {
+    "keywords": [
+      "run like hell",
+      "another brick",
+      "keep talking"
+    ],
+    "forced_gear": {
+      "amp": "J.H. Tone City 100",
+      "comp_wah": "Sustain Comp",
+      "mod_eq": "Flanger",
+      "delay": "Digital Delay",
+      "delay_settings": {
+        "E_LEVEL": 5.5,
+        "F_BACK": 6.0
+      },
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 5 (Neck)",
+        "volume": 10,
+        "tone": 7
+      }
+    },
+    "description": "Forced Sound City 100 + Flanger + Dotted 8th Delay (The Rhythmic Echo)"
+  },
+  "page_studio": {
+    "keywords": [
+      "communication breakdown",
+      "good times bad times",
+      "led zeppelin i",
+      "dazed and confused",
+      "how many more times"
+    ],
+    "forced_gear": {
+      "amp": "American Deluxe",
+      "drive": "Fuzz Face",
+      "drive_settings": {
+        "VOLUME": 8.5,
+        "FUZZ": 8.0
+      },
+      "reverb": "Room Studio A",
+      "reverb_settings": {
+        "LEVEL": 3.0,
+        "TIME": 2.0
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced '57 Deluxe + Tone Bender (The 'Telecaster' Studio Tone)"
+  },
+  "page_live": {
+    "keywords": [
+      "whole lotta love",
+      "black dog",
+      "rock and roll",
+      "immigrant song",
+      "heartbreaker",
+      "led zeppelin ocean",
+      "custard pie",
+      "stairway to heaven"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Booster",
+      "drive_settings": {
+        "GAIN": 6.0
+      },
+      "delay": "Echo Tape",
+      "delay_settings": {
+        "SUSTAIN": 0.0,
+        "VOLUME": 3.0,
+        "TONE": 6.0
+      },
+      "reverb": "Plate Rich",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Marshall + Echoplex Preamp (The 'Les Paul' Live Tone)"
+  },
+  "page_phaser": {
+    "keywords": [
+      "no quarter",
+      "achilles last stand",
+      "nobody's fault but mine",
+      "wanton song"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "mod_eq": "Phaser",
+      "mod_settings": {
+        "SPEED": 2.0,
+        "INTENSITY": 6.5
+      },
+      "delay": "Echo Tape",
+      "reverb": "Plate Long",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 6
+      }
+    },
+    "description": "Forced Marshall + Phase 90 (The 'Physical Graffiti' Tone)"
+  },
+  "clapton_cream": {
+    "keywords": [
+      "sunshine of your love",
+      "white room",
+      "swlabr",
+      "i feel free",
+      "spoonful"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Booster",
+      "drive_settings": {
+        "GAIN": 8.0
+      },
+      "reverb": "Room Studio A",
+      "reverb_settings": {
+        "LEVEL": 3.0
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 7,
+        "tone": 2
+      }
+    },
+    "description": "Forced Marshall (Woman Tone) - Treble Rolled Off"
+  },
+  "clapton_beano": {
+    "keywords": [
+      "hideaway",
+      "steppin' out",
+      "all your love",
+      "bluesbreakers",
+      "beano"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Booster",
+      "drive_settings": {
+        "GAIN": 8.0
+      },
+      "reverb": "Plate Short",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 10
+      }
+    },
+    "description": "Forced Marshall + Treble Booster (The 'Beano' Les Paul Tone)"
+  },
+  "clapton_badge": {
+    "keywords": [
+      "badge"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "mod_eq": "Classic Vibe",
+      "mod_settings": {
+        "SPEED": 6.0,
+        "INTENSITY": 7.5
+      },
+      "reverb": "Plate Short",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 6
+      }
+    },
+    "description": "Forced Marshall + Rotary/Vibe (The 'Badge' Bridge)"
+  },
+  "clapton_layla": {
+    "keywords": [
+      "layla"
+    ],
+    "forced_gear": {
+      "amp": "American Deluxe",
+      "drive": "Fuzz Face",
+      "drive_settings": {
+        "VOLUME": 8.0,
+        "FUZZ": 4.0
+      },
+      "reverb": "Room Studio A",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 2 (Bridge+Mid)",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Small Tweed Amp Cranked (The Layla Riff \u2014 Slide/Fuzz Tone)"
+  },
+  "clapton_80s": {
+    "keywords": [
+      "forever man",
+      "bad love",
+      "pretending",
+      "it's in the way that you use it"
+    ],
+    "forced_gear": {
+      "amp": "SLO 100",
+      "mod_eq": "Chorus",
+      "mod_settings": {
+        "DEPTH": 6.0,
+        "RATE": 3.0,
+        "E_LEVEL": 5.0
+      },
+      "delay": "Digital Delay",
+      "reverb": "Hall Natural",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 4 (Neck+Mid)",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Soldano + Chorus (The 'Journeyman' Strat Tone)"
+  },
+  "duane_slide": {
+    "keywords": [
+      "statesboro blues",
+      "don't keep me wonderin",
+      "trouble no more",
+      "done somebody wrong",
+      "mountain jam"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Booster",
+      "drive_settings": {
+        "GAIN": 8.0
+      },
+      "reverb": "Plate Short",
+      "reverb_settings": {
+        "LEVEL": 3.5,
+        "TIME": 2.5
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced 50W Marshall Spec (Darker/Saturated) + JBL Simulation"
+  },
+  "duane_whipping": {
+    "keywords": [
+      "whipping post",
+      "dreams"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Fuzz Face",
+      "drive_settings": {
+        "VOLUME": 8.0,
+        "FUZZ": 3.0
+      },
+      "reverb": "Plate Long",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Marshall + Low-Gain Fuzz (The 'Fillmore' Fuzz Face Myth)"
+  },
+  "betts_fillmore": {
+    "keywords": [
+      "elizabeth reed",
+      "liz reed",
+      "hot 'lanta",
+      "revival"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "reverb": "Hall Medium",
+      "comp_wah": "Optical Comp",
+      "comp_settings": {
+        "VOLUME": 6.0,
+        "COMP": 2.0
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced 100W Marshall (Clean/Jazzy) + Light Compression"
+  },
+  "betts_highway": {
+    "keywords": [
+      "blue sky",
+      "ramblin man",
+      "jessica",
+      "midnight rider",
+      "ain't wastin"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 2.0,
+        "TONE": 7.0,
+        "LEVEL": 9.0
+      },
+      "mod_eq": "Chorus",
+      "mod_settings": {
+        "DEPTH": 2.0,
+        "E_LEVEL": 3.0
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 7
+      }
+    },
+    "description": "Forced Marshall + Clean Boost (The 'Country' Major Pentatonic Tone)"
+  },
+  "zz_early": {
+    "keywords": [
+      "la grange",
+      "tush",
+      "jesus just left chicago",
+      "waitin for the bus",
+      "just got paid"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Booster",
+      "drive_settings": {
+        "GAIN": 8.0
+      },
+      "gate": "Noise Gate",
+      "gate_settings": {
+        "THRESHOLD": 4.0,
+        "DECAY": 2.0
+      },
+      "reverb": "Room Studio A",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Marshall (Bass 10/Treble 0) - The 'Flat Tire' Tone"
+  },
+  "zz_eliminator": {
+    "keywords": [
+      "sharp dressed man",
+      "gimme all your lovin",
+      "zz top legs",
+      "tv dinners",
+      "sleeping bag"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "comp_wah": "LA Comp",
+      "comp_settings": {
+        "GAIN": 5.0,
+        "PEAK_REDUCTION": 7.0
+      },
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 8.0,
+        "LEVEL": 7.0
+      },
+      "mod_eq": "Chorus",
+      "mod_settings": {
+        "DEPTH": 1.5,
+        "RATE": 2.0,
+        "E_LEVEL": 3.0
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Tight Distortion + Compression + Micro-Chorus (The 80s Tone)"
+  },
+  "zz_rhythmeen": {
+    "keywords": [
+      "i gotsta get paid",
+      "rhythmeen",
+      "my head's in mississippi"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Fuzz Face",
+      "drive_settings": {
+        "FUZZ": 10.0,
+        "VOLUME": 8.0
+      },
+      "mod_eq": "Tremolo",
+      "mod_settings": {
+        "DEPTH": 6.0,
+        "SPEED": 4.0
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 6
+      }
+    },
+    "description": "Forced Gated Fuzz (Simulating the Bixonic Expandora)"
+  },
+  "stu_nonagon": {
+    "keywords": [
+      "robot stop",
+      "gamma knife",
+      "people-vultures",
+      "nonagon infinity",
+      "rattlesnake",
+      "kglw_robotstop",
+      "kglw_gammaknife",
+      "kglw_peoplevultures",
+      "kglw_rattlesnake"
+    ],
+    "forced_gear": {
+      "amp": "Blues Boy",
+      "drive": "Fuzz Face",
+      "drive_settings": {
+        "FUZZ": 10.0,
+        "VOLUME": 10.0
+      },
+      "delay": "Digital Delay",
+      "delay_settings": {
+        "E_LEVEL": 6.0,
+        "F_BACK": 7.5
+      },
+      "mod_eq": "Tremolo",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Fender Hot Rod + Spitty Fuzz + Laser Delay (The 'Nonagon' Chaos)"
+  },
+  "stu_rats_nest": {
+    "keywords": [
+      "planet b",
+      "mars for the rich",
+      "organ farmer",
+      "self-immolate",
+      "king gizzard hell",
+      "venusian",
+      "kglw_planetb",
+      "kglw_marsfortherich",
+      "kglw_organfarmer",
+      "kglw_selfimmolate",
+      "kglw_venusian"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 8.0,
+        "LEVEL": 10.0,
+        "TONE": 6.5
+      },
+      "gate": "Noise Gate",
+      "gate_settings": {
+        "THRESHOLD": 6.0,
+        "DECAY": 1.0
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Marshall + TS Boost (The 'Thrash Metal' Tone)"
+  },
+  "joey_microtonal": {
+    "keywords": [
+      "nuclear fusion",
+      "billabong valley",
+      "sleep drifter",
+      "intrasport",
+      "work this time",
+      "kglw_nuclearfusion",
+      "kglw_billabongvalley",
+      "kglw_sleepdrifter",
+      "kglw_workthistime"
+    ],
+    "forced_gear": {
+      "amp": "Blues Boy",
+      "drive": "Booster",
+      "drive_settings": {
+        "GAIN": 6.0
+      },
+      "comp_wah": "Sustain Comp",
+      "delay": "Echo Tape",
+      "delay_settings": {
+        "SUSTAIN": 5.0,
+        "VOLUME": 4.0
+      },
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 2 (Bridge+Mid)",
+        "volume": 10,
+        "tone": 7
+      }
+    },
+    "description": "Forced Fender + Clean Boost (The 'Microtonal' Clean Tone)"
+  },
+  "joey_poly": {
+    "keywords": [
+      "crumbling castle",
+      "polygondwanaland",
+      "fourth colour",
+      "inner cell",
+      "kglw_crumblingcastle",
+      "kglw_polygondwanaland",
+      "kglw_fourthcolour",
+      "kglw_innercell"
+    ],
+    "forced_gear": {
+      "amp": "American Deluxe",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 4.0,
+        "LEVEL": 7.0
+      },
+      "mod_eq": "Phaser",
+      "mod_settings": {
+        "SPEED": 2.5,
+        "INTENSITY": 6.0
+      },
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 4 (Neck+Mid)",
+        "volume": 10,
+        "tone": 7
+      }
+    },
+    "description": "Forced '57 Deluxe + Phase (The 'Polyrhythm' Prog Tone)"
+  },
+  "trey_sustain": {
+    "keywords": [
+      "chalk dust torture",
+      "divide sky",
+      "you enjoy myself",
+      "tweezer",
+      "harry hood",
+      "stash",
+      "farmhouse"
+    ],
+    "forced_gear": {
+      "amp": "Black Duo",
+      "comp_wah": "Red Comp",
+      "comp_settings": {
+        "OUTPUT": 7.0,
+        "SENSITIVITY": 8.5
+      },
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 9.0,
+        "LEVEL": 10.0,
+        "TONE": 5.0
+      },
+      "delay": "Digital Delay",
+      "delay_settings": {
+        "E_LEVEL": 3.0,
+        "F_BACK": 4.0
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Ross Comp + Tube Screamer (The 'Infinite Sustain' Tone)"
+  },
+  "trey_funk": {
+    "keywords": [
+      "phish ghost",
+      "black-eyed katy",
+      "moma dance",
+      "2001",
+      "phish tube",
+      "phish sand"
+    ],
+    "forced_gear": {
+      "amp": "Black Duo",
+      "comp_wah": "Optical Comp",
+      "comp_settings": {
+        "VOLUME": 7.0,
+        "COMP": 6.0
+      },
+      "mod_eq": "Phaser",
+      "mod_settings": {
+        "SPEED": 2.0,
+        "INTENSITY": 4.0
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Auto-Wah + Compression (The '97 Cow Funk Tone)"
+  },
+  "skynyrd_ed": {
+    "keywords": [
+      "sweet home alabama",
+      "swamp music",
+      "i know a little",
+      "saturday night special"
+    ],
+    "forced_gear": {
+      "amp": "Black Duo",
+      "reverb": "Room Studio A",
+      "comp_wah": "Optical Comp",
+      "comp_settings": {
+        "VOLUME": 7.0,
+        "COMP": 4.0
+      },
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 2 (Bridge+Mid)",
+        "volume": 10,
+        "tone": 7
+      }
+    },
+    "description": "Forced Fender Twin + Compression (The 'Ed King' Strat Tone)"
+  },
+  "skynyrd_allen": {
+    "keywords": [
+      "free bird",
+      "gimme three steps",
+      "that smell",
+      "call me the breeze"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Booster",
+      "drive_settings": {
+        "GAIN": 2.0
+      },
+      "delay": "Echo Tape",
+      "delay_settings": {
+        "VOLUME": 2.0
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Marshall Super Lead (Bright/Biting) - The 'Free Bird' Solo"
+  },
+  "skynyrd_gary": {
+    "keywords": [
+      "tuesday's gone",
+      "simple man",
+      "needle and the spoon",
+      "what's your name"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 6.0,
+        "LEVEL": 8.0
+      },
+      "mod_eq": "Phaser",
+      "mod_settings": {
+        "SPEED": 1.5,
+        "INTENSITY": 6.0
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Marshall + Phaser (The 'Rossington' Les Paul Tone)"
+  },
+  "garcia_clean": {
+    "keywords": [
+      "eyes of the world",
+      "franklin's tower",
+      "sugar magnolia",
+      "uncle john's band",
+      "china cat sunflower",
+      "scarlet begonias",
+      "ripple",
+      "touch of grey"
+    ],
+    "forced_gear": {
+      "amp": "Black Duo",
+      "drive": "Booster",
+      "drive_settings": {
+        "GAIN": 0.0
+      },
+      "reverb": "Plate Short",
+      "reverb_settings": {
+        "LEVEL": 4.0,
+        "TIME": 4.0
+      },
+      "comp_wah": "Optical Comp",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 4 (Neck+Mid)",
+        "volume": 8,
+        "tone": 7
+      }
+    },
+    "description": "Forced Twin Reverb + Clean Boost (The 'JBL' Clean Tone)"
+  },
+  "garcia_mutron": {
+    "keywords": [
+      "estimated prophet",
+      "shakedown street",
+      "fire on the mountain",
+      "dancing in the street",
+      "feel like a stranger",
+      "rubin and cherise"
+    ],
+    "forced_gear": {
+      "amp": "Black Duo",
+      "comp_wah": "J.H. Legendary Wah",
+      "comp_settings": {
+        "AUTO_DETECT_SENSITIVITY": 7.5
+      },
+      "drive": "Booster",
+      "drive_settings": {
+        "GAIN": 8.0
+      },
+      "reverb": "Hall Medium",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 4 (Neck+Mid)",
+        "volume": 8,
+        "tone": 6
+      }
+    },
+    "description": "Forced Twin + Auto-Wah (The 'Mu-Tron' Envelope Tone)"
+  },
+  "garcia_dirt": {
+    "keywords": [
+      "grateful dead deal",
+      "sugaree",
+      "bertha",
+      "althea",
+      "west l.a. fadeaway",
+      "help on the way",
+      "slipknot"
+    ],
+    "forced_gear": {
+      "amp": "Black Duo",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 6.5,
+        "LEVEL": 8.0
+      },
+      "mod_eq": "Phaser",
+      "mod_settings": {
+        "SPEED": 2.0,
+        "INTENSITY": 4.0
+      },
+      "reverb": "Plate Long",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 4 (Neck+Mid)",
+        "volume": 10,
+        "tone": 6
+      }
+    },
+    "description": "Forced Twin + MXR Distortion+ (The 'Tiger' Lead Tone)"
+  },
+  "zappa_lead": {
+    "keywords": [
+      "muffin man",
+      "black napkins",
+      "zoot allures",
+      "apostrophe",
+      "camarillo brillo",
+      "dirty love",
+      "cosmik debris"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 8.5,
+        "LEVEL": 9.0
+      },
+      "gate": "Noise Gate",
+      "gate_settings": {
+        "THRESHOLD": 3.0,
+        "DECAY": 1.0
+      },
+      "comp_wah": "Optical Comp",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 1 (Bridge)",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Marshall + MXR Dist+ (The 'SG' Mid-Range Honk)"
+  },
+  "zappa_clean": {
+    "keywords": [
+      "inca roads",
+      "montana",
+      "village of the sun",
+      "pygmy twylyte",
+      "peaches en regalia",
+      "florentine pogen"
+    ],
+    "forced_gear": {
+      "amp": "Black Duo",
+      "comp_wah": "Red Comp",
+      "comp_settings": {
+        "OUTPUT": 7.5,
+        "SENSITIVITY": 9.0
+      },
+      "mod_eq": "Phaser",
+      "mod_settings": {
+        "SPEED": 1.2,
+        "INTENSITY": 7.5
+      },
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 2 (Bridge+Mid)",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Twin + Heavy Compression + Phaser (The 'Roxy' Funk Tone)"
+  },
+  "zappa_watermelon": {
+    "keywords": [
+      "watermelon in easter hay",
+      "black page",
+      "shut up 'n play yer guitar"
+    ],
+    "forced_gear": {
+      "amp": "Black Duo",
+      "comp_wah": "Optical Comp",
+      "comp_settings": {
+        "COMP": 8.5,
+        "VOLUME": 6.0
+      },
+      "mod_eq": "Chorus",
+      "mod_settings": {
+        "DEPTH": 3.5,
+        "RATE": 2.0,
+        "E_LEVEL": 4.5
+      },
+      "delay": "Digital Delay",
+      "delay_settings": {
+        "E_LEVEL": 4.0,
+        "F_BACK": 4.0
+      },
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 5 (Neck)",
+        "volume": 10,
+        "tone": 6
+      }
+    },
+    "description": "Forced Ultra-Clean Sustain + Modulation (The 'Easter Hay' Tone)"
+  },
+  "lifeson_prog": {
+    "keywords": [
+      "2112",
+      "working man",
+      "by-tor",
+      "xanadu",
+      "la villa strangiato",
+      "fly by night",
+      "anthem",
+      "bastille day"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 7.0,
+        "LEVEL": 8.0
+      },
+      "mod_eq": "Flanger",
+      "mod_settings": {
+        "RATE": 2.5,
+        "DEPTH": 7.0,
+        "MIX": 5.0
+      },
+      "reverb": "Plate Long",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Marshall + MXR Dist+ + Flanger (The '70s Prog' Tone)"
+  },
+  "lifeson_moving": {
+    "keywords": [
+      "tom sawyer",
+      "limelight",
+      "spirit of radio",
+      "freewill",
+      "subdivisions",
+      "red barchetta",
+      "yyz",
+      "closer to the heart"
+    ],
+    "forced_gear": {
+      "amp": "J.H. Tone City 100",
+      "drive": "Booster",
+      "drive_settings": {
+        "GAIN": 2.0
+      },
+      "mod_eq": "Chorus",
+      "mod_settings": {
+        "DEPTH": 7.5,
+        "RATE": 2.0,
+        "E_LEVEL": 6.0
+      },
+      "delay": "Echo Tape",
+      "delay_settings": {
+        "SUSTAIN": 3.0,
+        "VOLUME": 4.0
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Sound City 100 + Heavy Chorus (The 'Moving Pictures' Shimmer)"
+  },
+  "lifeson_heavy": {
+    "keywords": [
+      "stick it out",
+      "animate",
+      "counterparts",
+      "test for echo"
+    ],
+    "forced_gear": {
+      "amp": "SLO 100",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 5.0,
+        "LEVEL": 8.0,
+        "TONE": 4.0
+      },
+      "mod_eq": "Chorus",
+      "mod_settings": {
+        "E_LEVEL": 2.0
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Soldano (Hughes & Kettner Proxy) + Subtle Mod (The '90s Heavy' Tone)"
+  },
+  "knopfler_sultans": {
+    "keywords": [
+      "sultans of swing",
+      "lady writer",
+      "tunnel of love",
+      "down to the waterline",
+      "wild west end",
+      "single handed sailor"
+    ],
+    "forced_gear": {
+      "amp": "Black Duo",
+      "comp_wah": "Red Comp",
+      "comp_settings": {
+        "OUTPUT": 7.0,
+        "SENSITIVITY": 8.5
+      },
+      "reverb": "Room Studio A",
+      "reverb_settings": {
+        "LEVEL": 3.0,
+        "TIME": 3.0
+      },
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 2 (Bridge+Mid)",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Fender Twin + Heavy Compression (The 'Orange Squeezer' Clean)"
+  },
+  "knopfler_money": {
+    "keywords": [
+      "money for nothing",
+      "heavy fuel",
+      "calling elvis",
+      "industrial disease"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 7.5,
+        "LEVEL": 8.0
+      },
+      "mod_eq": "Guitar EQ",
+      "mod_settings": {
+        "100Hz": -5.0,
+        "200Hz": 2.0,
+        "400Hz": 5.0,
+        "800Hz": 5.0,
+        "1600Hz": 0.0,
+        "3200Hz": -5.0
+      },
+      "reverb": "Plate Short",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 2 (Bridge+Mid)",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Marshall + Mid-Boost EQ (The 'Cocked Wah' Nasal Tone)"
+  },
+  "knopfler_brothers": {
+    "keywords": [
+      "brothers in arms",
+      "so far away",
+      "latest trick",
+      "on every street",
+      "private investigations"
+    ],
+    "forced_gear": {
+      "amp": "SLO 100",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 4.0,
+        "LEVEL": 9.0,
+        "TONE": 5.0
+      },
+      "mod_eq": "Chorus",
+      "mod_settings": {
+        "DEPTH": 3.0,
+        "E_LEVEL": 4.0
+      },
+      "reverb": "Hall Natural",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 2 (Bridge+Mid)",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Soldano SLO-100 + Reverb (The 'High-Gain' Smoothness)"
+  },
+  "robertson_tweed": {
+    "keywords": [
+      "up on cripple creek",
+      "rag mama rag",
+      "king harvest",
+      "jawbone",
+      "look out cleveland"
+    ],
+    "forced_gear": {
+      "amp": "American Deluxe",
+      "drive": "Booster",
+      "drive_settings": {
+        "GAIN": 4.0
+      },
+      "comp_wah": "Optical Comp",
+      "reverb": "Room Studio A",
+      "reverb_settings": {
+        "LEVEL": 2.0
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 7
+      }
+    },
+    "description": "Forced Tweed Deluxe (Mid-Range Bite) - The 'Harvard' Amp Tone"
+  },
+  "robertson_waltz": {
+    "keywords": [
+      "further on up the road",
+      "it makes no difference",
+      "last waltz",
+      "shape i'm in",
+      "ophelia"
+    ],
+    "forced_gear": {
+      "amp": "Black Duo",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 2.0,
+        "LEVEL": 10.0,
+        "TONE": 8.0
+      },
+      "reverb": "Plate Short",
+      "reverb_settings": {
+        "LEVEL": 3.0
+      },
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 2 (Bridge+Mid)",
+        "volume": 10,
+        "tone": 7
+      }
+    },
+    "description": "Forced Twin Reverb + Boost (The 'Bronze Strat' Sharp Tone)"
+  },
+  "robertson_swirl": {
+    "keywords": [
+      "the weight",
+      "chest fever",
+      "stage fright",
+      "whispering pines"
+    ],
+    "forced_gear": {
+      "amp": "Black Duo",
+      "mod_eq": "Classic Vibe",
+      "mod_settings": {
+        "SPEED": 6.5,
+        "INTENSITY": 5.0
+      },
+      "reverb": "Hall Medium",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 4 (Neck+Mid)",
+        "volume": 10,
+        "tone": 6
+      }
+    },
+    "description": "Forced Rotary/Vibe (Simulating the Leslie Speaker Blend)"
+  },
+  "young_crazy": {
+    "keywords": [
+      "rockin' in the free world",
+      "cinnamon girl",
+      "powderfinger",
+      "fuckin' up",
+      "piece of crap",
+      "sedan delivery"
+    ],
+    "forced_gear": {
+      "amp": "American Deluxe",
+      "drive": "Fuzz Face",
+      "drive_settings": {
+        "FUZZ": 2.5,
+        "VOLUME": 10.0
+      },
+      "gate": "Noise Gate",
+      "gate_settings": {
+        "THRESHOLD": 2.0,
+        "DECAY": 5.0
+      },
+      "reverb": "Room Studio A",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Cranked Tweed + Low-Gain Fuzz (The 'Imploding Amp' Tone)"
+  },
+  "young_doom": {
+    "keywords": [
+      "hey hey my my",
+      "into the black",
+      "rust never sleeps",
+      "welfare mothers"
+    ],
+    "forced_gear": {
+      "amp": "American Deluxe",
+      "drive": "Fuzz Face",
+      "drive_settings": {
+        "FUZZ": 8.5,
+        "VOLUME": 10.0
+      },
+      "mod_eq": "Flanger",
+      "mod_settings": {
+        "RATE": 0.5,
+        "DEPTH": 8.0,
+        "MIX": 9.0
+      },
+      "reverb": "Plate Long",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Fuzz + Flange Chaos (The 'Hey Hey My My' Drone)"
+  },
+  "young_cortez": {
+    "keywords": [
+      "cortez the killer",
+      "down by the river",
+      "cowgirl in the sand",
+      "danger bird"
+    ],
+    "forced_gear": {
+      "amp": "American Deluxe",
+      "drive": "Booster",
+      "drive_settings": {
+        "GAIN": 5.0
+      },
+      "delay": "Echo Tape",
+      "delay_settings": {
+        "SUSTAIN": 4.0,
+        "VOLUME": 3.0
+      },
+      "reverb": "Plate Long",
+      "reverb_settings": {
+        "LEVEL": 5.0,
+        "TIME": 6.0
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Tweed + High Reverb (The 'Floating' Slow Lead)"
+  },
+  "young_harvest": {
+    "keywords": [
+      "heart of gold",
+      "old man",
+      "harvest moon",
+      "out on the weekend"
+    ],
+    "forced_gear": {
+      "amp": "American Deluxe",
+      "mod_eq": "Tremolo",
+      "mod_settings": {
+        "SPEED": 4.0,
+        "DEPTH": 4.0
+      },
+      "reverb": "Room Studio A",
+      "comp_wah": "Optical Comp",
+      "comp_settings": {
+        "VOLUME": 6.0,
+        "COMP": 3.0
+      },
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 4 (Neck+Mid)",
+        "volume": 10,
+        "tone": 6
+      }
+    },
+    "description": "Forced Clean Tweed + Tremolo (The 'Harvest' Vibe)"
+  },
+  "harrison_beatle": {
+    "keywords": [
+      "hard day's night",
+      "beatles help",
+      "ticket to ride",
+      "if i needed someone",
+      "taxman",
+      "day tripper"
+    ],
+    "forced_gear": {
+      "amp": "AC Boost",
+      "comp_wah": "Red Comp",
+      "comp_settings": {
+        "OUTPUT": 7.0,
+        "SENSITIVITY": 6.0
+      },
+      "drive": "Booster",
+      "drive_settings": {
+        "GAIN": 2.0
+      },
+      "reverb": "Room Studio A",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 1 (Bridge)",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Vox AC30 + Compression (The 'Rickenbacker' Jangle)"
+  },
+  "harrison_leslie": {
+    "keywords": [
+      "something",
+      "here comes the sun",
+      "you never give me your money",
+      "octopus's garden",
+      "sun king",
+      "let it be"
+    ],
+    "forced_gear": {
+      "amp": "AC Boost",
+      "mod_eq": "Classic Vibe",
+      "mod_settings": {
+        "SPEED": 6.5,
+        "INTENSITY": 6.0
+      },
+      "comp_wah": "Sustain Comp",
+      "reverb": "Plate Short",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 4 (Neck+Mid)",
+        "volume": 10,
+        "tone": 7
+      }
+    },
+    "description": "Forced Vox + Rotary/Vibe (The 'Abbey Road' Swirl)"
+  },
+  "harrison_slide": {
+    "keywords": [
+      "my sweet lord",
+      "what is life",
+      "all things must pass",
+      "give me love",
+      "blow away",
+      "got my mind set on you"
+    ],
+    "forced_gear": {
+      "amp": "Black Duo",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 4.0,
+        "LEVEL": 9.0,
+        "TONE": 3.5
+      },
+      "comp_wah": "Red Comp",
+      "comp_settings": {
+        "OUTPUT": 6.0,
+        "SENSITIVITY": 8.0
+      },
+      "reverb": "Plate Long",
+      "reverb_settings": {
+        "LEVEL": 5.0,
+        "TIME": 5.5
+      },
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 4 (Neck+Mid)",
+        "volume": 10,
+        "tone": 6
+      }
+    },
+    "description": "Forced Fender + Smooth Overdrive + Heavy Reverb (The 'Spector' Slide Tone)"
+  },
+  "harrison_weeps": {
+    "keywords": [
+      "while my guitar gently weeps",
+      "savoy truffle"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Fuzz Face",
+      "drive_settings": {
+        "VOLUME": 9.0,
+        "FUZZ": 6.5
+      },
+      "mod_eq": "Flanger",
+      "mod_settings": {
+        "RATE": 0.5,
+        "DEPTH": 3.0
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 7
+      }
+    },
+    "description": "Forced Marshall (Eric Clapton's Rig) - Actually played by Clapton"
+  },
+  "lennon_early": {
+    "keywords": [
+      "twist and shout",
+      "all my loving",
+      "she loves you",
+      "i want to hold your hand"
+    ],
+    "forced_gear": {
+      "amp": "AC Boost",
+      "comp_wah": "Red Comp",
+      "comp_settings": {
+        "OUTPUT": 7.0,
+        "SENSITIVITY": 5.0
+      },
+      "drive": "Booster",
+      "drive_settings": {
+        "GAIN": 3.0
+      },
+      "reverb": "Room Studio A",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 2 (Bridge+Mid)",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Vox AC30 + Compression (The 'Rickenbacker 325' Rhythm)"
+  },
+  "lennon_revolution": {
+    "keywords": [
+      "revolution",
+      "happiness is a warm gun",
+      "i want you (she's so heavy)",
+      "yer blues",
+      "helter skelter"
+    ],
+    "forced_gear": {
+      "amp": "Black Duo",
+      "drive": "Fuzz Face",
+      "drive_settings": {
+        "FUZZ": 10.0,
+        "VOLUME": 10.0
+      },
+      "gate": "Noise Gate",
+      "gate_settings": {
+        "THRESHOLD": 4.5,
+        "DECAY": 1.0
+      },
+      "mod_eq": "Guitar EQ",
+      "mod_settings": {
+        "100Hz": 5.0,
+        "200Hz": 5.0,
+        "400Hz": 5.0,
+        "800Hz": 5.0,
+        "1600Hz": 5.0,
+        "3200Hz": 5.0
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 6
+      }
+    },
+    "description": "Forced Console Overload (Fuzz Face Maxed) - The 'White Album' Dirt"
+  },
+  "lennon_rooftop": {
+    "keywords": [
+      "get back",
+      "don't let me down",
+      "dig a pony",
+      "ballad of john and yoko",
+      "come together"
+    ],
+    "forced_gear": {
+      "amp": "Black Duo",
+      "drive": "Booster",
+      "drive_settings": {
+        "GAIN": 5.0
+      },
+      "reverb": "Plate Short",
+      "reverb_settings": {
+        "LEVEL": 2.5
+      },
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 2 (Bridge+Mid)",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Twin Reverb + Boost (The 'Epiphone Casino' P90 Tone)"
+  },
+  "lennon_solo": {
+    "keywords": [
+      "imagine",
+      "instant karma",
+      "cold turkey",
+      "jealous guy",
+      "working class hero",
+      "mind games"
+    ],
+    "forced_gear": {
+      "amp": "Black Duo",
+      "delay": "Echo Tape",
+      "delay_settings": {
+        "SUSTAIN": 2.0,
+        "VOLUME": 4.0
+      },
+      "reverb": "Plate Long",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 4 (Neck+Mid)",
+        "volume": 10,
+        "tone": 6
+      }
+    },
+    "description": "Forced Twin + Slapback Echo (The 'Plastic Ono' Sound)"
+  },
+  "bellamy_fuzz": {
+    "keywords": [
+      "plug in baby",
+      "supermassive black hole",
+      "hysteria",
+      "time is running out",
+      "stockholm syndrome",
+      "psycho",
+      "uprising"
+    ],
+    "forced_gear": {
+      "amp": "AC Boost",
+      "drive": "Fuzz Face",
+      "drive_settings": {
+        "FUZZ": 10.0,
+        "VOLUME": 10.0
+      },
+      "gate": "Noise Gate",
+      "gate_settings": {
+        "THRESHOLD": 6.0,
+        "DECAY": 0.5
+      },
+      "mod_eq": "Phaser",
+      "mod_settings": {
+        "SPEED": 1.0,
+        "INTENSITY": 4.0
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Fuzz Factory Emulation (The 'Origin of Symmetry' Chaos)"
+  },
+  "bellamy_knights": {
+    "keywords": [
+      "knights of cydonia",
+      "map of the problematique",
+      "city of delusion"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Fuzz Face",
+      "drive_settings": {
+        "FUZZ": 8.0,
+        "VOLUME": 9.0
+      },
+      "mod_eq": "Tremolo",
+      "mod_settings": {
+        "SPEED": 6.0,
+        "DEPTH": 7.5
+      },
+      "delay": "Echo Tape",
+      "delay_settings": {
+        "SUSTAIN": 4.0,
+        "VOLUME": 4.0
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Fuzz + Tremolo (The 'Space Western' Trumpet Tone)"
+  },
+  "bellamy_starlight": {
+    "keywords": [
+      "starlight",
+      "madness",
+      "muse mercy",
+      "invincible"
+    ],
+    "forced_gear": {
+      "amp": "AC Boost",
+      "comp_wah": "Red Comp",
+      "comp_settings": {
+        "OUTPUT": 7.0,
+        "SENSITIVITY": 6.0
+      },
+      "mod_eq": "Chorus",
+      "mod_settings": {
+        "DEPTH": 3.0,
+        "RATE": 2.5
+      },
+      "delay": "Digital Delay",
+      "delay_settings": {
+        "E_LEVEL": 4.5,
+        "F_BACK": 5.0
+      },
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 4 (Neck+Mid)",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Vox AC30 + Heavy Delay (The 'Arena Pop' Clean)"
+  },
+  "bellamy_metal": {
+    "keywords": [
+      "assassin",
+      "reapers",
+      "kill or be killed",
+      "dead star"
+    ],
+    "forced_gear": {
+      "amp": "Treadplate",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 2.0,
+        "LEVEL": 10.0
+      },
+      "gate": "Noise Gate",
+      "gate_settings": {
+        "THRESHOLD": 5.0
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Mesa Triple Rectifier High Gain (The 'Heavy' Muse Riffs)"
+  },
+  "maiden_gallop": {
+    "keywords": [
+      "run to the hills",
+      "the trooper",
+      "number of the beast",
+      "aces high",
+      "2 minutes to midnight",
+      "powerslave",
+      "wrathchild"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 0.0,
+        "LEVEL": 10.0,
+        "TONE": 6.5
+      },
+      "gate": "Noise Gate",
+      "gate_settings": {
+        "THRESHOLD": 4.5,
+        "DECAY": 1.0
+      },
+      "reverb": "Room Studio A",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Marshall + TS Boost (The 'Gallop' Rhythm)"
+  },
+  "maiden_dave": {
+    "keywords": [
+      "hallowed be thy name",
+      "fear of the dark",
+      "phantom of the opera",
+      "iron maiden",
+      "dance of death"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 7.5,
+        "LEVEL": 8.0
+      },
+      "delay": "Digital Delay",
+      "delay_settings": {
+        "E_LEVEL": 3.5,
+        "F_BACK": 3.5
+      },
+      "reverb": "Plate Long",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Marshall + Distortion (Dave Murray's 'Liquid' Lead)"
+  },
+  "maiden_adrian": {
+    "keywords": [
+      "wasted years",
+      "stranger in a strange land",
+      "caught somewhere in time",
+      "alexander the great",
+      "heaven can wait"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "mod_eq": "Chorus",
+      "mod_settings": {
+        "DEPTH": 6.5,
+        "RATE": 3.0,
+        "E_LEVEL": 5.0
+      },
+      "delay": "Digital Delay",
+      "delay_settings": {
+        "E_LEVEL": 6.5,
+        "F_BACK": 6.0
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Marshall + Heavy Delay/Chorus (The 'Somewhere in Time' FX)"
+  },
+  "angus_bib": {
+    "keywords": [
+      "back in black",
+      "shook me all night long",
+      "hells bells",
+      "shoot to thrill",
+      "have a drink on me"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Booster",
+      "drive_settings": {
+        "GAIN": 3.0
+      },
+      "reverb": "Plate Short",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Marshall + Clean Boost (The 'Schaffer Wireless' Tone)"
+  },
+  "angus_thunder": {
+    "keywords": [
+      "thunderstruck",
+      "moneytalks",
+      "razor's edge",
+      "hard as a rock"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 2.0,
+        "LEVEL": 10.0,
+        "TONE": 6.0
+      },
+      "gate": "Noise Gate",
+      "gate_settings": {
+        "THRESHOLD": 4.5,
+        "DECAY": 0.5
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Marshall + TS Boost (The 'Razor's Edge' Lead)"
+  },
+  "iommi_classic": {
+    "keywords": [
+      "iron man",
+      "paranoid",
+      "war pigs",
+      "black sabbath",
+      "wizard",
+      "sabbath nib",
+      "fairies wear boots"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Booster",
+      "drive_settings": {
+        "GAIN": 9.0
+      },
+      "gate": "Noise Gate",
+      "gate_settings": {
+        "THRESHOLD": 3.5,
+        "DECAY": 1.0
+      },
+      "reverb": "Room Studio A",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 6
+      }
+    },
+    "description": "Forced Marshall + Treble Booster (The 'Fingertips' Crunch)"
+  },
+  "iommi_master": {
+    "keywords": [
+      "into the void",
+      "children of the grave",
+      "sweet leaf",
+      "lord of this world",
+      "snowblind",
+      "supernaut"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Booster",
+      "drive_settings": {
+        "GAIN": 10.0
+      },
+      "mod_eq": "Guitar EQ",
+      "mod_settings": {
+        "100Hz": -2.0,
+        "200Hz": 5.0,
+        "400Hz": 5.0,
+        "800Hz": 5.0,
+        "1600Hz": 2.0,
+        "3200Hz": -2.0
+      },
+      "reverb": "Plate Short",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 6
+      }
+    },
+    "description": "Forced Mid-Boosted Sludge (Simulating C# Tuning Thickness)"
+  },
+  "iommi_dio": {
+    "keywords": [
+      "heaven and hell",
+      "neon knights",
+      "children of the sea",
+      "mob rules",
+      "die young"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 8.0,
+        "LEVEL": 9.0
+      },
+      "mod_eq": "Chorus",
+      "mod_settings": {
+        "DEPTH": 4.0,
+        "RATE": 2.0,
+        "E_LEVEL": 3.0
+      },
+      "delay": "Digital Delay",
+      "reverb": "Hall Medium",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 6
+      }
+    },
+    "description": "Forced Marshall + Distortion + Chorus (The '80s Polished' Metal)"
+  },
+  "auerbach_raw": {
+    "keywords": [
+      "thickfreakness",
+      "i got mine",
+      "your touch",
+      "10 am automatic",
+      "till i get my way",
+      "strange times"
+    ],
+    "forced_gear": {
+      "amp": "Checkmate",
+      "drive": "Fuzz Face",
+      "drive_settings": {
+        "FUZZ": 3.5,
+        "VOLUME": 10.0
+      },
+      "reverb": "Room Studio A",
+      "reverb_settings": {
+        "LEVEL": 3.5,
+        "TIME": 1.5
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 6
+      }
+    },
+    "description": "Forced Teisco + Broken Fuzz (The 'Rubber Factory' Lo-Fi Tone)"
+  },
+  "auerbach_gold": {
+    "keywords": [
+      "lonely boy",
+      "gold on the ceiling",
+      "little black submarines",
+      "howlin' for you",
+      "tighten up"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Guitar Muff",
+      "drive_settings": {
+        "SUSTAIN": 8.0,
+        "TONE": 4.0,
+        "VOLUME": 7.0
+      },
+      "mod_eq": "Guitar EQ",
+      "mod_settings": {
+        "800Hz": 3.0
+      },
+      "reverb": "Hall Medium",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 7
+      }
+    },
+    "description": "Forced Marshall + Big Muff (The 'El Camino' Glam Rock Wall)"
+  },
+  "auerbach_soul": {
+    "keywords": [
+      "everlasting light",
+      "too afraid to love you",
+      "weight of love",
+      "black keys fever"
+    ],
+    "forced_gear": {
+      "amp": "Checkmate",
+      "mod_eq": "Tremolo",
+      "mod_settings": {
+        "SPEED": 4.5,
+        "DEPTH": 7.0
+      },
+      "drive": "Booster",
+      "drive_settings": {
+        "GAIN": 4.0
+      },
+      "reverb": "Hall Medium",
+      "reverb_settings": {
+        "DWELL": 6.0,
+        "LEVEL": 5.0
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 7
+      }
+    },
+    "description": "Forced Teisco + Tremolo + Spring (The 'Brothers' Soul Vibe)"
+  },
+  "scholz_distortion": {
+    "keywords": [
+      "more than a feeling",
+      "peace of mind",
+      "rock and roll band",
+      "smokin'",
+      "don't look back"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 8.0,
+        "LEVEL": 8.0
+      },
+      "mod_eq": "Guitar EQ",
+      "mod_settings": {
+        "100Hz": -2.0,
+        "200Hz": 4.0,
+        "400Hz": 6.0,
+        "800Hz": 4.0,
+        "1600Hz": 1.0,
+        "3200Hz": 0.0
+      },
+      "reverb": "Plate Long",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Marshall + Mid-Boost EQ (The 'Rockman' Distortion)"
+  },
+  "scholz_clean": {
+    "keywords": [
+      "hitch a ride",
+      "man i'll never be",
+      "amanda",
+      "let me take you home tonight"
+    ],
+    "forced_gear": {
+      "amp": "Black Duo",
+      "comp_wah": "Red Comp",
+      "comp_settings": {
+        "OUTPUT": 7.0,
+        "SENSITIVITY": 9.0
+      },
+      "mod_eq": "Chorus",
+      "mod_settings": {
+        "DEPTH": 7.0,
+        "RATE": 2.0,
+        "E_LEVEL": 6.0
+      },
+      "reverb": "Hall Natural",
+      "reverb_settings": {
+        "LEVEL": 5.0,
+        "TIME": 4.0
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Compression + Heavy Chorus (The 'Rockman' Clean)"
+  },
+  "scholz_lead": {
+    "keywords": [
+      "foreplay",
+      "long time",
+      "boston party",
+      "something about you"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "comp_wah": "Sustain Comp",
+      "comp_settings": {
+        "LEVEL": 6.0,
+        "SUSTAIN": 7.0
+      },
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 8.0,
+        "LEVEL": 9.0,
+        "TONE": 6.0
+      },
+      "delay": "Echo Tape",
+      "delay_settings": {
+        "SUSTAIN": 5.0,
+        "VOLUME": 4.0
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Compressor + Drive (The 'Organ' Sustain)"
+  },
+  "richards_open_g": {
+    "keywords": [
+      "brown sugar",
+      "start me up",
+      "honky tonk women",
+      "jumpin jack flash",
+      "tumbling dice",
+      "stones happy",
+      "can't you hear me knocking"
+    ],
+    "forced_gear": {
+      "amp": "American Deluxe",
+      "drive": "Booster",
+      "drive_settings": {
+        "GAIN": 5.0
+      },
+      "gate": "Noise Gate",
+      "gate_settings": {
+        "THRESHOLD": 2.5
+      },
+      "reverb": "Room Studio A",
+      "reverb_settings": {
+        "LEVEL": 3.0
+      },
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 1 (Bridge)",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Cranked Tweed (Bass Cut) - The 'Micawber' Rhythm Tone"
+  },
+  "richards_satisfaction": {
+    "keywords": [
+      "satisfaction",
+      "last time",
+      "19th nervous breakdown",
+      "mother's little helper"
+    ],
+    "forced_gear": {
+      "amp": "Black Duo",
+      "drive": "Fuzz Face",
+      "drive_settings": {
+        "FUZZ": 10.0,
+        "VOLUME": 7.5
+      },
+      "reverb": "Plate Short",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 2 (Bridge+Mid)",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Fuzz Face (The 'Saxophone' Fuzz Tone)"
+  },
+  "richards_shelter": {
+    "keywords": [
+      "gimme shelter",
+      "midnight rambler",
+      "sympathy for the devil",
+      "wild horses",
+      "angie",
+      "beast of burden"
+    ],
+    "forced_gear": {
+      "amp": "Black Duo",
+      "mod_eq": "Tremolo",
+      "mod_settings": {
+        "SPEED": 3.5,
+        "DEPTH": 6.5
+      },
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 2.0,
+        "LEVEL": 8.0,
+        "TONE": 6.0
+      },
+      "reverb": "Hall Medium",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 7
+      }
+    },
+    "description": "Forced Twin Reverb + Tremolo (The 'Menacing' Atmosphere)"
+  },
+  "may_bohemian": {
+    "keywords": [
+      "bohemian rhapsody",
+      "killer queen"
+    ],
+    "forced_gear": {
+      "amp": "AC Boost",
+      "drive": "Booster",
+      "drive_settings": {
+        "GAIN": 10.0
+      },
+      "mod_eq": "Chorus",
+      "mod_settings": {
+        "DEPTH": 6.0,
+        "RATE": 2.0,
+        "E_LEVEL": 4.0
+      },
+      "reverb": "Room Studio A",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Vox AC30 + Treble Booster + Chorus (The 'Red Special' Wall of Sound)"
+  },
+  "may_deacy": {
+    "keywords": [
+      "good company",
+      "procession",
+      "god save the queen",
+      "love of my life"
+    ],
+    "forced_gear": {
+      "amp": "AC Boost",
+      "comp_wah": "Sustain Comp",
+      "mod_eq": "Guitar EQ",
+      "mod_settings": {
+        "100Hz": -5.0,
+        "200Hz": 5.0,
+        "400Hz": 5.0,
+        "800Hz": 2.0,
+        "1600Hz": -2.0,
+        "3200Hz": -5.0
+      },
+      "reverb": "Hall Natural",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 1 (Bridge)",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Mid-Range + Compression (Simulating the 'Deacy' Amp)"
+  },
+  "greenwood_creep": {
+    "keywords": [
+      "radiohead creep",
+      "radiohead just",
+      "my iron lung",
+      "radiohead bones",
+      "electioneering",
+      "polyethylene"
+    ],
+    "forced_gear": {
+      "amp": "Black Duo",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 9.0,
+        "LEVEL": 9.0
+      },
+      "mod_eq": "Guitar EQ",
+      "mod_settings": {
+        "100Hz": 2.0,
+        "200Hz": 0.0,
+        "400Hz": -4.0,
+        "800Hz": -2.0,
+        "1600Hz": 2.0,
+        "3200Hz": 0.0
+      },
+      "gate": "Noise Gate",
+      "gate_settings": {
+        "THRESHOLD": 5.0,
+        "DECAY": 0.5
+      },
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 1 (Bridge)",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Solid-State Clean + Scooped Distortion (The 'Shredmaster' Tone)"
+  },
+  "greenwood_space": {
+    "keywords": [
+      "subterranean homesick alien",
+      "airbag",
+      "radiohead lucky",
+      "ok computer lucky",
+      "no surprises",
+      "street spirit",
+      "pyramid song"
+    ],
+    "forced_gear": {
+      "amp": "AC Boost",
+      "mod_eq": "Tremolo",
+      "mod_settings": {
+        "SPEED": 6.0,
+        "DEPTH": 7.0
+      },
+      "delay": "Echo Tape",
+      "delay_settings": {
+        "SUSTAIN": 6.0,
+        "VOLUME": 5.0
+      },
+      "reverb": "Hall Natural",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 4 (Neck+Mid)",
+        "volume": 10,
+        "tone": 6
+      }
+    },
+    "description": "Forced Vox + Space Echo + Tremolo (The 'OK Computer' Atmosphere)"
+  },
+  "yorke_crunch": {
+    "keywords": [
+      "bodysnatchers",
+      "2+2=5",
+      "high and dry",
+      "fake plastic trees",
+      "there there",
+      "optimistic"
+    ],
+    "forced_gear": {
+      "amp": "AC Boost",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 7.0,
+        "LEVEL": 8.0
+      },
+      "reverb": "Room Studio A",
+      "reverb_settings": {
+        "LEVEL": 3.5
+      },
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 2 (Bridge+Mid)",
+        "volume": 10,
+        "tone": 6
+      }
+    },
+    "description": "Forced Vox AC30 + Turbo RAT (The 'Thom' Rhythm Tone)"
+  },
+  "greenwood_glitch": {
+    "keywords": [
+      "go to sleep",
+      "paranoid android",
+      "idioteque"
+    ],
+    "forced_gear": {
+      "amp": "AC Boost",
+      "mod_eq": "Phaser",
+      "mod_settings": {
+        "SPEED": 0.5,
+        "INTENSITY": 8.0
+      },
+      "drive": "Fuzz Face",
+      "drive_settings": {
+        "FUZZ": 8.0
+      },
+      "delay": "Digital Delay",
+      "delay_settings": {
+        "E_LEVEL": 6.0,
+        "F_BACK": 0.0
+      },
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 2 (Bridge+Mid)",
+        "volume": 10,
+        "tone": 6
+      }
+    },
+    "description": "Forced Phaser + Fuzz (Simulating Max/MSP Glitches)"
+  },
+  "slash_appetite": {
+    "keywords": [
+      "welcome to the jungle",
+      "nightrain",
+      "it's so easy",
+      "mr brownstone",
+      "rocket queen",
+      "you could be mine"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Booster",
+      "drive_settings": {
+        "GAIN": 2.0
+      },
+      "gate": "Noise Gate",
+      "gate_settings": {
+        "THRESHOLD": 3.0,
+        "DECAY": 1.0
+      },
+      "reverb": "Room Studio A",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Marshall + Boost (Simulating the 'SIR #39' Modded Amp)"
+  },
+  "slash_sweet": {
+    "keywords": [
+      "sweet child o mine",
+      "don't cry"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 5.0,
+        "LEVEL": 8.0,
+        "TONE": 2.0
+      },
+      "reverb": "Plate Long",
+      "reverb_settings": {
+        "LEVEL": 4.0
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Warm Drive (Simulating Neck Pickup 'Woman Tone')"
+  },
+  "slash_november": {
+    "keywords": [
+      "november rain",
+      "estranged",
+      "civil war",
+      "knockin on heavens door"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 6.0,
+        "LEVEL": 9.0
+      },
+      "delay": "Digital Delay",
+      "delay_settings": {
+        "E_LEVEL": 4.0,
+        "F_BACK": 4.5
+      },
+      "reverb": "Hall Natural",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced JCM 800 + Delay (The 'Illusion' Stadium Solo)"
+  },
+  "slash_paradise": {
+    "keywords": [
+      "paradise city"
+    ],
+    "forced_gear": {
+      "amp": "Black Duo",
+      "mod_eq": "Chorus",
+      "mod_settings": {
+        "DEPTH": 7.5,
+        "RATE": 2.5,
+        "E_LEVEL": 5.0
+      },
+      "reverb": "Hall Medium",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Clean + Heavy Chorus (The 'Paradise City' Intro)"
+  },
+  "cobain_nevermind": {
+    "keywords": [
+      "smells like teen spirit",
+      "lithium",
+      "drain you",
+      "nirvana breed",
+      "territorial pissings",
+      "stay away"
+    ],
+    "forced_gear": {
+      "amp": "Black Duo",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 9.5,
+        "LEVEL": 9.0
+      },
+      "mod_eq": "Chorus",
+      "mod_settings": {
+        "DEPTH": 4.5,
+        "RATE": 2.5,
+        "E_LEVEL": 5.0
+      },
+      "gate": "Noise Gate",
+      "gate_settings": {
+        "THRESHOLD": 3.0
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 10
+      }
+    },
+    "description": "Forced Twin Reverb + Boss DS-1 Proxy (The 'Teen Spirit' Quiet/Loud)"
+  },
+  "cobain_watery": {
+    "keywords": [
+      "come as you are",
+      "polly",
+      "about a girl",
+      "nirvana dumb",
+      "something in the way"
+    ],
+    "forced_gear": {
+      "amp": "Black Duo",
+      "mod_eq": "Chorus",
+      "mod_settings": {
+        "DEPTH": 8.5,
+        "RATE": 1.5,
+        "E_LEVEL": 7.0
+      },
+      "comp_wah": "Red Comp",
+      "comp_settings": {
+        "OUTPUT": 6.0,
+        "SENSITIVITY": 4.0
+      },
+      "reverb": "Room Studio A",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 5 (Neck)",
+        "volume": 10,
+        "tone": 6
+      }
+    },
+    "description": "Forced Small Clone Chorus (The 'Underwater' Clean Tone)"
+  },
+  "cobain_utero": {
+    "keywords": [
+      "heart-shaped box",
+      "rape me",
+      "all apologies",
+      "pennyroyal tea",
+      "scentless apprentice",
+      "serve the servants"
+    ],
+    "forced_gear": {
+      "amp": "Black Duo",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 9.0,
+        "LEVEL": 10.0
+      },
+      "mod_eq": "Guitar EQ",
+      "mod_settings": {
+        "100Hz": 0.0,
+        "200Hz": 2.0,
+        "400Hz": 4.0,
+        "800Hz": 5.0,
+        "1600Hz": 3.0,
+        "3200Hz": 2.0
+      },
+      "reverb": "Room Studio A",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 6
+      }
+    },
+    "description": "Forced Mid-Boosted Distortion (The 'SansAmp' Abrasive Tone)"
+  },
+  "cobain_unplugged": {
+    "keywords": [
+      "man who sold the world",
+      "lake of fire",
+      "where did you sleep last night",
+      "jesus doesn't want me for a sunbeam"
+    ],
+    "forced_gear": {
+      "amp": "Black Duo",
+      "drive": "Fuzz Face",
+      "drive_settings": {
+        "VOLUME": 8.0,
+        "FUZZ": 6.0
+      },
+      "mod_eq": "Chorus",
+      "mod_settings": {
+        "DEPTH": 3.0,
+        "E_LEVEL": 4.0
+      },
+      "reverb": "Hall Medium",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 4 (Neck+Mid)",
+        "volume": 10,
+        "tone": 6
+      }
+    },
+    "description": "Forced Acoustic-Electric (The 'Martin D-18' Fuzz Tone)"
+  },
+  "mccready_lead": {
+    "keywords": [
+      "pearl jam alive",
+      "even flow",
+      "animal",
+      "porch",
+      "state of love and trust",
+      "pearl jam go",
+      "corduroy",
+      "spin the black circle"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 0.5,
+        "LEVEL": 10.0,
+        "TONE": 6.5
+      },
+      "delay": "Digital Delay",
+      "delay_settings": {
+        "E_LEVEL": 3.0,
+        "F_BACK": 3.0
+      },
+      "reverb": "Plate Long",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced JCM 800 + TS9 Boost (The 'Alive' Arena Solo)"
+  },
+  "mccready_ledbetter": {
+    "keywords": [
+      "yellow ledbetter",
+      "pearl jam black",
+      "daughter",
+      "immortality",
+      "nothingman",
+      "better man",
+      "elderly woman"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "reverb": "Hall Natural",
+      "reverb_settings": {
+        "LEVEL": 4.5,
+        "TIME": 4.0
+      },
+      "comp_wah": "Optical Comp",
+      "comp_settings": {
+        "VOLUME": 6.0,
+        "COMP": 3.0
+      },
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 5 (Neck)",
+        "volume": 10,
+        "tone": 6
+      }
+    },
+    "description": "Forced Low-Gain Marshall (The 'Little Wing' Clean/Breakup)"
+  },
+  "mccready_vibe": {
+    "keywords": [
+      "river of deceit",
+      "garden",
+      "oceans",
+      "release",
+      "long road",
+      "given to fly"
+    ],
+    "forced_gear": {
+      "amp": "Black Duo",
+      "mod_eq": "Classic Vibe",
+      "mod_settings": {
+        "SPEED": 4.5,
+        "INTENSITY": 7.0
+      },
+      "reverb": "Plate Rich",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 2 (Bridge+Mid)",
+        "volume": 10,
+        "tone": 6
+      }
+    },
+    "description": "Forced Twin + Uni-Vibe (The 'Rotovibe' Atmosphere)"
+  },
+  "walsh_funk": {
+    "keywords": [
+      "funk #49",
+      "walk away",
+      "the bomber",
+      "midnight man"
+    ],
+    "forced_gear": {
+      "amp": "American Deluxe",
+      "comp_wah": "Red Comp",
+      "comp_settings": {
+        "OUTPUT": 7.0,
+        "SENSITIVITY": 6.0
+      },
+      "drive": "Booster",
+      "drive_settings": {
+        "GAIN": 4.0
+      },
+      "reverb": "Room Studio A",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Tweed Deluxe + Compressor (The 'James Gang' Rhythm)"
+  },
+  "walsh_talkbox": {
+    "keywords": [
+      "rocky mountain way",
+      "meadows"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "comp_wah": "J.H. Legendary Wah",
+      "comp_settings": {
+        "AUTO_DETECT_SENSITIVITY": 7.0
+      },
+      "drive": "Fuzz Face",
+      "drive_settings": {
+        "FUZZ": 6.0,
+        "VOLUME": 8.5
+      },
+      "reverb": "Plate Long",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 6
+      }
+    },
+    "description": "Forced Auto-Wah + Fuzz (Simulating the Talk Box)"
+  },
+  "walsh_life": {
+    "keywords": [
+      "life's been good",
+      "in the city",
+      "all night long"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "mod_eq": "Phaser",
+      "mod_settings": {
+        "SPEED": 2.0,
+        "INTENSITY": 7.5
+      },
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 7.0,
+        "LEVEL": 8.0
+      },
+      "reverb": "Hall Medium",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 2 (Bridge+Mid)",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Marshall + Phaser (The 'Maserati' Solo Tone)"
+  },
+  "walsh_hotel": {
+    "keywords": [
+      "hotel california",
+      "victim of love",
+      "new kid in town"
+    ],
+    "forced_gear": {
+      "amp": "American Deluxe",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 4.0,
+        "LEVEL": 9.0,
+        "TONE": 7.0
+      },
+      "mod_eq": "Guitar EQ",
+      "mod_settings": {
+        "100Hz": -2.0,
+        "200Hz": 2.0,
+        "400Hz": 4.0,
+        "800Hz": 5.0,
+        "1600Hz": 2.0,
+        "3200Hz": -2.0
+      },
+      "reverb": "Plate Short",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 2 (Bridge+Mid)",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Tweed + Mid Boost (The 'Telecaster' Half of the Solo)"
+  },
+  "becker_clean": {
+    "keywords": [
+      "deacon blues",
+      "hey nineteen",
+      "glamour profession",
+      "time out of mind",
+      "babylon sisters",
+      "gaucho"
+    ],
+    "forced_gear": {
+      "amp": "Black Duo",
+      "comp_wah": "Red Comp",
+      "comp_settings": {
+        "OUTPUT": 7.0,
+        "SENSITIVITY": 8.0
+      },
+      "mod_eq": "Chorus",
+      "mod_settings": {
+        "DEPTH": 3.0,
+        "RATE": 1.5,
+        "E_LEVEL": 4.0
+      },
+      "reverb": "Plate Rich",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 4 (Neck+Mid)",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Twin + Heavy Compression (The 'Hi-Fi' Sadowsky Clean)"
+  },
+  "becker_josie": {
+    "keywords": [
+      "josie",
+      "steely dan fm",
+      "show biz kids",
+      "chain lightning"
+    ],
+    "forced_gear": {
+      "amp": "Black Duo",
+      "drive": "Fuzz Face",
+      "drive_settings": {
+        "FUZZ": 9.0,
+        "VOLUME": 8.0
+      },
+      "gate": "Noise Gate",
+      "gate_settings": {
+        "THRESHOLD": 4.0,
+        "DECAY": 1.0
+      },
+      "reverb": "Room Studio A",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 4 (Neck+Mid)",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Fuzz + Clean Amp (The 'Direct-to-Console' Splat)"
+  },
+  "becker_dirt": {
+    "keywords": [
+      "black friday",
+      "bad sneakers",
+      "home at last",
+      "daddy don't live in that new york city no more"
+    ],
+    "forced_gear": {
+      "amp": "American Deluxe",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 8.0,
+        "LEVEL": 9.0
+      },
+      "mod_eq": "Guitar EQ",
+      "mod_settings": {
+        "100Hz": -2.0,
+        "200Hz": 2.0,
+        "400Hz": 5.0,
+        "800Hz": 5.0,
+        "1600Hz": 2.0,
+        "3200Hz": 0.0
+      },
+      "reverb": "Plate Short",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 4 (Neck+Mid)",
+        "volume": 10,
+        "tone": 6
+      }
+    },
+    "description": "Forced Tweed + Mid Boost (The 'Nasty' P90 Blues Tone)"
+  },
+  "lynne_bluesky_rhythm": {
+    "keywords": [
+      "mr blue sky",
+      "livin thing",
+      "turn to stone",
+      "sweet talkin woman"
+    ],
+    "forced_gear": {
+      "amp": "Black Duo",
+      "comp_wah": "Red Comp",
+      "comp_settings": {
+        "OUTPUT": 8.0,
+        "SENSITIVITY": 9.5
+      },
+      "mod_eq": "Guitar EQ",
+      "mod_settings": {
+        "100Hz": -5.0,
+        "200Hz": 2.0,
+        "400Hz": 4.0,
+        "800Hz": 4.0,
+        "1600Hz": 5.0,
+        "3200Hz": 0.0
+      },
+      "reverb": "Room Studio A",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 2 (Bridge+Mid)",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Twin + Max Compression (The 'Squashed Acoustic' Strum)"
+  },
+  "lynne_bluesky_lead": {
+    "keywords": [
+      "mr blue sky solo",
+      "strange magic",
+      "telephone line"
+    ],
+    "forced_gear": {
+      "amp": "AC Boost",
+      "comp_wah": "Optical Comp",
+      "comp_settings": {
+        "VOLUME": 7.0,
+        "COMP": 8.0
+      },
+      "mod_eq": "Chorus",
+      "mod_settings": {
+        "DEPTH": 3.0,
+        "RATE": 2.0,
+        "E_LEVEL": 4.0
+      },
+      "delay": "Digital Delay",
+      "delay_settings": {
+        "E_LEVEL": 3.0,
+        "F_BACK": 3.0
+      },
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 2 (Bridge+Mid)",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Vox + Compression (The 'Clean Sustain' Solo)"
+  },
+  "lynne_heavy": {
+    "keywords": [
+      "don't bring me down",
+      "do ya",
+      "ma-ma-ma belle",
+      "evil woman"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 7.0,
+        "LEVEL": 8.0
+      },
+      "mod_eq": "Phaser",
+      "mod_settings": {
+        "SPEED": 1.0,
+        "INTENSITY": 5.0
+      },
+      "reverb": "Plate Short",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 2 (Bridge+Mid)",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Marshall + Phaser (The 'Jet Plane' Heavy Rhythm)"
+  },
+  "tull_aqualung": {
+    "keywords": [
+      "aqualung",
+      "cross-eyed mary",
+      "hymn 43",
+      "wind up",
+      "my god"
+    ],
+    "forced_gear": {
+      "amp": "J.H. Tone City 100",
+      "drive": "Booster",
+      "drive_settings": {
+        "GAIN": 8.5
+      },
+      "gate": "Noise Gate",
+      "gate_settings": {
+        "THRESHOLD": 3.0,
+        "DECAY": 1.0
+      },
+      "reverb": "Room Studio A",
+      "reverb_settings": {
+        "LEVEL": 1.5
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 7
+      }
+    },
+    "description": "Forced Sound City 100 + Treble Booster (The Dry P90 Solo Tone)"
+  },
+  "tull_locomotive": {
+    "keywords": [
+      "locomotive breath",
+      "teacher",
+      "bungle in the jungle",
+      "new day yesterday",
+      "cry you a song"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Booster",
+      "drive_settings": {
+        "GAIN": 4.0
+      },
+      "mod_eq": "Guitar EQ",
+      "mod_settings": {
+        "100Hz": 2.0,
+        "200Hz": 2.0,
+        "400Hz": 5.0,
+        "800Hz": 5.0,
+        "1600Hz": 2.0,
+        "3200Hz": 0.0
+      },
+      "reverb": "Plate Short",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 2 (Bridge+Mid)",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Marshall + Mid Boost (The 'Heavy' Rhythm)"
+  },
+  "tull_folk": {
+    "keywords": [
+      "thick as a brick",
+      "songs from the wood",
+      "minstrel in the gallery",
+      "skating away",
+      "living in the past"
+    ],
+    "forced_gear": {
+      "amp": "AC Boost",
+      "comp_wah": "Red Comp",
+      "comp_settings": {
+        "OUTPUT": 6.0,
+        "SENSITIVITY": 4.0
+      },
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 2.0,
+        "LEVEL": 8.0,
+        "TONE": 7.0
+      },
+      "reverb": "Hall Medium",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 2 (Bridge+Mid)",
+        "volume": 10,
+        "tone": 7
+      }
+    },
+    "description": "Forced Vox AC30 + Light Drive (The 'Prog' Jangle)"
+  },
+  "townshend_power": {
+    "keywords": [
+      "won't get fooled again",
+      "baba o'riley",
+      "who are you",
+      "bargain",
+      "behind blue eyes"
+    ],
+    "forced_gear": {
+      "amp": "J.H. Tone City 100",
+      "drive": "Booster",
+      "drive_settings": {
+        "GAIN": 4.0
+      },
+      "comp_wah": "Optical Comp",
+      "comp_settings": {
+        "VOLUME": 7.0,
+        "COMP": 3.0
+      },
+      "reverb": "Room Studio A",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 2 (Bridge+Mid)",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Sound City 100 + Clean Boost (The 'Windmill' Power Chord Tone)"
+  },
+  "townshend_leeds": {
+    "keywords": [
+      "live at leeds",
+      "magic bus",
+      "my generation",
+      "young man blues",
+      "summertime blues",
+      "shakin' all over"
+    ],
+    "forced_gear": {
+      "amp": "J.H. Tone City 100",
+      "drive": "Fuzz Face",
+      "drive_settings": {
+        "FUZZ": 10.0,
+        "VOLUME": 9.0
+      },
+      "gate": "Noise Gate",
+      "gate_settings": {
+        "THRESHOLD": 3.5,
+        "DECAY": 1.0
+      },
+      "reverb": "Plate Short",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 10
+      }
+    },
+    "description": "Forced Sound City 100 + Fuzz Face (The 'Super-Fuzz' Meltdown)"
+  },
+  "townshend_pinball": {
+    "keywords": [
+      "pinball wizard",
+      "i can see for miles",
+      "substitute",
+      "happy jack",
+      "pictures of lily"
+    ],
+    "forced_gear": {
+      "amp": "AC Boost",
+      "comp_wah": "Red Comp",
+      "comp_settings": {
+        "OUTPUT": 7.0,
+        "SENSITIVITY": 4.0
+      },
+      "drive": "Booster",
+      "drive_settings": {
+        "GAIN": 3.0
+      },
+      "reverb": "Hall Medium",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 9
+      }
+    },
+    "description": "Forced Vox AC30 + Compression (The 'Mod' Jangle)"
+  },
+  "townshend_quad": {
+    "keywords": [
+      "real me",
+      "5:15",
+      "love reign o'er me",
+      "punk and the godfather",
+      "drowned"
+    ],
+    "forced_gear": {
+      "amp": "J.H. Tone City 100",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 6.5,
+        "LEVEL": 8.0
+      },
+      "mod_eq": "Chorus",
+      "mod_settings": {
+        "DEPTH": 2.0,
+        "E_LEVEL": 3.0
+      },
+      "delay": "Echo Tape",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 10
+      }
+    },
+    "description": "Forced Sound City 100 + Distortion (The 'Les Paul Deluxe' Era)"
+  },
+  "rhoads_crazy": {
+    "keywords": [
+      "crazy train",
+      "i don't know",
+      "suicide solution",
+      "steal away",
+      "flying high again"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 8.5,
+        "LEVEL": 9.0
+      },
+      "gate": "Noise Gate",
+      "gate_settings": {
+        "THRESHOLD": 4.0,
+        "DECAY": 1.0
+      },
+      "mod_eq": "Guitar EQ",
+      "mod_settings": {
+        "100Hz": -2.0,
+        "200Hz": 2.0,
+        "400Hz": 5.0,
+        "800Hz": 6.0,
+        "1600Hz": 4.0,
+        "3200Hz": 2.0
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Marshall + Distortion+ (The 'Buzzsaw' Rhythm)"
+  },
+  "rhoads_crowley": {
+    "keywords": [
+      "mr crowley",
+      "revelation mother earth",
+      "over the mountain",
+      "believer"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 9.0,
+        "LEVEL": 9.5
+      },
+      "delay": "Echo Tape",
+      "delay_settings": {
+        "SUSTAIN": 4.0,
+        "VOLUME": 4.5
+      },
+      "reverb": "Hall Natural",
+      "reverb_settings": {
+        "LEVEL": 5.0,
+        "TIME": 5.0
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced High Gain + Tape Echo (The 'Triple Tracked' Solo)"
+  },
+  "rhoads_clean": {
+    "keywords": [
+      "diary of a madman",
+      "goodbye to romance",
+      "randy rhoads dee"
+    ],
+    "forced_gear": {
+      "amp": "Black Duo",
+      "comp_wah": "Red Comp",
+      "comp_settings": {
+        "OUTPUT": 7.0,
+        "SENSITIVITY": 6.0
+      },
+      "mod_eq": "Chorus",
+      "mod_settings": {
+        "DEPTH": 6.0,
+        "RATE": 2.5,
+        "E_LEVEL": 5.0
+      },
+      "reverb": "Hall Medium",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Forced Chorus + Compression (The 'Classical' Clean)"
+  },
+  "hendrix_voodoo": {
+    "keywords": [
+      "voodoo child",
+      "voodoo chile",
+      "slight return",
+      "voodoochild"
+    ],
+    "forced_gear": {
+      "drive": "J.H. Octave Fuzz",
+      "drive_settings": {
+        "FUZZ": 7.5,
+        "LEVEL": 8.5
+      },
+      "mod_eq": "J.H. Legendary Vibe",
+      "mod_settings": {
+        "SPEED": 4.5,
+        "INTENSITY": 6.5,
+        "SWEEP": 5.5,
+        "MIX": 7.0
+      },
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 5 (Neck)",
+        "volume": 10,
+        "tone": 10
+      }
+    },
+    "description": "Octave Fuzz + Vibe (The Voodoo Child Solo Tone)"
+  },
+  "hendrix_foxy": {
+    "keywords": [
+      "foxy lady",
+      "purple haze",
+      "hendrix fire"
+    ],
+    "forced_gear": {
+      "drive": "Fuzz Face",
+      "drive_settings": {
+        "FUZZ": 8.5,
+        "VOLUME": 9.0
+      },
+      "mod_eq": "UniVibe",
+      "mod_settings": {
+        "SPEED": 5.0,
+        "INTENSITY": 7.0
+      },
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 1 (Bridge)",
+        "volume": 10,
+        "tone": 10
+      }
+    },
+    "description": "Fuzz Face + Uni-Vibe (The Are You Experienced Tone)"
+  },
+  "hendrix_wind": {
+    "keywords": [
+      "wind cries mary",
+      "little wing",
+      "castles made of sand"
+    ],
+    "forced_gear": {
+      "comp_wah": "Sustain Comp",
+      "comp_settings": {
+        "LEVEL": 6.5,
+        "ATTACK": 3.5,
+        "SUSTAIN": 7.0,
+        "TONE": 6.0
+      },
+      "mod_eq": "UniVibe",
+      "mod_settings": {
+        "SPEED": 3.5,
+        "INTENSITY": 5.5
+      },
+      "reverb": "Plate Rich",
+      "reverb_settings": {
+        "LEVEL": 6.5,
+        "TIME": 5.5,
+        "DAMPING": 4.5,
+        "DWELL": 5.0,
+        "LOW_CUT": 5.0,
+        "HIGH_CUT": 5.0
+      },
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 4 (Neck+Mid)",
+        "volume": 8,
+        "tone": 7
+      }
+    },
+    "description": "Clean + Uni-Vibe + Reverb (The Ballad Tone)"
+  },
+  "may_classic": {
+    "keywords": [
+      "tie your mother down",
+      "we will rock you",
+      "brighton rock",
+      "now i'm here",
+      "keep yourself alive"
+    ],
+    "forced_gear": {
+      "drive": "Booster",
+      "drive_settings": {
+        "GAIN": 7.5
+      },
+      "mod_eq": "Phaser",
+      "mod_settings": {
+        "SPEED": 1.5,
+        "INTENSITY": 6.0
+      },
+      "delay": "Echo Tape",
+      "delay_settings": {
+        "SUSTAIN": 3.0,
+        "VOLUME": 4.0,
+        "TONE": 6.5
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Treble Booster + Vox + Phaser + Delay (Classic May Crunch)"
+  },
+  "may_heavy": {
+    "keywords": [
+      "stone cold crazy",
+      "stonecoldcrazy",
+      "ogre battle",
+      "sheer heart attack"
+    ],
+    "forced_gear": {
+      "drive": "Booster",
+      "drive_settings": {
+        "GAIN": 8.5
+      },
+      "mod_eq": "Phaser",
+      "mod_settings": {
+        "SPEED": 1.0,
+        "INTENSITY": 7.5
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Treble Booster + Phaser (The Proto-Metal Tone)"
+  },
+  "hendrix_bog": {
+    "keywords": [
+      "machine gun",
+      "machinegun",
+      "band of gypsys",
+      "bandofgypsys",
+      "who knows",
+      "whoknows",
+      "power to love",
+      "powertolove",
+      "power of soul",
+      "changes",
+      "message to love",
+      "we gotta live together"
+    ],
+    "forced_gear": {
+      "drive": "J.H. Octave Fuzz",
+      "drive_settings": {
+        "FUZZ": 7.0,
+        "LEVEL": 8.0
+      },
+      "mod_eq": "J.H. Legendary Vibe",
+      "mod_settings": {
+        "SPEED": 4.5,
+        "INTENSITY": 6.5,
+        "MIX": 7.5,
+        "SWEEP": 5.5
+      },
+      "reverb": "Plate Short",
+      "reverb_settings": {
+        "LEVEL": 3.5,
+        "TIME": 4.0,
+        "DAMPING": 5.5,
+        "DWELL": 3.5,
+        "LOW_CUT": 5.0,
+        "HIGH_CUT": 5.0
+      },
+      "amp": "J.H. Super 100",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 1 (Bridge)",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Fillmore East live tone - mysterious red Fuzz Face with Uni-Vibe"
+  },
+  "quarters_the_river": {
+    "keywords": [
+      "the river"
+    ],
+    "forced_gear": {
+      "amp": "Silver 120",
+      "amp_settings": {
+        "GAIN": 7.0,
+        "TREBLE": 3.5,
+        "MIDDLE": 7.0,
+        "BASS": 5.0,
+        "VOLUME": 8.0
+      },
+      "reverb": "Room Studio A",
+      "reverb_settings": {
+        "LEVEL": 5.0,
+        "TIME": 4.5,
+        "DAMPING": 6.5,
+        "DWELL": 4.5,
+        "LOW_CUT": 5.0,
+        "HIGH_CUT": 5.0
+      },
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 4 (Neck+Mid)",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Roland JC-120, dry (no modulation) \u2014 Quarters! The River"
+  },
+  "quarters_god_is_in_the_rhythm": {
+    "keywords": [
+      "god is in the rhythm"
+    ],
+    "forced_gear": {
+      "amp": "Silver 120",
+      "amp_settings": {
+        "GAIN": 7.0,
+        "TREBLE": 3.5,
+        "MIDDLE": 7.0,
+        "BASS": 5.0,
+        "VOLUME": 8.0
+      },
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 1.7,
+        "TONE": 6.2,
+        "LEVEL": 7.2
+      },
+      "reverb": "Room Studio A",
+      "reverb_settings": {
+        "LEVEL": 5.0,
+        "TIME": 4.5,
+        "DAMPING": 6.5,
+        "DWELL": 4.5,
+        "LOW_CUT": 5.0,
+        "HIGH_CUT": 5.0
+      },
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 4 (Neck+Mid)",
+        "volume": 10,
+        "tone": 7
+      }
+    },
+    "description": "Roland JC-120 + light Tube Drive (kurt=-0.31, HP=4.97 \u2014 compressed harmonic push) \u2014 Quarters! God Is in the Rhythm"
+  },
+  "quarters_infinite_rise": {
+    "keywords": [
+      "infinite rise"
+    ],
+    "forced_gear": {
+      "amp": "Silver 120",
+      "amp_settings": {
+        "GAIN": 7.0,
+        "TREBLE": 3.5,
+        "MIDDLE": 7.0,
+        "BASS": 5.0,
+        "VOLUME": 8.0
+      },
+      "mod_eq": "Vibrato",
+      "mod_settings": {
+        "SPEED": 4.0,
+        "DEPTH": 5.1
+      },
+      "reverb": "Room Studio A",
+      "reverb_settings": {
+        "LEVEL": 5.0,
+        "TIME": 4.5,
+        "DAMPING": 6.5,
+        "DWELL": 4.5,
+        "LOW_CUT": 5.0,
+        "HIGH_CUT": 5.0
+      },
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 2 (Bridge+Mid)",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Roland JC-120 + Vibrato speed=4.0/depth=5.1 (rms_cv=0.37, most dynamic) \u2014 Quarters! Infinite Rise"
+  },
+  "quarters_lonely_steel_sheet_flyer": {
+    "keywords": [
+      "lonely steel sheet flyer"
+    ],
+    "forced_gear": {
+      "amp": "Silver 120",
+      "amp_settings": {
+        "GAIN": 7.0,
+        "TREBLE": 3.5,
+        "MIDDLE": 7.0,
+        "BASS": 5.0,
+        "VOLUME": 8.0
+      },
+      "mod_eq": "Vibrato",
+      "mod_settings": {
+        "SPEED": 3.4,
+        "DEPTH": 4.9
+      },
+      "reverb": "Room Studio A",
+      "reverb_settings": {
+        "LEVEL": 5.0,
+        "TIME": 4.5,
+        "DAMPING": 6.5,
+        "DWELL": 4.5,
+        "LOW_CUT": 5.0,
+        "HIGH_CUT": 5.0
+      },
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 2 (Bridge+Mid)",
+        "volume": 10,
+        "tone": 7
+      }
+    },
+    "description": "Roland JC-120 + Vibrato speed=3.4/depth=4.9 (rms_cv=0.23, more languid) \u2014 Quarters! Lonely Steel Sheet Flyer"
+  },
+  "corgan_siamese": {
+    "keywords": [
+      "cherub rock",
+      "today",
+      "disarm",
+      "quiet",
+      "rocket",
+      "hummer",
+      "mayonaise",
+      "soma",
+      "siamese",
+      "corgan",
+      "smashing pumpkins",
+      "pumpkins"
+    ],
+    "description": "Forced Plexi + Big Muff (The Siamese Dream Wall of Fuzz)",
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "amp_settings": {
+        "GAIN": 6.5,
+        "BASS": 5.0,
+        "MIDDLE": 4.0,
+        "TREBLE": 9.0,
+        "VOLUME": 8.2
+      },
+      "drive": "Guitar Muff",
+      "drive_settings": {
+        "SUSTAIN": 6.5,
+        "TONE": 7.8,
+        "VOLUME": 5.5
+      },
+      "gate": "Noise Gate",
+      "gate_settings": {
+        "THRESHOLD": 5.0,
+        "DECAY": 1.2
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 10
+      }
+    }
+  },
+  "auto_cheapsunglasses_wav": {
+    "keywords": [
+      "cheap",
+      "sunglasses",
+      "zztop",
+      "deguello"
+    ],
+    "description": "Classic ZZ Top blues rock tone with gritty overdrive, Gibson Les Paul through Marshall stack",
+    "source": "auto",
+    "validated": false,
+    "confidence": "high",
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Over Drive",
+      "drive_settings": {
+        "DRIVE": 6.0,
+        "TONE": 7.0,
+        "LEVEL": 6.0
+      },
+      "reverb": "Hall Medium",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    }
+  },
+  "clapton_dominos": {
+    "keywords": [
+      "i looked away",
+      "ilookedaway",
+      "tell the truth",
+      "tellthetruth",
+      "its too late",
+      "itstoolate",
+      "nobody knows you",
+      "nobodyknowsyou",
+      "keep on growing",
+      "keepongrowing",
+      "anyday",
+      "have you ever loved a woman",
+      "haveyoueverlovedawoman",
+      "got to get better",
+      "gottogetterbetter",
+      "bell bottom blues",
+      "bellbottomblues",
+      "key to the highway",
+      "keytothehighway",
+      "why does love got to be so sad",
+      "whydoeslovegottobeso sad",
+      "whydoeslovegottobesosad"
+    ],
+    "description": "Forced Lux Verb Cranked (Derek and the Dominos \u2014 Brownie Strat Tone)",
+    "source": null,
+    "forced_gear": {
+      "amp": "Lux Verb",
+      "reverb": "Plate Rich",
+      "reverb_settings": {
+        "LEVEL": 4.5,
+        "TIME": 5.0,
+        "DAMPING": 5.0,
+        "DWELL": 5.5,
+        "LOW_CUT": 4.0,
+        "HIGH_CUT": 5.5
+      },
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 4 (Neck+Mid)",
+        "volume": 8,
+        "tone": 7
+      }
+    }
+  },
+  "stu_mindfuzz": {
+    "keywords": [
+      "iminyourmind",
+      "imnotinyourmind",
+      "iminyourmindfuzz",
+      "cellophanefloored",
+      "cellophanesymphony",
+      "cellophane",
+      "amiinheaven",
+      "hotwater",
+      "herandi",
+      "satanspeedsup",
+      "kglw_iminyourmind",
+      "kglw_imnotinyourmind",
+      "kglw_iminyourmindfuzz",
+      "kglw_cellophane",
+      "kglw_empty",
+      "kglw_hotwater",
+      "kglw_amiinheaven",
+      "kglw_herandi",
+      "kglw_satanspeedsup",
+      "kglw_slowjam1"
+    ],
+    "description": "Forced Blues Boy + Fuzz (The Mind Fuzz Garage Psych Tone)",
+    "source": null,
+    "forced_gear": {
+      "amp": "Blues Boy",
+      "drive": "Fuzz Face",
+      "drive_settings": {
+        "FUZZ": 7.0,
+        "VOLUME": 7.0
+      },
+      "reverb": "Room Studio A",
+      "reverb_settings": {
+        "LEVEL": 3.5,
+        "TIME": 3.0,
+        "DAMPING": 5.0,
+        "DWELL": 4.0,
+        "LOW_CUT": 5.0,
+        "HIGH_CUT": 5.0
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    }
+  },
+  "auto_thewswalcottmedicine_show_wav": {
+    "keywords": [
+      "wallflowers",
+      "medicine",
+      "show",
+      "breach",
+      "jakob",
+      "dylan"
+    ],
+    "description": "Clean to slightly driven Telecaster tone with subtle compression and reverb, characteristic of Jakob Dylan's alternative rock style",
+    "source": "auto",
+    "validated": false,
+    "confidence": "medium",
+    "forced_gear": {
+      "amp": "Lux Verb",
+      "drive": "Clone Drive",
+      "drive_settings": {
+        "GAIN": 2.5,
+        "TREBLE": 6.0,
+        "OUTPUT": 5.5
+      },
+      "delay": "Digital Delay",
+      "delay_settings": {
+        "E_LEVEL": 3.0,
+        "F_BACK": 2.5,
+        "D_TIME": 50,
+        "MODE": "500ms",
+        "BPM_MODE": "Off"
+      },
+      "comp_wah": "Red Comp",
+      "comp_settings": {
+        "OUTPUT": 6.5,
+        "SENSITIVITY": 4.0
+      },
+      "reverb": "Plate Short",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 1 (Bridge)",
+        "volume": 8,
+        "tone": 7
+      }
+    }
+  }
+}
