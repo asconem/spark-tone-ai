@@ -1,0 +1,41 @@
+════════════════════════════════════════════════════════════
+SECTION 3/6: CLEAN (3:21 — 4:19)
+════════════════════════════════════════════════════════════
+🎸 SPARK 2 RECIPE: hotelcalifornia.wav
+📅 Date: 2026-03-11 01:01:23
+🎯 DSP Analysis: Gain 0.31 | Presence 0.26 | Air 0.51 | Mids 0.50 | Width 0.72 | BPM 72
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 2 (Bridge+Mid)
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[COMP/WAH] RED COMP 🔬
+   • OUTPUT: 5.6            • SENSITIVITY: 4.8    
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🎨
+   • LEVEL: 9.0             • OVERDRIVE: 4.0      
+   • TONE: 7.0           
+--------------------------------------------------
+[AMP] AMERICAN DELUXE 🎨
+   • BASS: 5.0              • GAIN: 2.0           
+   • MIDDLE: 4.0            • TREBLE: 5.9         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🎨
+   • 100HZ: -2.0            • 1600HZ: 2.0         
+   • 200HZ: 2.0             • 3200HZ: -2.0        
+   • 400HZ: 4.0             • 800HZ: 5.0          
+--------------------------------------------------
+[DELAY] VINTAGE DELAY 🔬
+   • BPM_MODE: On           • ECHO: 4.8           
+   • INTENSITY: 4.3         • REPEAT_RATE: 1/4    
+--------------------------------------------------
+[REVERB] CHAMBER 🔬
+   • DAMPING: 6.1           • DWELL: 5.4          
+   • HIGH_CUT: 4.4          • LEVEL: 6.9          
+   • LOW_CUT: 4.2           • TIME: 4.9           
+--------------------------------------------------

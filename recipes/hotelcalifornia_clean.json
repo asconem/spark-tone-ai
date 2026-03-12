@@ -1,0 +1,90 @@
+{
+  "song": "hotelcalifornia.wav",
+  "date": "2026-03-11T01:01:23.345472",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset"
+  },
+  "dsp": {
+    "gain": 0.31,
+    "mids": 0.498,
+    "presence": 0.256,
+    "air": 0.514,
+    "width": 0.723,
+    "bpm": 71.8
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 2 (Bridge+Mid)",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": "Red Comp",
+    "drive": "Tube Drive",
+    "amp": "American Deluxe",
+    "mod_eq": "Guitar EQ",
+    "delay": "Vintage Delay",
+    "reverb": "Chamber"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": {
+      "OUTPUT": 5.6,
+      "SENSITIVITY": 4.8
+    },
+    "drive": {
+      "OVERDRIVE": 4.0,
+      "LEVEL": 9.0,
+      "TONE": 7.0
+    },
+    "amp": {
+      "GAIN": 2.0,
+      "TREBLE": 5.900878124088824,
+      "MIDDLE": 3.9821671696764445,
+      "BASS": 5.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100Hz": -2.0,
+      "200Hz": 2.0,
+      "400Hz": 4.0,
+      "800Hz": 5.0,
+      "1600Hz": 2.0,
+      "3200Hz": -2.0
+    },
+    "delay": {
+      "REPEAT_RATE": "1/4",
+      "ECHO": 4.8,
+      "INTENSITY": 4.3,
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 6.9,
+      "TIME": 4.9,
+      "DAMPING": 6.1,
+      "DWELL": 5.4,
+      "LOW_CUT": 4.2,
+      "HIGH_CUT": 4.4
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "\ud83d\udd2c",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83c\udfa8",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  },
+  "section": {
+    "label": "Clean",
+    "type": "quiet",
+    "start": 201.0,
+    "end": 259.5,
+    "index": 2,
+    "total_sections": 6
+  }
+}

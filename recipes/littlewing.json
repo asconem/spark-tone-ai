@@ -1,6 +1,6 @@
 {
   "song": "littlewing.wav",
-  "date": "2026-03-10T17:31:11.396901",
+  "date": "2026-03-11T19:29:31.683099",
   "confidence": {
     "tier": "A",
     "label": "HIGH \u2014 Hand-curated artist preset"
@@ -11,7 +11,7 @@
     "presence": 0.262,
     "air": 0.368,
     "width": 0.73,
-    "bpm": 136.0
+    "bpm": 68.0
   },
   "guitar": {
     "guitar": "American Pro II Strat (SSS)",
@@ -44,8 +44,8 @@
     },
     "amp": {
       "GAIN": 2.0,
-      "TREBLE": 1.6,
-      "MIDDLE": 7.0,
+      "TREBLE": 4.4,
+      "MIDDLE": 7.6,
       "BASS": 4.8,
       "VOLUME": 8.0
     },

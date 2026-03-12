@@ -1,0 +1,39 @@
+════════════════════════════════════════════════════════════
+SECTION 6/6: CRUNCH (6:13 — 6:31)
+════════════════════════════════════════════════════════════
+🎸 SPARK 2 RECIPE: hotelcalifornia.wav
+📅 Date: 2026-03-11 01:01:23
+🎯 DSP Analysis: Gain 0.51 | Presence 0.33 | Air 0.49 | Mids 0.51 | Width 0.57 | BPM 72
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 2 (Bridge+Mid)
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🎨
+   • LEVEL: 9.0             • OVERDRIVE: 4.0      
+   • TONE: 7.0           
+--------------------------------------------------
+[AMP] AMERICAN DELUXE 🎨
+   • BASS: 5.0              • GAIN: 2.0           
+   • MIDDLE: 4.1            • TREBLE: 5.3         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🎨
+   • 100HZ: -2.0            • 1600HZ: 2.0         
+   • 200HZ: 2.0             • 3200HZ: -2.0        
+   • 400HZ: 4.0             • 800HZ: 5.0          
+--------------------------------------------------
+[DELAY] ECHO TAPE 🔬
+   • BPM_MODE: On           • SHORT/LONG: 1/8d    
+   • SUSTAIN: 3.6           • TONE: 5.3           
+   • VOLUME: 3.2         
+--------------------------------------------------
+[REVERB] PLATE RICH 🔬
+   • DAMPING: 6.0           • DWELL: 4.5          
+   • HIGH_CUT: 4.5          • LEVEL: 4.9          
+   • LOW_CUT: 5.0           • TIME: 4.5           
+--------------------------------------------------

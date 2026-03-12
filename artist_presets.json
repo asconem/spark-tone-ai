@@ -3613,7 +3613,8 @@
       "mod_eq": "UniVibe",
       "mod_settings": {
         "SPEED": 3.5,
-        "INTENSITY": 5.5
+        "INTENSITY": 5.5,
+        "MODE_SWITCH": "Chorus"
       },
       "reverb": "Plate Rich",
       "reverb_settings": {

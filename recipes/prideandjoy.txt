@@ -1,5 +1,5 @@
 🎸 SPARK 2 RECIPE (HYBRID MODE): prideandjoy.wav
-📅 Date: 2026-03-10 17:57:21
+📅 Date: 2026-03-11 19:34:49
 🎯 DSP Analysis: Gain 0.51 | Presence 0.28 | Air 0.43 | Mids 0.56 | Width 0.95 | BPM 123
 📊 Confidence: Tier A — HIGH — Hand-curated artist preset
 
@@ -16,7 +16,7 @@ Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
 --------------------------------------------------
 [AMP] BLACK DUO 🎨
    • BASS: 5.0              • GAIN: 4.1           
-   • MIDDLE: 7.1            • TREBLE: 1.5         
+   • MIDDLE: 6.4            • TREBLE: 5.8         
    • VOLUME: 8.0         
 --------------------------------------------------
 [MOD/EQ] GUITAR EQ 🔬

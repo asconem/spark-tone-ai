@@ -9,6 +9,19 @@ import re
 from scipy.signal import butter, lfilter
 from scipy.stats import kurtosis as calc_kurtosis
 
+# Load .env file if present (for API keys without needing `export`)
+def _load_dotenv():
+    env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '.env')
+    if os.path.exists(env_path):
+        with open(env_path) as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith('#') and '=' in line:
+                    key, _, value = line.partition('=')
+                    value = value.strip().strip("'").strip('"')
+                    os.environ.setdefault(key.strip(), value)
+_load_dotenv()
+
 # ==========================================
 # PART 1: THE EARS (Tone Analysis)
 # ==========================================
@@ -108,6 +121,132 @@ def detect_bpm(y, sr):
         # Autocorrelation failed — use raw BPM
         print(f"   📊 Tempo: {bpm_raw:.0f} BPM (octave check failed: {e})")
         return {'bpm': bpm_raw, 'bpm_raw': bpm_raw, 'halved': False, 'ac_full': None, 'ac_half': None}
+
+
+# ==========================================
+# BPM API LOOKUP (GetSongBPM.com)
+# ==========================================
+
+def lookup_bpm_api(song_name):
+    """
+    Look up the canonical BPM for a song via the Anthropic API.
+    
+    Extracts a search query from the filename and asks Claude for the BPM.
+    Returns None if no API key, unrecognizable filename, or error.
+    
+    Args:
+        song_name: filename like "hotelcalifornia.wav" or "Hotel California - Eagles.wav"
+    
+    Returns:
+        dict with 'bpm', 'title', 'artist' on success, or None on failure
+    """
+    api_key = os.environ.get('ANTHROPIC_API_KEY')
+    if not api_key:
+        return None
+    
+    # Clean filename into search query
+    name = os.path.splitext(os.path.basename(song_name))[0]
+    name = re.sub(r'[_\-]', ' ', name)
+    name = re.sub(r'\b(guitar|vocals|drums|bass|piano|other|stem|wav|flac|mp3)\b', '', name, flags=re.IGNORECASE)
+    name = re.sub(r'\s+', ' ', name).strip()
+    
+    if not name or len(name) < 3:
+        return None
+    
+    try:
+        import anthropic
+    except ImportError:
+        return None
+    
+    prompt = (
+        f'What is the BPM (tempo) of the song "{name}"? '
+        f'Reply with ONLY a JSON object in this exact format, nothing else:\n'
+        f'{{"bpm": 120, "title": "Song Title", "artist": "Artist Name"}}\n'
+        f'Use the standard studio recording tempo. If you are not confident '
+        f'about the exact song, reply with just: {{"error": "unknown"}}'
+    )
+    
+    try:
+        client = anthropic.Anthropic(api_key=api_key)
+        response = client.messages.create(
+            model="claude-sonnet-4-20250514",
+            max_tokens=150,
+            messages=[{"role": "user", "content": prompt}]
+        )
+        text = response.content[0].text.strip()
+        
+        # Strip markdown code fences if present
+        text = re.sub(r'^```json\s*', '', text)
+        text = re.sub(r'^```\s*', '', text)
+        text = re.sub(r'\s*```$', '', text)
+        
+        data = json.loads(text)
+        
+        if 'error' in data:
+            return None
+        
+        bpm = data.get('bpm')
+        if not bpm or not isinstance(bpm, (int, float)):
+            return None
+        
+        return {
+            'bpm': float(bpm),
+            'title': data.get('title', ''),
+            'artist': data.get('artist', ''),
+        }
+    
+    except Exception as e:
+        print(f"   ⚠️ BPM API lookup failed: {e}")
+        return None
+
+
+def correct_bpm_with_api(features, song_name):
+    """
+    Cross-reference librosa's BPM against the GetSongBPM database.
+    
+    If the API returns a BPM and librosa's detection is approximately double,
+    halve the librosa value. This fixes the octave-doubling problem that
+    autocorrelation analysis couldn't solve (AC ratio was useless — 0.91-1.01
+    for both correct and doubled BPMs).
+    
+    Modifies features['bpm'] in-place if correction applied.
+    
+    Returns:
+        str: status message for logging ('corrected', 'confirmed', 'no_match', 'no_key')
+    """
+    librosa_bpm = features.get('bpm', 120.0)
+    
+    api_result = lookup_bpm_api(song_name)
+    if api_result is None:
+        return 'no_match'
+    
+    api_bpm = api_result['bpm']
+    title = api_result.get('title', '')
+    artist = api_result.get('artist', '')
+    
+    # Check if librosa is approximately double the API value (within 15%)
+    ratio = librosa_bpm / api_bpm if api_bpm > 0 else 0
+    
+    if 1.7 < ratio < 2.3:
+        # Octave error — librosa detected double the actual tempo
+        corrected = librosa_bpm / 2.0
+        print(f"   🎵 BPM API: {title} by {artist} = {api_bpm:.0f} BPM")
+        print(f"   🎵 BPM corrected: {librosa_bpm:.0f} → {corrected:.0f} (librosa was 2× actual)")
+        features['bpm'] = corrected
+        return 'corrected'
+    elif 0.85 < ratio < 1.15:
+        # Librosa and API agree — confirmed
+        print(f"   🎵 BPM API: {title} by {artist} = {api_bpm:.0f} BPM (confirmed ✓)")
+        return 'confirmed'
+    elif 0.43 < ratio < 0.57:
+        # Librosa detected half the API value — unusual but possible
+        # Don't correct — librosa probably found a half-time feel
+        print(f"   🎵 BPM API: {title} by {artist} = {api_bpm:.0f} BPM (librosa={librosa_bpm:.0f}, half-time feel?)")
+        return 'half_time'
+    else:
+        # Big mismatch — API might have found wrong song, don't touch
+        print(f"   🎵 BPM API: {title} by {artist} = {api_bpm:.0f} BPM (librosa={librosa_bpm:.0f}, mismatch — keeping librosa)")
+        return 'mismatch'
 
 
 # ==========================================
@@ -247,76 +386,6 @@ def format_timestamp(seconds):
     minutes = int(seconds // 60)
     secs = int(seconds % 60)
     return f"{minutes}:{secs:02d}"
-
-
-def merge_adjacent_sections(sections):
-    """
-    Merge adjacent sections that share the same label.
-    
-    After section detection and per-section analysis, tracks like Her and I
-    produce 9 sections where 6 are "Crunch" with nearly identical settings.
-    This merges adjacent same-label sections into one, using duration-weighted
-    averages for all DSP features.
-    
-    Example: Clean, Crunch, Crunch, Crunch, Drive, Crunch, Clean, Clean
-           → Clean, Crunch, Drive, Crunch, Clean  (8 → 5)
-    
-    Args:
-        sections: list of feature dicts with 'section_label', 'section_start',
-                  'section_end', and all DSP features.
-    
-    Returns:
-        New list of merged sections (may be shorter than input).
-    """
-    if len(sections) <= 1:
-        return sections
-    
-    # Numeric feature keys to average (everything except metadata)
-    metadata_keys = {'section_start', 'section_end', 'section_label', 'section_type'}
-    numeric_keys = [k for k in sections[0].keys() 
-                    if k not in metadata_keys and isinstance(sections[0][k], (int, float))]
-    
-    merged = []
-    current_group = [sections[0]]
-    
-    for i in range(1, len(sections)):
-        if sections[i]['section_label'] == current_group[0]['section_label']:
-            current_group.append(sections[i])
-        else:
-            merged.append(_merge_group(current_group, numeric_keys))
-            current_group = [sections[i]]
-    
-    # Final group
-    merged.append(_merge_group(current_group, numeric_keys))
-    
-    return merged
-
-
-def _merge_group(group, numeric_keys):
-    """Merge a group of adjacent same-label sections into one."""
-    if len(group) == 1:
-        return group[0]
-    
-    # Duration-weighted average of numeric features
-    durations = [s['section_end'] - s['section_start'] for s in group]
-    total_dur = sum(durations)
-    weights = [d / total_dur for d in durations]
-    
-    merged = {}
-    for key in numeric_keys:
-        vals = [s.get(key, 0) for s in group]
-        merged[key] = sum(v * w for v, w in zip(vals, weights))
-    
-    # Metadata: span the full time range, keep the label
-    merged['section_start'] = group[0]['section_start']
-    merged['section_end'] = group[-1]['section_end']
-    merged['section_label'] = group[0]['section_label']
-    merged['section_type'] = group[0]['section_type']
-    
-    # Re-derive the label from the merged gain (in case averaging shifts it)
-    merged['section_label'] = get_section_label(merged.get('gain', 0))
-    
-    return merged
 
 
 def analyze_with_sections(file_path):
@@ -1120,6 +1189,13 @@ def format_settings(slot_name, item, overrides={}, source=""):
         param_def = params.get(key, {}) if params else {}
         param_type = param_def.get('type') if isinstance(param_def, dict) else None
 
+        # Suppress MODE on Digital Delay when BPM_MODE is On.
+        # In BPM mode, MODE (range selector: 50ms/200ms/500ms/1s) is irrelevant —
+        # timing is fully determined by BPM + D_TIME subdivision. Showing it
+        # produces a confusing and meaningless "MODE: 50ms" line in every recipe.
+        if lookup_key == 'MODE' and ci_overrides.get('BPM_MODE') == 'On':
+            continue
+
         if lookup_key in ci_overrides:
             val = ci_overrides[lookup_key]
         elif param_type in ('switch', 'selector'):
@@ -1431,11 +1507,18 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
     #   DAMPING: higher for bright tones (tames harsh reflections)
     #   DWELL: higher for clean (more early reflections = warmth), lower for gain
 
-    if reverb_suggestion and override_settings and 'reverb_settings' in override_settings:
-        rig['reverb'] = next((r for r in db['reverb'] if r['name'] == reverb_suggestion), None)
-        if rig['reverb']:
-            settings['reverb'] = override_settings['reverb_settings']
-            sources['reverb'] = "🎨"
+    if reverb_suggestion:
+        reverb_obj = next((r for r in db['reverb'] if r['name'] == reverb_suggestion), None)
+        if reverb_obj:
+            rig['reverb'] = reverb_obj
+            if override_settings and 'reverb_settings' in override_settings:
+                # Preset has both type AND knob values — use them as-is.
+                settings['reverb'] = override_settings['reverb_settings']
+                sources['reverb'] = "🎨"
+            # else: preset specifies reverb type only, no knob values.
+            # rig['reverb'] is now set, so the DSP block below will be skipped.
+            # But we still need DSP to fill in the knob settings.
+            # Fall through to DSP reverb knob calculation with type already locked.
 
     if not rig['reverb']:
         # --- REVERB TYPE SELECTION (B4 Enhanced) ---
@@ -1550,6 +1633,28 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
             "HIGH_CUT": round(min(8.0, max(3.0, 8.0 - (target_air * 7.0))), 1),
         }
         sources['reverb'] = "🔬"
+
+    # Reverb type-only fallthrough: preset specified reverb type but no knob values.
+    # rig['reverb'] is set (locked to preset type) but settings['reverb'] is empty.
+    # Run DSP knob calculation using the locked reverb type.
+    elif rig['reverb'] and not settings['reverb']:
+        rms_cv_rev = features.get('rms_cv', 0.25)
+        base_level = 8.0 - (target_gain * 6.5)
+        width_bonus = max(0, (target_width - 0.5)) * 4.0
+        reverb_level = round(min(10.0, max(1.0, base_level + width_bonus)), 1)
+        rms_cv = features.get('rms_cv', 0.25)
+        reverb_time = round(min(7.0, max(2.0, 6.0 - (target_gain * 2.5) - (rms_cv * 2.0))), 1)
+        reverb_damping = round(min(8.0, max(3.0, 3.0 + (target_air * 6.0))), 1)
+        reverb_dwell = round(min(8.0, max(2.0, 7.0 - (target_gain * 5.0))), 1)
+        settings['reverb'] = {
+            "LEVEL": reverb_level,
+            "TIME": reverb_time,
+            "DAMPING": reverb_damping,
+            "DWELL": reverb_dwell,
+            "LOW_CUT": round(min(8.0, max(3.0, 3.0 + (target_gain * 4.0))), 1),
+            "HIGH_CUT": round(min(8.0, max(3.0, 8.0 - (target_air * 7.0))), 1),
+        }
+        sources['reverb'] = "🎨"  # Artist type, DSP knobs
 
     # --- NOISE GATE ---
     # High-gain patches on real amps hum and feedback between notes.
@@ -2277,12 +2382,22 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
         # std=0.021 across 48 stems — no discrimination. Air has real spread and
         # correctly ranks songs by brightness (Gravity=0.328 dark, Cherub Rock=0.618 bright).
         #
-        # Floor of 1.5: prevents collapse to 0.0 when a bright amp (Silver 120
-        # treble=0.85) is selected for a warm song (Roxanne air=0.42). An amp
-        # at TREBLE 0.0 sounds completely dead — no real guitarist would do this.
+        # Formula: 4.0 + air_normalized * 5.0 → range 4.0 (darkest) to 9.0 (brightest).
+        # Validated: Cherub Rock air=0.618 (air_normalized=1.0) → TREBLE 9.0 ✓
+        #
+        # Intentionally decoupled from amp base_tone.treble. The amp's character is
+        # already expressed by which amp was selected (base_tone drives the distance
+        # formula). Using it again here double-counted and produced absurd values
+        # (TREBLE -3.5 → floored at 1.5) when a bright amp was chosen for a dark song.
+        # The knob should reflect the song's brightness, not punish the amp mismatch twice.
         air_normalized = np.clip((target_air - 0.328) / (0.618 - 0.328), 0, 1)
-        settings['amp']['TREBLE'] = min(10.0, max(1.5, 5.0 + (air_normalized - rig['amp']['base_tone']['treble']) * 10))
-        settings['amp']['MIDDLE'] = min(10.0, max(1.0, 5.0 + (target_mids - rig['amp']['base_tone']['mids']) * 10))
+        settings['amp']['TREBLE'] = round(min(10.0, max(4.0, 4.0 + air_normalized * 5.0)), 1)
+        # MIDDLE: Driven by target_mids (500-2000Hz, clipped 0-1, typical range 0.30-0.65).
+        # Formula: 3.0 + target_mids * 6.0 → range ~4.8 (scooped) to ~6.9 (mid-forward).
+        # Same decoupling rationale as TREBLE — amp base_tone.mids already influenced
+        # amp selection; using it in the knob formula double-counted and hit floor values
+        # on high-mids amps paired with scooped songs.
+        settings['amp']['MIDDLE'] = round(min(10.0, max(3.0, 3.0 + target_mids * 6.0)), 1)
         settings['amp']['BASS'], settings['amp']['VOLUME'] = 5.0, 8.0
 
         # --- MOD/EQ SLOT CONFLICT COMPENSATION ---
@@ -2353,8 +2468,8 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
             treble_adj = v_eq_3200 * EQ_TO_AMP
 
             settings['amp']['BASS']   = round(min(10.0, max(0.0, settings['amp']['BASS'] + bass_adj)), 1)
-            settings['amp']['MIDDLE'] = round(min(10.0, max(0.0, settings['amp']['MIDDLE'] + mid_adj)), 1)
-            settings['amp']['TREBLE'] = round(min(10.0, max(0.0, settings['amp']['TREBLE'] + treble_adj)), 1)
+            settings['amp']['MIDDLE'] = round(min(10.0, max(2.5, settings['amp']['MIDDLE'] + mid_adj)), 1)
+            settings['amp']['TREBLE'] = round(min(10.0, max(3.0, settings['amp']['TREBLE'] + treble_adj)), 1)
 
             # Log the compensation for recipe diagnostics
             mod_name = rig['mod_eq']['name']
@@ -2456,11 +2571,7 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
     clean_name = re.sub(r'[^a-zA-Z0-9_-]', '_', clean_name)
     
     if section_info and section_info.get('is_multi_section'):
-        # Include section index to prevent collisions when multiple sections
-        # share the same label (e.g., three "Drive" sections would all overwrite
-        # the same file without the index).
-        section_num = section_info['section_index'] + 1
-        section_suffix = f"_{section_num}_{section_info['section_label'].lower()}"
+        section_suffix = f"_{section_info['section_label'].lower()}"
         clean_name = f"{clean_name}{section_suffix}"
     
     recipe_filename = os.path.join(recipes_dir, f"{clean_name}.txt")
@@ -2603,6 +2714,7 @@ def main():
         result = analyze_tone(args.audio)
         if result is None:
             return
+        correct_bpm_with_api(result, song_name)
         build_rig(result, song_name=song_name, skip_research=args.no_research)
     else:
         # Multi-section mode: detect and analyze sections separately
@@ -2611,48 +2723,30 @@ def main():
             return
         
         if result['is_multi_section']:
-            # Step 1: Merge adjacent sections with the same label.
-            # Tracks like Her and I produce 9 raw sections where 6 are "Crunch"
-            # with nearly identical settings. Merging adjacent same-labels first
-            # reduces noise before the collapse check.
-            raw_count = len(result['sections'])
-            result['sections'] = merge_adjacent_sections(result['sections'])
-            if len(result['sections']) < raw_count:
-                print(f"   📊 Merged {raw_count} sections → {len(result['sections'])} (adjacent same-label combined)")
-            
-            # Step 2: Collapse check — after merging, re-evaluate whether
-            # splitting is worthwhile.
-            #
-            # 1. All sections share the same label (5× Drive = same rig)
-            # 2. Gain spread < 0.30 across sections (e.g., Hot Water 0.30→0.58
-            #    is a 0.10 spread — same tonal neighborhood, same rig)
-            #
-            # Songs that stay split: Comfortably Numb (0.47 spread),
-            #   Machine Gun (0.66), Changes (0.65), Seven Nation Army (0.61)
-            # Songs that collapse: Stone Cold Crazy (0.06), Stairway (0.10),
-            #   Tie Your Mother Down (0.15), Little Wing (0.19)
-            labels = set(s['section_label'] for s in result['sections'])
-            gains = [s['gain'] for s in result['sections']]
-            gain_spread = max(gains) - min(gains)
-            
-            if len(labels) == 1:
-                print(f"\n   ⚠️ All {len(result['sections'])} sections are {labels.pop()} — collapsing to single recipe")
-                result = analyze_tone(args.audio)
-                if result is None:
-                    return
-                build_rig(result, song_name=song_name, skip_research=args.no_research)
-                return
-            elif gain_spread < 0.30:
-                print(f"\n   ⚠️ {len(result['sections'])} sections detected but gain spread is only {gain_spread:.2f} ({', '.join(labels)}) — collapsing to single recipe")
-                result = analyze_tone(args.audio)
-                if result is None:
-                    return
-                build_rig(result, song_name=song_name, skip_research=args.no_research)
-                return
-            
             print(f"\n{'═'*60}")
             print(f"⚡ MULTI-SECTION TRACK DETECTED — Generating {len(result['sections'])} recipes")
             print(f"{'═'*60}")
+        
+        # BPM API correction: look up once, apply to each section independently.
+        # Different sections may have different librosa BPMs (e.g., section 1 = 99,
+        # sections 2-6 = 144). Each needs its own octave-error check against the API.
+        api_result = lookup_bpm_api(song_name)
+        if api_result is not None:
+            api_bpm = api_result['bpm']
+            title = api_result.get('title', '')
+            artist = api_result.get('artist', '')
+            for sec in result['sections']:
+                librosa_bpm = sec.get('bpm', 120.0)
+                ratio = librosa_bpm / api_bpm if api_bpm > 0 else 0
+                if 1.7 < ratio < 2.3:
+                    corrected = librosa_bpm / 2.0
+                    sec['bpm'] = corrected
+                    print(f"   🎵 BPM corrected: {librosa_bpm:.0f} → {corrected:.0f} ({title} by {artist} = {api_bpm:.0f} BPM)")
+                elif 0.85 < ratio < 1.15:
+                    pass  # confirmed, no change needed
+            # Print summary
+            bpms = set(sec.get('bpm', 120.0) for sec in result['sections'])
+            print(f"   🎵 BPM API: {title} by {artist} = {api_bpm:.0f} BPM (section BPMs: {', '.join(f'{b:.0f}' for b in sorted(bpms))})")
         
         for i, section_features in enumerate(result['sections']):
             section_info = None
@@ -2723,6 +2817,7 @@ def batch_recipes(stems_dir, skip_research=False, skip_sections=False):
                     errors.append((song_name, "Analysis failed"))
                     continue
                 
+                correct_bpm_with_api(result_single, song_name)
                 build_rig(result_single, song_name=song_name, skip_research=skip_research, save_presets=False)
                 
                 # Read the JSON recipe to capture summary data
@@ -2765,35 +2860,23 @@ def batch_recipes(stems_dir, skip_research=False, skip_sections=False):
                 is_multi = result['is_multi_section']
                 
                 if is_multi:
-                    # Merge adjacent same-label sections
-                    raw_count = len(sections)
-                    sections = merge_adjacent_sections(sections)
-                    if len(sections) < raw_count:
-                        print(f"   📊 Merged {raw_count} sections → {len(sections)} (adjacent same-label combined)")
-                    
-                    # Collapse check: same label or narrow gain spread
-                    labels = set(s['section_label'] for s in sections)
-                    gains = [s['gain'] for s in sections]
-                    gain_spread = max(gains) - min(gains)
-                    
-                    if len(labels) == 1:
-                        print(f"   ⚠️ All {len(sections)} sections are {labels.pop()} — collapsing to single recipe")
-                        is_multi = False
-                        result_single = analyze_tone(wav_path)
-                        if result_single is None:
-                            errors.append((song_name, "Re-analysis failed"))
-                            continue
-                        sections = [result_single]
-                    elif gain_spread < 0.30:
-                        print(f"   ⚠️ {len(sections)} sections but gain spread only {gain_spread:.2f} — collapsing to single recipe")
-                        is_multi = False
-                        result_single = analyze_tone(wav_path)
-                        if result_single is None:
-                            errors.append((song_name, "Re-analysis failed"))
-                            continue
-                        sections = [result_single]
-                    else:
-                        print(f"   ⚡ Multi-section: {len(sections)} sections detected (spread={gain_spread:.2f})")
+                    print(f"   ⚡ Multi-section: {len(sections)} sections detected")
+                
+                # BPM API correction: look up once, apply to each section independently
+                api_result = lookup_bpm_api(song_name)
+                if api_result is not None:
+                    api_bpm = api_result['bpm']
+                    title = api_result.get('title', '')
+                    artist = api_result.get('artist', '')
+                    for sec in sections:
+                        librosa_bpm = sec.get('bpm', 120.0)
+                        ratio = librosa_bpm / api_bpm if api_bpm > 0 else 0
+                        if 1.7 < ratio < 2.3:
+                            corrected = librosa_bpm / 2.0
+                            sec['bpm'] = corrected
+                            print(f"   🎵 BPM corrected: {librosa_bpm:.0f} → {corrected:.0f} ({title} by {artist} = {api_bpm:.0f} BPM)")
+                    bpms = set(sec.get('bpm', 120.0) for sec in sections)
+                    print(f"   🎵 BPM API: {title} by {artist} = {api_bpm:.0f} BPM (section BPMs: {', '.join(f'{b:.0f}' for b in sorted(bpms))})")
                 
                 for sec_idx, section_features in enumerate(sections):
                     section_info = None
@@ -2816,13 +2899,12 @@ def batch_recipes(stems_dir, skip_research=False, skip_sections=False):
                     clean_name = os.path.splitext(song_name)[0]
                     clean_name = re.sub(r'[^a-zA-Z0-9_-]', '_', clean_name)
                     if is_multi:
-                        section_num = i + 1
-                        clean_name = f"{clean_name}_{section_num}_{section_features['section_label'].lower()}"
+                        clean_name = f"{clean_name}_{section_features['section_label'].lower()}"
                     
                     # Read the JSON recipe to capture summary data
                     json_path = os.path.join("recipes", f"{clean_name}.json")
 
-                    display_name = song_name if not is_multi else f"{song_name} [{section_num}/{len(result['sections'])} {section_features['section_label']}]"
+                    display_name = song_name if not is_multi else f"{song_name} [{section_features['section_label']}]"
                     
                     if os.path.exists(json_path):
                         with open(json_path, 'r') as f:

@@ -1,31 +1,27 @@
 🎸 SPARK 2 RECIPE (HYBRID MODE): gravity.wav
-📅 Date: 2026-03-10 16:49:50
+📅 Date: 2026-03-11 19:25:26
 🎯 DSP Analysis: Gain 0.39 | Presence 0.25 | Air 0.36 | Mids 0.71 | Width 0.48 | BPM 112
-📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+📊 Confidence: Tier C — LOW — Pure DSP analysis (no preset data)
 
 Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
 ==================================================
-[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
-   • PICKUP: Position 5 (Neck)
-   • VOLUME: 8
-   • TONE: 7
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🔬
+   • PICKUP: Position 4 (Neck+Mid)
+   • VOLUME: 10
+   • TONE: 6
 --------------------------------------------------
-[COMP/WAH] LA COMP 🎨
-   • GAIN: 4.0              • LIMIT_COMPRESS_TOGGLE: Compress
-   • PEAK_REDUCTION: 3.0 
+[COMP/WAH] SUSTAIN COMP 🔬
+   • ATTACK: 3.5            • LEVEL: 7.5          
+   • SUSTAIN: 6.5           • TONE: 5.0           
 --------------------------------------------------
-[DRIVE] TUBE DRIVE 🎨
-   • LEVEL: 5.0             • OVERDRIVE: 3.0      
-   • TONE: 6.0           
---------------------------------------------------
-[AMP] TWO STONE SP50 🎨
-   • BASS: 5.0              • GAIN: 2.0           
-   • MIDDLE: 4.6            • TREBLE: 1.5         
+[AMP] J.H. BASS MASTER 🔬
+   • BASS: 5.0              • GAIN: 4.9           
+   • MIDDLE: 7.2            • TREBLE: 4.5         
    • VOLUME: 8.0         
 --------------------------------------------------
 [MOD/EQ] GUITAR EQ 🔬
-   • 100HZ: -1.7            • 1600HZ: 1.2         
-   • 200HZ: -0.8            • 3200HZ: -1.3        
+   • 100HZ: -0.7            • 1600HZ: 1.2         
+   • 200HZ: -0.0            • 3200HZ: -0.6        
    • 400HZ: 1.2             • 800HZ: 1.5          
 --------------------------------------------------
 [DELAY] ECHO TAPE 🔬

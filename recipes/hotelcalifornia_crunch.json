@@ -1,22 +1,22 @@
 {
-  "song": "prideandjoy.wav",
-  "date": "2026-03-11T19:34:49.076168",
+  "song": "hotelcalifornia.wav",
+  "date": "2026-03-11T01:01:23.357240",
   "confidence": {
     "tier": "A",
     "label": "HIGH \u2014 Hand-curated artist preset"
   },
   "dsp": {
-    "gain": 0.506,
-    "mids": 0.561,
-    "presence": 0.282,
-    "air": 0.433,
-    "width": 0.947,
-    "bpm": 123.0
+    "gain": 0.51,
+    "mids": 0.509,
+    "presence": 0.328,
+    "air": 0.495,
+    "width": 0.565,
+    "bpm": 71.8
   },
   "guitar": {
     "guitar": "American Pro II Strat (SSS)",
-    "pickup": "Position 4 (Neck+Mid)",
-    "volume": 8,
+    "pickup": "Position 2 (Bridge+Mid)",
+    "volume": 10,
     "tone": 8
   },
   "guitar_source": "\ud83c\udfa8",
@@ -24,49 +24,48 @@
     "gate": null,
     "comp_wah": null,
     "drive": "Tube Drive",
-    "amp": "Black Duo",
+    "amp": "American Deluxe",
     "mod_eq": "Guitar EQ",
     "delay": "Echo Tape",
-    "reverb": "Room Studio A"
+    "reverb": "Plate Rich"
   },
   "settings": {
     "gate": null,
     "comp_wah": null,
     "drive": {
-      "OVERDRIVE": 1.5,
-      "TONE": 6.0,
-      "LEVEL": 9.5
+      "OVERDRIVE": 4.0,
+      "LEVEL": 9.0,
+      "TONE": 7.0
     },
     "amp": {
-      "GAIN": 4.060055729125232,
-      "TREBLE": 5.8,
-      "MIDDLE": 6.4,
+      "GAIN": 2.0,
+      "TREBLE": 5.256333170266437,
+      "MIDDLE": 4.088141800937285,
       "BASS": 5.0,
       "VOLUME": 8.0
     },
     "mod_eq": {
-      "100HZ": -1.0,
-      "200HZ": -0.4,
-      "400HZ": 0.4,
-      "800HZ": 0.8,
-      "1600HZ": 0.1,
-      "3200HZ": 0.6,
-      "LEVEL": -0.0
+      "100Hz": -2.0,
+      "200Hz": 2.0,
+      "400Hz": 4.0,
+      "800Hz": 5.0,
+      "1600Hz": 2.0,
+      "3200Hz": -2.0
     },
     "delay": {
       "SUSTAIN": 3.6,
       "VOLUME": 3.2,
-      "TONE": 4.5,
+      "TONE": 5.3,
       "SHORT/LONG": "1/8d",
       "BPM_MODE": "On"
     },
     "reverb": {
-      "LEVEL": 6.5,
-      "TIME": 4.3,
-      "DAMPING": 5.6,
+      "LEVEL": 4.9,
+      "TIME": 4.5,
+      "DAMPING": 6.0,
       "DWELL": 4.5,
       "LOW_CUT": 5.0,
-      "HIGH_CUT": 5.0
+      "HIGH_CUT": 4.5
     }
   },
   "sources": {
@@ -74,8 +73,16 @@
     "comp_wah": "",
     "drive": "\ud83c\udfa8",
     "amp": "\ud83c\udfa8",
-    "mod_eq": "\ud83d\udd2c",
+    "mod_eq": "\ud83c\udfa8",
     "delay": "\ud83d\udd2c",
     "reverb": "\ud83d\udd2c"
+  },
+  "section": {
+    "label": "Crunch",
+    "type": "quiet",
+    "start": 373.0,
+    "end": 391.38,
+    "index": 5,
+    "total_sections": 6
   }
 }

@@ -1,9 +1,9 @@
 {
   "song": "reptilia.wav",
-  "date": "2026-03-10T18:02:26.173002",
+  "date": "2026-03-11T19:56:50.279204",
   "confidence": {
-    "tier": "B",
-    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+    "tier": "C",
+    "label": "LOW \u2014 Pure DSP analysis (no preset data)"
   },
   "dsp": {
     "gain": 0.562,
@@ -15,16 +15,16 @@
   },
   "guitar": {
     "guitar": "American Pro II Strat (SSS)",
-    "pickup": "Position 1 (Bridge)",
+    "pickup": "Position 3 (Middle)",
     "volume": 10,
-    "tone": 8
+    "tone": 8.0
   },
-  "guitar_source": "\ud83c\udfa8",
+  "guitar_source": "\ud83d\udd2c",
   "rig": {
     "gate": null,
     "comp_wah": null,
     "drive": "Tube Drive",
-    "amp": "AC Boost",
+    "amp": "Plexiglas",
     "mod_eq": "Guitar EQ",
     "delay": "Vintage Delay",
     "reverb": "Plate Short"
@@ -33,14 +33,14 @@
     "gate": null,
     "comp_wah": null,
     "drive": {
-      "OVERDRIVE": 1.6,
+      "OVERDRIVE": 1.0,
       "TONE": 4.7,
-      "LEVEL": 7.8
+      "LEVEL": 7.0
     },
     "amp": {
-      "GAIN": 2.1195201158929287,
-      "TREBLE": 1.5,
-      "MIDDLE": 4.0544348495807565,
+      "GAIN": 2.0,
+      "TREBLE": 5.7,
+      "MIDDLE": 6.6,
       "BASS": 5.0,
       "VOLUME": 8.0
     },
@@ -72,7 +72,7 @@
     "gate": "",
     "comp_wah": "",
     "drive": "\ud83d\udd2c",
-    "amp": "\ud83c\udfa8",
+    "amp": "\ud83d\udd2c",
     "mod_eq": "\ud83d\udd2c",
     "delay": "\ud83d\udd2c",
     "reverb": "\ud83d\udd2c"

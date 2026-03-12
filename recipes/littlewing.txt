@@ -1,6 +1,6 @@
 🎸 SPARK 2 RECIPE (HYBRID MODE): littlewing.wav
-📅 Date: 2026-03-10 17:31:11
-🎯 DSP Analysis: Gain 0.49 | Presence 0.26 | Air 0.37 | Mids 0.72 | Width 0.73 | BPM 136
+📅 Date: 2026-03-11 19:29:31
+🎯 DSP Analysis: Gain 0.49 | Presence 0.26 | Air 0.37 | Mids 0.72 | Width 0.73 | BPM 68
 📊 Confidence: Tier A — HIGH — Hand-curated artist preset
 
 Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
@@ -20,7 +20,7 @@ Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
 --------------------------------------------------
 [AMP] JM45 🔬
    • BASS: 4.8              • GAIN: 2.0           
-   • MIDDLE: 7.0            • TREBLE: 1.6         
+   • MIDDLE: 7.6            • TREBLE: 4.4         
    • VOLUME: 8.0         
 --------------------------------------------------
 [MOD/EQ] UNIVIBE 🎨

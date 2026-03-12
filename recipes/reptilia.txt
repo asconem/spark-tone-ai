@@ -1,22 +1,22 @@
 🎸 SPARK 2 RECIPE (HYBRID MODE): reptilia.wav
-📅 Date: 2026-03-10 18:02:26
+📅 Date: 2026-03-11 19:56:50
 🎯 DSP Analysis: Gain 0.56 | Presence 0.31 | Air 0.43 | Mids 0.61 | Width 0.38 | BPM 161
-📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+📊 Confidence: Tier C — LOW — Pure DSP analysis (no preset data)
 
 Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
 ==================================================
-[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
-   • PICKUP: Position 1 (Bridge)
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🔬
+   • PICKUP: Position 3 (Middle)
    • VOLUME: 10
    • TONE: 8
 --------------------------------------------------
 [DRIVE] TUBE DRIVE 🔬
-   • LEVEL: 7.8             • OVERDRIVE: 1.6      
+   • LEVEL: 7.0             • OVERDRIVE: 1.0      
    • TONE: 4.7           
 --------------------------------------------------
-[AMP] AC BOOST 🎨
-   • BASS: 5.0              • GAIN: 2.1           
-   • MIDDLE: 4.1            • TREBLE: 1.5         
+[AMP] PLEXIGLAS 🔬
+   • BASS: 5.0              • GAIN: 2.0           
+   • MIDDLE: 6.6            • TREBLE: 5.7         
    • VOLUME: 8.0         
 --------------------------------------------------
 [MOD/EQ] GUITAR EQ 🔬
