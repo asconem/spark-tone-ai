@@ -4220,5 +4220,86 @@
     },
     "real_world_amp": "Marshall JTM45",
     "amp_manufacturer": "Marshall"
+  },
+  "auto_draonattack_wav": {
+    "keywords": [
+      "dragonforce",
+      "through",
+      "fire",
+      "flames",
+      "power",
+      "metal",
+      "speed"
+    ],
+    "description": "High-gain British metal tone with searing leads, compressed attack, and crystal clear articulation for extreme speed playing",
+    "source": "auto",
+    "validated": false,
+    "confidence": "medium",
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 6.0,
+        "TONE": 7.0,
+        "LEVEL": 8.0
+      },
+      "delay": "Digital Delay",
+      "delay_settings": {
+        "E_LEVEL": 3.0,
+        "F_BACK": 4.0,
+        "D_TIME": "1/8",
+        "MODE": "200ms"
+      },
+      "comp_wah": "Sustain Comp",
+      "comp_settings": {
+        "LEVEL": 8.0,
+        "TONE": 6.0,
+        "ATTACK": 3.0,
+        "SUSTAIN": 7.0
+      },
+      "reverb": "Hall Medium",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "real_world_amp": "Marshall JCM2000 DSL100",
+    "amp_manufacturer": "Marshall"
+  },
+  "auto_evildeathroll_wav": {
+    "keywords": [
+      "evil",
+      "death",
+      "roll",
+      "spiritbox",
+      "eternal",
+      "blue",
+      "metalcore",
+      "djent"
+    ],
+    "description": "Modern djent/metalcore tone with high gain, tight low end, and crisp highs for palm-muted chugging and melodic leads",
+    "source": "auto",
+    "validated": false,
+    "confidence": "high",
+    "forced_gear": {
+      "amp": "Insane",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 3.5,
+        "TONE": 6.0,
+        "LEVEL": 7.0
+      },
+      "reverb": "Room Studio A",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "real_world_amp": "EVH 5150 III 100S",
+    "amp_manufacturer": "EVH"
   }
 }

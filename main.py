@@ -1729,9 +1729,11 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
     guitar_source = "🔬"
 
     # Check if artist preset specifies guitar
+    has_preset_guitar = False
     if override_settings and 'guitar' in override_settings:
         guitar_info.update(override_settings['guitar'])
         guitar_source = "🎨"
+        has_preset_guitar = True
     elif override_rig and not skip_research:
         # Preset exists but no guitar block — try API guitar research
         try:
@@ -1782,22 +1784,32 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
         else:
             guitar_info['pickup'] = 'Position 1 (Bridge)'
 
-        # Tone knob — maps to air. Low air = roll back for warmth. High air = open.
-        if target_air < 0.35:
-            guitar_info['tone'] = round(min(10, max(1, 4.0 + (target_air - 0.25) * 20)), 0)
-        elif target_air < 0.45:
-            guitar_info['tone'] = round(min(10, max(1, 6.0 + (target_air - 0.35) * 20)), 0)
-        elif target_air < 0.55:
-            guitar_info['tone'] = round(min(10, max(1, 8.0 + (target_air - 0.45) * 10)), 0)
-        else:
-            guitar_info['tone'] = 10
+    # --- TONE AND VOLUME: Always DSP-driven, never from preset ---
+    # Guitar model and pickup can come from presets (🎨), but knob settings
+    # should respond to the actual audio. This ensures a Mexican Strat preset
+    # doesn't force TONE=8 on a bright song that needs TONE=10.
+    #
+    # Tone knob — maps to air. Low air = roll back for warmth. High air = open.
+    if target_air < 0.35:
+        guitar_info['tone'] = round(min(10, max(1, 4.0 + (target_air - 0.25) * 20)), 0)
+    elif target_air < 0.45:
+        guitar_info['tone'] = round(min(10, max(1, 6.0 + (target_air - 0.35) * 20)), 0)
+    elif target_air < 0.55:
+        guitar_info['tone'] = round(min(10, max(1, 8.0 + (target_air - 0.45) * 10)), 0)
+    else:
+        guitar_info['tone'] = 10
 
-        # Volume — default 10. Roll back slightly for very clean tones
-        # where dynamics benefit from less input signal.
-        if target_gain < 0.25:
-            guitar_info['volume'] = 9
-        else:
-            guitar_info['volume'] = 10
+    # Volume — default 10. Roll back slightly for very clean tones
+    # where dynamics benefit from less input signal.
+    if target_gain < 0.25:
+        guitar_info['volume'] = 9
+    else:
+        guitar_info['volume'] = 10
+
+    # Update source marker: if preset specified guitar model/pickup,
+    # mark as hybrid (preset model + DSP knobs)
+    if has_preset_guitar:
+        guitar_source = "🎨🔬"
 
     # HYBRID MODE: Use DSP analysis for amp selection UNLESS forced by preset
     if not rig['amp']:

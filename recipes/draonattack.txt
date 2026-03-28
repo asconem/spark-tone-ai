@@ -1,0 +1,31 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): draonattack.wav
+📅 Date: 2026-03-27 23:57:51
+🎯 DSP Analysis: Gain 0.83 | Presence 0.26 | Air 0.46 | Mids 0.58 | Width 0.61 | BPM 89
+📊 Confidence: Tier C — LOW — Pure DSP analysis (no preset data)
+✅ Coherence: Grade A (100/100)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🔬
+   • PICKUP: Position 3 (Middle)
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[GATE] NOISE GATE 🔬
+   • DECAY: 3.8             • THRESHOLD: 2.5      
+--------------------------------------------------
+[AMP] AMERICAN HIGH GAIN 🔬
+   • BASS: 6.1              • GAIN: 4.8           
+   • MIDDLE: 7.5            • TREBLE: 6.3         
+   • VOLUME: 7.6         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: 1.8             • 1600HZ: 0.2         
+   • 200HZ: 1.3             • 3200HZ: -0.5        
+   • 400HZ: 0.5             • 800HZ: 0.9          
+--------------------------------------------------
+[REVERB] PLATE SHORT 🔬
+   • DAMPING: 5.3           • DWELL: 2.8          
+   • HIGH_CUT: 5.2          • LEVEL: 3.0          
+   • LOW_CUT: 6.3           • TIME: 2.8           
+--------------------------------------------------

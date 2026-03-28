@@ -1,9 +1,12 @@
 {
   "song": "stonecoldcrazy.wav",
-  "date": "2026-03-10T18:19:46.315650",
+  "date": "2026-03-27T23:43:41.613451",
   "confidence": {
     "tier": "A",
-    "label": "HIGH \u2014 Hand-curated artist preset"
+    "label": "HIGH \u2014 Hand-curated artist preset",
+    "coherence_score": 100,
+    "coherence_grade": "A",
+    "coherence_flags": []
   },
   "dsp": {
     "gain": 0.845,
@@ -11,7 +14,7 @@
     "presence": 0.218,
     "air": 0.565,
     "width": 0.863,
-    "bpm": 123.0
+    "bpm": 61.5
   },
   "guitar": {
     "guitar": "Mexican Strat (SSH)",
@@ -31,19 +34,19 @@
   },
   "settings": {
     "gate": {
-      "THRESHOLD": 3.4,
-      "DECAY": 2.7
+      "THRESHOLD": 4.1,
+      "DECAY": 2.5
     },
     "comp_wah": null,
     "drive": {
       "GAIN": 8.5
     },
     "amp": {
-      "GAIN": 2.953408139436753,
-      "TREBLE": 6.8,
-      "MIDDLE": 3.8,
-      "BASS": 5.4,
-      "VOLUME": 8.0
+      "GAIN": 5.0,
+      "TREBLE": 9.3,
+      "MIDDLE": 4.7,
+      "BASS": 5.9,
+      "VOLUME": 7.4
     },
     "mod_eq": {
       "SPEED": 1.0,
@@ -51,17 +54,17 @@
     },
     "delay": {
       "E_LEVEL": 2.6,
-      "F_BACK": 3.8,
+      "F_BACK": 5.1,
       "D_TIME": "1/8",
       "BPM_MODE": "On"
     },
     "reverb": {
       "LEVEL": 4.0,
       "TIME": 3.4,
-      "DAMPING": 6.4,
+      "DAMPING": 7.1,
       "DWELL": 2.8,
       "LOW_CUT": 6.4,
-      "HIGH_CUT": 4.0
+      "HIGH_CUT": 3.7
     }
   },
   "sources": {

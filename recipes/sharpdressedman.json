@@ -1,9 +1,12 @@
 {
   "song": "sharpdressedman.wav",
-  "date": "2026-03-10T18:10:49.401130",
+  "date": "2026-03-27T23:24:11.420758",
   "confidence": {
     "tier": "A",
-    "label": "HIGH \u2014 Hand-curated artist preset"
+    "label": "HIGH \u2014 Hand-curated artist preset",
+    "coherence_score": 100,
+    "coherence_grade": "A",
+    "coherence_flags": []
   },
   "dsp": {
     "gain": 0.752,
@@ -11,7 +14,7 @@
     "presence": 0.248,
     "air": 0.516,
     "width": 0.418,
-    "bpm": 123.0
+    "bpm": 61.5
   },
   "guitar": {
     "guitar": "Mexican Strat (SSH)",
@@ -31,8 +34,8 @@
   },
   "settings": {
     "gate": {
-      "THRESHOLD": 2.4,
-      "DECAY": 3.6
+      "THRESHOLD": 3.5,
+      "DECAY": 3.0
     },
     "comp_wah": {
       "GAIN": 5.0,
@@ -43,11 +46,11 @@
       "LEVEL": 7.0
     },
     "amp": {
-      "GAIN": 2.0,
-      "TREBLE": 8.1,
-      "MIDDLE": 3.7,
-      "BASS": 5.1,
-      "VOLUME": 8.0
+      "GAIN": 5.592423470759101,
+      "TREBLE": 7.5,
+      "MIDDLE": 5.3,
+      "BASS": 5.4,
+      "VOLUME": 7.6
     },
     "mod_eq": {
       "DEPTH": 1.5,
@@ -56,14 +59,14 @@
     },
     "delay": {
       "E_LEVEL": 3.0,
-      "F_BACK": 3.8,
+      "F_BACK": 4.0,
       "D_TIME": "1/8",
       "BPM_MODE": "On"
     },
     "reverb": {
       "LEVEL": 3.1,
       "TIME": 3.7,
-      "DAMPING": 6.1,
+      "DAMPING": 6.2,
       "DWELL": 3.2,
       "LOW_CUT": 6.0,
       "HIGH_CUT": 4.4

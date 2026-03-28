@@ -1,0 +1,39 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): evildeathroll.wav
+📅 Date: 2026-03-28 00:24:07
+🎯 DSP Analysis: Gain 0.54 | Presence 0.31 | Air 0.45 | Mids 0.61 | Width 0.71 | BPM 68
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+🟡 Coherence: Grade B (78/100) — Gain stack likely over-saturated: amp base_gain=0.95 + drive boost≈0.25 → ~1.00, but stem only warrants gain=0.54 (excess=0.46)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨🔬
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[GATE] NOISE GATE 🔬
+   • DECAY: 4.4             • THRESHOLD: 1.6      
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🎨
+   • LEVEL: 7.0             • OVERDRIVE: 3.5      
+   • TONE: 6.0           
+--------------------------------------------------
+[AMP] INSANE 🎨
+   • BASS: 3.8              • GAIN: 3.0           
+   • MIDDLE: 8.2            • TREBLE: 6.1         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -2.9            • 1600HZ: 0.5         
+   • 200HZ: -2.2            • 3200HZ: -1.8        
+   • 400HZ: 0.7             • 800HZ: 1.1          
+--------------------------------------------------
+[DELAY] VINTAGE DELAY 🔬
+   • BPM_MODE: On           • ECHO: 3.8           
+   • INTENSITY: 5.0         • REPEAT_RATE: 1/8d   
+--------------------------------------------------
+[REVERB] ROOM STUDIO A 🎨
+   • DAMPING: 5.1           • DWELL: 4.3          
+   • HIGH_CUT: 5.3          • LEVEL: 5.3          
+   • LOW_CUT: 5.2           • TIME: 4.3           
+--------------------------------------------------

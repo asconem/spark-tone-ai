@@ -1,0 +1,77 @@
+{
+  "song": "draonattack.wav",
+  "date": "2026-03-27T23:57:51.642087",
+  "confidence": {
+    "tier": "C",
+    "label": "LOW \u2014 Pure DSP analysis (no preset data)",
+    "coherence_score": 100,
+    "coherence_grade": "A",
+    "coherence_flags": []
+  },
+  "dsp": {
+    "gain": 0.832,
+    "mids": 0.575,
+    "presence": 0.258,
+    "air": 0.461,
+    "width": 0.607,
+    "bpm": 89.1
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 3 (Middle)",
+    "volume": 10,
+    "tone": 8.0
+  },
+  "guitar_source": "\ud83d\udd2c",
+  "rig": {
+    "gate": "Noise Gate",
+    "comp_wah": null,
+    "drive": null,
+    "amp": "American High Gain",
+    "mod_eq": "Guitar EQ",
+    "delay": null,
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": {
+      "THRESHOLD": 2.5,
+      "DECAY": 3.8
+    },
+    "comp_wah": null,
+    "drive": null,
+    "amp": {
+      "GAIN": 4.8,
+      "TREBLE": 6.3,
+      "MIDDLE": 7.5,
+      "BASS": 6.1,
+      "VOLUME": 7.6
+    },
+    "mod_eq": {
+      "100HZ": 1.8,
+      "200HZ": 1.3,
+      "400HZ": 0.5,
+      "800HZ": 0.9,
+      "1600HZ": 0.2,
+      "3200HZ": -0.5,
+      "LEVEL": -0.4
+    },
+    "delay": null,
+    "reverb": {
+      "LEVEL": 3.0,
+      "TIME": 2.8,
+      "DAMPING": 5.3,
+      "DWELL": 2.8,
+      "LOW_CUT": 6.3,
+      "HIGH_CUT": 5.2
+    }
+  },
+  "sources": {
+    "gate": "\ud83d\udd2c",
+    "comp_wah": "",
+    "drive": "",
+    "amp": "\ud83d\udd2c",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "",
+    "reverb": "\ud83d\udd2c"
+  }
+}
