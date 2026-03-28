@@ -2847,32 +2847,68 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
                 # Future: scale by drive amount if settings are available.
                 treble_comp = gb * 1.5
 
-            # --- Base EQ formulas (what the stem needs) minus drive compensation ---
+            # --- Last-Mile EQ: Residual gap between target and predicted rig output ---
+            #
+            # Philosophy: The amp selection + knob formulas get the rig "close."
+            # The EQ is the final sharpening pass — it only corrects what the amp
+            # and drive leave uncovered. When the amp is well-matched, residuals
+            # are small and the EQ barely moves. When the amp is a poor character
+            # match (e.g. dark amp targeting a bright Brian May tone), residuals
+            # are large and the EQ does meaningful work.
+            #
+            # Formula:
+            #   residual = (target - amp_predicted_output) × (1 - AMP_KNOB_COVERAGE)
+            #   eq_band  = residual × K - drive_compensation
+            #
+            # AMP_KNOB_COVERAGE: fraction of the amp's base_tone→target gap that the
+            # amp's TREBLE/MIDDLE knobs actually close. The remainder is the EQ's job.
+            # Set conservatively (0.35) because amp character (e.g. a Marshall's natural
+            # darkness) resists the knob more than a simple linear correction implies.
+            AMP_KNOB_COVERAGE = 0.35
 
-            # 100Hz (Low Bass): Driven by measured low-frequency energy, not gain.
-            # Old formula used target_gain as proxy — a high-gain bright tone got
-            # bass boost it didn't need. Now uses low_energy_ratio (80-500Hz proportion).
-            # Normalized 0-1 from observed range 0.20-0.50, centered at 0.5 (neutral).
-            bass_norm = max(0.0, min(1.0, (target_low_energy - BASS_MIN) / BASS_RANGE))
-            eq_100 = round(np.clip((bass_norm - 0.5) * 8.0 - bass_comp, -10.0, 10.0), 1)
+            # Amp's natural predicted output in feature-space units.
+            # base_tone.treble maps to the AIR range; base_tone.mids to the MIDS range.
+            amp_treble_char = rig['amp']['base_tone']['treble'] if rig['amp'] else 0.5
+            amp_mids_char   = rig['amp']['base_tone']['mids']   if rig['amp'] else 0.5
+            amp_predicted_air  = AIR_MIN  + amp_treble_char * AIR_RANGE
+            amp_predicted_mids = MIDS_MIN + amp_mids_char   * MIDS_RANGE
 
-            # 200Hz (Upper Bass): Same bass measurement, slightly attenuated (×0.8 comp)
-            eq_200 = round(np.clip((bass_norm - 0.5) * 6.0 - bass_comp * 0.8, -10.0, 10.0), 1)
+            # Residuals: the gap left after the amp knobs do their best.
+            # Bass has no base_tone reference → neutral anchor at midpoint of BASS range.
+            bass_norm      = max(0.0, min(1.0, (target_low_energy - BASS_MIN) / BASS_RANGE))
+            air_residual   = (target_air          - amp_predicted_air)               * (1.0 - AMP_KNOB_COVERAGE)
+            mids_residual  = (target_mids         - amp_predicted_mids)              * (1.0 - AMP_KNOB_COVERAGE)
+            bass_residual  = (target_low_energy   - (BASS_MIN + 0.5 * BASS_RANGE))  * (1.0 - AMP_KNOB_COVERAGE)
 
-            # 400Hz (Low Mids): per-drive factor scales with scoop width
-            eq_400 = round(np.clip((target_mids - 0.5) * 6.0 - mid_comp * mid_factor_400, -10.0, 10.0), 1)
+            # Sensitivity constants: dB of EQ per unit of residual gap.
+            # Calibrated so a large mismatch (amp off by the full AIR_RANGE) yields
+            # ~8 dB of correction; a well-matched amp yields near-zero EQ.
+            # K_air  tuned for AIR_RANGE=0.290:  0.290 × 0.65 × K_air ≈ 8  → K≈42
+            # K_mids tuned for MIDS_RANGE=0.350: 0.350 × 0.65 × K_mids ≈ 7 → K≈31
+            # K_bass tuned for BASS_RANGE=0.300: 0.300 × 0.65 × K_bass ≈ 6 → K≈31
+            K_air  = 42.0
+            K_mids = 31.0
+            K_bass = 31.0
 
-            # 800Hz (Mid Mids): per-drive factor, slightly stronger than 400Hz for wide scoops
-            eq_800 = round(np.clip((target_mids - 0.4) * 5.0 - mid_comp * mid_factor_800, -10.0, 10.0), 1)
+            # 100Hz: full bass sensitivity minus drive bass compensation
+            eq_100 = round(np.clip(bass_residual * K_bass        - bass_comp,       -10.0, 10.0), 1)
 
-            # 1600Hz (Upper Mids / Bite): always strongest — this is the scoop peak
-            eq_1600 = round(np.clip((target_mids - 0.55) * 8.0 - mid_comp * mid_factor_1600, -10.0, 10.0), 1)
+            # 200Hz: slightly attenuated bass correction
+            eq_200 = round(np.clip(bass_residual * K_bass * 0.75 - bass_comp * 0.8, -10.0, 10.0), 1)
 
-            # 3200Hz (Air / Rangemaster zone): Normalized air, minus drive treble comp.
-            # Old formula (target_air - 0.38) * 25.0 hit ±10 ceiling at air=0.78/0.0.
-            # Now uses AIR_MIN/AIR_RANGE normalization, centered at 0.5, ×12.0 spread.
-            air_norm_eq = max(0.0, min(1.0, (target_air - AIR_MIN) / AIR_RANGE))
-            eq_3200 = round(np.clip((air_norm_eq - 0.5) * 12.0 - treble_comp, -10.0, 10.0), 1)
+            # 400Hz: lower-mids (50% weight — narrower influence than 800/1600)
+            eq_400 = round(np.clip(mids_residual * K_mids * 0.50 - mid_comp * mid_factor_400,  -10.0, 10.0), 1)
+
+            # 800Hz: mid correction
+            eq_800 = round(np.clip(mids_residual * K_mids * 0.70 - mid_comp * mid_factor_800,  -10.0, 10.0), 1)
+
+            # 1600Hz: upper-mids / bite — highest mids weight, scoop peak
+            eq_1600 = round(np.clip(mids_residual * K_mids * 1.00 - mid_comp * mid_factor_1600, -10.0, 10.0), 1)
+
+            # 3200Hz: the Rangemaster zone — key last-mile treble correction.
+            # Dark amp + bright target → large air_residual → EQ cranked.
+            # Well-matched bright amp + bright target → near-zero residual → EQ quiet.
+            eq_3200 = round(np.clip(air_residual * K_air           - treble_comp,    -10.0, 10.0), 1)
 
             # LEVEL: output compensation based on total boost/cut
             total_adjustment = eq_100 + eq_200 + eq_400 + eq_800 + eq_1600 + eq_3200
@@ -3022,15 +3058,29 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
                 v_mid_factor_1600 = 4.5
                 v_treble_comp = v_gb * 1.5
 
-            # Compute virtual EQ band values
-            v_bass_norm = max(0.0, min(1.0, (target_low_energy - BASS_MIN) / BASS_RANGE))
-            v_eq_100  = np.clip((v_bass_norm - 0.5) * 8.0 - v_bass_comp, -10.0, 10.0)
-            v_eq_200  = np.clip((v_bass_norm - 0.5) * 6.0 - v_bass_comp * 0.8, -10.0, 10.0)
-            v_eq_400  = np.clip((target_mids - 0.5) * 6.0 - v_mid_comp * v_mid_factor_400, -10.0, 10.0)
-            v_eq_800  = np.clip((target_mids - 0.4) * 5.0 - v_mid_comp * v_mid_factor_800, -10.0, 10.0)
-            v_eq_1600 = np.clip((target_mids - 0.55) * 8.0 - v_mid_comp * v_mid_factor_1600, -10.0, 10.0)
-            v_air_norm_eq = max(0.0, min(1.0, (target_air - AIR_MIN) / AIR_RANGE))
-            v_eq_3200 = np.clip((v_air_norm_eq - 0.5) * 12.0 - v_treble_comp, -10.0, 10.0)
+            # Compute virtual EQ band values using the same residual approach as
+            # the live EQ — ensures compensation is proportional to what the amp
+            # actually left uncovered, not an absolute re-computation of the target.
+            V_AMP_KNOB_COVERAGE = 0.35
+            v_amp_treble_char = rig['amp']['base_tone']['treble'] if rig['amp'] else 0.5
+            v_amp_mids_char   = rig['amp']['base_tone']['mids']   if rig['amp'] else 0.5
+            v_amp_predicted_air  = AIR_MIN  + v_amp_treble_char * AIR_RANGE
+            v_amp_predicted_mids = MIDS_MIN + v_amp_mids_char   * MIDS_RANGE
+
+            v_air_residual  = (target_air        - v_amp_predicted_air)              * (1.0 - V_AMP_KNOB_COVERAGE)
+            v_mids_residual = (target_mids        - v_amp_predicted_mids)             * (1.0 - V_AMP_KNOB_COVERAGE)
+            v_bass_residual = (target_low_energy  - (BASS_MIN + 0.5 * BASS_RANGE))   * (1.0 - V_AMP_KNOB_COVERAGE)
+
+            V_K_air  = 42.0
+            V_K_mids = 31.0
+            V_K_bass = 31.0
+
+            v_eq_100  = np.clip(v_bass_residual * V_K_bass        - v_bass_comp,                -10.0, 10.0)
+            v_eq_200  = np.clip(v_bass_residual * V_K_bass * 0.75 - v_bass_comp * 0.8,          -10.0, 10.0)
+            v_eq_400  = np.clip(v_mids_residual * V_K_mids * 0.50 - v_mid_comp * v_mid_factor_400, -10.0, 10.0)
+            v_eq_800  = np.clip(v_mids_residual * V_K_mids * 0.70 - v_mid_comp * v_mid_factor_800, -10.0, 10.0)
+            v_eq_1600 = np.clip(v_mids_residual * V_K_mids * 1.00 - v_mid_comp * v_mid_factor_1600, -10.0, 10.0)
+            v_eq_3200 = np.clip(v_air_residual  * V_K_air          - v_treble_comp,             -10.0, 10.0)
 
             # Scale virtual EQ into amp knob adjustments.
             # Each EQ band is ±10dB. Amp knobs are 0-10 with ~3dB per unit

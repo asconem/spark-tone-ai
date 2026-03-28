@@ -1,0 +1,79 @@
+{
+  "song": "robotstop.wav",
+  "date": "2026-03-28T00:26:33.932013",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset",
+    "coherence_score": 100,
+    "coherence_grade": "A",
+    "coherence_flags": []
+  },
+  "dsp": {
+    "gain": 0.596,
+    "mids": 0.621,
+    "presence": 0.282,
+    "air": 0.439,
+    "width": 0.702,
+    "bpm": 99.4
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 10,
+    "tone": 8.0
+  },
+  "guitar_source": "\ud83c\udfa8\ud83d\udd2c",
+  "rig": {
+    "gate": "Noise Gate",
+    "comp_wah": null,
+    "drive": "Fuzz Face",
+    "amp": "Blues Boy",
+    "mod_eq": "Tremolo",
+    "delay": "Digital Delay",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": {
+      "THRESHOLD": 2.3,
+      "DECAY": 3.9
+    },
+    "comp_wah": null,
+    "drive": {
+      "FUZZ": 10.0,
+      "VOLUME": 10.0
+    },
+    "amp": {
+      "GAIN": 5.208772169698403,
+      "TREBLE": 5.1,
+      "MIDDLE": 8.6,
+      "BASS": 2.8,
+      "VOLUME": 7.9
+    },
+    "mod_eq": {
+      "SPEED": 4.4,
+      "DEPTH": 5.5,
+      "LEVEL": 7.0
+    },
+    "delay": {
+      "E_LEVEL": 6.0,
+      "F_BACK": 7.5
+    },
+    "reverb": {
+      "LEVEL": 4.9,
+      "TIME": 3.8,
+      "DAMPING": 4.9,
+      "DWELL": 4.0,
+      "LOW_CUT": 5.4,
+      "HIGH_CUT": 5.5
+    }
+  },
+  "sources": {
+    "gate": "\ud83d\udd2c",
+    "comp_wah": "",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83c\udfa8",
+    "reverb": "\ud83d\udd2c"
+  }
+}

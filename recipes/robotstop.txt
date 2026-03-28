@@ -1,0 +1,37 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): robotstop.wav
+📅 Date: 2026-03-28 00:26:33
+🎯 DSP Analysis: Gain 0.60 | Presence 0.28 | Air 0.44 | Mids 0.62 | Width 0.70 | BPM 99
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+✅ Coherence: Grade A (100/100)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨🔬
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[GATE] NOISE GATE 🔬
+   • DECAY: 3.9             • THRESHOLD: 2.3      
+--------------------------------------------------
+[DRIVE] FUZZ FACE 🎨
+   • FUZZ: 10.0             • VOLUME: 10.0        
+--------------------------------------------------
+[AMP] BLUES BOY 🎨
+   • BASS: 2.8              • GAIN: 5.2           
+   • MIDDLE: 8.6            • TREBLE: 5.1         
+   • VOLUME: 7.9         
+--------------------------------------------------
+[MOD/EQ] TREMOLO 🔬
+   • DEPTH: 5.5             • LEVEL: 7.0          
+   • SPEED: 4.4          
+--------------------------------------------------
+[DELAY] DIGITAL DELAY 🎨
+   • BPM_MODE: Off          • E_LEVEL: 6.0           • F_BACK: 7.5         
+   • MODE: 50ms          
+--------------------------------------------------
+[REVERB] PLATE SHORT 🔬
+   • DAMPING: 4.9           • DWELL: 4.0          
+   • HIGH_CUT: 5.5          • LEVEL: 4.9          
+   • LOW_CUT: 5.4           • TIME: 3.8           
+--------------------------------------------------
