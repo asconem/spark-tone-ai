@@ -406,14 +406,27 @@ def detect_sections(y, sr, min_section_duration=15.0, dynamic_threshold=3.0):
         else:
             final_sections.append(section)
     
+    # Consolidate consecutive sections of the same type into one.
+    # After duration-based merging we may still have e.g. QUIET, LOUD, QUIET, QUIET, QUIET
+    # where the three trailing QUIETs are each long enough to survive the min-duration
+    # check. Merging same-type neighbours reduces recipe count without losing any
+    # information — their shared type means the same tone applies throughout.
+    consolidated = [final_sections[0]]
+    for section in final_sections[1:]:
+        if section['type'] == consolidated[-1]['type']:
+            consolidated[-1]['end_sample'] = section['end_sample']
+        else:
+            consolidated.append(section)
+    final_sections = consolidated
+
     # Need at least 2 distinct sections with different types
     if len(final_sections) < 2:
         return None
-    
+
     types = set(s['type'] for s in final_sections)
     if len(types) < 2:
         return None
-    
+
     return final_sections
 
 
@@ -3117,7 +3130,8 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
     clean_name = re.sub(r'[^a-zA-Z0-9_-]', '_', clean_name)
     
     if section_info and section_info.get('is_multi_section'):
-        section_suffix = f"_{section_info['section_label'].lower()}"
+        idx = section_info['section_index'] + 1  # 1-based for readability
+        section_suffix = f"_{idx}_{section_info['section_label'].lower()}"
         clean_name = f"{clean_name}{section_suffix}"
     
     recipe_filename = os.path.join(recipes_dir, f"{clean_name}.txt")
@@ -3267,6 +3281,17 @@ def main():
         return
 
     song_name = os.path.basename(args.audio)
+
+    # When the file is a separated stem (guitar.wav, bass.wav, etc. from htdemucs),
+    # the filename has no song context. Use the parent directory name instead so
+    # artist lookup and recipe filenames reflect the actual song title.
+    STEM_NAMES = {'guitar', 'bass', 'drums', 'vocals', 'piano', 'other',
+                  'guitar_1', 'guitar_2', 'melody', 'no_vocals'}
+    stem_base = os.path.splitext(song_name)[0].lower()
+    if stem_base in STEM_NAMES:
+        parent_dir = os.path.basename(os.path.dirname(os.path.abspath(args.audio)))
+        if parent_dir and parent_dir not in ('', '.', 'separated', 'htdemucs_6s', 'htdemucs'):
+            song_name = parent_dir + os.path.splitext(song_name)[1]  # e.g. "Le Risque.wav"
     
     if args.no_sections:
         # Single-section mode: analyze full track (legacy behavior)
