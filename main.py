@@ -23,6 +23,60 @@ def _load_dotenv():
 _load_dotenv()
 
 # ==========================================
+# AMP FAMILY CONSTRAINTS
+# Maps real-world manufacturer names (as returned by the API) to the
+# Spark 2 model names that belong to each family. Used to validate and
+# constrain amp selection when API research identifies the artist's gear.
+# ==========================================
+AMP_FAMILIES = {
+    "Marshall":        ["Plexiglas", "JM45", "YJM100", "J.H. 45/100", "J.H. Super 100", "Blues Boy"],
+    "Fender":          ["Black Duo", "Tweed Bass", "American Deluxe", "Lux Verb", "J.H. Bass Master", "J.H. D-Show Master"],
+    "Vox":             ["AC Boost"],
+    "Mesa":            ["American High Gain", "Treadplate"],
+    "Orange":          ["AD Clean", "British 30", "Rocker V"],
+    "Roland":          ["Silver 120"],
+    "Dumble":          ["ODS 50"],
+    "Matchless":       ["MATCH DC"],
+    "Soldano":         ["SLO 100"],
+    "Bogner":          ["RB 101"],
+    "EVH":             ["Insane"],
+    "Friedman":        ["BE 101"],
+    "Peavey":          ["Insane 6508"],
+    "Two Rock":        ["Two Stone SP50"],
+    "Sound City":      ["J.H. Tone City 100"],
+    "Sunn":            ["J.H. Sun 100S"],
+    "Hughes & Kettner": ["SwitchAxe"],
+}
+
+# Reverse map: Spark model name → manufacturer family
+SPARK_TO_FAMILY = {}
+for mfr, models in AMP_FAMILIES.items():
+    for model in models:
+        SPARK_TO_FAMILY[model] = mfr
+
+# ==========================================
+# DSP RANGE CONSTANTS
+# Observed min/max for air (2400-6800Hz energy ratio) across the
+# calibration library. Used everywhere air needs normalizing to 0-1.
+# Single source of truth — change here, all formulas update.
+# ==========================================
+AIR_MIN = 0.328   # Gravity (darkest in library)
+AIR_MAX = 0.618   # Cherub Rock (brightest in library)
+AIR_RANGE = AIR_MAX - AIR_MIN  # 0.290
+
+# Observed typical range for mids (500-2000Hz, ×1.5 scaled, 0-1 clipped).
+# Used to normalize mids to 0-1 for knob formulas.
+MIDS_MIN = 0.30   # Scooped tones (metal, Muff-driven)
+MIDS_MAX = 0.65   # Mid-forward tones (blues, TS-driven)
+MIDS_RANGE = MIDS_MAX - MIDS_MIN  # 0.35
+
+# Observed range for low energy ratio (80-500Hz proportion of total energy).
+# Used to normalize bass content to 0-1 for BASS knob and EQ formulas.
+BASS_MIN = 0.20   # Thin/bright tones
+BASS_MAX = 0.50   # Thick/heavy tones
+BASS_RANGE = BASS_MAX - BASS_MIN  # 0.30
+
+# ==========================================
 # PART 1: THE EARS (Tone Analysis)
 # ==========================================
 def butter_bandpass_filter(data, lowcut, highcut, fs, order=5):
@@ -104,16 +158,14 @@ def detect_bpm(y, sr):
         # Decision: if half-tempo AC is at least 95% as strong as full-tempo AC,
         # the downbeat pulse is as strong as the detected pulse, suggesting the
         # detected tempo is tracking eighth notes, not quarter notes.
-        #
-        # Threshold TBD — disabled pending batch calibration on real stems.
-        # AC ratio is logged for every song > 120 BPM so the correct threshold
-        # can be determined from the full dataset.
-        # halved = ac_half >= ac_full * THRESHOLD
-        halved = False  # DISABLED — collecting data only
-        bpm = bpm_raw
+        # Only apply to fast tempos (>= 120 BPM) where octave confusion is likely.
+        HALF_TEMPO_THRESHOLD = 0.95
+        halved = bpm_raw >= 120 and ac_half >= ac_full * HALF_TEMPO_THRESHOLD
+        bpm = bpm_raw / 2.0 if halved else bpm_raw
         
         ac_ratio = ac_half / max(ac_full, 1e-10)
-        print(f"   📊 Tempo: {bpm_raw:.0f} BPM (octave check: AC@{bpm_raw:.0f}={ac_full:.3f}, AC@{half_bpm:.0f}={ac_half:.3f}, ratio={ac_ratio:.2f})")
+        halved_tag = f" → halved to {bpm:.0f}" if halved else ""
+        print(f"   📊 Tempo: {bpm_raw:.0f} BPM (octave check: AC@{bpm_raw:.0f}={ac_full:.3f}, AC@{half_bpm:.0f}={ac_half:.3f}, ratio={ac_ratio:.2f}{halved_tag})")
         
         return {'bpm': bpm, 'bpm_raw': bpm_raw, 'halved': halved, 'ac_full': ac_full, 'ac_half': ac_half}
     
@@ -170,7 +222,7 @@ def lookup_bpm_api(song_name):
         client = anthropic.Anthropic(api_key=api_key)
         response = client.messages.create(
             model="claude-sonnet-4-20250514",
-            max_tokens=150,
+            max_tokens=300,
             messages=[{"role": "user", "content": prompt}]
         )
         text = response.content[0].text.strip()
@@ -683,18 +735,25 @@ def analyze_audio_segment(y_left, y_right, sr):
         loud_energy = frame_energy[loud_mask]
         loud_weights = loud_energy / (np.sum(loud_energy) + 1e-10)
         
+        low_range      = (freqs >= 80)   & (freqs <= 500)
         mids_range     = (freqs >= 500)  & (freqs <= 2000)
         presence_range = (freqs >= 1200) & (freqs <= 2400)
         air_range      = (freqs >= 2400) & (freqs <= 6800)
-        
+
         frame_totals = np.sum(S_loud, axis=0) + 1e-10
+        low_per_frame      = np.sum(S_loud[low_range, :], axis=0) / frame_totals
         mids_per_frame     = np.sum(S_loud[mids_range, :], axis=0) / frame_totals
         presence_per_frame = np.sum(S_loud[presence_range, :], axis=0) / frame_totals
         air_per_frame      = np.sum(S_loud[air_range, :], axis=0) / frame_totals
-        
+
+        spark_low      = float(np.sum(low_per_frame * loud_weights))
         spark_mids     = float(np.clip(np.sum(mids_per_frame * loud_weights) * 1.5, 0, 1))
         spark_presence = float(np.sum(presence_per_frame * loud_weights))
         spark_air      = float(np.sum(air_per_frame * loud_weights))
+
+        # Low energy ratio: proportion of energy in low band vs total (low+mid+air)
+        total_band_energy = spark_low + spark_mids + spark_air + 1e-10
+        low_energy_ratio = spark_low / total_band_energy
         
         print(f"   📊 Tonal: Mids={spark_mids:.3f} | Presence={spark_presence:.3f} | Air={spark_air:.3f}")
         
@@ -717,9 +776,10 @@ def analyze_audio_segment(y_left, y_right, sr):
             'harmonic_ratio': harmonic_ratio,
             'harmonic_rolloff': harmonic_rolloff,
             'harmonic_coverage': harmonic_coverage,
+            'low_energy_ratio': low_energy_ratio,
             'bpm': bpm,
         }
-        
+
     except Exception as e:
         print(f"   ❌ Segment analysis error: {e}")
         return None
@@ -853,6 +913,7 @@ def analyze_tone(file_path):
     energy_high = np.mean(high_band**2)
     total_energy = energy_low + energy_mid + energy_high + 1e-10
     high_energy_ratio = energy_high / total_energy
+    low_energy_ratio = energy_low / total_energy
 
     # --- Debug output ---
     gain_delta = spark_gain_p75 - spark_gain
@@ -1083,7 +1144,252 @@ def analyze_tone(file_path):
         'harmonic_ratio': harmonic_ratio,
         'harmonic_rolloff': harmonic_rolloff,
         'harmonic_coverage': harmonic_coverage,
+        'low_energy_ratio': low_energy_ratio,
         'bpm': bpm,
+    }
+
+
+# ==========================================
+# PART 2A: RECIPE COHERENCE SCORER
+# Evaluates a completed recipe for internal consistency.
+# Runs after build_rig() finishes — before the recipe is
+# printed or saved. Catches contradictions that individual
+# DSP formulas can't see because they operate in isolation.
+#
+# Returns a dict:
+#   score: 0-100 (100 = fully coherent)
+#   grade: A/B/C/D
+#   flags: list of plain-English issue descriptions
+#   auto_fixed: list of values auto-corrected (e.g. rounding)
+# ==========================================
+def score_recipe_coherence(rig, settings, features, sources):
+    """
+    Evaluate internal consistency of a completed recipe.
+
+    Checks:
+      1. Gain stack — combined drive+amp gain vs DSP target
+      2. TREBLE vs air — amp TREBLE setting vs stem brightness
+      3. MIDDLE vs mids — amp MIDDLE setting vs stem midrange
+      4. Drive-amp doubling — high-gain drive into high-gain amp for a clean song
+      5. EQ contradiction — EQ bands fighting stem measurements
+      6. Precision rounding — nonsensical float precision in knob values
+    """
+    flags = []
+    auto_fixed = []
+    deductions = 0
+
+    amp_obj  = rig.get('amp')
+    drive_obj = rig.get('drive')
+    amp_settings  = settings.get('amp', {}) or {}
+    drive_settings = settings.get('drive', {}) or {}
+    eq_settings   = settings.get('mod_eq', {}) or {}
+    mod_eq_obj    = rig.get('mod_eq')
+
+    target_gain = features.get('gain', 0.5)
+    target_air  = features.get('air', 0.47)
+    target_mids = features.get('mids', 0.5)
+
+    # ----------------------------------------------------------
+    # CHECK 1: TREBLE vs air coherence
+    # TREBLE knob range 0-10. Expected: low air → low-mid TREBLE,
+    # high air → high TREBLE. Tolerance ±2.5 before flagging.
+    # Air range: 0.328 (dark) → 0.618 (bright)
+    # Mapped to expected TREBLE: 4.0 → 9.0
+    # ----------------------------------------------------------
+    treble_val = amp_settings.get('TREBLE')
+    if treble_val is not None and amp_obj:
+        air_norm = max(0.0, min(1.0, (target_air - AIR_MIN) / AIR_RANGE))
+        expected_treble = 4.0 + air_norm * 5.0
+        treble_delta = abs(float(treble_val) - expected_treble)
+        if treble_delta > 3.0:
+            direction = "too high" if float(treble_val) > expected_treble else "too low"
+            flags.append(
+                f"TREBLE {treble_val:.1f} is {direction} for stem air={target_air:.3f} "
+                f"(expected ~{expected_treble:.1f}, delta={treble_delta:.1f})"
+            )
+            deductions += min(20, int(treble_delta * 4))
+
+    # ----------------------------------------------------------
+    # CHECK 2: MIDDLE vs mids coherence
+    # Expected: mids normalized 0-1 → MIDDLE 2.0-9.0
+    # ----------------------------------------------------------
+    middle_val = amp_settings.get('MIDDLE')
+    if middle_val is not None:
+        mids_norm = max(0.0, min(1.0, (target_mids - MIDS_MIN) / MIDS_RANGE))
+        expected_middle = 2.0 + mids_norm * 7.0
+        middle_delta = abs(float(middle_val) - expected_middle)
+        if middle_delta > 3.0:
+            direction = "too high" if float(middle_val) > expected_middle else "too low"
+            flags.append(
+                f"MIDDLE {middle_val:.1f} is {direction} for stem mids={target_mids:.3f} "
+                f"(expected ~{expected_middle:.1f}, delta={middle_delta:.1f})"
+            )
+            deductions += min(15, int(middle_delta * 3))
+
+    # ----------------------------------------------------------
+    # CHECK 2B: BASS vs low_energy_ratio coherence
+    # Expected: low_energy normalized 0-1 (range 0.20-0.50) → BASS 3.0-7.0
+    # ----------------------------------------------------------
+    bass_val = amp_settings.get('BASS')
+    target_low_energy = features.get('low_energy_ratio', 0.33)
+    if bass_val is not None:
+        bass_norm = max(0.0, min(1.0, (target_low_energy - BASS_MIN) / BASS_RANGE))
+        expected_bass = 3.0 + bass_norm * 4.0
+        bass_delta = abs(float(bass_val) - expected_bass)
+        if bass_delta > 2.5:
+            direction = "too high" if float(bass_val) > expected_bass else "too low"
+            flags.append(
+                f"BASS {bass_val:.1f} is {direction} for stem low_energy={target_low_energy:.3f} "
+                f"(expected ~{expected_bass:.1f}, delta={bass_delta:.1f})"
+            )
+            deductions += min(15, int(bass_delta * 3))
+
+    # ----------------------------------------------------------
+    # CHECK 3: Gain stack — drive + amp vs target
+    # Estimate the combined gain the recipe delivers and compare
+    # to what the stem actually warrants.
+    # ----------------------------------------------------------
+    amp_base_gain = amp_obj['base_tone']['gain'] if amp_obj else 0.5
+    drive_boost   = 0.0
+    if drive_obj:
+        sp = drive_obj.get('sonic_profile', {})
+        drive_boost = sp.get('gain_boost', 0.0) * 0.5  # drive contributes ~50% of its boost
+
+    recipe_gain_estimate = min(1.0, amp_base_gain + drive_boost)
+    gain_delta = recipe_gain_estimate - target_gain
+
+    if gain_delta > 0.35:
+        flags.append(
+            f"Gain stack likely over-saturated: amp base_gain={amp_base_gain:.2f} + "
+            f"drive boost≈{drive_boost:.2f} → ~{recipe_gain_estimate:.2f}, "
+            f"but stem only warrants gain={target_gain:.2f} (excess={gain_delta:.2f})"
+        )
+        deductions += min(25, int(gain_delta * 50))
+    elif gain_delta < -0.30 and drive_obj is None:
+        flags.append(
+            f"Gain stack may under-deliver: amp base_gain={amp_base_gain:.2f} "
+            f"for stem gain={target_gain:.2f} — consider adding a drive pedal"
+        )
+        deductions += min(10, int(abs(gain_delta) * 20))
+
+    # ----------------------------------------------------------
+    # CHECK 4: Drive-amp doubling for clean/light songs
+    # High-gain drive into high-gain amp when target_gain is low
+    # = recipe will produce far more saturation than the stem.
+    # ----------------------------------------------------------
+    if drive_obj and amp_obj:
+        sp = drive_obj.get('sonic_profile', {})
+        drive_gain_boost = sp.get('gain_boost', 0.0)
+        amp_bt_gain = amp_obj['base_tone']['gain']
+        if drive_gain_boost >= 0.7 and amp_bt_gain >= 0.55 and target_gain < 0.45:
+            flags.append(
+                f"High-gain drive ({drive_obj['name']}, boost={drive_gain_boost:.1f}) "
+                f"stacked into high-gain amp ({amp_obj['name']}, base={amp_bt_gain:.2f}) "
+                f"for a clean/light stem (gain={target_gain:.2f}) — likely over-driven"
+            )
+            deductions += 20
+
+    # ----------------------------------------------------------
+    # CHECK 5: EQ contradiction
+    # Only fires when mod_eq slot contains Guitar EQ.
+    # Air band (3200Hz) and mids band (800Hz) are the key checks.
+    # Flags when EQ is strongly fighting what the stem measures.
+    # ----------------------------------------------------------
+    if mod_eq_obj and 'EQ' in mod_eq_obj.get('name', ''):
+        hz3200 = eq_settings.get('3200HZ', eq_settings.get('3200hz', None))
+        hz800  = eq_settings.get('800HZ',  eq_settings.get('800hz',  None))
+        hz1600 = eq_settings.get('1600HZ', eq_settings.get('1600hz', None))
+
+        air_norm = max(0.0, min(1.0, (target_air - AIR_MIN) / AIR_RANGE))
+
+        # Dark stem + boosting 3200Hz = EQ fighting the amp
+        if hz3200 is not None and float(hz3200) > 3.0 and air_norm < 0.35:
+            flags.append(
+                f"EQ boosting 3200Hz by {float(hz3200):+.1f}dB on a dark stem "
+                f"(air={target_air:.3f}) — EQ is fighting the amp selection"
+            )
+            deductions += 10
+
+        # Bright stem + cutting 3200Hz = contradictory
+        if hz3200 is not None and float(hz3200) < -3.0 and air_norm > 0.65:
+            flags.append(
+                f"EQ cutting 3200Hz by {float(hz3200):+.1f}dB on a bright stem "
+                f"(air={target_air:.3f}) — EQ is contradicting the stem character"
+            )
+            deductions += 10
+
+        # Mid-forward stem + cutting 800Hz = contradictory
+        if hz800 is not None and float(hz800) < -3.0 and target_mids > 0.55:
+            flags.append(
+                f"EQ cutting 800Hz by {float(hz800):+.1f}dB on a mid-forward stem "
+                f"(mids={target_mids:.3f}) — EQ is fighting the stem midrange"
+            )
+            deductions += 10
+
+    # ----------------------------------------------------------
+    # CHECK 5B: Gate vs gain coherence
+    # High-gain recipes produce noise that needs gating.
+    # Missing gate at gain >= 0.70 is suspicious.
+    # With a drive pedal, the threshold drops to 0.50.
+    # ----------------------------------------------------------
+    gate_obj = rig.get('gate')
+    gate_settings = settings.get('gate', {}) or {}
+    has_drive = drive_obj is not None
+    gate_needed_threshold = 0.50 if has_drive else 0.70
+
+    if target_gain >= gate_needed_threshold and not gate_obj:
+        flags.append(
+            f"No gate on a {'drive+' if has_drive else ''}gain={target_gain:.2f} recipe — "
+            f"expect audible noise between notes"
+        )
+        deductions += 8
+
+    if gate_obj and gate_settings:
+        gate_thresh = gate_settings.get('THRESHOLD', 3.0)
+        # Very low threshold (< 2.0) on high-gain (> 0.80) = gate barely triggers
+        if target_gain >= 0.80 and float(gate_thresh) < 2.0:
+            flags.append(
+                f"Gate threshold {gate_thresh:.1f} is too low for gain={target_gain:.2f} — "
+                f"gate won't suppress noise effectively"
+            )
+            deductions += 5
+
+    # ----------------------------------------------------------
+    # CHECK 6: Precision rounding
+    # Knob values with absurd float precision (e.g. 2.372617...)
+    # are auto-corrected to 1 decimal place.
+    # ----------------------------------------------------------
+    for slot in ['amp', 'drive', 'mod_eq', 'gate', 'comp_wah', 'delay', 'reverb']:
+        slot_settings = settings.get(slot, {}) or {}
+        for param, val in list(slot_settings.items()):
+            try:
+                fval = float(val)
+                rounded = round(fval, 1)
+                if abs(fval - rounded) > 0.01 and isinstance(val, float):
+                    auto_fixed.append(f"{slot}.{param}: {fval:.6f} → {rounded:.1f}")
+                    slot_settings[param] = rounded
+            except (TypeError, ValueError):
+                pass
+
+    # ----------------------------------------------------------
+    # SCORE + GRADE
+    # ----------------------------------------------------------
+    score = max(0, 100 - deductions)
+
+    if score >= 85:
+        grade = "A"
+    elif score >= 70:
+        grade = "B"
+    elif score >= 50:
+        grade = "C"
+    else:
+        grade = "D"
+
+    return {
+        "score": score,
+        "grade": grade,
+        "flags": flags,
+        "auto_fixed": auto_fixed,
     }
 
 # ==========================================
@@ -1158,6 +1464,16 @@ def check_artist_override(song_name, db):
                 # Return reverb TYPE suggestion (not the reverb object itself)
                 reverb_suggestion = forced.get('reverb', None)
                 preset_source = data.get('source')  # None = curated, "auto" = API-generated
+
+                # Carry real-world amp provenance (top-level preset fields) into
+                # the forced_gear dict so family constraint validation can access them.
+                if data.get('real_world_amp') or data.get('amp_manufacturer'):
+                    forced = dict(forced)  # ensure mutable copy
+                    if data.get('real_world_amp'):
+                        forced['real_world_amp'] = data['real_world_amp']
+                    if data.get('amp_manufacturer'):
+                        forced['amp_manufacturer'] = data['amp_manufacturer']
+
                 return override_rig, forced, reverb_suggestion, preset_source
     return None, None, None, None
 
@@ -1259,6 +1575,8 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
     #   features['harmonic_ratio']      — even/odd harmonic balance (saturation character)
     #   features['harmonic_rolloff']    — upper vs lower harmonic decay (clipping type)
     #   features['harmonic_coverage']   — fraction of frames with reliable pitch
+    #   features['low_energy_ratio']    — proportion of energy in 80-500Hz band
+    target_low_energy = features.get('low_energy_ratio', 0.33)
 
     db = load_gear_db()
     if not db: return
@@ -1300,6 +1618,12 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
                                 if target: override_rig[slot] = target
                         reverb_suggestion = forced.get('reverb', None)
                         preset_source = "auto"  # API-generated, not hand-curated
+                        # Carry real-world amp provenance into override_settings
+                        # so family constraint validation can access it downstream.
+                        if preset.get('real_world_amp'):
+                            override_settings['real_world_amp'] = preset['real_world_amp']
+                        if preset.get('amp_manufacturer'):
+                            override_settings['amp_manufacturer'] = preset['amp_manufacturer']
                         print(f"   📌 Applying API research (batch mode — not saved to disk)")
         except ImportError:
             pass  # api_research.py not available, continue with DSP-only
@@ -1330,6 +1654,44 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
             for key_variant in settings_keys:
                 if override_settings and key_variant in override_settings:
                     settings[k] = override_settings[key_variant]
+
+    # ==========================================================
+    # AMP FAMILY CONSTRAINT VALIDATION
+    # When the API research identifies the real-world amp (e.g. "Marshall Bluesbreaker"),
+    # validate that the Spark model it selected belongs to the correct manufacturer family.
+    # If there is a mismatch — e.g. API returned Lux Verb (Fender) but the artist used
+    # a Marshall — clear the API amp choice and flag the correct family for DSP selection.
+    # DSP will then pick the best-matching amp from within the correct family.
+    #
+    # This corrects systematic errors like:
+    #   - Clapton/Dominos songs → Lux Verb (Fender) when Marshall/Dumble was used
+    #   - Blues artists → clean Fender when they used cranked Marshalls
+    # ==========================================================
+    constrained_amp_family = None  # Set if DSP should restrict to a specific family
+
+    if override_settings and rig.get("amp"):
+        # API gave us an amp — check its family against the declared manufacturer
+        declared_manufacturer = override_settings.get("amp_manufacturer", "").strip()
+        selected_amp_name = rig["amp"]["name"] if isinstance(rig["amp"], dict) else str(rig["amp"])
+        selected_family = SPARK_TO_FAMILY.get(selected_amp_name, "")
+
+        if declared_manufacturer and selected_family and declared_manufacturer != selected_family:
+            # Mismatch — API picked an amp from the wrong manufacturer family
+            # Check if the declared manufacturer has Spark models available
+            correct_family_amps = AMP_FAMILIES.get(declared_manufacturer, [])
+            if correct_family_amps:
+                print(f"   ⚠️  Amp family mismatch: API chose {selected_amp_name} ({selected_family}) "
+                      f"but artist used {declared_manufacturer} gear.")
+                print(f"   🔧 Overriding: DSP will select from {declared_manufacturer} family "                      f"({len(correct_family_amps)} models available)")
+                rig["amp"] = None      # Clear the wrong amp
+                sources["amp"] = ""    # Reset source
+                constrained_amp_family = declared_manufacturer
+            else:
+                # Declared manufacturer has no Spark models — keep API choice as best available
+                print(f"   ℹ️  Amp family note: {declared_manufacturer} has no direct Spark equivalent. "                      f"Keeping {selected_amp_name} as closest match.")
+        elif declared_manufacturer and selected_family:
+            # Family confirmed correct
+            print(f"   ✅ Amp family confirmed: {selected_amp_name} ({selected_family})")
 
     # ==========================================================
     # GUITAR SELECTION
@@ -1430,10 +1792,23 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
         # Without this filter, clean guitar tones with low gain + moderate treble
         # can match bass amps (RB-800, Sunny 3000, W600, Hammer 500).
         all_amps = [m for c in db['amps'] if c['category'] != 'Bass' for m in c['models']]
+
+        # AMP FAMILY CONSTRAINT: If the API identified the artist's real-world amp manufacturer,
+        # restrict DSP selection to only amps from that family. This ensures historically
+        # accurate amp heritage — e.g. Clapton/Dominos songs stay in Marshall family,
+        # not Fender, regardless of what the raw DSP distance formula would pick.
+        if constrained_amp_family:
+            family_models = AMP_FAMILIES.get(constrained_amp_family, [])
+            family_amps = [a for a in all_amps if a['name'] in family_models]
+            if family_amps:
+                all_amps = family_amps  # Constrain search space to correct family
+            else:
+                # Family has no non-bass models — fall back to full pool
+                print(f"   ⚠️  No eligible amps in {constrained_amp_family} family after bass filter — using full pool")
         # Normalize air to 0-1 scale for fair distance comparison against base_tone treble.
         # Air (2400-6800Hz, range 0.328-0.618) replaces presence (1200-2400Hz, std=0.021)
         # which had no discrimination across songs.
-        air_norm = float(np.clip((target_air - 0.328) / (0.618 - 0.328), 0, 1))
+        air_norm = float(np.clip((target_air - AIR_MIN) / AIR_RANGE, 0, 1))
 
         # Harmonic type affinity: when harmonic analysis confidently identifies
         # tube or solid-state character, penalize amps of the wrong type.
@@ -1549,19 +1924,22 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
         reverb_selected = False
         rms_cv_rev = features.get('rms_cv', 0.25)
 
-        if detected_genre_rev == 'hendrix':
+        # Genre narrows the reverb pool but DSP still picks the final type.
+        # Genre only overrides when the DSP characteristics are ambiguous
+        # (mid-range gain where multiple reverb types work equally well).
+        if detected_genre_rev == 'hendrix' and 0.40 <= target_gain <= 0.75:
             rig['reverb'] = find_reverb('Hall Medium')
             reverb_selected = True
         elif detected_genre_rev == 'progressive' and target_gain < 0.60:
             # Progressive cleans: ambient hall for Gilmour-style space
             rig['reverb'] = find_reverb('Hall Ambient')
             reverb_selected = True
-        elif detected_genre_rev == 'progressive':
+        elif detected_genre_rev == 'progressive' and target_gain < 0.80:
             # Progressive drive/lead: plate rich for studio polish
             rig['reverb'] = find_reverb('Plate Rich')
             reverb_selected = True
-        elif detected_genre_rev in ('blues', 'blues_rock'):
-            # Blues: warm plate for studio character
+        elif detected_genre_rev in ('blues', 'blues_rock') and target_gain < 0.65:
+            # Blues at moderate gain: warm plate for studio character
             rig['reverb'] = find_reverb('Plate Rich')
             reverb_selected = True
 
@@ -1599,18 +1977,22 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
         width_bonus = max(0, (target_width - 0.5)) * 4.0
         reverb_level = round(min(10.0, max(1.0, base_level + width_bonus)), 1)
 
-        # TIME: sustained playing gets longer tails, choppy rhythm gets shorter.
-        # Two factors: gain (high gain = tighter reverb) and dynamics (rms_cv).
-        # rms_cv < 0.15 = very steady (sustained Gilmour leads) → longer time
-        # rms_cv > 0.35 = very dynamic (rhythmic/choppy Malcolm Young) → shorter time
-        # rms_cv contribution scaled by 2.0 — gives ~0.6 range across typical songs.
+        # TIME: three factors — gain, dynamics, and tempo.
+        #   Gain: high gain = tighter reverb (less wash over distortion)
+        #   rms_cv: dynamic/choppy = shorter, sustained = longer
+        #   BPM: faster songs need shorter decay so tail clears before next beat.
+        #     70 BPM (slow ballad): no reduction. 180 BPM (fast punk): max reduction.
+        #     Normalized 0-1 from range 70-180, contributes up to 1.5 knob units.
         rms_cv = features.get('rms_cv', 0.25)
-        reverb_time = round(min(7.0, max(2.0, 6.0 - (target_gain * 2.5) - (rms_cv * 2.0))), 1)
+        bpm_rev = features.get('bpm', 120.0)
+        bpm_factor = max(0.0, min(1.0, (bpm_rev - 70.0) / 110.0))
+        reverb_time = round(min(7.0, max(2.0, 6.0 - (target_gain * 2.5) - (rms_cv * 2.0) - (bpm_factor * 1.5))), 1)
 
-        # DAMPING: bright tones need more damping to avoid harshness
-        # Use air (2400-6800Hz, range 0.33-0.62) for damping — brighter tones need
-        # more high-frequency damping in reverb. Gives range 3.0-6.5 across library.
-        reverb_damping = round(min(8.0, max(3.0, 3.0 + (target_air * 6.0))), 1)
+        # DAMPING: bright tones need more damping to avoid harshness.
+        # Uses normalized air (0-1) for full knob spread.
+        # Dark (air_norm=0) → DAMPING 3.0, Bright (air_norm=1) → DAMPING 8.0.
+        air_norm_rev = max(0.0, min(1.0, (target_air - AIR_MIN) / AIR_RANGE))
+        reverb_damping = round(min(8.0, max(3.0, 3.0 + air_norm_rev * 5.0)), 1)
 
         # DWELL: more early reflections for clean (warmth), less for gain (clarity)
         reverb_dwell = round(min(8.0, max(2.0, 7.0 - (target_gain * 5.0))), 1)
@@ -1626,11 +2008,9 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
             # Range: 3.0 (clean, gain=0) to 7.0 (thrash, gain=1.0)
             "LOW_CUT": round(min(8.0, max(3.0, 3.0 + (target_gain * 4.0))), 1),
             # HIGH_CUT: tame treble in reverb tail for bright tones.
-            # Bright songs (high air) produce harsh sibilant reflections.
-            # Dark songs need the reverb tail to carry some sparkle.
-            # Range: 3.4 (very bright, air=0.62) to 6.4 (very dark, air=0.33)
-            # Inverted: higher air → lower HIGH_CUT (more treble filtering)
-            "HIGH_CUT": round(min(8.0, max(3.0, 8.0 - (target_air * 7.0))), 1),
+            # Uses normalized air (0-1). Inverted: bright → more filtering.
+            # Dark (air_norm=0) → HIGH_CUT 7.0, Bright (air_norm=1) → HIGH_CUT 3.0.
+            "HIGH_CUT": round(min(8.0, max(3.0, 7.0 - air_norm_rev * 4.0)), 1),
         }
         sources['reverb'] = "🔬"
 
@@ -1643,8 +2023,11 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
         width_bonus = max(0, (target_width - 0.5)) * 4.0
         reverb_level = round(min(10.0, max(1.0, base_level + width_bonus)), 1)
         rms_cv = features.get('rms_cv', 0.25)
-        reverb_time = round(min(7.0, max(2.0, 6.0 - (target_gain * 2.5) - (rms_cv * 2.0))), 1)
-        reverb_damping = round(min(8.0, max(3.0, 3.0 + (target_air * 6.0))), 1)
+        bpm_rev2 = features.get('bpm', 120.0)
+        bpm_factor2 = max(0.0, min(1.0, (bpm_rev2 - 70.0) / 110.0))
+        reverb_time = round(min(7.0, max(2.0, 6.0 - (target_gain * 2.5) - (rms_cv * 2.0) - (bpm_factor2 * 1.5))), 1)
+        air_norm_rev2 = max(0.0, min(1.0, (target_air - AIR_MIN) / AIR_RANGE))
+        reverb_damping = round(min(8.0, max(3.0, 3.0 + air_norm_rev2 * 5.0)), 1)
         reverb_dwell = round(min(8.0, max(2.0, 7.0 - (target_gain * 5.0))), 1)
         settings['reverb'] = {
             "LEVEL": reverb_level,
@@ -1652,7 +2035,7 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
             "DAMPING": reverb_damping,
             "DWELL": reverb_dwell,
             "LOW_CUT": round(min(8.0, max(3.0, 3.0 + (target_gain * 4.0))), 1),
-            "HIGH_CUT": round(min(8.0, max(3.0, 8.0 - (target_air * 7.0))), 1),
+            "HIGH_CUT": round(min(8.0, max(3.0, 7.0 - air_norm_rev2 * 4.0)), 1),
         }
         sources['reverb'] = "🎨"  # Artist type, DSP knobs
 
@@ -1670,17 +2053,25 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
     #
     # rms_cv adjustment range: ±1.0 on threshold, ±0.8 on decay.
     # Normalized to 0-1 from typical range 0.10-0.40.
-    if not rig['gate'] and target_gain >= 0.70:
+    # Gate threshold: account for drive pedal raising the noise floor.
+    # Without a drive, gate at gain >= 0.70 (amp distortion adds hiss).
+    # With a drive, gate at gain >= 0.50 (drive + amp = more noise at lower gain).
+    gate_gain_threshold = 0.50 if rig['drive'] else 0.70
+    if not rig['gate'] and target_gain >= gate_gain_threshold:
         rig['gate'] = db['gate'][0]  # Noise Gate
         rms_cv_gate = features.get('rms_cv', 0.25)
         dynamics_gate = max(0.0, min(1.0, (rms_cv_gate - 0.10) / 0.30))
 
-        # Threshold: base 2.0-5.0 from gain, then dynamic songs pull it DOWN (gentler)
-        gate_threshold_base = 2.0 + (target_gain - 0.70) * 13.3
+        # Threshold: scales from gate_gain_threshold to 1.0 across the gain range.
+        # Moderate gain (0.50-0.70 with drive): gentle gate (1.5-3.0)
+        # High gain (0.70-1.0): stronger gate (3.0-6.0)
+        gain_above_floor = target_gain - gate_gain_threshold
+        gain_range = 1.0 - gate_gain_threshold
+        gate_threshold_base = 1.5 + (gain_above_floor / gain_range) * 4.5
         gate_threshold = round(min(6.0, max(1.5, gate_threshold_base - dynamics_gate * 1.0)), 1)
 
-        # Decay: base 3.0-0.5 from gain, then dynamic songs push it UP (longer ring)
-        gate_decay_base = 4.0 - (target_gain - 0.70) * 11.7
+        # Decay: longer at moderate gain (more sustain), shorter at high gain
+        gate_decay_base = 4.5 - (gain_above_floor / gain_range) * 3.5
         gate_decay = round(min(5.0, max(0.5, gate_decay_base + dynamics_gate * 0.8)), 1)
 
         settings['gate'] = {"THRESHOLD": gate_threshold, "DECAY": gate_decay}
@@ -1725,9 +2116,12 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
             else:
                 # Clean + warm: Sustain Comp, gentle settings
                 rig['comp_wah'] = db['compressor'][1]  # Sustain Comp
+                # TONE driven by air: dark stems get warmer comp, bright stems get brighter.
+                # Same normalization as amp TREBLE (AIR_MIN/AIR_RANGE), mapped to 3.0-7.0.
+                comp_air_norm = max(0.0, min(1.0, (target_air - AIR_MIN) / AIR_RANGE))
                 settings['comp_wah'] = {
                     "LEVEL": round(6.0 + dynamics_norm * 2.0, 1),
-                    "TONE": 4.5,
+                    "TONE": round(3.0 + comp_air_norm * 4.0, 1),
                     "ATTACK": round(5.0 - dynamics_norm * 2.0, 1),
                     "SUSTAIN": round(4.0 + dynamics_norm * 4.0, 1)
                 }
@@ -1736,9 +2130,10 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
             # and gain is still more clean than crunch
             if target_gain < 0.45 and dynamics_norm > 0.4:
                 rig['comp_wah'] = db['compressor'][1]  # Sustain Comp
+                comp_air_norm = max(0.0, min(1.0, (target_air - AIR_MIN) / AIR_RANGE))
                 settings['comp_wah'] = {
                     "LEVEL": round(5.5 + dynamics_norm * 2.0, 1),
-                    "TONE": 5.0,
+                    "TONE": round(3.0 + comp_air_norm * 4.0, 1),
                     "ATTACK": round(5.0 - dynamics_norm * 1.5, 1),
                     "SUSTAIN": round(3.5 + dynamics_norm * 3.0, 1)
                 }
@@ -1766,9 +2161,19 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
     #
     # The drive's sonic_profile automatically feeds into:
     #   - Compensatory EQ (bass_comp, treble_comp, future mid_comp)
-    #   - Amp GAIN calculation (subtracts drive gain_boost)
+    #   - Amp GAIN calculation (graduated drive takeover reduction)
     #   - Amp GAIN floor (2.0 minimum when drive present)
-    if not rig['drive'] and target_gain >= 0.45:
+    #
+    # Drive selection is gap-based: a drive is only added when the amp
+    # can't comfortably reach the target gain on its own. The gap threshold
+    # of 0.20 means the amp's GAIN knob would need to exceed ~7.0 to hit
+    # the target — beyond that, a drive keeps the amp in a natural range.
+    #
+    # This replaces the old fixed threshold (gain >= 0.45) which added
+    # drives to songs where the amp could handle it alone (e.g., Plexi
+    # at gain 0.65 = gap of 0.05, no drive needed).
+    gain_gap = target_gain - rig['amp']['base_tone']['gain']
+    if not rig['drive'] and gain_gap > 0.20:
         # Helper to find drive by name
         def find_drive(name):
             return next((d for d in db['drive'] if d['name'] == name), None)
@@ -1785,24 +2190,43 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
 
         elif target_gain < 0.75:
             # Overdrive zone — drive is doing real tonal work, not just boosting.
+            # harmonic_ratio disambiguates warm OD from aggressive distortion:
+            #   > 1.3 = soft-clip / tube character → favour TS or SAB
+            #   < 0.9 = hard-clip / transistor character → favour OD-3 or Black Op
+            harm_ratio_od = features.get('harmonic_ratio', 1.0)
             if target_mids >= 0.55:
                 # Strong mid-forward: Tube Drive (SRV, blues rock)
                 rig['drive'] = find_drive('Tube Drive')
             elif target_mids >= 0.45:
-                # Neutral mids: Over Drive (OD-3, flat response, versatile)
-                rig['drive'] = find_drive('Over Drive')
+                if harm_ratio_od > 1.3:
+                    # Warm harmonics + neutral mids: SAB Driver (tube-voiced OD)
+                    rig['drive'] = find_drive('SAB Driver')
+                else:
+                    # Neutral/hard harmonics: Over Drive (OD-3, flat, versatile)
+                    rig['drive'] = find_drive('Over Drive')
             else:
                 # Scooped mids: SAB Driver (Plexi-Drive, Marshall-voiced distortion)
                 rig['drive'] = find_drive('SAB Driver')
 
         elif target_gain < 0.85:
             # Heavy overdrive/distortion zone.
+            # harmonic_rolloff distinguishes tight modern (high rolloff, upper
+            # harmonics preserved) from warm vintage (low rolloff, rolled off).
+            harm_rolloff = features.get('harmonic_rolloff', 0.5)
             if target_mids >= 0.50:
-                # Present mids: SAB Driver (amp-in-a-box, thick Marshall push)
-                rig['drive'] = find_drive('SAB Driver')
+                if harm_rolloff > 0.7:
+                    # Present mids + bright/tight saturation: Over Drive (focused)
+                    rig['drive'] = find_drive('Over Drive')
+                else:
+                    # Present mids + warm saturation: SAB Driver (thick Marshall push)
+                    rig['drive'] = find_drive('SAB Driver')
             else:
-                # Scooped/tight: Black Op (RAT, hard clipping, cuts through)
-                rig['drive'] = find_drive('Black Op')
+                if harm_rolloff > 0.7:
+                    # Scooped + tight: Black Op (RAT, hard clipping, cuts through)
+                    rig['drive'] = find_drive('Black Op')
+                else:
+                    # Scooped + warm: Guitar Muff territory (fuzzy sustain)
+                    rig['drive'] = find_drive('Guitar Muff')
 
         else:
             # Fuzz/heavy saturation zone (gain >= 0.85).
@@ -1857,88 +2281,101 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
         gb = sp.get('gain_boost', 0.5)
         drive_name = rig['drive']['name']
 
-        # How hard does the drive need to work?
-        amp_base_gain = rig['amp']['base_tone']['gain'] if rig['amp'] else 0.5
-        drive_intensity = max(0.0, min(1.0, (target_gain - amp_base_gain) / (gb + 0.01)))
+        # How hard should the drive work?
+        # Based on target_gain vs a fixed "no drive needed" baseline (0.35),
+        # NOT vs the amp's base_gain. This prevents the amp from stealing
+        # the drive's headroom — the old formula subtracted amp base_gain,
+        # which meant a high-gain amp (Plexi 0.6) left almost no room for
+        # the drive, producing OVERDRIVE 1.1 on moderate-gain songs.
+        drive_headroom = max(0.0, target_gain - 0.35)
+        drive_intensity = max(0.0, min(1.0, drive_headroom / (gb + 0.25)))
 
         # Air normalized to 0-1 for tone mapping
-        air_norm = max(0.0, min(1.0, (target_air - 0.328) / (0.618 - 0.328)))
+        air_norm = max(0.0, min(1.0, (target_air - AIR_MIN) / AIR_RANGE))
 
         # --- Per-pedal settings ---
         # Each drive has unique parameter names and scaling behavior.
+        #
+        # OD/Drive/Distortion range scales with amp headroom: when the amp
+        # is cranked (GAIN 7+), the drive is a boost — keep amount low.
+        # When the amp is moderate (GAIN 4-5), the drive needs to work —
+        # open up the full range. This replaces the old fixed narrow ranges
+        # (e.g. TS capped at 2.5) that produced barely-on drive settings.
+        amp_gain_val = settings['amp'].get('GAIN', 5.0)
+        amp_headroom = max(0.3, 1.0 - (amp_gain_val / 10.0))
 
         if drive_name == 'Booster':
-            # Only one knob — it's a pure level boost
+            # Pure level boost — GAIN is the only knob
             settings['drive'] = {
-                "GAIN": round(min(10.0, max(1.0, 5.0 + drive_intensity * 4.0)), 1)
+                "GAIN": round(min(10.0, max(1.0, 3.0 + drive_intensity * 6.0)), 1)
             }
 
         elif drive_name == 'Clone Drive':
-            # Klon Centaur: transparent boost. Low gain, treble from air, output pushes amp.
+            # Klon Centaur (gb=0.4): transparent boost/overdrive.
+            # Very amp-dependent — most of the tone comes from the amp, so
+            # the GAIN knob range should expand significantly when amp is moderate.
+            od_range = 1.5 + amp_headroom * 6.0
             settings['drive'] = {
-                "GAIN": round(min(10.0, max(1.0, 1.0 + drive_intensity * 3.0)), 1),
+                "GAIN": round(min(10.0, max(1.0, 1.0 + drive_intensity * od_range)), 1),
                 "TREBLE": round(min(10.0, max(1.0, 3.0 + air_norm * 5.0)), 1),
-                "OUTPUT": round(min(10.0, max(3.0, 7.0 + drive_intensity * 1.5)), 1)
+                "OUTPUT": round(min(10.0, max(3.0, 6.0 + drive_intensity * 3.0)), 1)
             }
 
         elif drive_name == 'Tube Drive':
-            # Tube Screamer: almost always a boost (low OD, high level).
-            # Eruption validation: OD=1.7, Tone=6.5, Level=8.0
-            #   drive_intensity=0.50 → OD=1.0+0.50*1.5=1.75 ≈ 1.7 ✓
-            #   air_norm=0.69 → Tone=3.0+0.69*5.0=6.47 ≈ 6.5 ✓
-            #   Level=7.0+0.50*2.0=8.0 ✓
+            # Tube Screamer (gb=0.5): classic boost → OD depending on amp gain.
+            # Highly amp-dependent — at high amp gain it's a boost (low OD),
+            # at moderate amp gain it provides real overdrive (higher OD).
+            od_range = 1.5 + amp_headroom * 6.0
             settings['drive'] = {
-                "OVERDRIVE": round(min(10.0, max(1.0, 1.0 + drive_intensity * 1.5)), 1),
+                "OVERDRIVE": round(min(10.0, max(1.0, 1.0 + drive_intensity * od_range)), 1),
                 "TONE": round(min(10.0, max(1.0, 3.0 + air_norm * 5.0)), 1),
-                "LEVEL": round(min(10.0, max(3.0, 7.0 + drive_intensity * 2.0)), 1)
+                "LEVEL": round(min(10.0, max(3.0, 6.0 + drive_intensity * 3.0)), 1)
             }
 
         elif drive_name == 'Over Drive':
-            # Boss OD-3: flat response, slightly more drive than TS in OD mode
+            # Boss OD-3 (gb=0.5): slightly dirtier than TS, flatter response.
+            # Moderately amp-dependent — provides real overdrive character.
+            od_range = 2.0 + amp_headroom * 5.0
             settings['drive'] = {
-                "DRIVE": round(min(10.0, max(1.0, 1.5 + drive_intensity * 3.0)), 1),
+                "DRIVE": round(min(10.0, max(1.0, 1.5 + drive_intensity * od_range)), 1),
                 "TONE": round(min(10.0, max(1.0, 3.0 + air_norm * 5.0)), 1),
-                "LEVEL": round(min(10.0, max(3.0, 7.0 + drive_intensity * 1.5)), 1)
+                "LEVEL": round(min(10.0, max(3.0, 6.0 + drive_intensity * 3.0)), 1)
             }
 
         elif drive_name == 'SAB Driver':
-            # Plexi-Drive: amp-in-a-box, provides significant coloring
+            # Plexi-Drive (gb=0.6): amp-in-a-box, significant coloring.
+            # Less amp-dependent — it provides its own amp character.
+            od_range = 2.5 + amp_headroom * 4.5
             settings['drive'] = {
-                "DRIVE": round(min(10.0, max(1.0, 3.0 + drive_intensity * 5.0)), 1),
+                "DRIVE": round(min(10.0, max(1.0, 2.0 + drive_intensity * od_range)), 1),
                 "TONE": round(min(10.0, max(1.0, 3.0 + air_norm * 5.0)), 1),
-                "VOLUME": round(min(10.0, max(3.0, 6.0 - drive_intensity * 1.5)), 1)
+                "VOLUME": round(min(10.0, max(3.0, 7.0 - drive_intensity * 2.0)), 1)
             }
 
         elif drive_name == 'Black Op':
-            # ProCo RAT: hard clipping distortion.
+            # ProCo RAT (gb=0.8): hard clipping distortion.
+            # Mostly self-sufficient — less amp-dependent, higher base.
             # FILTER is inverted — clockwise CUTS treble.
-            # High air (bright song) → low filter (let treble through).
-            # Low air (dark song) → high filter (cut treble).
+            od_range = 3.0 + amp_headroom * 3.5
             settings['drive'] = {
-                "DISTORTION": round(min(10.0, max(1.0, 3.0 + drive_intensity * 5.0)), 1),
+                "DISTORTION": round(min(10.0, max(1.0, 2.0 + drive_intensity * od_range)), 1),
                 "FILTER": round(min(10.0, max(1.0, 8.0 - air_norm * 5.0)), 1),
-                "VOLUME": round(min(10.0, max(3.0, 6.0 - drive_intensity * 1.5)), 1)
+                "VOLUME": round(min(10.0, max(3.0, 7.0 - drive_intensity * 2.0)), 1)
             }
 
         elif drive_name == 'Fuzz Face':
             # Dunlop Fuzz Face: no tone control, just fuzz and volume.
-            # Amount scales with overall song heaviness.
-            # Volume backed off to prevent amp input clipping.
             settings['drive'] = {
-                "FUZZ": round(min(10.0, max(3.0, target_gain * 7.0)), 1),
-                "VOLUME": round(min(10.0, max(3.0, 7.0 - drive_intensity * 4.0)), 1)
+                "FUZZ": round(min(10.0, max(3.0, 2.0 + target_gain * 7.0)), 1),
+                "VOLUME": round(min(10.0, max(3.0, 7.0 - drive_intensity * 3.0)), 1)
             }
 
         elif drive_name == 'Guitar Muff':
             # Big Muff: fuzz IS the tone. Amount scales with song heaviness.
-            # Cherub Rock validation: Sustain=6.5, Tone=7.8, Volume=5.5
-            #   target_gain=0.94 → Sustain=0.94*7.0=6.58 ≈ 6.5 ✓
-            #   air_norm=1.0 → Tone=3.0+1.0*5.0=8.0 ≈ 7.8 (within 0.2) ✓
-            #   drive_intensity=0.378 → Volume=7.0-0.378*4.0=5.49 ≈ 5.5 ✓
             settings['drive'] = {
-                "SUSTAIN": round(min(10.0, max(3.0, target_gain * 7.0)), 1),
+                "SUSTAIN": round(min(10.0, max(3.0, 2.0 + target_gain * 7.0)), 1),
                 "TONE": round(min(10.0, max(1.0, 3.0 + air_norm * 5.0)), 1),
-                "VOLUME": round(min(10.0, max(3.0, 7.0 - drive_intensity * 4.0)), 1)
+                "VOLUME": round(min(10.0, max(3.0, 7.5 - drive_intensity * 3.5)), 1)
             }
 
         if settings['drive'] and sources['drive'] != "🎨":
@@ -1955,19 +2392,25 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
     #   - TONE: mapped from air measurement (bright song = bright effect)
     #   - DEPTH/INTENSITY: moderate defaults, higher for cleaner tones
     rms_cv_fx = features.get('rms_cv', 0.25)
-    air_norm_fx = max(0.0, min(1.0, (target_air - 0.328) / (0.618 - 0.328)))
+    air_norm_fx = max(0.0, min(1.0, (target_air - AIR_MIN) / AIR_RANGE))
     # Effect intensity: cleaner tones take more modulation/delay effect
     fx_intensity = max(0.3, min(0.8, 0.8 - target_gain * 0.5))
+    # Width factor: wider stereo image → more spatial effects (chorus depth, delay feedback)
+    # Typical range 0.3 (mono) to 0.8 (wide stereo). Normalize to 0-1.
+    width_norm = max(0.0, min(1.0, (target_width - 0.3) / 0.5))
 
     # --- Modulation settings (when preset forces effect, no settings provided) ---
     if rig['mod_eq'] and not settings['mod_eq']:
         mod_name = rig['mod_eq'].get('name', '')
 
         if mod_name == 'Chorus':
+            # DEPTH scales with both fx_intensity and width — wide stems need deeper
+            # chorus to match the spatial character of the original recording.
+            chorus_depth = 3.0 + fx_intensity * 2.0 + width_norm * 2.0
             settings['mod_eq'] = {
                 "E_LEVEL": round(4.0 + fx_intensity * 3.0, 1),
                 "RATE": round(2.0 + rms_cv_fx * 4.0, 1),
-                "DEPTH": round(3.0 + fx_intensity * 3.0, 1),
+                "DEPTH": round(min(10.0, max(2.0, chorus_depth)), 1),
                 "TONE": round(3.0 + air_norm_fx * 4.0, 1),
             }
         elif mod_name == 'Cloner Chorus':
@@ -1975,10 +2418,11 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
                 "RATE": round(2.5 + rms_cv_fx * 3.0, 1),
             }
         elif mod_name == 'Flanger':
+            flanger_depth = 4.0 + fx_intensity * 2.0 + width_norm * 2.0
             settings['mod_eq'] = {
                 "RATE": round(1.0 + rms_cv_fx * 2.0, 1),
                 "MIX": round(3.0 + fx_intensity * 3.0, 1),
-                "DEPTH": round(4.0 + fx_intensity * 3.0, 1),
+                "DEPTH": round(min(10.0, max(2.0, flanger_depth)), 1),
             }
         elif mod_name == 'Phaser':
             settings['mod_eq'] = {
@@ -2059,17 +2503,28 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
             def find_delay(name):
                 return next((d for d in db['delay'] if d['name'] == name), None)
 
-            if detected_genre in ('blues', 'blues_rock'):
-                rig['delay'] = find_delay('Echo Tape')
-            elif detected_genre in ('progressive', 'hendrix'):
-                rig['delay'] = find_delay('Multi Head')
-            elif detected_genre in ('classic_rock',):
-                rig['delay'] = find_delay('Vintage Delay')
-            elif detected_genre in ('hard_rock',):
-                rig['delay'] = find_delay('Echo Tape')
-            elif detected_genre in ('alternative', 'grunge'):
-                rig['delay'] = find_delay('Digital Delay')
-            else:
+            # Genre hints narrow delay type but only in the gain range where
+            # multiple types are equally valid. At extremes (very clean, very heavy),
+            # the DSP-driven gain logic is more reliable than genre guessing.
+            genre_delay_selected = False
+            if 0.30 <= target_gain <= 0.75:
+                if detected_genre in ('blues', 'blues_rock'):
+                    rig['delay'] = find_delay('Echo Tape')
+                    genre_delay_selected = True
+                elif detected_genre in ('progressive', 'hendrix'):
+                    rig['delay'] = find_delay('Multi Head')
+                    genre_delay_selected = True
+                elif detected_genre in ('classic_rock',):
+                    rig['delay'] = find_delay('Vintage Delay')
+                    genre_delay_selected = True
+                elif detected_genre in ('hard_rock',):
+                    rig['delay'] = find_delay('Echo Tape')
+                    genre_delay_selected = True
+                elif detected_genre in ('alternative', 'grunge'):
+                    rig['delay'] = find_delay('Digital Delay')
+                    genre_delay_selected = True
+
+            if not genre_delay_selected:
                 # No genre detected — select by gain character
                 if target_gain < 0.35:
                     # Clean: warm analog delay suits ambient cleans
@@ -2110,6 +2565,9 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
         delay_name = rig['delay'].get('name', '')
         # Delay level: less for high gain (stay out of the way)
         delay_level = max(1.0, min(6.0, 6.0 - target_gain * 4.0))
+        # Feedback: base from fx_intensity, boosted by width for spatial fill.
+        # Wide stereo recordings used more repeats to fill the space.
+        delay_feedback = 3.0 + fx_intensity * 1.5 + width_norm * 1.5
 
         # BPM-derived delay times
         bpm = features.get('bpm', 120.0)
@@ -2137,7 +2595,7 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
             sub_map = {'eighth': '1/8', 'dotted eighth': '1/8d', 'quarter': '1/4'}
             settings['delay'] = {
                 "E_LEVEL": round(delay_level, 1),
-                "F_BACK": round(3.0 + fx_intensity * 2.0, 1),
+                "F_BACK": round(min(8.0, max(2.0, delay_feedback)), 1),
                 "D_TIME": sub_map.get(subdivision, '1/8d'),
                 "BPM_MODE": "On",
             }
@@ -2148,7 +2606,7 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
             sub_map = {'eighth': '1/8', 'dotted eighth': '1/8d', 'quarter': '1/4'}
             settings['delay'] = {
                 "DELAY": sub_map.get(subdivision, '1/8d'),
-                "FEEDBACK": round(3.0 + fx_intensity * 2.0, 1),
+                "FEEDBACK": round(min(8.0, max(2.0, delay_feedback)), 1),
                 "LEVEL": round(delay_level, 1),
                 "TONE": round(3.0 + air_norm_fx * 4.0, 1),
                 "BPM_MODE": "On",
@@ -2160,7 +2618,7 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
             settings['delay'] = {
                 "REPEAT_RATE": sub_map.get(subdivision, '1/8d'),
                 "ECHO": round(delay_level, 1),
-                "INTENSITY": round(3.0 + fx_intensity * 2.0, 1),
+                "INTENSITY": round(min(8.0, max(2.0, delay_feedback)), 1),
                 "BPM_MODE": "On",
             }
         elif delay_name == 'Reverse Delay':
@@ -2186,7 +2644,7 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
             sub_map = {'eighth': '1/8', 'dotted eighth': '1/8d', 'quarter': '1/4'}
             settings['delay'] = {
                 "REPEAT_RATE": sub_map.get(subdivision, '1/8d'),
-                "INTENSITY": round(3.0 + fx_intensity * 2.0, 1),
+                "INTENSITY": round(min(8.0, max(2.0, delay_feedback)), 1),
                 "ECHO_VOL": round(delay_level, 1),
                 "MODE_SELECTOR": "Head 0+1",
                 "BPM_MODE": "On",
@@ -2197,7 +2655,7 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
             # Quarter note is beyond its range, so clamp to 1/8d.
             sub_map = {'eighth': '1/8', 'dotted eighth': '1/8d', 'quarter': '1/8d'}
             settings['delay'] = {
-                "SUSTAIN": round(2.0 + fx_intensity * 3.0, 1),
+                "SUSTAIN": round(min(8.0, max(2.0, delay_feedback - 0.5)), 1),
                 "VOLUME": round(delay_level * 0.8, 1),
                 "TONE": round(3.0 + air_norm_fx * 4.0, 1),
                 "SHORT/LONG": sub_map.get(subdivision, '1/8d'),
@@ -2268,6 +2726,9 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
             # These values reduce the EQ's work in those bands.
             bass_comp = 0
             mid_comp = 0
+            mid_factor_400 = 1.0
+            mid_factor_800 = 1.0
+            mid_factor_1600 = 1.0
             treble_comp = 0
 
             if rig['drive'] and 'sonic_profile' in rig['drive']:
@@ -2314,11 +2775,21 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
                 #            Black Op (mids=-0.2) → mid_comp=0.16, moderate correction.
                 #            Fuzz Face (mids=-0.1) → mid_comp=0.07, light correction.
                 #
-                # STUB: Two anchor points (Muff, TS). Needs validation with 2-3 more
-                # mid-range drives (Black Op, Fuzz Face, Booster) to confirm linearity
-                # and per-band factors. Test Comfortably Numb, Teen Spirit, Stairway.
+                # Per-band factors now scale with scoop depth (|sp_mids|).
+                # Deep scoopers (Muff -0.5): wide scoop, all three bands affected heavily.
+                #   400Hz: ×2.0  800Hz: ×1.8  1600Hz: ×4.5
+                # Shallow scoopers (RAT -0.2, Fuzz Face -0.1): narrower, focused on 1600Hz.
+                #   400Hz: ×0.8  800Hz: ×0.8  1600Hz: ×4.5
+                # Interpolate between shallow and deep based on |mids| (0.1→shallow, 0.5→deep).
                 sp_mids = sp.get('mids', 0)
-                mid_comp = gb * max(0, -sp_mids)
+                scoop_depth = max(0, -sp_mids)
+                mid_comp = gb * scoop_depth
+                # How "wide" is the scoop? 0=narrowest, 1=widest
+                scoop_width = max(0.0, min(1.0, (scoop_depth - 0.1) / 0.4))
+                # Per-band factors: 400Hz and 800Hz scale with width, 1600Hz is always strong
+                mid_factor_400 = 0.8 + scoop_width * 1.2   # 0.8 → 2.0
+                mid_factor_800 = 0.8 + scoop_width * 1.0   # 0.8 → 1.8
+                mid_factor_1600 = 4.5                        # always strong — scoop peak
 
                 # Treble: when a drive is present, the amp TREBLE knob is already being
                 # pushed high to compensate for the drive's interaction with the signal.
@@ -2332,24 +2803,30 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
 
             # --- Base EQ formulas (what the stem needs) minus drive compensation ---
 
-            # 100Hz (Low Bass): Scales with gain, minus drive bass contribution
-            eq_100 = round(np.clip((target_gain - 0.5) * 6.0 - bass_comp, -10.0, 10.0), 1)
+            # 100Hz (Low Bass): Driven by measured low-frequency energy, not gain.
+            # Old formula used target_gain as proxy — a high-gain bright tone got
+            # bass boost it didn't need. Now uses low_energy_ratio (80-500Hz proportion).
+            # Normalized 0-1 from observed range 0.20-0.50, centered at 0.5 (neutral).
+            bass_norm = max(0.0, min(1.0, (target_low_energy - BASS_MIN) / BASS_RANGE))
+            eq_100 = round(np.clip((bass_norm - 0.5) * 8.0 - bass_comp, -10.0, 10.0), 1)
 
-            # 200Hz (Upper Bass): Same bass compensation, slightly attenuated (×0.8)
-            eq_200 = round(np.clip((target_gain - 0.4) * 4.0 - bass_comp * 0.8, -10.0, 10.0), 1)
+            # 200Hz (Upper Bass): Same bass measurement, slightly attenuated (×0.8 comp)
+            eq_200 = round(np.clip((bass_norm - 0.5) * 6.0 - bass_comp * 0.8, -10.0, 10.0), 1)
 
-            # 400Hz (Low Mids): mid_comp × 1.5 — lightest correction in the mid range
-            eq_400 = round(np.clip((target_mids - 0.5) * 6.0 - mid_comp * 1.5, -10.0, 10.0), 1)
+            # 400Hz (Low Mids): per-drive factor scales with scoop width
+            eq_400 = round(np.clip((target_mids - 0.5) * 6.0 - mid_comp * mid_factor_400, -10.0, 10.0), 1)
 
-            # 800Hz (Mid Mids): mid_comp × 1.3 — similar to 400Hz
-            eq_800 = round(np.clip((target_mids - 0.4) * 5.0 - mid_comp * 1.3, -10.0, 10.0), 1)
+            # 800Hz (Mid Mids): per-drive factor, slightly stronger than 400Hz for wide scoops
+            eq_800 = round(np.clip((target_mids - 0.4) * 5.0 - mid_comp * mid_factor_800, -10.0, 10.0), 1)
 
-            # 1600Hz (Upper Mids / Bite): mid_comp × 4.5 — strongest correction,
-            # this is the heart of the Muff scoop and the most perceptually critical band
-            eq_1600 = round(np.clip((target_mids - 0.55) * 8.0 - mid_comp * 4.5, -10.0, 10.0), 1)
+            # 1600Hz (Upper Mids / Bite): always strongest — this is the scoop peak
+            eq_1600 = round(np.clip((target_mids - 0.55) * 8.0 - mid_comp * mid_factor_1600, -10.0, 10.0), 1)
 
-            # 3200Hz (Air / Rangemaster zone): Minus drive treble compensation
-            eq_3200 = round(np.clip((target_air - 0.38) * 25.0 - treble_comp, -10.0, 10.0), 1)
+            # 3200Hz (Air / Rangemaster zone): Normalized air, minus drive treble comp.
+            # Old formula (target_air - 0.38) * 25.0 hit ±10 ceiling at air=0.78/0.0.
+            # Now uses AIR_MIN/AIR_RANGE normalization, centered at 0.5, ×12.0 spread.
+            air_norm_eq = max(0.0, min(1.0, (target_air - AIR_MIN) / AIR_RANGE))
+            eq_3200 = round(np.clip((air_norm_eq - 0.5) * 12.0 - treble_comp, -10.0, 10.0), 1)
 
             # LEVEL: output compensation based on total boost/cut
             total_adjustment = eq_100 + eq_200 + eq_400 + eq_800 + eq_1600 + eq_3200
@@ -2371,10 +2848,36 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
     # UNLESS the preset supplied explicit amp_settings (base_tone mismatch would produce wrong knob values)
     if not settings['amp']:
         drive_boost = rig['drive']['sonic_profile'].get('gain_boost', 0) if (rig['drive'] and 'sonic_profile' in rig['drive']) else 0
-        amp_gain = 5.0 + (target_gain - (rig['amp']['base_tone']['gain'] + drive_boost)) * 10
-        # Floor at 2.0 when a drive pedal is present — even with a high-gain drive
-        # providing the dirt, the amp needs some gain for body and response.
-        # Without this, amps behind Big Muffs etc. can hit 0.0 which sounds thin/sterile.
+
+        # Amp GAIN: how much the drive "takes over" the distortion role.
+        # Boosts (gb < 0.3): transparent, amp still does all the gain work.
+        # Overdrive (0.3-0.6): shared — drive colors, amp still matters.
+        # Fuzz/distortion (gb > 0.6): drive IS the distortion, amp provides body.
+        #
+        # The old formula subtracted the full drive_boost from target_gain,
+        # treating amp+drive as additive (total = base + boost). This meant
+        # any moderate-gain song with a decent amp hit the 2.0 floor —
+        # Plexi(0.6) + TS(0.5) = 1.1 vs target 0.65 → amp slammed to minimum.
+        #
+        # New formula: graduated reduction based on drive character.
+        # A Muff (takeover=1.0, gb=0.9) reduces amp target by 0.36.
+        # A TS (takeover=0.4, gb=0.5) reduces amp target by only 0.08.
+        drive_takeover = min(1.0, max(0.0, (drive_boost - 0.3) / 0.5))
+        amp_target = target_gain - (drive_takeover * drive_boost * 0.4)
+        # Gain multiplier: scales with the distance between target and base_tone.
+        # When the amp is well-matched (small delta), 10× is appropriate.
+        # When the amp is far off (large delta, e.g. Twin at 0.15 targeting 0.65),
+        # the raw 10× would slam to the ceiling. Soften the multiplier for large deltas
+        # using an inverse-distance curve: multiplier = 10 / (1 + |delta| * 3).
+        # Examples:
+        #   Plexi (base=0.6, target=0.65): delta=0.05, mult=9.5 → gain=5.5 ✓
+        #   Twin (base=0.15, target=0.55): delta=0.40, mult=4.5 → gain=6.8 (was 9.0)
+        #   Mesa (base=0.85, target=0.50): delta=-0.35, mult=4.8 → gain=3.3 (was 1.5)
+        base_tone_gain = rig['amp']['base_tone']['gain']
+        gain_delta = amp_target - base_tone_gain
+        gain_multiplier = 10.0 / (1.0 + abs(gain_delta) * 3.0)
+        amp_gain = 5.0 + gain_delta * gain_multiplier
+
         gain_floor = 2.0 if rig['drive'] else 0.0
         settings['amp']['GAIN'] = min(10.0, max(gain_floor, amp_gain))
         # TREBLE: Driven by spark_air (2400-6800Hz energy ratio, range 0.328-0.618).
@@ -2390,15 +2893,21 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
         # formula). Using it again here double-counted and produced absurd values
         # (TREBLE -3.5 → floored at 1.5) when a bright amp was chosen for a dark song.
         # The knob should reflect the song's brightness, not punish the amp mismatch twice.
-        air_normalized = np.clip((target_air - 0.328) / (0.618 - 0.328), 0, 1)
+        air_normalized = np.clip((target_air - AIR_MIN) / AIR_RANGE, 0, 1)
         settings['amp']['TREBLE'] = round(min(10.0, max(4.0, 4.0 + air_normalized * 5.0)), 1)
-        # MIDDLE: Driven by target_mids (500-2000Hz, clipped 0-1, typical range 0.30-0.65).
-        # Formula: 3.0 + target_mids * 6.0 → range ~4.8 (scooped) to ~6.9 (mid-forward).
-        # Same decoupling rationale as TREBLE — amp base_tone.mids already influenced
-        # amp selection; using it in the knob formula double-counted and hit floor values
-        # on high-mids amps paired with scooped songs.
-        settings['amp']['MIDDLE'] = round(min(10.0, max(3.0, 3.0 + target_mids * 6.0)), 1)
-        settings['amp']['BASS'], settings['amp']['VOLUME'] = 5.0, 8.0
+        # MIDDLE: Driven by target_mids (500-2000Hz, typical range 0.30-0.65).
+        # Normalize mids to 0-1 using observed range, then map to full knob spread.
+        # Old formula (3.0 + target_mids * 6.0) only used 21% of knob range (4.8-6.9).
+        # New formula: normalize then spread across 2.0-9.0 (7-unit range).
+        mids_normalized = max(0.0, min(1.0, (target_mids - MIDS_MIN) / MIDS_RANGE))
+        settings['amp']['MIDDLE'] = round(min(10.0, max(2.0, 2.0 + mids_normalized * 7.0)), 1)
+        # BASS: Driven by low_energy_ratio (80-500Hz energy proportion).
+        # Observed range ~0.20 (thin/bright) to ~0.50 (thick/heavy).
+        # Normalize to 0-1, then map to 3.0-7.0 knob range.
+        # Songs with more low-end energy get higher BASS; thin tones get less.
+        bass_normalized = max(0.0, min(1.0, (target_low_energy - BASS_MIN) / BASS_RANGE))
+        settings['amp']['BASS'] = round(min(10.0, max(3.0, 3.0 + bass_normalized * 4.0)), 1)
+        settings['amp']['VOLUME'] = 8.0
 
         # --- MOD/EQ SLOT CONFLICT COMPENSATION ---
         # When the mod/eq slot is occupied by a modulation effect (Flanger, Chorus,
@@ -2435,6 +2944,9 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
             # Compute drive compensation values (same formulas as EQ section)
             v_bass_comp = 0
             v_mid_comp = 0
+            v_mid_factor_400 = 1.0
+            v_mid_factor_800 = 1.0
+            v_mid_factor_1600 = 1.0
             v_treble_comp = 0
 
             if rig['drive'] and 'sonic_profile' in rig['drive']:
@@ -2449,20 +2961,30 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
                     v_bass_comp = v_gb * 2.5
 
                 v_sp_mids = v_sp.get('mids', 0)
-                v_mid_comp = v_gb * max(0, -v_sp_mids)
+                v_scoop_depth = max(0, -v_sp_mids)
+                v_mid_comp = v_gb * v_scoop_depth
+                v_scoop_width = max(0.0, min(1.0, (v_scoop_depth - 0.1) / 0.4))
+                v_mid_factor_400 = 0.8 + v_scoop_width * 1.2
+                v_mid_factor_800 = 0.8 + v_scoop_width * 1.0
+                v_mid_factor_1600 = 4.5
                 v_treble_comp = v_gb * 1.5
 
             # Compute virtual EQ band values
-            v_eq_100  = np.clip((target_gain - 0.5) * 6.0 - v_bass_comp, -10.0, 10.0)
-            v_eq_200  = np.clip((target_gain - 0.4) * 4.0 - v_bass_comp * 0.8, -10.0, 10.0)
-            v_eq_400  = np.clip((target_mids - 0.5) * 6.0 - v_mid_comp * 1.5, -10.0, 10.0)
-            v_eq_800  = np.clip((target_mids - 0.4) * 5.0 - v_mid_comp * 1.3, -10.0, 10.0)
-            v_eq_1600 = np.clip((target_mids - 0.55) * 8.0 - v_mid_comp * 4.5, -10.0, 10.0)
-            v_eq_3200 = np.clip((target_air - 0.38) * 25.0 - v_treble_comp, -10.0, 10.0)
+            v_bass_norm = max(0.0, min(1.0, (target_low_energy - BASS_MIN) / BASS_RANGE))
+            v_eq_100  = np.clip((v_bass_norm - 0.5) * 8.0 - v_bass_comp, -10.0, 10.0)
+            v_eq_200  = np.clip((v_bass_norm - 0.5) * 6.0 - v_bass_comp * 0.8, -10.0, 10.0)
+            v_eq_400  = np.clip((target_mids - 0.5) * 6.0 - v_mid_comp * v_mid_factor_400, -10.0, 10.0)
+            v_eq_800  = np.clip((target_mids - 0.4) * 5.0 - v_mid_comp * v_mid_factor_800, -10.0, 10.0)
+            v_eq_1600 = np.clip((target_mids - 0.55) * 8.0 - v_mid_comp * v_mid_factor_1600, -10.0, 10.0)
+            v_air_norm_eq = max(0.0, min(1.0, (target_air - AIR_MIN) / AIR_RANGE))
+            v_eq_3200 = np.clip((v_air_norm_eq - 0.5) * 12.0 - v_treble_comp, -10.0, 10.0)
 
-            # Scale virtual EQ into amp knob adjustments
-            # 0.25 = conservative conversion (EQ dB → amp knob units)
-            EQ_TO_AMP = 0.25
+            # Scale virtual EQ into amp knob adjustments.
+            # Each EQ band is ±10dB. Amp knobs are 0-10 with ~3dB per unit
+            # in the tonal region. Conversion: dB × (1 unit / 3 dB) = 0.33.
+            # Previous value 0.25 was too conservative — under-compensated when
+            # the mod slot was occupied, producing muddy tones with bass-heavy drives.
+            EQ_TO_AMP = 0.33
             bass_adj   = ((v_eq_100 + v_eq_200) / 2) * EQ_TO_AMP
             mid_adj    = ((v_eq_400 + v_eq_800 + v_eq_1600) / 3) * EQ_TO_AMP
             treble_adj = v_eq_3200 * EQ_TO_AMP
@@ -2506,6 +3028,28 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
 
     print(f"   📊 Confidence: Tier {confidence_tier} — {confidence_label}")
 
+    # ==========================================================
+    # COHERENCE SCORING
+    # Run after all rig/settings decisions are final.
+    # Passes DSP features using the key names the scorer expects.
+    # ==========================================================
+    coherence_features = {
+        'gain':             target_gain,
+        'air':              target_air,
+        'mids':             target_mids,
+        'presence':         target_presence,
+        'width':            target_width,
+        'low_energy_ratio': target_low_energy,
+    }
+    coherence = score_recipe_coherence(rig, settings, coherence_features, sources)
+
+    grade_emoji = {"A": "✅", "B": "🟡", "C": "🟠", "D": "🔴"}.get(coherence["grade"], "❓")
+    print(f"   {grade_emoji} Coherence: Grade {coherence['grade']} ({coherence['score']}/100)")
+    for flag in coherence["flags"]:
+        print(f"      ⚠️  {flag}")
+    for fix in coherence["auto_fixed"]:
+        print(f"      🔧 Auto-fixed: {fix}")
+
     # Build output with source indicators
     # Handle multi-section header formatting
     if section_info and section_info.get('is_multi_section'):
@@ -2523,6 +3067,7 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
             f"📅 Date: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
             f"🎯 DSP Analysis: Gain {target_gain:.2f} | Presence {target_presence:.2f} | Air {target_air:.2f} | Mids {target_mids:.2f} | Width {target_width:.2f} | BPM {features.get('bpm', 120.0):.0f}",
             f"📊 Confidence: Tier {confidence_tier} — {confidence_label}",
+            f"{({'A':'✅','B':'🟡','C':'🟠','D':'🔴'}).get(coherence['grade'],'❓')} Coherence: Grade {coherence['grade']} ({coherence['score']}/100){(' — ' + ' | '.join(coherence['flags'])) if coherence['flags'] else ''}",
             "",
             "Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched",
             "="*50
@@ -2533,6 +3078,7 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
             f"📅 Date: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
             f"🎯 DSP Analysis: Gain {target_gain:.2f} | Presence {target_presence:.2f} | Air {target_air:.2f} | Mids {target_mids:.2f} | Width {target_width:.2f} | BPM {features.get('bpm', 120.0):.0f}",
             f"📊 Confidence: Tier {confidence_tier} — {confidence_label}",
+            f"{({'A':'✅','B':'🟡','C':'🟠','D':'🔴'}).get(coherence['grade'],'❓')} Coherence: Grade {coherence['grade']} ({coherence['score']}/100){(' — ' + ' | '.join(coherence['flags'])) if coherence['flags'] else ''}",
             "",
             "Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched",
             "="*50
@@ -2590,6 +3136,9 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
         "confidence": {
             "tier": confidence_tier,
             "label": confidence_label,
+            "coherence_score": coherence["score"],
+            "coherence_grade": coherence["grade"],
+            "coherence_flags": coherence["flags"],
         },
         "dsp": {
             "gain": round(target_gain, 3),
@@ -2605,6 +3154,16 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
         "settings": {},
         "sources": {}
     }
+
+    # Store real-world amp provenance when API research identified it.
+    # Enables auditability: you can see what amp the artist actually used
+    # and whether the Spark selection was family-constrained or free.
+    if override_settings and override_settings.get("real_world_amp"):
+        recipe_json["real_world_amp"] = override_settings["real_world_amp"]
+    if override_settings and override_settings.get("amp_manufacturer"):
+        recipe_json["amp_manufacturer"] = override_settings["amp_manufacturer"]
+    if constrained_amp_family:
+        recipe_json["amp_family_constrained"] = constrained_amp_family
     
     # Add section metadata for multi-section songs
     if section_info and section_info.get('is_multi_section'):

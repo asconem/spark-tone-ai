@@ -1,9 +1,12 @@
 {
   "song": "backinblack.wav",
-  "date": "2026-03-10T16:23:11.940476",
+  "date": "2026-03-27T20:46:55.444408",
   "confidence": {
     "tier": "A",
-    "label": "HIGH \u2014 Hand-curated artist preset"
+    "label": "HIGH \u2014 Hand-curated artist preset",
+    "coherence_score": 100,
+    "coherence_grade": "A",
+    "coherence_flags": []
   },
   "dsp": {
     "gain": 0.722,
@@ -11,7 +14,7 @@
     "presence": 0.288,
     "air": 0.483,
     "width": 0.859,
-    "bpm": 129.2
+    "bpm": 64.6
   },
   "guitar": {
     "guitar": "Mexican Strat (SSH)",
@@ -31,42 +34,42 @@
   },
   "settings": {
     "gate": {
-      "THRESHOLD": 2.0,
-      "DECAY": 4.0
+      "THRESHOLD": 3.2,
+      "DECAY": 3.2
     },
     "comp_wah": null,
     "drive": {
       "GAIN": 3.0
     },
     "amp": {
-      "GAIN": 4.22126580898222,
-      "TREBLE": 6.347638207662816,
-      "MIDDLE": 4.280721215342705,
-      "BASS": 5.0,
+      "GAIN": 5.89379677612443,
+      "TREBLE": 6.7,
+      "MIDDLE": 6.6,
+      "BASS": 3.5,
       "VOLUME": 8.0
     },
     "mod_eq": {
-      "100HZ": 0.8,
-      "200HZ": 0.9,
+      "100HZ": -3.5,
+      "200HZ": -2.6,
       "400HZ": 0.2,
       "800HZ": 0.6,
       "1600HZ": -0.2,
-      "3200HZ": 2.3,
-      "LEVEL": -0.4
+      "3200HZ": 0.1,
+      "LEVEL": 0.4
     },
     "delay": {
       "REPEAT_RATE": "1/8d",
       "ECHO": 3.1,
-      "INTENSITY": 3.9,
+      "INTENSITY": 5.2,
       "BPM_MODE": "On"
     },
     "reverb": {
       "LEVEL": 4.7,
       "TIME": 3.8,
-      "DAMPING": 5.9,
+      "DAMPING": 5.7,
       "DWELL": 3.4,
       "LOW_CUT": 5.9,
-      "HIGH_CUT": 4.6
+      "HIGH_CUT": 4.9
     }
   },
   "sources": {
@@ -76,6 +79,6 @@
     "amp": "\ud83c\udfa8",
     "mod_eq": "\ud83d\udd2c",
     "delay": "\ud83d\udd2c",
-    "reverb": "\ud83d\udd2c"
+    "reverb": "\ud83c\udfa8"
   }
 }

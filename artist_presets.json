@@ -4089,5 +4089,114 @@
         "tone": 7
       }
     }
+  },
+  "metallica_one": {
+    "keywords": [
+      "metallica one",
+      "one metallica"
+    ],
+    "forced_gear": {
+      "drive": "Black Op",
+      "drive_settings": {
+        "DISTORTION": 4.5,
+        "FILTER": 3.5,
+        "VOLUME": 6.0
+      },
+      "gate": "Noise Gate",
+      "gate_settings": {
+        "THRESHOLD": 3.0,
+        "DECAY": 2.5
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Black Op + Gate (The Hetfield/Hammett Mesa Tone)"
+  },
+  "ratm_killing": {
+    "keywords": [
+      "killing in the name",
+      "killinginthename",
+      "rage against",
+      "ratm"
+    ],
+    "forced_gear": {
+      "drive": "Black Op",
+      "drive_settings": {
+        "DISTORTION": 5.0,
+        "FILTER": 4.0,
+        "VOLUME": 6.0
+      },
+      "gate": "Noise Gate",
+      "gate_settings": {
+        "THRESHOLD": 3.5,
+        "DECAY": 1.5
+      },
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "description": "Black Op + Gate (The Morello Dual Rectifier Tone)"
+  },
+  "auto_workinformca_wav": {
+    "keywords": [
+      "replacements",
+      "bastards",
+      "young",
+      "tim",
+      "alternative",
+      "jangle"
+    ],
+    "description": "Jangly alternative rock tone with light overdrive, characteristic of mid-80s college rock",
+    "source": "auto",
+    "validated": false,
+    "confidence": "medium",
+    "forced_gear": {
+      "amp": "Black Duo",
+      "drive": "Tube Drive",
+      "drive_settings": {
+        "OVERDRIVE": 3.5,
+        "TONE": 6.0,
+        "LEVEL": 7.0
+      },
+      "reverb": "Hall Medium",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 4 (Neck+Mid)",
+        "volume": 8,
+        "tone": 7
+      }
+    },
+    "real_world_amp": "Fender Twin Reverb",
+    "amp_manufacturer": "Fender"
+  },
+  "auto_guitar_wav": {
+    "keywords": [
+      "guitar",
+      "clean",
+      "electric"
+    ],
+    "description": "Cannot analyze audio file - clean electric guitar tone with moderate gain and reverb",
+    "source": "auto",
+    "validated": false,
+    "confidence": "low",
+    "forced_gear": {
+      "amp": "Lux Verb",
+      "reverb": "Hall Medium",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 5 (Neck)",
+        "volume": 8,
+        "tone": 7
+      }
+    },
+    "real_world_amp": "Fender Deluxe Reverb",
+    "amp_manufacturer": "Fender"
   }
 }

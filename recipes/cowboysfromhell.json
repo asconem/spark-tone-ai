@@ -1,9 +1,12 @@
 {
   "song": "cowboysfromhell.wav",
-  "date": "2026-03-10T16:36:32.691861",
+  "date": "2026-03-27T21:01:51.705896",
   "confidence": {
-    "tier": "B",
-    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+    "tier": "C",
+    "label": "LOW \u2014 Pure DSP analysis (no preset data)",
+    "coherence_score": 100,
+    "coherence_grade": "A",
+    "coherence_flags": []
   },
   "dsp": {
     "gain": 0.667,
@@ -14,17 +17,17 @@
     "bpm": 112.3
   },
   "guitar": {
-    "guitar": "Mexican Strat (SSH)",
-    "pickup": "Bridge Humbucker",
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 1 (Bridge)",
     "volume": 10,
-    "tone": 8
+    "tone": 10
   },
-  "guitar_source": "\ud83c\udfa8",
+  "guitar_source": "\ud83d\udd2c",
   "rig": {
     "gate": null,
     "comp_wah": null,
-    "drive": "SAB Driver",
-    "amp": "SLO 100",
+    "drive": null,
+    "amp": "SwitchAxe",
     "mod_eq": "Guitar EQ",
     "delay": "Vintage Delay",
     "reverb": "Plate Short"
@@ -32,47 +35,43 @@
   "settings": {
     "gate": null,
     "comp_wah": null,
-    "drive": {
-      "DRIVE": 3.0,
-      "TONE": 7.9,
-      "VOLUME": 6.0
-    },
+    "drive": null,
     "amp": {
-      "GAIN": 2.0,
-      "TREBLE": 8.744335990913342,
-      "MIDDLE": 3.4437058873085706,
-      "BASS": 5.0,
+      "GAIN": 3.8,
+      "TREBLE": 8.9,
+      "MIDDLE": 2.9,
+      "BASS": 7.0,
       "VOLUME": 8.0
     },
     "mod_eq": {
-      "100HZ": -0.5,
-      "200HZ": -0.1,
+      "100HZ": 4.0,
+      "200HZ": 3.0,
       "400HZ": -0.9,
       "800HZ": -0.3,
       "1600HZ": -1.6,
-      "3200HZ": 4.9,
-      "LEVEL": -0.1
+      "3200HZ": 5.7,
+      "LEVEL": -0.8
     },
     "delay": {
       "REPEAT_RATE": "1/8d",
       "ECHO": 3.3,
-      "INTENSITY": 3.9,
+      "INTENSITY": 5.2,
       "BPM_MODE": "On"
     },
     "reverb": {
       "LEVEL": 5.2,
-      "TIME": 3.4,
-      "DAMPING": 6.7,
+      "TIME": 2.8,
+      "DAMPING": 7.9,
       "DWELL": 3.7,
       "LOW_CUT": 5.7,
-      "HIGH_CUT": 3.7
+      "HIGH_CUT": 3.1
     }
   },
   "sources": {
     "gate": "",
     "comp_wah": "",
-    "drive": "\ud83d\udd2c",
-    "amp": "\ud83c\udfa8",
+    "drive": "",
+    "amp": "\ud83d\udd2c",
     "mod_eq": "\ud83d\udd2c",
     "delay": "\ud83d\udd2c",
     "reverb": "\ud83d\udd2c"

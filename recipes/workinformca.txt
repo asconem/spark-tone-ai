@@ -1,0 +1,32 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): workinformca.wav
+📅 Date: 2026-03-27 18:14:47
+🎯 DSP Analysis: Gain 0.65 | Presence 0.30 | Air 0.45 | Mids 0.59 | Width 0.69 | BPM 112
+📊 Confidence: Tier C — LOW — Pure DSP analysis (no preset data)
+✅ Coherence: Grade A (100/100)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🔬
+   • PICKUP: Position 3 (Middle)
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[AMP] PLEXIGLAS 🔬
+   • BASS: 5.1              • GAIN: 5.4           
+   • MIDDLE: 7.7            • TREBLE: 6.1         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: 0.2             • 1600HZ: 0.3         
+   • 200HZ: 0.1             • 3200HZ: -1.0        
+   • 400HZ: 0.5             • 800HZ: 0.9          
+--------------------------------------------------
+[DELAY] VINTAGE DELAY 🔬
+   • BPM_MODE: On           • ECHO: 3.4           
+   • INTENSITY: 3.9         • REPEAT_RATE: 1/8d   
+--------------------------------------------------
+[REVERB] PLATE SHORT 🔬
+   • DAMPING: 5.1           • DWELL: 3.7          
+   • HIGH_CUT: 5.3          • LEVEL: 4.5          
+   • LOW_CUT: 5.6           • TIME: 3.8           
+--------------------------------------------------

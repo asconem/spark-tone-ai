@@ -1,0 +1,90 @@
+{
+  "song": "guitar.wav",
+  "date": "2026-03-27T22:34:20.904032",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)",
+    "coherence_score": 100,
+    "coherence_grade": "A",
+    "coherence_flags": []
+  },
+  "dsp": {
+    "gain": 0.46,
+    "mids": 0.543,
+    "presence": 0.312,
+    "air": 0.451,
+    "width": 1.0,
+    "bpm": 76.0
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 5 (Neck)",
+    "volume": 8,
+    "tone": 7
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": null,
+    "amp": "Lux Verb",
+    "mod_eq": "Guitar EQ",
+    "delay": "Echo Tape",
+    "reverb": "Hall Medium"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": null,
+    "amp": {
+      "GAIN": 5.509091618281253,
+      "TREBLE": 6.1,
+      "MIDDLE": 6.9,
+      "BASS": 3.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -4.0,
+      "200HZ": -3.0,
+      "400HZ": 0.3,
+      "800HZ": 0.7,
+      "1600HZ": -0.1,
+      "3200HZ": -0.9,
+      "LEVEL": 0.6
+    },
+    "delay": {
+      "SUSTAIN": 4.9,
+      "VOLUME": 3.3,
+      "TONE": 4.7,
+      "SHORT/LONG": "1/8d",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 7.0,
+      "TIME": 4.2,
+      "DAMPING": 5.1,
+      "DWELL": 4.7,
+      "LOW_CUT": 4.8,
+      "HIGH_CUT": 5.3
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83c\udfa8"
+  },
+  "real_world_amp": "Fender Deluxe Reverb",
+  "amp_manufacturer": "Fender",
+  "section": {
+    "label": "Crunch",
+    "type": "loud",
+    "start": 46.0,
+    "end": 66.5,
+    "index": 1,
+    "total_sections": 5
+  }
+}

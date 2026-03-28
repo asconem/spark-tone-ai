@@ -1,0 +1,96 @@
+{
+  "song": "guitar.wav",
+  "date": "2026-03-27T22:34:20.918282",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)",
+    "coherence_score": 100,
+    "coherence_grade": "A",
+    "coherence_flags": []
+  },
+  "dsp": {
+    "gain": 0.775,
+    "mids": 0.409,
+    "presence": 0.199,
+    "air": 0.553,
+    "width": 1.0,
+    "bpm": 76.0
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 5 (Neck)",
+    "volume": 8,
+    "tone": 7
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": "Noise Gate",
+    "comp_wah": null,
+    "drive": "Black Op",
+    "amp": "Lux Verb",
+    "mod_eq": "Guitar EQ",
+    "delay": "Digital Delay",
+    "reverb": "Hall Medium"
+  },
+  "settings": {
+    "gate": {
+      "THRESHOLD": 2.2,
+      "DECAY": 3.9
+    },
+    "comp_wah": null,
+    "drive": {
+      "DISTORTION": 3.9,
+      "FILTER": 4.1,
+      "VOLUME": 6.2
+    },
+    "amp": {
+      "GAIN": 5.5,
+      "TREBLE": 7.9,
+      "MIDDLE": 4.2,
+      "BASS": 3.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -6.0,
+      "200HZ": -4.6,
+      "400HZ": -0.7,
+      "800HZ": -0.1,
+      "1600HZ": -1.8,
+      "3200HZ": 2.1,
+      "LEVEL": 0.9
+    },
+    "delay": {
+      "E_LEVEL": 2.9,
+      "F_BACK": 5.1,
+      "D_TIME": "1/8",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 5.0,
+      "TIME": 3.5,
+      "DAMPING": 6.9,
+      "DWELL": 3.1,
+      "LOW_CUT": 6.1,
+      "HIGH_CUT": 3.9
+    }
+  },
+  "sources": {
+    "gate": "\ud83d\udd2c",
+    "comp_wah": "",
+    "drive": "\ud83d\udd2c",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83c\udfa8"
+  },
+  "real_world_amp": "Fender Deluxe Reverb",
+  "amp_manufacturer": "Fender",
+  "section": {
+    "label": "Lead",
+    "type": "quiet",
+    "start": 127.0,
+    "end": 190.5,
+    "index": 3,
+    "total_sections": 5
+  }
+}

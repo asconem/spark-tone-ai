@@ -1,9 +1,12 @@
 {
   "song": "workingman.wav",
-  "date": "2026-03-10T18:55:59.841993",
+  "date": "2026-03-27T18:34:54.697344",
   "confidence": {
     "tier": "A",
-    "label": "HIGH \u2014 Hand-curated artist preset"
+    "label": "HIGH \u2014 Hand-curated artist preset",
+    "coherence_score": 100,
+    "coherence_grade": "A",
+    "coherence_flags": []
   },
   "dsp": {
     "gain": 0.529,
@@ -11,7 +14,7 @@
     "presence": 0.266,
     "air": 0.473,
     "width": 0.644,
-    "bpm": 152.0
+    "bpm": 76.0
   },
   "guitar": {
     "guitar": "Mexican Strat (SSH)",
@@ -21,26 +24,29 @@
   },
   "guitar_source": "\ud83c\udfa8",
   "rig": {
-    "gate": null,
+    "gate": "Noise Gate",
     "comp_wah": null,
     "drive": "Tube Drive",
     "amp": "Plexiglas",
     "mod_eq": "Flanger",
     "delay": "Echo Tape",
-    "reverb": "Room Studio A"
+    "reverb": "Plate Long"
   },
   "settings": {
-    "gate": null,
+    "gate": {
+      "THRESHOLD": 1.5,
+      "DECAY": 4.5
+    },
     "comp_wah": null,
     "drive": {
       "OVERDRIVE": 7.0,
       "LEVEL": 8.0
     },
     "amp": {
-      "GAIN": 2.0,
-      "TREBLE": 6.4,
-      "MIDDLE": 4.7,
-      "BASS": 4.9,
+      "GAIN": 4.0,
+      "TREBLE": 6.3,
+      "MIDDLE": 7.2,
+      "BASS": 6.1,
       "VOLUME": 8.0
     },
     "mod_eq": {
@@ -49,7 +55,7 @@
       "MIX": 5.0
     },
     "delay": {
-      "SUSTAIN": 3.6,
+      "SUSTAIN": 4.3,
       "VOLUME": 3.1,
       "TONE": 5.0,
       "SHORT/LONG": "1/8d",
@@ -58,19 +64,19 @@
     "reverb": {
       "LEVEL": 5.1,
       "TIME": 4.3,
-      "DAMPING": 5.8,
+      "DAMPING": 5.5,
       "DWELL": 4.4,
       "LOW_CUT": 5.1,
-      "HIGH_CUT": 4.7
+      "HIGH_CUT": 5.0
     }
   },
   "sources": {
-    "gate": "",
+    "gate": "\ud83d\udd2c",
     "comp_wah": "",
     "drive": "\ud83c\udfa8",
     "amp": "\ud83c\udfa8",
     "mod_eq": "\ud83c\udfa8",
     "delay": "\ud83d\udd2c",
-    "reverb": "\ud83d\udd2c"
+    "reverb": "\ud83c\udfa8"
   }
 }

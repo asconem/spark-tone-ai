@@ -1,0 +1,86 @@
+{
+  "song": "cheapsunglasses.wav",
+  "date": "2026-03-27T20:55:28.493945",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)",
+    "coherence_score": 82,
+    "coherence_grade": "B",
+    "coherence_flags": [
+      "Gain stack likely over-saturated: amp base_gain=0.60 + drive boost\u22480.25 \u2192 ~0.85, but stem only warrants gain=0.47 (excess=0.38)"
+    ]
+  },
+  "dsp": {
+    "gain": 0.474,
+    "mids": 0.602,
+    "presence": 0.25,
+    "air": 0.443,
+    "width": 0.667,
+    "bpm": 64.6
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 10,
+    "tone": 8
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": "Over Drive",
+    "amp": "Plexiglas",
+    "mod_eq": "Guitar EQ",
+    "delay": "Echo Tape",
+    "reverb": "Hall Medium"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": {
+      "DRIVE": 6.0,
+      "TONE": 7.0,
+      "LEVEL": 6.0
+    },
+    "amp": {
+      "GAIN": 3.7,
+      "TREBLE": 6.0,
+      "MIDDLE": 8.0,
+      "BASS": 7.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": 2.8,
+      "200HZ": 2.0,
+      "400HZ": 0.6,
+      "800HZ": 1.0,
+      "1600HZ": 0.4,
+      "3200HZ": -2.0,
+      "LEVEL": -0.4
+    },
+    "delay": {
+      "SUSTAIN": 4.4,
+      "VOLUME": 3.3,
+      "TONE": 4.6,
+      "SHORT/LONG": "1/8d",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 5.6,
+      "TIME": 3.9,
+      "DAMPING": 5.0,
+      "DWELL": 4.6,
+      "LOW_CUT": 4.9,
+      "HIGH_CUT": 5.4
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83c\udfa8"
+  }
+}

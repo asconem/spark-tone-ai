@@ -1,9 +1,12 @@
 {
   "song": "cellophane.wav",
-  "date": "2026-03-10T16:28:14.701138",
+  "date": "2026-03-27T20:52:04.081153",
   "confidence": {
     "tier": "A",
-    "label": "HIGH \u2014 Hand-curated artist preset"
+    "label": "HIGH \u2014 Hand-curated artist preset",
+    "coherence_score": 100,
+    "coherence_grade": "A",
+    "coherence_flags": []
   },
   "dsp": {
     "gain": 0.767,
@@ -11,7 +14,7 @@
     "presence": 0.263,
     "air": 0.476,
     "width": 0.859,
-    "bpm": 123.0
+    "bpm": 61.5
   },
   "guitar": {
     "guitar": "Mexican Strat (SSH)",
@@ -31,8 +34,8 @@
   },
   "settings": {
     "gate": {
-      "THRESHOLD": 2.2,
-      "DECAY": 3.8
+      "THRESHOLD": 3.2,
+      "DECAY": 3.2
     },
     "comp_wah": null,
     "drive": {
@@ -40,24 +43,24 @@
       "VOLUME": 7.0
     },
     "amp": {
-      "GAIN": 2.170300541173702,
-      "TREBLE": 4.104141614449809,
-      "MIDDLE": 5.5478097222798795,
-      "BASS": 5.0,
+      "GAIN": 6.2,
+      "TREBLE": 6.6,
+      "MIDDLE": 7.1,
+      "BASS": 7.0,
       "VOLUME": 8.0
     },
     "mod_eq": {
-      "100HZ": -0.8,
-      "200HZ": -0.5,
-      "400HZ": 0.2,
+      "100HZ": 1.6,
+      "200HZ": 1.0,
+      "400HZ": 0.3,
       "800HZ": 0.7,
       "1600HZ": -0.3,
-      "3200HZ": 1.4,
-      "LEVEL": -0.1
+      "3200HZ": -0.9,
+      "LEVEL": -0.2
     },
     "delay": {
       "E_LEVEL": 2.9,
-      "F_BACK": 3.8,
+      "F_BACK": 5.1,
       "D_TIME": "1/8",
       "BPM_MODE": "On"
     },

@@ -257,15 +257,15 @@ def build_genre_hint(genre):
     
     prefer, avoid = GENRE_AMP_HINTS[genre]
     
-    lines = ["\nGENRE GUIDANCE:"]
+    lines = ["\nGENRE HINT (advisory, not binding):"]
     lines.append(f"This appears to be a {genre.replace('_', ' ')} track.")
-    
+
     if prefer:
-        lines.append(f"Amp categories that typically fit this genre: {', '.join(prefer)}")
+        lines.append(f"Amp categories that often appear in this genre: {', '.join(prefer)}")
     if avoid:
-        lines.append(f"Amp categories to generally avoid for this genre: {', '.join(avoid)}")
-    
-    lines.append("Use this as guidance, but override if you know the actual gear used was different.")
+        lines.append(f"Amp categories less common in this genre: {', '.join(avoid)}")
+
+    lines.append("IMPORTANT: Always prioritize what you know about the artist's actual gear over genre defaults. Many iconic tones defy genre conventions.")
     
     return "\n".join(lines)
 
@@ -419,6 +419,8 @@ Respond with ONLY a JSON object (no markdown, no backticks, no explanation) in t
     "pickup_position": "bridge", "neck", "neck_mid", "middle", "bridge_mid",
     "guitar_volume": 1-10,
     "guitar_tone": 1-10,
+    "real_world_amp": "The actual real-world amp used on this recording (e.g. 'Marshall Bluesbreaker', 'Fender Deluxe Reverb'). Be specific.",
+    "amp_manufacturer": "The manufacturer of the real-world amp — one of: Marshall, Fender, Vox, Mesa, Orange, Roland, Dumble, Matchless, Soldano, Bogner, EVH, Friedman, Peavey, Two Rock, Sound City, Sunn, Other",
     "amp": "Spark Name from the list above",
     "amp_notes": "Why this amp was chosen",
     "drive": "Spark Name or null if no drive pedal",
@@ -447,6 +449,8 @@ IMPORTANT RULES:
 - For guitar_type: "humbucker" if Les Paul, SG, ES-335, HH guitars; "single_coil" if Strat, Tele, or SSS/SS guitars.
 - Be specific about pickup position based on the actual song's tone.
 - For settings objects: use the EXACT parameter names shown in parentheses for each effect. Values must be within the min-max range shown. If unsure about specific settings, use null for the settings object and the system will generate defaults.
+- For real_world_amp: state the actual amp used on the recording — this is used to validate that the Spark model you chose belongs to the correct amp family. Be historically accurate.
+- For amp_manufacturer: this must be the brand of the real_world_amp, not the Spark model.
 - Respond with ONLY the JSON object, nothing else."""
 
     return prompt
@@ -648,15 +652,26 @@ def build_preset_from_research(research, db):
 
     # --- Amp (required) ---
     amp_name = research.get("amp")
+    real_world_amp = research.get("real_world_amp", "")
+    amp_manufacturer = research.get("amp_manufacturer", "")
+
+    # Store real-world amp info at preset level for family constraint validation in main.py
+    if real_world_amp:
+        preset["real_world_amp"] = real_world_amp
+    if amp_manufacturer:
+        preset["amp_manufacturer"] = amp_manufacturer
+
     if amp_name:
         validated, matched = validate_gear_name(amp_name, "amp", db, real_to_spark, all_spark_names)
         if matched:
             forced["amp"] = validated
-            report.append(f"  ✅ Amp: {validated} (from '{amp_name}')")
+            mfr_tag = f" [{amp_manufacturer}]" if amp_manufacturer else ""
+            rw_tag = f" — real: {real_world_amp}" if real_world_amp else ""
+            report.append(f"  ✅ Amp: {validated} (from '{amp_name}'){mfr_tag}{rw_tag}")
         else:
-            report.append(f"  ❌ Amp: '{amp_name}' not found in Spark 2")
+            report.append(f"  ❌ Amp: '{amp_name}' not found in Spark 2 — DSP will choose amp")
     else:
-        report.append("  ⚠️ Amp: not specified by API (DSP will choose)")
+        report.append("  ⚠️ Amp: not specified by API — DSP will choose amp")
 
     # --- Drive ---
     drive_name = research.get("drive")
@@ -671,7 +686,7 @@ def build_preset_from_research(research, db):
                 forced["drive_settings"] = drive_settings
                 report.append(f"     ⚙️ Drive settings: {drive_settings}")
         else:
-            report.append(f"  ❌ Drive: '{drive_name}' not found in Spark 2")
+            report.append(f"  ❌ Drive: '{drive_name}' not found in Spark 2 — DSP will decide drive")
 
     # --- Modulation ---
     mod_name = research.get("modulation")
@@ -685,7 +700,7 @@ def build_preset_from_research(research, db):
                 forced["mod_settings"] = mod_settings
                 report.append(f"     ⚙️ Mod settings: {mod_settings}")
         else:
-            report.append(f"  ❌ Modulation: '{mod_name}' not found in Spark 2")
+            report.append(f"  ❌ Modulation: '{mod_name}' not found in Spark 2 — slot available for EQ")
 
     # --- Delay ---
     delay_name = research.get("delay")
@@ -699,7 +714,7 @@ def build_preset_from_research(research, db):
                 forced["delay_settings"] = delay_settings
                 report.append(f"     ⚙️ Delay settings: {delay_settings}")
         else:
-            report.append(f"  ❌ Delay: '{delay_name}' not found in Spark 2")
+            report.append(f"  ❌ Delay: '{delay_name}' not found in Spark 2 — DSP will choose delay")
 
     # --- Compressor ---
     comp_name = research.get("compressor")
@@ -713,7 +728,7 @@ def build_preset_from_research(research, db):
                 forced["comp_settings"] = comp_settings
                 report.append(f"     ⚙️ Comp settings: {comp_settings}")
         else:
-            report.append(f"  ❌ Compressor: '{comp_name}' not found in Spark 2")
+            report.append(f"  ❌ Compressor: '{comp_name}' not found in Spark 2 — DSP will decide comp")
 
     # --- Reverb ---
     reverb_name = research.get("reverb")
@@ -723,7 +738,7 @@ def build_preset_from_research(research, db):
             forced["reverb"] = validated
             report.append(f"  ✅ Reverb: {validated} (from '{reverb_name}')")
         else:
-            report.append(f"  ❌ Reverb: '{reverb_name}' not found in Spark 2")
+            report.append(f"  ❌ Reverb: '{reverb_name}' not found in Spark 2 — DSP will choose reverb")
 
     # --- Guitar ---
     guitar_type = research.get("guitar_type", "single_coil")
@@ -752,6 +767,11 @@ def build_preset_from_research(research, db):
         "tone": int(min(10, max(1, tone)))
     }
     report.append(f"  🎸 Guitar: {guitar_name}, {pickup_name}, V={vol} T={tone}")
+
+    # Track how many API-suggested slots failed validation
+    dropped = [line for line in report if "❌" in line]
+    if dropped:
+        preset["dropped_slots"] = len(dropped)
 
     return preset, report
 

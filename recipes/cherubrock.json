@@ -1,9 +1,12 @@
 {
   "song": "cherubrock.wav",
-  "date": "2026-03-10T16:32:13.506917",
+  "date": "2026-03-27T20:57:05.653639",
   "confidence": {
     "tier": "A",
-    "label": "HIGH \u2014 Hand-curated artist preset"
+    "label": "HIGH \u2014 Hand-curated artist preset",
+    "coherence_score": 100,
+    "coherence_grade": "A",
+    "coherence_flags": []
   },
   "dsp": {
     "gain": 0.939,
@@ -48,27 +51,27 @@
       "VOLUME": 8.2
     },
     "mod_eq": {
-      "100HZ": -0.5,
-      "200HZ": -0.4,
-      "400HZ": -1.7,
-      "800HZ": -1.0,
+      "100HZ": -2.4,
+      "200HZ": -2.0,
+      "400HZ": -1.9,
+      "800HZ": -1.2,
       "1600HZ": -3.8,
-      "3200HZ": 4.7,
-      "LEVEL": 0.2
+      "3200HZ": 4.6,
+      "LEVEL": 0.6
     },
     "delay": {
       "E_LEVEL": 2.2,
-      "F_BACK": 3.7,
+      "F_BACK": 5.0,
       "D_TIME": "1/8",
       "BPM_MODE": "On"
     },
     "reverb": {
       "LEVEL": 3.4,
-      "TIME": 3.4,
-      "DAMPING": 6.7,
+      "TIME": 2.8,
+      "DAMPING": 8.0,
       "DWELL": 2.3,
       "LOW_CUT": 6.8,
-      "HIGH_CUT": 3.7
+      "HIGH_CUT": 3.0
     }
   },
   "sources": {

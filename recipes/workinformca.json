@@ -1,0 +1,79 @@
+{
+  "song": "workinformca.wav",
+  "date": "2026-03-27T18:14:47.433752",
+  "confidence": {
+    "tier": "C",
+    "label": "LOW \u2014 Pure DSP analysis (no preset data)",
+    "coherence_score": 100,
+    "coherence_grade": "A",
+    "coherence_flags": []
+  },
+  "dsp": {
+    "gain": 0.65,
+    "mids": 0.587,
+    "presence": 0.295,
+    "air": 0.448,
+    "width": 0.685,
+    "bpm": 112.3
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 3 (Middle)",
+    "volume": 10,
+    "tone": 8.0
+  },
+  "guitar_source": "\ud83d\udd2c",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": null,
+    "amp": "Plexiglas",
+    "mod_eq": "Guitar EQ",
+    "delay": "Vintage Delay",
+    "reverb": "Plate Short"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": null,
+    "amp": {
+      "GAIN": 5.4,
+      "TREBLE": 6.1,
+      "MIDDLE": 7.7,
+      "BASS": 5.1,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": 0.2,
+      "200HZ": 0.1,
+      "400HZ": 0.5,
+      "800HZ": 0.9,
+      "1600HZ": 0.3,
+      "3200HZ": -1.0,
+      "LEVEL": -0.1
+    },
+    "delay": {
+      "REPEAT_RATE": "1/8d",
+      "ECHO": 3.4,
+      "INTENSITY": 3.9,
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 4.5,
+      "TIME": 3.8,
+      "DAMPING": 5.1,
+      "DWELL": 3.7,
+      "LOW_CUT": 5.6,
+      "HIGH_CUT": 5.3
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "",
+    "amp": "\ud83d\udd2c",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  }
+}

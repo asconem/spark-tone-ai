@@ -1,9 +1,12 @@
 {
   "song": "blackened.wav",
-  "date": "2026-03-10T16:27:18.145318",
+  "date": "2026-03-27T20:50:59.697329",
   "confidence": {
-    "tier": "B",
-    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+    "tier": "C",
+    "label": "LOW \u2014 Pure DSP analysis (no preset data)",
+    "coherence_score": 100,
+    "coherence_grade": "A",
+    "coherence_flags": []
   },
   "dsp": {
     "gain": 0.972,
@@ -14,71 +17,64 @@
     "bpm": 129.2
   },
   "guitar": {
-    "guitar": "Mexican Strat (SSH)",
-    "pickup": "Bridge Humbucker",
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 1 (Bridge)",
     "volume": 10,
-    "tone": 8
+    "tone": 10
   },
-  "guitar_source": "\ud83c\udfa8",
+  "guitar_source": "\ud83d\udd2c",
   "rig": {
     "gate": "Noise Gate",
-    "comp_wah": "Red Comp",
-    "drive": "Tube Drive",
-    "amp": "American High Gain",
+    "comp_wah": null,
+    "drive": null,
+    "amp": "SwitchAxe",
     "mod_eq": "Guitar EQ",
     "delay": "Digital Delay",
     "reverb": "Plate Short"
   },
   "settings": {
     "gate": {
-      "THRESHOLD": 5.1,
-      "DECAY": 1.3
+      "THRESHOLD": 5.0,
+      "DECAY": 1.8
     },
-    "comp_wah": {
-      "OUTPUT": 7.0,
-      "SENSITIVITY": 8.0
-    },
-    "drive": {
-      "OVERDRIVE": 3.0,
-      "TONE": 7.0,
-      "LEVEL": 6.0
-    },
+    "comp_wah": null,
+    "drive": null,
     "amp": {
-      "GAIN": 2.0,
-      "TREBLE": 10.0,
-      "MIDDLE": 2.8806426040333037,
-      "BASS": 5.0,
+      "GAIN": 5.892984347823855,
+      "TREBLE": 9.0,
+      "MIDDLE": 2.0,
+      "BASS": 7.0,
       "VOLUME": 8.0
     },
     "mod_eq": {
-      "100HZ": 1.8,
-      "200HZ": 1.5,
+      "100HZ": 4.0,
+      "200HZ": 3.0,
       "400HZ": -1.3,
       "800HZ": -0.6,
       "1600HZ": -2.1,
-      "3200HZ": 5.7,
-      "LEVEL": -0.4
+      "3200HZ": 6.0,
+      "LEVEL": -0.8
     },
     "delay": {
       "E_LEVEL": 2.1,
-      "F_BACK": 3.6,
+      "F_BACK": 5.0,
       "D_TIME": "1/8",
       "BPM_MODE": "On"
     },
     "reverb": {
       "LEVEL": 3.4,
-      "TIME": 3.0,
-      "DAMPING": 6.8,
+      "TIME": 2.2,
+      "DAMPING": 8.0,
       "DWELL": 2.1,
       "LOW_CUT": 6.9,
-      "HIGH_CUT": 3.5
+      "HIGH_CUT": 3.0
     }
   },
   "sources": {
     "gate": "\ud83d\udd2c",
-    "comp_wah": "\ud83c\udfa8",
-    "drive": "\ud83c\udfa8",
-    "amp": "\ud83c\udfa8",
+    "comp_wah": "",
+    "drive": "",
+    "amp": "\ud83d\udd2c",
     "mod_eq": "\ud83d\udd2c",
     "delay": "\ud83d\udd2c",
     "reverb": "\ud83d\udd2c"

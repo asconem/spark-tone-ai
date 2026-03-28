@@ -1,9 +1,12 @@
 {
   "song": "kglw_empty.wav",
-  "date": "2026-03-10T16:39:10.920175",
+  "date": "2026-03-27T21:04:32.029901",
   "confidence": {
     "tier": "A",
-    "label": "HIGH \u2014 Hand-curated artist preset"
+    "label": "HIGH \u2014 Hand-curated artist preset",
+    "coherence_score": 100,
+    "coherence_grade": "A",
+    "coherence_flags": []
   },
   "dsp": {
     "gain": 0.557,
@@ -21,7 +24,7 @@
   },
   "guitar_source": "\ud83c\udfa8",
   "rig": {
-    "gate": null,
+    "gate": "Noise Gate",
     "comp_wah": null,
     "drive": "Fuzz Face",
     "amp": "Blues Boy",
@@ -30,32 +33,35 @@
     "reverb": "Room Studio A"
   },
   "settings": {
-    "gate": null,
+    "gate": {
+      "THRESHOLD": 1.5,
+      "DECAY": 4.9
+    },
     "comp_wah": null,
     "drive": {
       "FUZZ": 7.0,
       "VOLUME": 7.0
     },
     "amp": {
-      "GAIN": 2.0,
-      "TREBLE": 1.5,
-      "MIDDLE": 7.13082545509323,
-      "BASS": 5.0,
+      "GAIN": 4.8,
+      "TREBLE": 4.7,
+      "MIDDLE": 9.0,
+      "BASS": 7.0,
       "VOLUME": 8.0
     },
     "mod_eq": {
-      "100HZ": -2.1,
-      "200HZ": -1.3,
+      "100HZ": 1.6,
+      "200HZ": 1.0,
       "400HZ": 1.2,
       "800HZ": 1.5,
       "1600HZ": 1.0,
-      "3200HZ": -1.3,
-      "LEVEL": 0.1
+      "3200HZ": -5.4,
+      "LEVEL": -0.1
     },
     "delay": {
       "REPEAT_RATE": "1/8d",
       "ECHO": 3.8,
-      "INTENSITY": 4.0,
+      "INTENSITY": 4.9,
       "BPM_MODE": "On"
     },
     "reverb": {
@@ -68,7 +74,7 @@
     }
   },
   "sources": {
-    "gate": "",
+    "gate": "\ud83d\udd2c",
     "comp_wah": "",
     "drive": "\ud83c\udfa8",
     "amp": "\ud83c\udfa8",

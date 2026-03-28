@@ -1,7 +1,8 @@
 🎸 SPARK 2 RECIPE (HYBRID MODE): bellbottomblues.wav
-📅 Date: 2026-03-10 16:24:50
-🎯 DSP Analysis: Gain 0.44 | Presence 0.29 | Air 0.38 | Mids 0.72 | Width 0.65 | BPM 136
+📅 Date: 2026-03-27 20:48:38
+🎯 DSP Analysis: Gain 0.44 | Presence 0.29 | Air 0.38 | Mids 0.72 | Width 0.65 | BPM 68
 📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+✅ Coherence: Grade A (100/100)
 
 Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
 ==================================================
@@ -12,21 +13,21 @@ Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
 --------------------------------------------------
 [COMP/WAH] SUSTAIN COMP 🔬
    • ATTACK: 4.4            • LEVEL: 6.3          
-   • SUSTAIN: 4.7           • TONE: 5.0           
+   • SUSTAIN: 4.7           • TONE: 3.7           
 --------------------------------------------------
 [AMP] LUX VERB 🎨
-   • BASS: 5.0              • GAIN: 5.4           
-   • MIDDLE: 7.7            • TREBLE: 1.5         
+   • BASS: 4.7              • GAIN: 5.4           
+   • MIDDLE: 9.0            • TREBLE: 4.8         
    • VOLUME: 8.0         
 --------------------------------------------------
 [MOD/EQ] GUITAR EQ 🔬
-   • 100HZ: -0.3            • 1600HZ: 1.4         
-   • 200HZ: 0.2             • 3200HZ: -0.1        
+   • 100HZ: -0.6            • 1600HZ: 1.4         
+   • 200HZ: -0.5            • 3200HZ: -4.0        
    • 400HZ: 1.3             • 800HZ: 1.6          
 --------------------------------------------------
 [DELAY] ECHO TAPE 🔬
    • BPM_MODE: On           • SHORT/LONG: 1/8d    
-   • SUSTAIN: 3.7           • TONE: 3.7           
+   • SUSTAIN: 4.4           • TONE: 3.7           
    • VOLUME: 3.4         
 --------------------------------------------------
 [REVERB] PLATE RICH 🎨

@@ -1,9 +1,14 @@
 {
   "song": "eruption.wav",
-  "date": "2026-03-10T16:39:40.492848",
+  "date": "2026-03-27T21:05:04.013255",
   "confidence": {
     "tier": "A",
-    "label": "HIGH \u2014 Hand-curated artist preset"
+    "label": "HIGH \u2014 Hand-curated artist preset",
+    "coherence_score": 92,
+    "coherence_grade": "A",
+    "coherence_flags": [
+      "BASS 6.0 is too high for stem low_energy=0.222 (expected ~3.3, delta=2.7)"
+    ]
   },
   "dsp": {
     "gain": 0.755,
@@ -11,7 +16,7 @@
     "presence": 0.258,
     "air": 0.538,
     "width": 0.586,
-    "bpm": 152.0
+    "bpm": 76.0
   },
   "guitar": {
     "guitar": "Mexican Strat (SSH)",
@@ -48,13 +53,13 @@
       "VOLUME": 7.8
     },
     "mod_eq": {
-      "100HZ": 0.5,
-      "200HZ": 0.6,
+      "100HZ": -4.4,
+      "200HZ": -3.4,
       "400HZ": -0.1,
       "800HZ": 0.4,
       "1600HZ": -0.5,
-      "3200HZ": 3.2,
-      "LEVEL": -0.3
+      "3200HZ": 2.0,
+      "LEVEL": 0.5
     },
     "delay": {
       "VOLUME": 1.0,
@@ -63,11 +68,11 @@
     },
     "reverb": {
       "LEVEL": 3.4,
-      "TIME": 3.7,
-      "DAMPING": 6.2,
+      "TIME": 3.6,
+      "DAMPING": 6.6,
       "DWELL": 3.2,
       "LOW_CUT": 6.0,
-      "HIGH_CUT": 4.2
+      "HIGH_CUT": 4.1
     }
   },
   "sources": {

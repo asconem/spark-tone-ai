@@ -1,9 +1,12 @@
 {
   "song": "anyday.wav",
-  "date": "2026-03-10T16:21:50.460550",
+  "date": "2026-03-27T20:45:24.716436",
   "confidence": {
     "tier": "A",
-    "label": "HIGH \u2014 Hand-curated artist preset"
+    "label": "HIGH \u2014 Hand-curated artist preset",
+    "coherence_score": 100,
+    "coherence_grade": "A",
+    "coherence_flags": []
   },
   "dsp": {
     "gain": 0.493,
@@ -23,7 +26,7 @@
   "rig": {
     "gate": null,
     "comp_wah": null,
-    "drive": "Tube Drive",
+    "drive": null,
     "amp": "Lux Verb",
     "mod_eq": "Guitar EQ",
     "delay": "Echo Tape",
@@ -32,29 +35,25 @@
   "settings": {
     "gate": null,
     "comp_wah": null,
-    "drive": {
-      "OVERDRIVE": 1.3,
-      "TONE": 4.2,
-      "LEVEL": 7.4
-    },
+    "drive": null,
     "amp": {
-      "GAIN": 2.0,
-      "TREBLE": 1.5,
-      "MIDDLE": 7.429690627462385,
-      "BASS": 5.0,
+      "GAIN": 5.7,
+      "TREBLE": 5.2,
+      "MIDDLE": 9.0,
+      "BASS": 5.5,
       "VOLUME": 8.0
     },
     "mod_eq": {
-      "100HZ": -1.0,
-      "200HZ": -0.4,
+      "100HZ": 1.0,
+      "200HZ": 0.8,
       "400HZ": 1.2,
       "800HZ": 1.5,
       "1600HZ": 1.1,
-      "3200HZ": -0.3,
+      "3200HZ": -3.1,
       "LEVEL": -0.2
     },
     "delay": {
-      "SUSTAIN": 3.7,
+      "SUSTAIN": 4.5,
       "VOLUME": 3.2,
       "TONE": 4.0,
       "SHORT/LONG": "1/8d",
@@ -72,7 +71,7 @@
   "sources": {
     "gate": "",
     "comp_wah": "",
-    "drive": "\ud83d\udd2c",
+    "drive": "",
     "amp": "\ud83c\udfa8",
     "mod_eq": "\ud83d\udd2c",
     "delay": "\ud83d\udd2c",

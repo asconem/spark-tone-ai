@@ -1,9 +1,12 @@
 {
   "song": "aintnosunshine.wav",
-  "date": "2026-03-10T16:17:37.965775",
+  "date": "2026-03-27T20:40:41.511639",
   "confidence": {
-    "tier": "B",
-    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+    "tier": "C",
+    "label": "LOW \u2014 Pure DSP analysis (no preset data)",
+    "coherence_score": 100,
+    "coherence_grade": "A",
+    "coherence_flags": []
   },
   "dsp": {
     "gain": 0.385,
@@ -11,20 +14,20 @@
     "presence": 0.229,
     "air": 0.416,
     "width": 0.586,
-    "bpm": 129.2
+    "bpm": 64.6
   },
   "guitar": {
     "guitar": "American Pro II Strat (SSS)",
-    "pickup": "Position 5 (Neck)",
-    "volume": 8,
-    "tone": 7
+    "pickup": "Position 4 (Neck+Mid)",
+    "volume": 10,
+    "tone": 7.0
   },
-  "guitar_source": "\ud83c\udfa8",
+  "guitar_source": "\ud83d\udd2c",
   "rig": {
     "gate": null,
-    "comp_wah": "LA Comp",
+    "comp_wah": "Sustain Comp",
     "drive": null,
-    "amp": "American Deluxe",
+    "amp": "J.H. Bass Master",
     "mod_eq": "Guitar EQ",
     "delay": "Echo Tape",
     "reverb": "Chamber"
@@ -32,29 +35,30 @@
   "settings": {
     "gate": null,
     "comp_wah": {
-      "GAIN": 3.0,
-      "PEAK_REDUCTION": 2.0,
-      "LIMIT_COMPRESS_TOGGLE": "Compress"
+      "LEVEL": 7.5,
+      "TONE": 4.2,
+      "ATTACK": 3.5,
+      "SUSTAIN": 6.5
     },
     "drive": null,
     "amp": {
-      "GAIN": 4.3515251157927155,
-      "TREBLE": 2.517647318640473,
-      "MIDDLE": 5.269704663462153,
-      "BASS": 5.0,
+      "GAIN": 4.9,
+      "TREBLE": 5.5,
+      "MIDDLE": 8.5,
+      "BASS": 7.0,
       "VOLUME": 8.0
     },
     "mod_eq": {
-      "100HZ": -0.7,
-      "200HZ": -0.1,
+      "100HZ": 4.0,
+      "200HZ": 3.0,
       "400HZ": 0.8,
       "800HZ": 1.1,
       "1600HZ": 0.6,
-      "3200HZ": 0.9,
-      "LEVEL": -0.2
+      "3200HZ": -2.4,
+      "LEVEL": -0.6
     },
     "delay": {
-      "SUSTAIN": 3.8,
+      "SUSTAIN": 4.3,
       "VOLUME": 3.6,
       "TONE": 4.2,
       "SHORT/LONG": "1/8d",
@@ -63,17 +67,17 @@
     "reverb": {
       "LEVEL": 5.8,
       "TIME": 4.2,
-      "DAMPING": 5.5,
+      "DAMPING": 4.5,
       "DWELL": 5.1,
       "LOW_CUT": 4.5,
-      "HIGH_CUT": 5.1
+      "HIGH_CUT": 5.8
     }
   },
   "sources": {
     "gate": "",
-    "comp_wah": "\ud83c\udfa8",
+    "comp_wah": "\ud83d\udd2c",
     "drive": "",
-    "amp": "\ud83c\udfa8",
+    "amp": "\ud83d\udd2c",
     "mod_eq": "\ud83d\udd2c",
     "delay": "\ud83d\udd2c",
     "reverb": "\ud83d\udd2c"

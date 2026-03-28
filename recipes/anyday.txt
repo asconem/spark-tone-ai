@@ -1,7 +1,8 @@
 🎸 SPARK 2 RECIPE (HYBRID MODE): anyday.wav
-📅 Date: 2026-03-10 16:21:50
+📅 Date: 2026-03-27 20:45:24
 🎯 DSP Analysis: Gain 0.49 | Presence 0.28 | Air 0.40 | Mids 0.69 | Width 0.70 | BPM 112
 📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+✅ Coherence: Grade A (100/100)
 
 Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
 ==================================================
@@ -10,23 +11,19 @@ Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
    • VOLUME: 8
    • TONE: 7
 --------------------------------------------------
-[DRIVE] TUBE DRIVE 🔬
-   • LEVEL: 7.4             • OVERDRIVE: 1.3      
-   • TONE: 4.2           
---------------------------------------------------
 [AMP] LUX VERB 🎨
-   • BASS: 5.0              • GAIN: 2.0           
-   • MIDDLE: 7.4            • TREBLE: 1.5         
+   • BASS: 5.5              • GAIN: 5.7           
+   • MIDDLE: 9.0            • TREBLE: 5.2         
    • VOLUME: 8.0         
 --------------------------------------------------
 [MOD/EQ] GUITAR EQ 🔬
-   • 100HZ: -1.0            • 1600HZ: 1.1         
-   • 200HZ: -0.4            • 3200HZ: -0.3        
+   • 100HZ: 1.0             • 1600HZ: 1.1         
+   • 200HZ: 0.8             • 3200HZ: -3.1        
    • 400HZ: 1.2             • 800HZ: 1.5          
 --------------------------------------------------
 [DELAY] ECHO TAPE 🔬
    • BPM_MODE: On           • SHORT/LONG: 1/8d    
-   • SUSTAIN: 3.7           • TONE: 4.0           
+   • SUSTAIN: 4.5           • TONE: 4.0           
    • VOLUME: 3.2         
 --------------------------------------------------
 [REVERB] PLATE RICH 🎨

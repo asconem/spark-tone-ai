@@ -1,7 +1,8 @@
 🎸 SPARK 2 RECIPE (HYBRID MODE): cellophane.wav
-📅 Date: 2026-03-10 16:28:14
-🎯 DSP Analysis: Gain 0.77 | Presence 0.26 | Air 0.48 | Mids 0.55 | Width 0.86 | BPM 123
+📅 Date: 2026-03-27 20:52:04
+🎯 DSP Analysis: Gain 0.77 | Presence 0.26 | Air 0.48 | Mids 0.55 | Width 0.86 | BPM 62
 📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+✅ Coherence: Grade A (100/100)
 
 Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
 ==================================================
@@ -11,25 +12,24 @@ Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
    • TONE: 8
 --------------------------------------------------
 [GATE] NOISE GATE 🔬
-   • DECAY: 3.8             • THRESHOLD: 2.2      
+   • DECAY: 3.2             • THRESHOLD: 3.2      
 --------------------------------------------------
 [DRIVE] FUZZ FACE 🎨
    • FUZZ: 7.0              • VOLUME: 7.0         
 --------------------------------------------------
 [AMP] BLUES BOY 🎨
-   • BASS: 5.0              • GAIN: 2.2           
-   • MIDDLE: 5.5            • TREBLE: 4.1         
+   • BASS: 7.0              • GAIN: 6.2           
+   • MIDDLE: 7.1            • TREBLE: 6.6         
    • VOLUME: 8.0         
 --------------------------------------------------
 [MOD/EQ] GUITAR EQ 🔬
-   • 100HZ: -0.8            • 1600HZ: -0.3        
-   • 200HZ: -0.5            • 3200HZ: 1.4         
-   • 400HZ: 0.2             • 800HZ: 0.7          
+   • 100HZ: 1.6             • 1600HZ: -0.3        
+   • 200HZ: 1.0             • 3200HZ: -0.9        
+   • 400HZ: 0.3             • 800HZ: 0.7          
 --------------------------------------------------
 [DELAY] DIGITAL DELAY 🔬
    • BPM_MODE: On           • D_TIME: 1/8         
-   • E_LEVEL: 2.9           • F_BACK: 3.8         
-   • MODE: 50ms          
+   • E_LEVEL: 2.9           • F_BACK: 5.1         
 --------------------------------------------------
 [REVERB] ROOM STUDIO A 🎨
    • DAMPING: 5.0           • DWELL: 4.0          

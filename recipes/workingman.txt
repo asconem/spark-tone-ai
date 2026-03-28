@@ -1,7 +1,8 @@
 🎸 SPARK 2 RECIPE (HYBRID MODE): workingman.wav
-📅 Date: 2026-03-10 18:55:59
-🎯 DSP Analysis: Gain 0.53 | Presence 0.27 | Air 0.47 | Mids 0.56 | Width 0.64 | BPM 152
+📅 Date: 2026-03-27 18:34:54
+🎯 DSP Analysis: Gain 0.53 | Presence 0.27 | Air 0.47 | Mids 0.56 | Width 0.64 | BPM 76
 📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+✅ Coherence: Grade A (100/100)
 
 Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
 ==================================================
@@ -10,13 +11,16 @@ Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
    • VOLUME: 10
    • TONE: 8
 --------------------------------------------------
+[GATE] NOISE GATE 🔬
+   • DECAY: 4.5             • THRESHOLD: 1.5      
+--------------------------------------------------
 [DRIVE] TUBE DRIVE 🎨
    • LEVEL: 8.0             • OVERDRIVE: 7.0      
    • TONE: 5.0           
 --------------------------------------------------
 [AMP] PLEXIGLAS 🎨
-   • BASS: 4.9              • GAIN: 2.0           
-   • MIDDLE: 4.7            • TREBLE: 6.4         
+   • BASS: 6.1              • GAIN: 4.0           
+   • MIDDLE: 7.2            • TREBLE: 6.3         
    • VOLUME: 8.0         
 --------------------------------------------------
 [MOD/EQ] FLANGER 🎨
@@ -25,11 +29,11 @@ Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
 --------------------------------------------------
 [DELAY] ECHO TAPE 🔬
    • BPM_MODE: On           • SHORT/LONG: 1/8d    
-   • SUSTAIN: 3.6           • TONE: 5.0           
+   • SUSTAIN: 4.3           • TONE: 5.0           
    • VOLUME: 3.1         
 --------------------------------------------------
-[REVERB] ROOM STUDIO A 🔬
-   • DAMPING: 5.8           • DWELL: 4.4          
-   • HIGH_CUT: 4.7          • LEVEL: 5.1          
+[REVERB] PLATE LONG 🎨
+   • DAMPING: 5.5           • DWELL: 4.4          
+   • HIGH_CUT: 5.0          • LEVEL: 5.1          
    • LOW_CUT: 5.1           • TIME: 4.3           
 --------------------------------------------------

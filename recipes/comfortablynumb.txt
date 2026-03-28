@@ -1,0 +1,38 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): comfortablynumb.wav
+📅 Date: 2026-03-27 21:00:34
+🎯 DSP Analysis: Gain 0.51 | Presence 0.23 | Air 0.48 | Mids 0.57 | Width 0.75 | BPM 65
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+🟡 Coherence: Grade B (76/100) — Gain stack likely over-saturated: amp base_gain=0.55 + drive boost≈0.45 → ~1.00, but stem only warrants gain=0.51 (excess=0.49)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 5 (Neck)
+   • VOLUME: 10
+   • TONE: 7
+--------------------------------------------------
+[GATE] NOISE GATE 🔬
+   • DECAY: 4.8             • THRESHOLD: 1.5      
+--------------------------------------------------
+[DRIVE] GUITAR MUFF 🎨
+   • SUSTAIN: 9.0           • TONE: 4.5           
+   • VOLUME: 7.0         
+--------------------------------------------------
+[AMP] J.H. TONE CITY 100 🎨
+   • BASS: 6.9              • GAIN: 3.2           
+   • MIDDLE: 7.0            • TREBLE: 6.2         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] FLANGER 🎨
+   • DEPTH: 6.0             • MIX: 4.0            
+   • RATE: 0.2           
+--------------------------------------------------
+[DELAY] MULTI HEAD 🎨
+   • BPM_MODE: Off          • ECHO_VOL: 4.5       
+   • INTENSITY: 5.5         • MODE_SELECTOR: Head 0+2
+--------------------------------------------------
+[REVERB] ROOM STUDIO A 🔬
+   • DAMPING: 5.6           • DWELL: 4.4          
+   • HIGH_CUT: 5.0          • LEVEL: 5.7          
+   • LOW_CUT: 5.0           • TIME: 4.3           
+--------------------------------------------------

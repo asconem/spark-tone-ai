@@ -1,0 +1,81 @@
+{
+  "song": "guitar.wav",
+  "date": "2026-03-27T19:32:42.715797",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)",
+    "coherence_score": 100,
+    "coherence_grade": "A",
+    "coherence_flags": []
+  },
+  "dsp": {
+    "gain": 0.561,
+    "mids": 0.662,
+    "presence": 0.276,
+    "air": 0.411,
+    "width": 0.608,
+    "bpm": 112.3
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 5 (Neck)",
+    "volume": 8,
+    "tone": 7
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": null,
+    "amp": "Lux Verb",
+    "mod_eq": "Guitar EQ",
+    "delay": "Vintage Delay",
+    "reverb": "Hall Medium"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": null,
+    "amp": {
+      "GAIN": 6.1,
+      "TREBLE": 5.4,
+      "MIDDLE": 9.0,
+      "BASS": 7.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": 4.0,
+      "200HZ": 3.0,
+      "400HZ": 1.0,
+      "800HZ": 1.3,
+      "1600HZ": 0.9,
+      "3200HZ": -2.6,
+      "LEVEL": -0.6
+    },
+    "delay": {
+      "REPEAT_RATE": "1/8d",
+      "ECHO": 3.8,
+      "INTENSITY": 4.7,
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 4.8,
+      "TIME": 4.2,
+      "DAMPING": 4.4,
+      "DWELL": 4.2,
+      "LOW_CUT": 5.2,
+      "HIGH_CUT": 5.9
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83c\udfa8"
+  },
+  "real_world_amp": "Fender Deluxe Reverb",
+  "amp_manufacturer": "Fender"
+}

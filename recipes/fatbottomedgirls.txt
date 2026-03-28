@@ -1,0 +1,32 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): fatbottomedgirls.wav
+📅 Date: 2026-03-27 21:07:48
+🎯 DSP Analysis: Gain 0.58 | Presence 0.25 | Air 0.49 | Mids 0.53 | Width 0.99 | BPM 89
+📊 Confidence: Tier C — LOW — Pure DSP analysis (no preset data)
+✅ Coherence: Grade A (100/100)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🔬
+   • PICKUP: Position 3 (Middle)
+   • VOLUME: 10
+   • TONE: 8
+--------------------------------------------------
+[AMP] J.H. 45/100 🔬
+   • BASS: 5.9              • GAIN: 4.8           
+   • MIDDLE: 6.6            • TREBLE: 6.9         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: 1.8             • 1600HZ: -0.2        
+   • 200HZ: 1.4             • 3200HZ: 0.9         
+   • 400HZ: 0.2             • 800HZ: 0.7          
+--------------------------------------------------
+[DELAY] VINTAGE DELAY 🔬
+   • BPM_MODE: On           • ECHO: 3.7           
+   • INTENSITY: 5.3         • REPEAT_RATE: 1/8d   
+--------------------------------------------------
+[REVERB] PLATE SHORT 🔬
+   • DAMPING: 5.9           • DWELL: 4.1          
+   • HIGH_CUT: 4.7          • LEVEL: 6.2          
+   • LOW_CUT: 5.3           • TIME: 3.9           
+--------------------------------------------------

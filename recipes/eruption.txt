@@ -1,7 +1,8 @@
 🎸 SPARK 2 RECIPE (HYBRID MODE): eruption.wav
-📅 Date: 2026-03-10 16:39:40
-🎯 DSP Analysis: Gain 0.75 | Presence 0.26 | Air 0.54 | Mids 0.48 | Width 0.59 | BPM 152
+📅 Date: 2026-03-27 21:05:04
+🎯 DSP Analysis: Gain 0.75 | Presence 0.26 | Air 0.54 | Mids 0.48 | Width 0.59 | BPM 76
 📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+✅ Coherence: Grade A (92/100) — BASS 6.0 is too high for stem low_energy=0.222 (expected ~3.3, delta=2.7)
 
 Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
 ==================================================
@@ -23,8 +24,8 @@ Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
    • VOLUME: 7.8         
 --------------------------------------------------
 [MOD/EQ] GUITAR EQ 🔬
-   • 100HZ: 0.5             • 1600HZ: -0.5        
-   • 200HZ: 0.6             • 3200HZ: 3.2         
+   • 100HZ: -4.4            • 1600HZ: -0.5        
+   • 200HZ: -3.4            • 3200HZ: 2.0         
    • 400HZ: -0.1            • 800HZ: 0.4          
 --------------------------------------------------
 [DELAY] ECHO TAPE 🎨
@@ -32,7 +33,7 @@ Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
    • VOLUME: 1.0         
 --------------------------------------------------
 [REVERB] PLATE SHORT 🔬
-   • DAMPING: 6.2           • DWELL: 3.2          
-   • HIGH_CUT: 4.2          • LEVEL: 3.4          
-   • LOW_CUT: 6.0           • TIME: 3.7           
+   • DAMPING: 6.6           • DWELL: 3.2          
+   • HIGH_CUT: 4.1          • LEVEL: 3.4          
+   • LOW_CUT: 6.0           • TIME: 3.6           
 --------------------------------------------------

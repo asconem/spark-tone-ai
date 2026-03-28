@@ -1,9 +1,12 @@
 {
   "song": "cochise.wav",
-  "date": "2026-03-10T16:33:25.661480",
+  "date": "2026-03-27T20:58:27.573855",
   "confidence": {
-    "tier": "B",
-    "label": "MEDIUM \u2014 API-researched preset (unverified)"
+    "tier": "C",
+    "label": "LOW \u2014 Pure DSP analysis (no preset data)",
+    "coherence_score": 100,
+    "coherence_grade": "A",
+    "coherence_flags": []
   },
   "dsp": {
     "gain": 0.558,
@@ -14,17 +17,17 @@
     "bpm": 107.7
   },
   "guitar": {
-    "guitar": "Mexican Strat (SSH)",
-    "pickup": "Bridge Humbucker",
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 3 (Middle)",
     "volume": 10,
-    "tone": 8
+    "tone": 8.0
   },
-  "guitar_source": "\ud83c\udfa8",
+  "guitar_source": "\ud83d\udd2c",
   "rig": {
     "gate": null,
     "comp_wah": null,
-    "drive": "Tube Drive",
-    "amp": "Plexiglas",
+    "drive": null,
+    "amp": "J.H. 45/100",
     "mod_eq": "Guitar EQ",
     "delay": "Vintage Delay",
     "reverb": "Plate Short"
@@ -32,47 +35,43 @@
   "settings": {
     "gate": null,
     "comp_wah": null,
-    "drive": {
-      "OVERDRIVE": 1.0,
-      "TONE": 5.6,
-      "LEVEL": 7.0
-    },
+    "drive": null,
     "amp": {
-      "GAIN": 2.0,
-      "TREBLE": 6.228117665527862,
-      "MIDDLE": 4.222702803823029,
-      "BASS": 5.0,
+      "GAIN": 4.6,
+      "TREBLE": 6.6,
+      "MIDDLE": 6.4,
+      "BASS": 6.4,
       "VOLUME": 8.0
     },
     "mod_eq": {
-      "100HZ": -0.7,
-      "200HZ": -0.2,
+      "100HZ": 2.7,
+      "200HZ": 2.0,
       "400HZ": 0.1,
       "800HZ": 0.6,
       "1600HZ": -0.2,
-      "3200HZ": 1.7,
-      "LEVEL": -0.1
+      "3200HZ": 0.3,
+      "LEVEL": -0.5
     },
     "delay": {
       "REPEAT_RATE": "1/8d",
       "ECHO": 3.8,
-      "INTENSITY": 4.0,
+      "INTENSITY": 5.1,
       "BPM_MODE": "On"
     },
     "reverb": {
       "LEVEL": 5.3,
-      "TIME": 4.0,
-      "DAMPING": 5.9,
+      "TIME": 3.5,
+      "DAMPING": 5.6,
       "DWELL": 4.2,
       "LOW_CUT": 5.2,
-      "HIGH_CUT": 4.6
+      "HIGH_CUT": 4.9
     }
   },
   "sources": {
     "gate": "",
     "comp_wah": "",
-    "drive": "\ud83d\udd2c",
-    "amp": "\ud83c\udfa8",
+    "drive": "",
+    "amp": "\ud83d\udd2c",
     "mod_eq": "\ud83d\udd2c",
     "delay": "\ud83d\udd2c",
     "reverb": "\ud83d\udd2c"

@@ -1,0 +1,36 @@
+════════════════════════════════════════════════════════════
+SECTION 2/5: CRUNCH (0:46 — 1:06)
+════════════════════════════════════════════════════════════
+🎸 SPARK 2 RECIPE: guitar.wav
+📅 Date: 2026-03-27 22:34:20
+🎯 DSP Analysis: Gain 0.46 | Presence 0.31 | Air 0.45 | Mids 0.54 | Width 1.00 | BPM 76
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+✅ Coherence: Grade A (100/100)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨
+   • PICKUP: Position 5 (Neck)
+   • VOLUME: 8
+   • TONE: 7
+--------------------------------------------------
+[AMP] LUX VERB 🎨
+   • BASS: 3.0              • GAIN: 5.5           
+   • MIDDLE: 6.9            • TREBLE: 6.1         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -4.0            • 1600HZ: -0.1        
+   • 200HZ: -3.0            • 3200HZ: -0.9        
+   • 400HZ: 0.3             • 800HZ: 0.7          
+--------------------------------------------------
+[DELAY] ECHO TAPE 🔬
+   • BPM_MODE: On           • SHORT/LONG: 1/8d    
+   • SUSTAIN: 4.9           • TONE: 4.7           
+   • VOLUME: 3.3         
+--------------------------------------------------
+[REVERB] HALL MEDIUM 🎨
+   • DAMPING: 5.1           • DWELL: 4.7          
+   • HIGH_CUT: 5.3          • LEVEL: 7.0          
+   • LOW_CUT: 4.8           • TIME: 4.2           
+--------------------------------------------------
