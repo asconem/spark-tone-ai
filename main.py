@@ -1241,13 +1241,13 @@ def score_recipe_coherence(rig, settings, features, sources):
 
     # ----------------------------------------------------------
     # CHECK 2B: BASS vs low_energy_ratio coherence
-    # Expected: low_energy normalized 0-1 (range 0.20-0.50) → BASS 3.0-7.0
+    # Expected: low_energy normalized 0-1 (range 0.20-0.50) → BASS 2.5-7.5
     # ----------------------------------------------------------
     bass_val = amp_settings.get('BASS')
     target_low_energy = features.get('low_energy_ratio', 0.33)
     if bass_val is not None:
         bass_norm = max(0.0, min(1.0, (target_low_energy - BASS_MIN) / BASS_RANGE))
-        expected_bass = 3.0 + bass_norm * 4.0
+        expected_bass = 2.5 + bass_norm * 5.0
         bass_delta = abs(float(bass_val) - expected_bass)
         if bass_delta > 2.5:
             direction = "too high" if float(bass_val) > expected_bass else "too low"
@@ -2538,18 +2538,39 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
                     genre_delay_selected = True
 
             if not genre_delay_selected:
-                # No genre detected — select by gain character
+                # No genre detected — select by gain + air (brightness).
+                # Using gain alone produced Vintage Delay for ~46% of recipes.
+                # Air differentiates: dark tones get warm tape delays,
+                # bright tones get cleaner/adjustable delays.
+                bpm = features.get('bpm', 120.0)
                 if target_gain < 0.35:
-                    # Clean: warm analog delay suits ambient cleans
-                    rig['delay'] = find_delay('Vintage Delay')
+                    # Clean: delay character is prominent in the mix
+                    if target_air > 0.50:
+                        rig['delay'] = find_delay('Digital Delay')     # bright clean → transparent repeats
+                    elif bpm < 100 and target_width > 0.65:
+                        rig['delay'] = find_delay('Multi Head')        # slow ambient clean → spatial repeats
+                    else:
+                        rig['delay'] = find_delay('Vintage Delay')     # warm clean → warm analog
                 elif target_gain < 0.55:
-                    # Crunch: tape delay for warmth without clutter
-                    rig['delay'] = find_delay('Echo Tape')
+                    # Crunch: delay supports the tone
+                    if target_air < 0.42:
+                        rig['delay'] = find_delay('Echo Tape')         # dark crunch → tape warmth
+                    elif target_air > 0.50:
+                        rig['delay'] = find_delay('Echo Filt')         # bright crunch → adjustable tone
+                    else:
+                        rig['delay'] = find_delay('Vintage Delay')     # balanced crunch → warm analog
                 elif target_gain < 0.75:
-                    # Drive: vintage delay, moderate
-                    rig['delay'] = find_delay('Vintage Delay')
+                    # Drive: delay complements without overwhelming
+                    if target_air < 0.42:
+                        rig['delay'] = find_delay('Echo Tape')         # dark drive → tape warmth
+                    elif target_air > 0.50:
+                        rig['delay'] = find_delay('Echo Filt')         # bright drive → adjustable tone
+                    elif bpm < 100 and target_width > 0.75:
+                        rig['delay'] = find_delay('Multi Head')        # slow wide drive → atmospheric
+                    else:
+                        rig['delay'] = find_delay('Vintage Delay')     # mid-range drive → warm analog
                 else:
-                    # High gain without genre: digital delay, tight and clean
+                    # High gain: tight and controlled
                     rig['delay'] = find_delay('Digital Delay')
 
             if rig['delay']:
@@ -2916,11 +2937,18 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
         settings['amp']['MIDDLE'] = round(min(10.0, max(2.0, 2.0 + mids_normalized * 7.0)), 1)
         # BASS: Driven by low_energy_ratio (80-500Hz energy proportion).
         # Observed range ~0.20 (thin/bright) to ~0.50 (thick/heavy).
-        # Normalize to 0-1, then map to 3.0-7.0 knob range.
+        # Normalize to 0-1, then map to 2.5-7.5 knob range.
         # Songs with more low-end energy get higher BASS; thin tones get less.
         bass_normalized = max(0.0, min(1.0, (target_low_energy - BASS_MIN) / BASS_RANGE))
-        settings['amp']['BASS'] = round(min(10.0, max(3.0, 3.0 + bass_normalized * 4.0)), 1)
-        settings['amp']['VOLUME'] = 8.0
+        settings['amp']['BASS'] = round(min(10.0, max(2.5, 2.5 + bass_normalized * 5.0)), 1)
+
+        # VOLUME: Scales inversely with gain — clean tones need more output
+        # level, high-gain tones are inherently louder and need less.
+        # Dynamic playing (high rms_cv) gets a small boost to maintain
+        # presence during quieter passages.
+        rms_cv_vol = features.get('rms_cv', 0.25)
+        amp_volume = 9.0 - target_gain * 2.0 + rms_cv_vol * 0.5
+        settings['amp']['VOLUME'] = round(min(9.5, max(7.0, amp_volume)), 1)
 
         # --- MOD/EQ SLOT CONFLICT COMPENSATION ---
         # When the mod/eq slot is occupied by a modulation effect (Flanger, Chorus,
