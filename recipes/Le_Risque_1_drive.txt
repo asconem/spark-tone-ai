@@ -1,0 +1,42 @@
+════════════════════════════════════════════════════════════
+SECTION 1/3: DRIVE (0:00 — 0:46)
+════════════════════════════════════════════════════════════
+🎸 SPARK 2 RECIPE: Le Risque.wav
+📅 Date: 2026-03-27 23:04:36
+🎯 DSP Analysis: Gain 0.74 | Presence 0.27 | Air 0.49 | Mids 0.47 | Width 0.99 | BPM 117
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+✅ Coherence: Grade A (100/100)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 8
+   • TONE: 7
+--------------------------------------------------
+[GATE] NOISE GATE 🔬
+   • DECAY: 4.6             • THRESHOLD: 1.5      
+--------------------------------------------------
+[DRIVE] OVER DRIVE 🔬
+   • DRIVE: 3.8             • LEVEL: 7.6          
+   • TONE: 5.8           
+--------------------------------------------------
+[AMP] JM45 🎨
+   • BASS: 3.0              • GAIN: 6.1           
+   • MIDDLE: 5.5            • TREBLE: 6.8         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -5.2            • 1600HZ: -0.6        
+   • 200HZ: -4.0            • 3200HZ: 0.0         
+   • 400HZ: -0.2            • 800HZ: 0.4          
+--------------------------------------------------
+[DELAY] VINTAGE DELAY 🔬
+   • BPM_MODE: On           • ECHO: 3.0           
+   • INTENSITY: 5.1         • REPEAT_RATE: 1/8d   
+--------------------------------------------------
+[REVERB] HALL MEDIUM 🎨
+   • DAMPING: 5.8           • DWELL: 3.3          
+   • HIGH_CUT: 4.7          • LEVEL: 5.1          
+   • LOW_CUT: 6.0           • TIME: 2.9           
+--------------------------------------------------

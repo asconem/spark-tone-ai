@@ -1,0 +1,96 @@
+{
+  "song": "Le Risque.wav",
+  "date": "2026-03-27T23:04:36.868911",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)",
+    "coherence_score": 100,
+    "coherence_grade": "A",
+    "coherence_flags": []
+  },
+  "dsp": {
+    "gain": 0.738,
+    "mids": 0.473,
+    "presence": 0.271,
+    "air": 0.492,
+    "width": 0.985,
+    "bpm": 117.5
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 8,
+    "tone": 7
+  },
+  "guitar_source": "\ud83c\udfa8",
+  "rig": {
+    "gate": "Noise Gate",
+    "comp_wah": null,
+    "drive": "Over Drive",
+    "amp": "JM45",
+    "mod_eq": "Guitar EQ",
+    "delay": "Vintage Delay",
+    "reverb": "Hall Medium"
+  },
+  "settings": {
+    "gate": {
+      "THRESHOLD": 1.5,
+      "DECAY": 4.6
+    },
+    "comp_wah": null,
+    "drive": {
+      "DRIVE": 3.8,
+      "TONE": 5.8,
+      "LEVEL": 7.6
+    },
+    "amp": {
+      "GAIN": 6.1,
+      "TREBLE": 6.8,
+      "MIDDLE": 5.5,
+      "BASS": 3.0,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": -5.2,
+      "200HZ": -4.0,
+      "400HZ": -0.2,
+      "800HZ": 0.4,
+      "1600HZ": -0.6,
+      "3200HZ": 0.0,
+      "LEVEL": 0.8
+    },
+    "delay": {
+      "REPEAT_RATE": "1/8d",
+      "ECHO": 3.0,
+      "INTENSITY": 5.1,
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 5.1,
+      "TIME": 2.9,
+      "DAMPING": 5.8,
+      "DWELL": 3.3,
+      "LOW_CUT": 6.0,
+      "HIGH_CUT": 4.7
+    }
+  },
+  "sources": {
+    "gate": "\ud83d\udd2c",
+    "comp_wah": "",
+    "drive": "\ud83d\udd2c",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83c\udfa8"
+  },
+  "real_world_amp": "Marshall JTM45",
+  "amp_manufacturer": "Marshall",
+  "section": {
+    "label": "Drive",
+    "type": "quiet",
+    "start": 0.0,
+    "end": 46.0,
+    "index": 0,
+    "total_sections": 3
+  }
+}

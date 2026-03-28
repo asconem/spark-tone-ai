@@ -3216,7 +3216,7 @@ def main():
     parser.add_argument("--tested", type=str, help="Record amp test results for a recipe (e.g. --tested cherubrock)")
     parser.add_argument("--test-results", action="store_true", help="Show all test results and systematic biases")
     parser.add_argument("--batch", type=str, help="Generate recipes for all WAV files in a directory (recursive)")
-    parser.add_argument("--no-sections", action="store_true", help="Disable multi-section detection (analyze full track)")
+    parser.add_argument("--sections", action="store_true", help="Enable multi-section detection (split into quiet/loud sections)")
     parser.add_argument("--clean", action="store_true", help="Delete all files in recipes/ folder before running")
 
     args = parser.parse_args()
@@ -3272,7 +3272,7 @@ def main():
 
     # Batch mode: generate recipes for all WAV files in a directory
     if args.batch:
-        batch_recipes(args.batch, skip_research=args.no_research, skip_sections=args.no_sections)
+        batch_recipes(args.batch, skip_research=args.no_research, enable_sections=args.sections)
         return
 
     # Normal mode: analyze audio and build rig
@@ -3292,15 +3292,8 @@ def main():
         parent_dir = os.path.basename(os.path.dirname(os.path.abspath(args.audio)))
         if parent_dir and parent_dir not in ('', '.', 'separated', 'htdemucs_6s', 'htdemucs'):
             song_name = parent_dir + os.path.splitext(song_name)[1]  # e.g. "Le Risque.wav"
-    
-    if args.no_sections:
-        # Single-section mode: analyze full track (legacy behavior)
-        result = analyze_tone(args.audio)
-        if result is None:
-            return
-        correct_bpm_with_api(result, song_name)
-        build_rig(result, song_name=song_name, skip_research=args.no_research)
-    else:
+
+    if args.sections:
         # Multi-section mode: detect and analyze sections separately
         result = analyze_with_sections(args.audio)
         if result is None:
@@ -3350,22 +3343,29 @@ def main():
                       song_name=song_name,
                       skip_research=args.no_research,
                       section_info=section_info)
+    else:
+        # Single-section mode (default): analyze full track
+        result = analyze_tone(args.audio)
+        if result is None:
+            return
+        correct_bpm_with_api(result, song_name)
+        build_rig(result, song_name=song_name, skip_research=args.no_research)
 
 
-def batch_recipes(stems_dir, skip_research=False, skip_sections=False):
+def batch_recipes(stems_dir, skip_research=False, enable_sections=False):
     """
     Generate recipes for all WAV files in a directory (recursive).
 
     Usage: python main.py --batch /path/to/stems
            python main.py --batch /path/to/stems --no-research
-           python main.py --batch /path/to/stems --no-sections
+           python main.py --batch /path/to/stems --sections
 
     Finds all .wav files, runs each through the full pipeline (analyze +
     build_rig), and outputs a summary table at the end. Recipes are saved
     to recipes/ as usual (both .txt and .json).
 
     Use --no-research to skip API calls for unknown songs (faster, DSP-only).
-    Use --no-sections to disable multi-section detection (single recipe per track).
+    Use --sections to enable multi-section detection (default is single recipe per track).
     """
     import glob
 
@@ -3382,7 +3382,7 @@ def batch_recipes(stems_dir, skip_research=False, skip_sections=False):
     print(f"\n🎸 BATCH RECIPE GENERATION — {len(wav_files)} stems")
     print(f"   Source: {stems_dir}")
     print(f"   API research: {'disabled' if skip_research else 'enabled'}")
-    print(f"   Section detection: {'disabled' if skip_sections else 'enabled'}")
+    print(f"   Section detection: {'enabled' if enable_sections else 'disabled'}")
     print(f"{'='*70}")
 
     results = []
@@ -3390,12 +3390,22 @@ def batch_recipes(stems_dir, skip_research=False, skip_sections=False):
 
     for i, wav_path in enumerate(wav_files):
         song_name = os.path.basename(wav_path)
+
+        # Apply stem name fix (same as in main())
+        STEM_NAMES = {'guitar', 'bass', 'drums', 'vocals', 'piano', 'other',
+                      'guitar_1', 'guitar_2', 'melody', 'no_vocals'}
+        stem_base = os.path.splitext(song_name)[0].lower()
+        if stem_base in STEM_NAMES:
+            parent_dir = os.path.basename(os.path.dirname(os.path.abspath(wav_path)))
+            if parent_dir and parent_dir not in ('', '.', 'separated', 'htdemucs_6s', 'htdemucs'):
+                song_name = parent_dir + os.path.splitext(song_name)[1]
+
         print(f"\n[{i+1}/{len(wav_files)}] {song_name}")
         print(f"   Path: {wav_path}")
 
         try:
-            if skip_sections:
-                # Single-section mode: analyze full track
+            if not enable_sections:
+                # Single-section mode (default): analyze full track
                 result_single = analyze_tone(wav_path)
                 if result_single is None:
                     errors.append((song_name, "Analysis failed"))
@@ -3433,7 +3443,7 @@ def batch_recipes(stems_dir, skip_research=False, skip_sections=False):
                         'amp': '?', 'drive': '?', 'mod_eq': '?', 'guitar': '?',
                     })
             else:
-                # Multi-section mode
+                # Multi-section mode (--sections flag)
                 result = analyze_with_sections(wav_path)
                 if result is None:
                     errors.append((song_name, "Analysis failed"))
@@ -3483,7 +3493,8 @@ def batch_recipes(stems_dir, skip_research=False, skip_sections=False):
                     clean_name = os.path.splitext(song_name)[0]
                     clean_name = re.sub(r'[^a-zA-Z0-9_-]', '_', clean_name)
                     if is_multi:
-                        clean_name = f"{clean_name}_{section_features['section_label'].lower()}"
+                        idx = sec_idx + 1  # 1-based for readability
+                        clean_name = f"{clean_name}_{idx}_{section_features['section_label'].lower()}"
                     
                     # Read the JSON recipe to capture summary data
                     json_path = os.path.join("recipes", f"{clean_name}.json")

@@ -4198,5 +4198,27 @@
     },
     "real_world_amp": "Fender Deluxe Reverb",
     "amp_manufacturer": "Fender"
+  },
+  "auto_le_risque_wav": {
+    "keywords": [
+      "le",
+      "risque"
+    ],
+    "description": "Unable to identify specific song or artist from filename alone",
+    "source": "auto",
+    "validated": false,
+    "confidence": "low",
+    "forced_gear": {
+      "amp": "JM45",
+      "reverb": "Hall Medium",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 8,
+        "tone": 7
+      }
+    },
+    "real_world_amp": "Marshall JTM45",
+    "amp_manufacturer": "Marshall"
   }
 }
