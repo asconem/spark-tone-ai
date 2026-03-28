@@ -524,7 +524,8 @@
           "base_tone": {
             "gain": 0.05,
             "treble": 0.85,
-            "mids": 0.4
+            "mids": 0.4,
+            "bass": 0.55
           },
           "type": "Solid State"
         },
@@ -534,7 +535,8 @@
           "base_tone": {
             "gain": 0.1,
             "treble": 0.75,
-            "mids": 0.35
+            "mids": 0.35,
+            "bass": 0.65
           },
           "type": "Tube"
         },
@@ -544,7 +546,8 @@
           "base_tone": {
             "gain": 0.15,
             "treble": 0.8,
-            "mids": 0.6
+            "mids": 0.6,
+            "bass": 0.45
           },
           "type": "Tube"
         },
@@ -554,7 +557,8 @@
           "base_tone": {
             "gain": 0.12,
             "treble": 0.6,
-            "mids": 0.65
+            "mids": 0.65,
+            "bass": 0.5
           },
           "type": "Tube"
         },
@@ -564,7 +568,8 @@
           "base_tone": {
             "gain": 0.15,
             "treble": 0.7,
-            "mids": 0.75
+            "mids": 0.75,
+            "bass": 0.55
           },
           "type": "Tube"
         }
@@ -579,7 +584,8 @@
           "base_tone": {
             "gain": 0.3,
             "treble": 0.5,
-            "mids": 0.65
+            "mids": 0.65,
+            "bass": 0.75
           },
           "type": "Tube"
         },
@@ -589,7 +595,8 @@
           "base_tone": {
             "gain": 0.35,
             "treble": 0.8,
-            "mids": 0.7
+            "mids": 0.7,
+            "bass": 0.35
           },
           "type": "Tube"
         },
@@ -599,7 +606,8 @@
           "base_tone": {
             "gain": 0.25,
             "treble": 0.65,
-            "mids": 0.75
+            "mids": 0.75,
+            "bass": 0.55
           },
           "type": "Tube"
         },
@@ -609,7 +617,8 @@
           "base_tone": {
             "gain": 0.4,
             "treble": 0.9,
-            "mids": 0.5
+            "mids": 0.5,
+            "bass": 0.3
           },
           "type": "Solid State"
         }
@@ -624,7 +633,8 @@
           "base_tone": {
             "gain": 0.6,
             "treble": 0.4,
-            "mids": 0.6
+            "mids": 0.6,
+            "bass": 0.5
           },
           "type": "Tube"
         },
@@ -634,7 +644,8 @@
           "base_tone": {
             "gain": 0.5,
             "treble": 0.45,
-            "mids": 0.55
+            "mids": 0.55,
+            "bass": 0.55
           },
           "type": "Tube"
         },
@@ -644,7 +655,8 @@
           "base_tone": {
             "gain": 0.45,
             "treble": 0.55,
-            "mids": 0.6
+            "mids": 0.6,
+            "bass": 0.55
           },
           "type": "Tube"
         },
@@ -654,7 +666,8 @@
           "base_tone": {
             "gain": 0.4,
             "treble": 0.65,
-            "mids": 0.45
+            "mids": 0.45,
+            "bass": 0.5
           },
           "type": "Tube"
         },
@@ -664,7 +677,8 @@
           "base_tone": {
             "gain": 0.35,
             "treble": 0.6,
-            "mids": 0.5
+            "mids": 0.5,
+            "bass": 0.45
           },
           "type": "Tube"
         }
@@ -679,7 +693,8 @@
           "base_tone": {
             "gain": 0.65,
             "treble": 0.5,
-            "mids": 0.75
+            "mids": 0.75,
+            "bass": 0.6
           },
           "type": "Tube"
         },
@@ -689,7 +704,8 @@
           "base_tone": {
             "gain": 0.85,
             "treble": 0.4,
-            "mids": 0.5
+            "mids": 0.5,
+            "bass": 0.7
           },
           "type": "Tube"
         },
@@ -699,7 +715,8 @@
           "base_tone": {
             "gain": 0.8,
             "treble": 0.6,
-            "mids": 0.5
+            "mids": 0.5,
+            "bass": 0.55
           },
           "type": "Tube"
         },
@@ -709,7 +726,8 @@
           "base_tone": {
             "gain": 0.75,
             "treble": 0.55,
-            "mids": 0.65
+            "mids": 0.65,
+            "bass": 0.6
           },
           "type": "Tube"
         },
@@ -719,7 +737,8 @@
           "base_tone": {
             "gain": 0.7,
             "treble": 0.65,
-            "mids": 0.6
+            "mids": 0.6,
+            "bass": 0.5
           },
           "type": "Tube"
         }
@@ -734,7 +753,8 @@
           "base_tone": {
             "gain": 0.9,
             "treble": 0.3,
-            "mids": 0.3
+            "mids": 0.3,
+            "bass": 0.85
           },
           "type": "Tube"
         },
@@ -744,7 +764,8 @@
           "base_tone": {
             "gain": 0.95,
             "treble": 0.7,
-            "mids": 0.45
+            "mids": 0.45,
+            "bass": 0.55
           },
           "type": "Tube"
         },
@@ -754,7 +775,8 @@
           "base_tone": {
             "gain": 0.88,
             "treble": 0.65,
-            "mids": 0.6
+            "mids": 0.6,
+            "bass": 0.55
           },
           "type": "Tube"
         },
@@ -764,7 +786,8 @@
           "base_tone": {
             "gain": 0.85,
             "treble": 0.75,
-            "mids": 0.55
+            "mids": 0.55,
+            "bass": 0.5
           },
           "type": "Tube"
         },
@@ -774,7 +797,8 @@
           "base_tone": {
             "gain": 0.82,
             "treble": 0.45,
-            "mids": 0.7
+            "mids": 0.7,
+            "bass": 0.7
           },
           "type": "Tube"
         },
@@ -784,7 +808,8 @@
           "base_tone": {
             "gain": 0.92,
             "treble": 0.4,
-            "mids": 0.5
+            "mids": 0.5,
+            "bass": 0.6
           },
           "type": "Tube"
         }
@@ -799,7 +824,8 @@
           "base_tone": {
             "gain": 0.6,
             "treble": 0.5,
-            "mids": 0.6
+            "mids": 0.6,
+            "bass": 0.55
           },
           "type": "Tube"
         },
@@ -809,7 +835,8 @@
           "base_tone": {
             "gain": 0.65,
             "treble": 0.55,
-            "mids": 0.6
+            "mids": 0.6,
+            "bass": 0.5
           },
           "type": "Tube"
         },
@@ -819,7 +846,8 @@
           "base_tone": {
             "gain": 0.4,
             "treble": 0.5,
-            "mids": 0.65
+            "mids": 0.65,
+            "bass": 0.7
           },
           "type": "Tube"
         },
@@ -829,7 +857,8 @@
           "base_tone": {
             "gain": 0.25,
             "treble": 0.75,
-            "mids": 0.35
+            "mids": 0.35,
+            "bass": 0.6
           },
           "type": "Tube"
         },
@@ -839,7 +868,8 @@
           "base_tone": {
             "gain": 0.5,
             "treble": 0.6,
-            "mids": 0.55
+            "mids": 0.55,
+            "bass": 0.75
           },
           "type": "Tube"
         },
@@ -849,7 +879,8 @@
           "base_tone": {
             "gain": 0.55,
             "treble": 0.65,
-            "mids": 0.5
+            "mids": 0.5,
+            "bass": 0.6
           },
           "type": "Tube"
         }
@@ -864,7 +895,8 @@
           "base_tone": {
             "gain": 0.3,
             "treble": 0.6,
-            "mids": 0.5
+            "mids": 0.5,
+            "bass": 0.7
           },
           "type": "Solid State"
         },
@@ -874,7 +906,8 @@
           "base_tone": {
             "gain": 0.4,
             "treble": 0.4,
-            "mids": 0.6
+            "mids": 0.6,
+            "bass": 0.85
           },
           "type": "Tube"
         },
@@ -884,7 +917,8 @@
           "base_tone": {
             "gain": 0.2,
             "treble": 0.7,
-            "mids": 0.4
+            "mids": 0.4,
+            "bass": 0.75
           },
           "type": "Solid State"
         },
@@ -894,7 +928,8 @@
           "base_tone": {
             "gain": 0.25,
             "treble": 0.55,
-            "mids": 0.55
+            "mids": 0.55,
+            "bass": 0.75
           },
           "type": "Solid State"
         }
@@ -1239,14 +1274,28 @@
           "max": 10.0
         },
         "d_time": {
-          "bpm_off": {"min": 1, "max": 50, "unit": "ms", "step": 1},
+          "bpm_off": {
+            "min": 1,
+            "max": 50,
+            "unit": "ms",
+            "step": 1
+          },
           "bpm_on": {
             "type": "selector",
             "values": [
-              "1/32", "1/16", "1/16t", "1/16d",
-              "1/8", "1/8t", "1/8d",
-              "1/4", "1/4t", "1/4d",
-              "1/2", "1/2t", "1/2d",
+              "1/32",
+              "1/16",
+              "1/16t",
+              "1/16d",
+              "1/8",
+              "1/8t",
+              "1/8d",
+              "1/4",
+              "1/4t",
+              "1/4d",
+              "1/2",
+              "1/2t",
+              "1/2d",
               "1"
             ]
           }
@@ -1279,14 +1328,28 @@
       "type": "Digital",
       "parameters": {
         "delay": {
-          "bpm_off": {"min": 100, "max": 1000, "unit": "ms", "step": 1},
+          "bpm_off": {
+            "min": 100,
+            "max": 1000,
+            "unit": "ms",
+            "step": 1
+          },
           "bpm_on": {
             "type": "selector",
             "values": [
-              "1/32", "1/16", "1/16t", "1/16d",
-              "1/8", "1/8t", "1/8d",
-              "1/4", "1/4t", "1/4d",
-              "1/2", "1/2t", "1/2d",
+              "1/32",
+              "1/16",
+              "1/16t",
+              "1/16d",
+              "1/8",
+              "1/8t",
+              "1/8d",
+              "1/4",
+              "1/4t",
+              "1/4d",
+              "1/2",
+              "1/2t",
+              "1/2d",
               "1"
             ]
           }
@@ -1322,14 +1385,26 @@
       "type": "Analog",
       "parameters": {
         "repeat_rate": {
-          "bpm_off": {"min": 0.0, "max": 10.0},
+          "bpm_off": {
+            "min": 0.0,
+            "max": 10.0
+          },
           "bpm_on": {
             "type": "selector",
             "values": [
-              "1/32", "1/16", "1/16t", "1/16d",
-              "1/8", "1/8t", "1/8d",
-              "1/4", "1/4t", "1/4d",
-              "1/2", "1/2t", "1/2d",
+              "1/32",
+              "1/16",
+              "1/16t",
+              "1/16d",
+              "1/8",
+              "1/8t",
+              "1/8d",
+              "1/4",
+              "1/4t",
+              "1/4d",
+              "1/2",
+              "1/2t",
+              "1/2d",
               "1"
             ]
           }
@@ -1361,7 +1436,12 @@
       "type": "Special",
       "parameters": {
         "time": {
-          "bpm_off": {"min": 100, "max": 2000, "unit": "ms", "step": 1},
+          "bpm_off": {
+            "min": 100,
+            "max": 2000,
+            "unit": "ms",
+            "step": 1
+          },
           "bpm_on": {
             "type": "fixed",
             "value": "1/4"
@@ -1398,14 +1478,28 @@
       "type": "Tape",
       "parameters": {
         "repeat_rate": {
-          "bpm_off": {"min": 100, "max": 1000, "unit": "ms", "step": 1},
+          "bpm_off": {
+            "min": 100,
+            "max": 1000,
+            "unit": "ms",
+            "step": 1
+          },
           "bpm_on": {
             "type": "selector",
             "values": [
-              "1/32", "1/16", "1/16t", "1/16d",
-              "1/8", "1/8t", "1/8d",
-              "1/4", "1/4t", "1/4d",
-              "1/2", "1/2t", "1/2d",
+              "1/32",
+              "1/16",
+              "1/16t",
+              "1/16d",
+              "1/8",
+              "1/8t",
+              "1/8d",
+              "1/4",
+              "1/4t",
+              "1/4d",
+              "1/2",
+              "1/2t",
+              "1/2d",
               "1"
             ]
           }
@@ -1459,12 +1553,22 @@
           "max": 10.0
         },
         "short/long": {
-          "bpm_off": {"min": 70, "max": 600, "unit": "ms", "step": 1},
+          "bpm_off": {
+            "min": 70,
+            "max": 600,
+            "unit": "ms",
+            "step": 1
+          },
           "bpm_on": {
             "type": "selector",
             "values": [
-              "1/32", "1/16", "1/16t", "1/16d",
-              "1/8", "1/8t", "1/8d"
+              "1/32",
+              "1/16",
+              "1/16t",
+              "1/16d",
+              "1/8",
+              "1/8t",
+              "1/8d"
             ]
           }
         },

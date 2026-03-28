@@ -2370,11 +2370,15 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
         elif drive_name == 'SAB Driver':
             # Plexi-Drive (gb=0.6): amp-in-a-box, significant coloring.
             # Less amp-dependent — it provides its own amp character.
+            # HP/LP toggle: HP cuts bass (tighter, brighter), LP is full range.
+            # Use HP when target is bright/thin, LP when bassy/thick.
             od_range = 2.5 + amp_headroom * 4.5
+            sab_hp_lp = "HP" if target_low_energy < 0.33 else "LP"
             settings['drive'] = {
                 "DRIVE": round(min(10.0, max(1.0, 2.0 + drive_intensity * od_range)), 1),
                 "TONE": round(min(10.0, max(1.0, 3.0 + air_norm * 5.0)), 1),
-                "VOLUME": round(min(10.0, max(3.0, 7.0 - drive_intensity * 2.0)), 1)
+                "VOLUME": round(min(10.0, max(3.0, 7.0 - drive_intensity * 2.0)), 1),
+                "HP/LP": sab_hp_lp
             }
 
         elif drive_name == 'Black Op':
@@ -2401,6 +2405,56 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
                 "SUSTAIN": round(min(10.0, max(3.0, 2.0 + target_gain * 7.0)), 1),
                 "TONE": round(min(10.0, max(1.0, 3.0 + air_norm * 5.0)), 1),
                 "VOLUME": round(min(10.0, max(3.0, 7.5 - drive_intensity * 3.5)), 1)
+            }
+
+        elif drive_name == 'Bass Muff':
+            # EHX Bass Big Muff: similar to Guitar Muff but retains more low end.
+            settings['drive'] = {
+                "SUSTAIN": round(min(10.0, max(3.0, 2.0 + target_gain * 7.0)), 1),
+                "TONE": round(min(10.0, max(1.0, 3.0 + air_norm * 5.0)), 1),
+                "VOLUME": round(min(10.0, max(3.0, 7.5 - drive_intensity * 3.5)), 1)
+            }
+
+        elif drive_name == 'J.H. Axle Fuzz':
+            # Roger Mayer Axis Fuzz (gb=0.8): bright, cutting fuzz with mid presence.
+            # DRIVE controls fuzz amount, VOLUME controls output.
+            settings['drive'] = {
+                "DRIVE": round(min(10.0, max(2.0, 2.0 + target_gain * 7.0)), 1),
+                "VOLUME": round(min(10.0, max(3.0, 7.0 - drive_intensity * 3.0)), 1)
+            }
+
+        elif drive_name == 'J.H. Super Fuzz':
+            # Marshall Supa Fuzz (gb=0.8): vintage fuzz with a FILTER control.
+            # FILTER shapes tone — higher = brighter, lower = darker/thicker.
+            settings['drive'] = {
+                "FILTER": round(min(10.0, max(1.0, 3.0 + air_norm * 5.0)), 1),
+                "VOLUME": round(min(10.0, max(3.0, 7.0 - drive_intensity * 3.0)), 1)
+            }
+
+        elif drive_name == 'J.H. Octave Fuzz':
+            # Roger Mayer Octavia (gb=0.65): octave-up fuzz, very bright/cutting.
+            # FUZZ controls intensity, LEVEL controls output.
+            settings['drive'] = {
+                "FUZZ": round(min(10.0, max(3.0, 2.0 + target_gain * 7.0)), 1),
+                "LEVEL": round(min(10.0, max(3.0, 7.0 - drive_intensity * 3.0)), 1)
+            }
+
+        elif drive_name == 'J.H. Fuzz Zone':
+            # Maestro FZ-1 Fuzz-Tone (gb=0.6): velcro-textured vintage fuzz.
+            # ATTACK controls fuzz intensity (not envelope attack).
+            settings['drive'] = {
+                "ATTACK": round(min(10.0, max(2.0, 2.0 + target_gain * 7.0)), 1),
+                "VOLUME": round(min(10.0, max(3.0, 7.0 - drive_intensity * 3.0)), 1)
+            }
+
+        elif drive_name == 'Bassmaster':
+            # Maestro Bass Brassmaster (gb=0.8): blendable fuzz with two volume controls.
+            # BRASS VOL = fuzz signal, BASS VOL = clean signal, SENSITIVITY = fuzz amount.
+            fuzz_blend = max(0.3, min(1.0, target_gain * 1.2))
+            settings['drive'] = {
+                "BRASS_VOL": round(min(10.0, max(2.0, 3.0 + fuzz_blend * 5.0)), 1),
+                "SENSITIVITY": round(min(10.0, max(2.0, 2.0 + target_gain * 6.0)), 1),
+                "BASS_VOL": round(min(10.0, max(2.0, 7.0 - fuzz_blend * 4.0)), 1)
             }
 
         if settings['drive'] and sources['drive'] != "🎨":
@@ -2439,8 +2493,12 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
                 "TONE": round(3.0 + air_norm_fx * 4.0, 1),
             }
         elif mod_name == 'Cloner Chorus':
+            # EHX Small Clone: DEPTH toggle selects chorus intensity.
+            # High for wide/lush tones (high width or clean), Low for subtle.
+            cloner_depth = "High" if (width_norm > 0.5 or fx_intensity > 0.5) else "Low"
             settings['mod_eq'] = {
                 "RATE": round(2.5 + rms_cv_fx * 3.0, 1),
+                "DEPTH": cloner_depth
             }
         elif mod_name == 'Flanger':
             flanger_depth = 4.0 + fx_intensity * 2.0 + width_norm * 2.0
@@ -2454,13 +2512,36 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
                 "SPEED": round(3.0 + rms_cv_fx * 3.0, 1),
                 "INTENSITY": round(4.0 + fx_intensity * 3.0, 1),
             }
-        elif mod_name in ('Tremolo', 'Tremolator', 'Tremolo Square'):
+        elif mod_name == 'Tremolo':
             settings['mod_eq'] = {
                 "SPEED": round(4.0 + rms_cv_fx * 3.0, 1),
                 "DEPTH": round(4.0 + fx_intensity * 3.0, 1),
                 "LEVEL": 7.0,
             }
-        elif mod_name in ('UniVibe', 'Classic Vibe'):
+        elif mod_name == 'Tremolator':
+            # Demeter TRM-1: BPM sync toggle. Enable when BPM is detected.
+            settings['mod_eq'] = {
+                "DEPTH": round(4.0 + fx_intensity * 3.0, 1),
+                "SPEED": round(4.0 + rms_cv_fx * 3.0, 1),
+                "BPM": "On" if features.get('bpm', 0) > 0 else "Off"
+            }
+        elif mod_name == 'Tremolo Square':
+            settings['mod_eq'] = {
+                "SPEED": round(4.0 + rms_cv_fx * 3.0, 1),
+                "DEPTH": round(4.0 + fx_intensity * 3.0, 1),
+                "LEVEL": 7.0,
+            }
+        elif mod_name == 'UniVibe':
+            # Shin-ei Uni-Vibe: CHORUS mode is subtle warble, VIBRATO is
+            # full pitch modulation. Chorus is the standard; Vibrato for
+            # extreme psychedelic effects (very clean, wide signal).
+            univibe_mode = "Vibrato" if (target_gain < 0.25 and width_norm > 0.6) else "Chorus"
+            settings['mod_eq'] = {
+                "SPEED": round(3.0 + rms_cv_fx * 3.0, 1),
+                "INTENSITY": round(4.0 + fx_intensity * 3.0, 1),
+                "CHORUS/VIBRATO": univibe_mode
+            }
+        elif mod_name == 'Classic Vibe':
             settings['mod_eq'] = {
                 "SPEED": round(3.0 + rms_cv_fx * 3.0, 1),
                 "INTENSITY": round(4.0 + fx_intensity * 3.0, 1),
@@ -2837,15 +2918,27 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
                 mid_factor_800 = 0.8 + scoop_width * 1.0   # 0.8 → 1.8
                 mid_factor_1600 = 4.5                        # always strong — scoop peak
 
-                # Treble: when a drive is present, the amp TREBLE knob is already being
-                # pushed high to compensate for the drive's interaction with the signal.
-                # The EQ's treble boost needs to back off proportionally.
-                # Scaling: gb * 1.5 — higher gain drives cause more treble interaction.
-                # Validated: Muff (gb=0.9) → treble_comp=1.35, 5.9→4.6 dB (Matt: 4.6 ✓)
-                #            TS (gb=0.5) → treble_comp=0.75, 3.7→3.0 dB (Matt: 3.7, 0.7 off)
-                # Note: TS regression is because TS at low drive is nearly transparent.
-                # Future: scale by drive amount if settings are available.
-                treble_comp = gb * 1.5
+                # Treble compensation: how much the drive's treble interaction should
+                # reduce the EQ's 3200Hz correction. Now uses the drive's own treble
+                # character (sonic_profile.treble) to modulate the effect:
+                #
+                #   Dark drives (treble < 0): they REMOVE high-end, so treble_comp
+                #     stays moderate — the EQ needs to work to restore treble.
+                #   Neutral drives (treble ≈ 0): standard gain-based compensation.
+                #   Bright/transparent drives (treble > 0): their brightness is already
+                #     captured in target_air from the recording. The residual EQ formula
+                #     accounts for it via amp base_tone, so comp should be low to avoid
+                #     subtracting what the EQ legitimately needs.
+                #
+                # Formula: gb × 1.5 × attenuation_factor
+                #   attenuation_factor = clamp(1.0 - drive_treble × 2.0, 0.0, 1.5)
+                #   Dark drives (treble=-0.4):   factor=1.8 → capped at 1.5 (more comp)
+                #   Neutral drives (treble=0.0): factor=1.0 (standard comp)
+                #   Bright drives (treble=0.3):  factor=0.4 (less comp — EQ should keep its boost)
+                #   Very bright (treble=0.6):    factor=0.0 → capped (zero comp — drive already bright)
+                drive_treble = sp.get('treble', 0)
+                treble_atten = max(0.0, min(1.5, 1.0 - drive_treble * 2.0))
+                treble_comp = gb * 1.5 * treble_atten
 
             # --- Last-Mile EQ: Residual gap between target and predicted rig output ---
             #
@@ -2867,18 +2960,16 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
             AMP_KNOB_COVERAGE = 0.35
 
             # Amp's natural predicted output in feature-space units.
-            # base_tone.treble maps to the AIR range; base_tone.mids to the MIDS range.
-            amp_treble_char = rig['amp']['base_tone']['treble'] if rig['amp'] else 0.5
-            amp_mids_char   = rig['amp']['base_tone']['mids']   if rig['amp'] else 0.5
-            amp_predicted_air  = AIR_MIN  + amp_treble_char * AIR_RANGE
-            amp_predicted_mids = MIDS_MIN + amp_mids_char   * MIDS_RANGE
+            # base_tone fields (0-1) map to the measured feature ranges.
+            amp_bt = rig['amp']['base_tone'] if rig['amp'] else {}
+            amp_predicted_air  = AIR_MIN  + amp_bt.get('treble', 0.5) * AIR_RANGE
+            amp_predicted_mids = MIDS_MIN + amp_bt.get('mids',   0.5) * MIDS_RANGE
+            amp_predicted_bass = BASS_MIN + amp_bt.get('bass',   0.5) * BASS_RANGE
 
             # Residuals: the gap left after the amp knobs do their best.
-            # Bass has no base_tone reference → neutral anchor at midpoint of BASS range.
-            bass_norm      = max(0.0, min(1.0, (target_low_energy - BASS_MIN) / BASS_RANGE))
-            air_residual   = (target_air          - amp_predicted_air)               * (1.0 - AMP_KNOB_COVERAGE)
-            mids_residual  = (target_mids         - amp_predicted_mids)              * (1.0 - AMP_KNOB_COVERAGE)
-            bass_residual  = (target_low_energy   - (BASS_MIN + 0.5 * BASS_RANGE))  * (1.0 - AMP_KNOB_COVERAGE)
+            air_residual   = (target_air        - amp_predicted_air)  * (1.0 - AMP_KNOB_COVERAGE)
+            mids_residual  = (target_mids       - amp_predicted_mids) * (1.0 - AMP_KNOB_COVERAGE)
+            bass_residual  = (target_low_energy - amp_predicted_bass) * (1.0 - AMP_KNOB_COVERAGE)
 
             # Sensitivity constants: dB of EQ per unit of residual gap.
             # Calibrated so a large mismatch (amp off by the full AIR_RANGE) yields
@@ -2910,10 +3001,13 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
             # Well-matched bright amp + bright target → near-zero residual → EQ quiet.
             eq_3200 = round(np.clip(air_residual * K_air           - treble_comp,    -10.0, 10.0), 1)
 
-            # LEVEL: output compensation based on total boost/cut
+            # LEVEL: output compensation based on total boost/cut.
+            # Each dB of average boost should reduce output to maintain perceived
+            # loudness. Factor 0.7 (was 0.5) with ±5 dB range (was ±3) to prevent
+            # volume jumps when the EQ is working hard on a mismatched amp.
             total_adjustment = eq_100 + eq_200 + eq_400 + eq_800 + eq_1600 + eq_3200
             avg_adjustment = total_adjustment / 6.0
-            eq_level = round(np.clip(-avg_adjustment * 0.5, -3.0, 3.0), 1)
+            eq_level = round(np.clip(-avg_adjustment * 0.7, -5.0, 5.0), 1)
 
             settings['mod_eq'] = {
                 "100HZ": eq_100,
@@ -3056,20 +3150,22 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
                 v_mid_factor_400 = 0.8 + v_scoop_width * 1.2
                 v_mid_factor_800 = 0.8 + v_scoop_width * 1.0
                 v_mid_factor_1600 = 4.5
-                v_treble_comp = v_gb * 1.5
+                v_drive_treble = v_sp.get('treble', 0)
+                v_treble_atten = max(0.0, min(1.5, 1.0 - v_drive_treble * 2.0))
+                v_treble_comp = v_gb * 1.5 * v_treble_atten
 
             # Compute virtual EQ band values using the same residual approach as
             # the live EQ — ensures compensation is proportional to what the amp
             # actually left uncovered, not an absolute re-computation of the target.
             V_AMP_KNOB_COVERAGE = 0.35
-            v_amp_treble_char = rig['amp']['base_tone']['treble'] if rig['amp'] else 0.5
-            v_amp_mids_char   = rig['amp']['base_tone']['mids']   if rig['amp'] else 0.5
-            v_amp_predicted_air  = AIR_MIN  + v_amp_treble_char * AIR_RANGE
-            v_amp_predicted_mids = MIDS_MIN + v_amp_mids_char   * MIDS_RANGE
+            v_amp_bt = rig['amp']['base_tone'] if rig['amp'] else {}
+            v_amp_predicted_air  = AIR_MIN  + v_amp_bt.get('treble', 0.5) * AIR_RANGE
+            v_amp_predicted_mids = MIDS_MIN + v_amp_bt.get('mids',   0.5) * MIDS_RANGE
+            v_amp_predicted_bass = BASS_MIN + v_amp_bt.get('bass',   0.5) * BASS_RANGE
 
-            v_air_residual  = (target_air        - v_amp_predicted_air)              * (1.0 - V_AMP_KNOB_COVERAGE)
-            v_mids_residual = (target_mids        - v_amp_predicted_mids)             * (1.0 - V_AMP_KNOB_COVERAGE)
-            v_bass_residual = (target_low_energy  - (BASS_MIN + 0.5 * BASS_RANGE))   * (1.0 - V_AMP_KNOB_COVERAGE)
+            v_air_residual  = (target_air        - v_amp_predicted_air)  * (1.0 - V_AMP_KNOB_COVERAGE)
+            v_mids_residual = (target_mids       - v_amp_predicted_mids) * (1.0 - V_AMP_KNOB_COVERAGE)
+            v_bass_residual = (target_low_energy - v_amp_predicted_bass) * (1.0 - V_AMP_KNOB_COVERAGE)
 
             V_K_air  = 42.0
             V_K_mids = 31.0
