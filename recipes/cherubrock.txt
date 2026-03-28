@@ -1,12 +1,12 @@
 🎸 SPARK 2 RECIPE (HYBRID MODE): cherubrock.wav
-📅 Date: 2026-03-27 20:57:05
+📅 Date: 2026-03-28 03:15:48
 🎯 DSP Analysis: Gain 0.94 | Presence 0.21 | Air 0.62 | Mids 0.33 | Width 0.88 | BPM 112
 📊 Confidence: Tier A — HIGH — Hand-curated artist preset
 ✅ Coherence: Grade A (100/100)
 
 Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
 ==================================================
-[GUITAR] MEXICAN STRAT (SSH) 🎨
+[GUITAR] MEXICAN STRAT (SSH) 🎨🔬
    • PICKUP: Bridge Humbucker
    • VOLUME: 10
    • TONE: 10
@@ -24,9 +24,9 @@ Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
    • VOLUME: 8.2         
 --------------------------------------------------
 [MOD/EQ] GUITAR EQ 🔬
-   • 100HZ: -2.4            • 1600HZ: -3.8        
-   • 200HZ: -2.0            • 3200HZ: 4.6         
-   • 400HZ: -1.9            • 800HZ: -1.2         
+   • 100HZ: -0.5            • 1600HZ: -3.7        
+   • 200HZ: -0.4            • 3200HZ: 4.7         
+   • 400HZ: -1.7            • 800HZ: -1.0         
 --------------------------------------------------
 [DELAY] DIGITAL DELAY 🔬
    • BPM_MODE: On           • D_TIME: 1/8         

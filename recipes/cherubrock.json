@@ -1,6 +1,6 @@
 {
   "song": "cherubrock.wav",
-  "date": "2026-03-27T20:57:05.653639",
+  "date": "2026-03-28T03:15:48.877337",
   "confidence": {
     "tier": "A",
     "label": "HIGH \u2014 Hand-curated artist preset",
@@ -22,7 +22,7 @@
     "volume": 10,
     "tone": 10
   },
-  "guitar_source": "\ud83c\udfa8",
+  "guitar_source": "\ud83c\udfa8\ud83d\udd2c",
   "rig": {
     "gate": "Noise Gate",
     "comp_wah": null,
@@ -51,13 +51,13 @@
       "VOLUME": 8.2
     },
     "mod_eq": {
-      "100HZ": -2.4,
-      "200HZ": -2.0,
-      "400HZ": -1.9,
-      "800HZ": -1.2,
-      "1600HZ": -3.8,
-      "3200HZ": 4.6,
-      "LEVEL": 0.6
+      "100HZ": -0.5,
+      "200HZ": -0.4,
+      "400HZ": -1.7,
+      "800HZ": -1.0,
+      "1600HZ": -3.7,
+      "3200HZ": 4.7,
+      "LEVEL": 0.3
     },
     "delay": {
       "E_LEVEL": 2.2,

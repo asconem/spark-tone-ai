@@ -1,13 +1,13 @@
 {
   "song": "eruption.wav",
-  "date": "2026-03-27T21:05:04.013255",
+  "date": "2026-03-28T03:16:32.207150",
   "confidence": {
     "tier": "A",
     "label": "HIGH \u2014 Hand-curated artist preset",
-    "coherence_score": 92,
+    "coherence_score": 91,
     "coherence_grade": "A",
     "coherence_flags": [
-      "BASS 6.0 is too high for stem low_energy=0.222 (expected ~3.3, delta=2.7)"
+      "BASS 6.0 is too high for stem low_energy=0.222 (expected ~2.9, delta=3.1)"
     ]
   },
   "dsp": {
@@ -22,9 +22,9 @@
     "guitar": "Mexican Strat (SSH)",
     "pickup": "Bridge Humbucker",
     "volume": 10,
-    "tone": 10
+    "tone": 9.0
   },
-  "guitar_source": "\ud83c\udfa8",
+  "guitar_source": "\ud83c\udfa8\ud83d\udd2c",
   "rig": {
     "gate": "Noise Gate",
     "comp_wah": null,
@@ -53,13 +53,13 @@
       "VOLUME": 7.8
     },
     "mod_eq": {
-      "100HZ": -4.4,
-      "200HZ": -3.4,
-      "400HZ": -0.1,
-      "800HZ": 0.4,
+      "100HZ": 0.5,
+      "200HZ": 0.4,
+      "400HZ": -0.2,
+      "800HZ": -0.1,
       "1600HZ": -0.5,
-      "3200HZ": 2.0,
-      "LEVEL": 0.5
+      "3200HZ": 3.2,
+      "LEVEL": -0.4
     },
     "delay": {
       "VOLUME": 1.0,

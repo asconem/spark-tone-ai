@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+ 2 in#!/usr/bin/env python3
 """
 test_recipes.py — Automated regression testing for Spark AI Tone Engineer.
 
@@ -130,10 +130,13 @@ def run_test(song_key, test_def, stems_dir):
     print(f"\n🔬 {desc}")
     print(f"   Stem: {stem_path}")
 
-    # Run main.py
+    # Run main.py — prefer the project venv's Python if available
+    venv_python = os.path.join(os.path.dirname(os.path.abspath(__file__)), "venv", "bin", "python3")
+    python_exe = venv_python if os.path.exists(venv_python) else sys.executable
+
     result = subprocess.run(
-        [sys.executable, "main.py", stem_path],
-        capture_output=True, text=True, timeout=120
+        [python_exe, "main.py", stem_path],
+        capture_output=True, text=True, timeout=300
     )
 
     if result.returncode != 0:

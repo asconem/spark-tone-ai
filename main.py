@@ -2852,93 +2852,53 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
             # Compute how much the drive pedal is already shaping bass, mids, and treble.
             # These values reduce the EQ's work in those bands.
             bass_comp = 0
-            mid_comp = 0
-            mid_factor_400 = 1.0
-            mid_factor_800 = 1.0
-            mid_factor_1600 = 1.0
             treble_comp = 0
 
             if rig['drive'] and 'sonic_profile' in rig['drive']:
                 sp = rig['drive']['sonic_profile']
                 gb = sp.get('gain_boost', 0)
 
-                # Bass: high-gain drives add low-end energy from saturation harmonics.
-                # Bass-heavy drives (Muff, Fuzz Face) add the most — big reduction.
-                # Bass-cutting drives (Tube Screamer) still add some via amp saturation.
-                # Scaling: gb * factor, where factor depends on bass character.
-                # Validated: Muff (gb=0.9) → bass_comp=3.15, reduces +2.6 to -0.5 (Matt: 0.0)
-                #            TS (gb=0.5) → bass_comp=1.0, reduces +1.5 to +0.5 (Matt: 0.0)
+                # Bass compensation (100/200Hz): amp BASS knob tracks target_low_energy
+                # precisely, so there is no meaningful bass residual. EQ compensates
+                # only for what the drive itself adds or removes.
+                #
+                # Sign convention: bass_comp is subtracted from EQ.
+                #   Positive bass_comp → EQ cuts (drive boosted bass, compensate)
+                #   Negative bass_comp → EQ boosts (drive cut bass, restore)
+                #
+                # Calibrated against Cherub Rock (Guitar Muff → Plexi) and Eruption
+                # (Tube Drive → Plexi) as amp-verified anchors:
+                #   Guitar Muff (scooped, gb=0.9): bass_comp=+0.50 → eq_100=-0.5
+                #   Tube Drive (cut_bass, gb=0.5): bass_comp=-0.50 → eq_100=+0.5
                 if sp.get('cut_bass'):
-                    bass_comp = gb * 2.0
-                elif sp.get('scooped') or sp.get('wooly') or sp.get('retains_low_end'):
-                    bass_comp = gb * 3.5
+                    bass_comp = -gb * 1.0    # drive removes bass → EQ restores
+                elif sp.get('retains_low_end'):
+                    bass_comp = gb * 0.80    # strong bass retention → more EQ cut
+                elif sp.get('scooped') or sp.get('wooly'):
+                    bass_comp = gb * 0.56    # drive retains bass → slight EQ cut
                 else:
-                    bass_comp = gb * 2.5
+                    bass_comp = 0.0          # neutral drive, let amp knob handle it
 
-                # Mids: drives with negative mids values (scoopers) require the EQ to
-                # cut mids harder to reinforce the scoop character. Drives with positive
-                # mids (TS mid hump) need no compensation — the uncompensated formulas
-                # already produce correct values for mid-boosting drives.
+                # Treble compensation (3200Hz): adjusts how much the residual formula
+                # contributes at 3200Hz based on drive's bass/treble interaction.
                 #
-                # Why one-directional: the Muff scoops 500-2000Hz, but the Spark 2's
-                # Muff model + amp MIDDLE knob don't fully place the scoop where the
-                # recording has it. The EQ needs to actively reinforce the scoop.
-                # Meanwhile, the TS mid hump at low drive (boost mode) is nearly
-                # transparent — Eruption's mid bands match without any compensation.
+                # cut_bass drives (TS): their bass roll-off shifts spectral weight upward.
+                # The EQ needs MORE 3200Hz boost than the residual alone provides.
+                # → treble_comp NEGATIVE (adds to EQ boost)
                 #
-                # Formula: mid_comp = gb × |negative mids|. Applied per-band with
-                # different weights because the scoop affects upper mids (1600Hz)
-                # much more than lower mids (400Hz).
+                # scooped/wooly drives (Muff, Fuzz Face): mid scoop is already captured
+                # by mids_residual. The 3200Hz residual handles the air gap correctly.
+                # Tiny positive comp to avoid marginal over-boost.
+                # → treble_comp NEAR ZERO (small positive)
                 #
-                # Per-band factors calibrated against Cherub Rock (Muff → Plexi):
-                #   400Hz: ×1.5  (tested -1.7, was -1.0, gap -0.7)
-                #   800Hz: ×1.3  (tested -1.0, was -0.4, gap -0.6)
-                #   1600Hz: ×4.5 (tested -3.8, was -1.8, gap -2.0)
-                # 1600Hz needs the largest factor — it's in the heart of the Muff's
-                # scoop range and the most perceptually significant mid frequency.
-                #
-                # Validated: Muff (mids=-0.5) → mid_comp=0.45, hits all three bands.
-                #            TS (mids=+0.4) → mid_comp=0.0, zero effect on Eruption.
-                #            Black Op (mids=-0.2) → mid_comp=0.16, moderate correction.
-                #            Fuzz Face (mids=-0.1) → mid_comp=0.07, light correction.
-                #
-                # Per-band factors now scale with scoop depth (|sp_mids|).
-                # Deep scoopers (Muff -0.5): wide scoop, all three bands affected heavily.
-                #   400Hz: ×2.0  800Hz: ×1.8  1600Hz: ×4.5
-                # Shallow scoopers (RAT -0.2, Fuzz Face -0.1): narrower, focused on 1600Hz.
-                #   400Hz: ×0.8  800Hz: ×0.8  1600Hz: ×4.5
-                # Interpolate between shallow and deep based on |mids| (0.1→shallow, 0.5→deep).
-                sp_mids = sp.get('mids', 0)
-                scoop_depth = max(0, -sp_mids)
-                mid_comp = gb * scoop_depth
-                # How "wide" is the scoop? 0=narrowest, 1=widest
-                scoop_width = max(0.0, min(1.0, (scoop_depth - 0.1) / 0.4))
-                # Per-band factors: 400Hz and 800Hz scale with width, 1600Hz is always strong
-                mid_factor_400 = 0.8 + scoop_width * 1.2   # 0.8 → 2.0
-                mid_factor_800 = 0.8 + scoop_width * 1.0   # 0.8 → 1.8
-                mid_factor_1600 = 4.5                        # always strong — scoop peak
-
-                # Treble compensation: how much the drive's treble interaction should
-                # reduce the EQ's 3200Hz correction. Now uses the drive's own treble
-                # character (sonic_profile.treble) to modulate the effect:
-                #
-                #   Dark drives (treble < 0): they REMOVE high-end, so treble_comp
-                #     stays moderate — the EQ needs to work to restore treble.
-                #   Neutral drives (treble ≈ 0): standard gain-based compensation.
-                #   Bright/transparent drives (treble > 0): their brightness is already
-                #     captured in target_air from the recording. The residual EQ formula
-                #     accounts for it via amp base_tone, so comp should be low to avoid
-                #     subtracting what the EQ legitimately needs.
-                #
-                # Formula: gb × 1.5 × attenuation_factor
-                #   attenuation_factor = clamp(1.0 - drive_treble × 2.0, 0.0, 1.5)
-                #   Dark drives (treble=-0.4):   factor=1.8 → capped at 1.5 (more comp)
-                #   Neutral drives (treble=0.0): factor=1.0 (standard comp)
-                #   Bright drives (treble=0.3):  factor=0.4 (less comp — EQ should keep its boost)
-                #   Very bright (treble=0.6):    factor=0.0 → capped (zero comp — drive already bright)
-                drive_treble = sp.get('treble', 0)
-                treble_atten = max(0.0, min(1.5, 1.0 - drive_treble * 2.0))
-                treble_comp = gb * 1.5 * treble_atten
+                # Calibrated: Muff (gb=0.9, scooped) → treble_comp=+0.13 → eq_3200=4.7
+                #             TS (gb=0.5, cut_bass)  → treble_comp=-0.63 → eq_3200=3.2
+                if sp.get('cut_bass'):
+                    treble_comp = -gb * 1.26     # negative → EQ gets extra 3200Hz boost
+                elif sp.get('scooped') or sp.get('wooly') or sp.get('retains_low_end'):
+                    treble_comp = gb * 0.14      # tiny positive, residual does the heavy lifting
+                else:
+                    treble_comp = 0.0            # neutral, residual is accurate
 
             # --- Last-Mile EQ: Residual gap between target and predicted rig output ---
             #
@@ -2981,25 +2941,32 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
             K_mids = 31.0
             K_bass = 31.0
 
-            # 100Hz: full bass sensitivity minus drive bass compensation
-            eq_100 = round(np.clip(bass_residual * K_bass        - bass_comp,       -10.0, 10.0), 1)
+            # 100Hz: drive bass compensation only — amp BASS knob tracks target.
+            # No residual term: the BASS knob formula maps target_low_energy directly,
+            # so the residual is near-zero for all non-preset songs.
+            eq_100 = round(np.clip(-bass_comp, -10.0, 10.0), 1)
 
-            # 200Hz: slightly attenuated bass correction
-            eq_200 = round(np.clip(bass_residual * K_bass * 0.75 - bass_comp * 0.8, -10.0, 10.0), 1)
+            # 200Hz: bass compensation, slightly attenuated vs 100Hz
+            eq_200 = round(np.clip(-bass_comp * 0.8, -10.0, 10.0), 1)
 
-            # 400Hz: lower-mids (50% weight — narrower influence than 800/1600)
-            eq_400 = round(np.clip(mids_residual * K_mids * 0.50 - mid_comp * mid_factor_400,  -10.0, 10.0), 1)
+            # 400Hz: lower-mids residual (46% weight).
+            # Factor calibrated so a full MIDS_RANGE gap yields ~4 dB correction.
+            eq_400 = round(np.clip(mids_residual * K_mids * 0.46, -10.0, 10.0), 1)
 
-            # 800Hz: mid correction
-            eq_800 = round(np.clip(mids_residual * K_mids * 0.70 - mid_comp * mid_factor_800,  -10.0, 10.0), 1)
+            # 800Hz: mid residual (27% weight).
+            # Low factor because the amp MIDDLE knob targets 800Hz directly —
+            # it covers most of the gap, leaving little for the EQ.
+            eq_800 = round(np.clip(mids_residual * K_mids * 0.27, -10.0, 10.0), 1)
 
-            # 1600Hz: upper-mids / bite — highest mids weight, scoop peak
-            eq_1600 = round(np.clip(mids_residual * K_mids * 1.00 - mid_comp * mid_factor_1600, -10.0, 10.0), 1)
+            # 1600Hz: upper-mids / bite (100% weight).
+            # Highest factor: presence range is least controlled by amp MIDDLE knob,
+            # and mids_residual captures the Muff scoop peak naturally.
+            eq_1600 = round(np.clip(mids_residual * K_mids * 1.00, -10.0, 10.0), 1)
 
             # 3200Hz: the Rangemaster zone — key last-mile treble correction.
             # Dark amp + bright target → large air_residual → EQ cranked.
-            # Well-matched bright amp + bright target → near-zero residual → EQ quiet.
-            eq_3200 = round(np.clip(air_residual * K_air           - treble_comp,    -10.0, 10.0), 1)
+            # treble_comp sign: negative = drive cuts treble → EQ adds more.
+            eq_3200 = round(np.clip(air_residual * K_air - treble_comp, -10.0, 10.0), 1)
 
             # LEVEL: output compensation based on total boost/cut.
             # Each dB of average boost should reduce output to maintain perceived
@@ -3124,12 +3091,8 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
                                 rig['mod_eq'].get('name') not in ('Guitar EQ', 'Bass EQ'))
 
         if mod_eq_is_modulation:
-            # Compute drive compensation values (same formulas as EQ section)
+            # Compute drive compensation values — same formulas as EQ section
             v_bass_comp = 0
-            v_mid_comp = 0
-            v_mid_factor_400 = 1.0
-            v_mid_factor_800 = 1.0
-            v_mid_factor_1600 = 1.0
             v_treble_comp = 0
 
             if rig['drive'] and 'sonic_profile' in rig['drive']:
@@ -3137,46 +3100,39 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
                 v_gb = v_sp.get('gain_boost', 0)
 
                 if v_sp.get('cut_bass'):
-                    v_bass_comp = v_gb * 2.0
-                elif v_sp.get('scooped') or v_sp.get('wooly') or v_sp.get('retains_low_end'):
-                    v_bass_comp = v_gb * 3.5
+                    v_bass_comp = -v_gb * 1.0
+                elif v_sp.get('retains_low_end'):
+                    v_bass_comp = v_gb * 0.80
+                elif v_sp.get('scooped') or v_sp.get('wooly'):
+                    v_bass_comp = v_gb * 0.56
                 else:
-                    v_bass_comp = v_gb * 2.5
+                    v_bass_comp = 0.0
 
-                v_sp_mids = v_sp.get('mids', 0)
-                v_scoop_depth = max(0, -v_sp_mids)
-                v_mid_comp = v_gb * v_scoop_depth
-                v_scoop_width = max(0.0, min(1.0, (v_scoop_depth - 0.1) / 0.4))
-                v_mid_factor_400 = 0.8 + v_scoop_width * 1.2
-                v_mid_factor_800 = 0.8 + v_scoop_width * 1.0
-                v_mid_factor_1600 = 4.5
-                v_drive_treble = v_sp.get('treble', 0)
-                v_treble_atten = max(0.0, min(1.5, 1.0 - v_drive_treble * 2.0))
-                v_treble_comp = v_gb * 1.5 * v_treble_atten
+                if v_sp.get('cut_bass'):
+                    v_treble_comp = -v_gb * 1.26
+                elif v_sp.get('scooped') or v_sp.get('wooly') or v_sp.get('retains_low_end'):
+                    v_treble_comp = v_gb * 0.14
+                else:
+                    v_treble_comp = 0.0
 
-            # Compute virtual EQ band values using the same residual approach as
-            # the live EQ — ensures compensation is proportional to what the amp
-            # actually left uncovered, not an absolute re-computation of the target.
+            # Compute virtual EQ band values using the same formulas as the live EQ.
             V_AMP_KNOB_COVERAGE = 0.35
             v_amp_bt = rig['amp']['base_tone'] if rig['amp'] else {}
             v_amp_predicted_air  = AIR_MIN  + v_amp_bt.get('treble', 0.5) * AIR_RANGE
             v_amp_predicted_mids = MIDS_MIN + v_amp_bt.get('mids',   0.5) * MIDS_RANGE
-            v_amp_predicted_bass = BASS_MIN + v_amp_bt.get('bass',   0.5) * BASS_RANGE
 
-            v_air_residual  = (target_air        - v_amp_predicted_air)  * (1.0 - V_AMP_KNOB_COVERAGE)
-            v_mids_residual = (target_mids       - v_amp_predicted_mids) * (1.0 - V_AMP_KNOB_COVERAGE)
-            v_bass_residual = (target_low_energy - v_amp_predicted_bass) * (1.0 - V_AMP_KNOB_COVERAGE)
+            v_air_residual  = (target_air  - v_amp_predicted_air)  * (1.0 - V_AMP_KNOB_COVERAGE)
+            v_mids_residual = (target_mids - v_amp_predicted_mids) * (1.0 - V_AMP_KNOB_COVERAGE)
 
             V_K_air  = 42.0
             V_K_mids = 31.0
-            V_K_bass = 31.0
 
-            v_eq_100  = np.clip(v_bass_residual * V_K_bass        - v_bass_comp,                -10.0, 10.0)
-            v_eq_200  = np.clip(v_bass_residual * V_K_bass * 0.75 - v_bass_comp * 0.8,          -10.0, 10.0)
-            v_eq_400  = np.clip(v_mids_residual * V_K_mids * 0.50 - v_mid_comp * v_mid_factor_400, -10.0, 10.0)
-            v_eq_800  = np.clip(v_mids_residual * V_K_mids * 0.70 - v_mid_comp * v_mid_factor_800, -10.0, 10.0)
-            v_eq_1600 = np.clip(v_mids_residual * V_K_mids * 1.00 - v_mid_comp * v_mid_factor_1600, -10.0, 10.0)
-            v_eq_3200 = np.clip(v_air_residual  * V_K_air          - v_treble_comp,             -10.0, 10.0)
+            v_eq_100  = np.clip(-v_bass_comp,                    -10.0, 10.0)
+            v_eq_200  = np.clip(-v_bass_comp * 0.8,              -10.0, 10.0)
+            v_eq_400  = np.clip(v_mids_residual * V_K_mids * 0.46, -10.0, 10.0)
+            v_eq_800  = np.clip(v_mids_residual * V_K_mids * 0.27, -10.0, 10.0)
+            v_eq_1600 = np.clip(v_mids_residual * V_K_mids * 1.00, -10.0, 10.0)
+            v_eq_3200 = np.clip(v_air_residual  * V_K_air - v_treble_comp, -10.0, 10.0)
 
             # Scale virtual EQ into amp knob adjustments.
             # Each EQ band is ±10dB. Amp knobs are 0-10 with ~3dB per unit
