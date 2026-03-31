@@ -1437,12 +1437,26 @@ def check_artist_override(song_name, db):
     # coincidence. Legitimate short keywords like "srv" or "yyz" are preserved.
     _keyword_stopwords = {'the', 'is', 'a', 'an', 'in', 'on', 'of', 'to', 'it', 'at', 'by', 'or', 'no', 'do', 'my', 'me', 'so', 'up', 'am', 'if', 'be', 'we', 'us', 'he'}
 
+    # Pre-split song name into words for single-word keyword matching.
+    # Single-word keywords (e.g. "today", "quiet") must match the first
+    # significant word of the song title to prevent false positives like
+    # "today" matching "Had To Cry Today" (Blind Faith) instead of just
+    # "Today" (Smashing Pumpkins).
+    _song_words = [w.lower() for w in re.split(r'[^a-zA-Z0-9]+', song_name) if w]
+    _first_sig = next((w for w in _song_words if w not in _keyword_stopwords), _song_words[0] if _song_words else '')
+
     for _, data in presets.items():
         for keyword in data['keywords']:
             keyword_clean = re.sub(r'[^a-zA-Z0-9]', '', keyword.lower())
             if keyword_clean in _keyword_stopwords:
                 continue
-            if keyword_clean in song_clean:
+            # Single-word keywords: must match the first significant word
+            # Multi-word keywords: use substring matching (specific enough)
+            if ' ' not in keyword.strip():
+                matched = (keyword_clean == _first_sig)
+            else:
+                matched = (keyword_clean in song_clean)
+            if matched:
                 forced_amp_msg = " (amp forced)" if 'amp' in data['forced_gear'] else " (amp chosen by analysis)"
                 print(f"   🌟 ARTIST MATCH: {data['description']}")
                 print(f"   📌 Applying signature effects{forced_amp_msg}")

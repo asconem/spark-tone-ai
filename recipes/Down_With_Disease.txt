@@ -1,0 +1,36 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): Down With Disease.wav
+📅 Date: 2026-03-28 10:13:35
+🎯 DSP Analysis: Gain 0.60 | Presence 0.31 | Air 0.40 | Mids 0.67 | Width 0.63 | BPM 62
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+✅ Coherence: Grade A (92/100) — No gate on a drive+gain=0.60 recipe — expect audible noise between notes
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨🔬
+   • PICKUP: Position 4 (Neck+Mid)
+   • VOLUME: 10
+   • TONE: 7
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🔬
+   • LEVEL: 7.0             • OVERDRIVE: 2.5      
+   • TONE: 4.2           
+--------------------------------------------------
+[AMP] LUX VERB 🎨
+   • BASS: 6.5              • GAIN: 5.9           
+   • MIDDLE: 9.8            • TREBLE: 4.3         
+   • VOLUME: 7.9         
+--------------------------------------------------
+[MOD/EQ] CHORUS 🎨
+   • DEPTH: 5.0             • E_LEVEL: 6.0        
+   • RATE: 4.0              • TONE: 7.0           
+--------------------------------------------------
+[DELAY] DIGITAL DELAY 🎨
+   • BPM_MODE: Off          • D_TIME: 50.0        
+   • E_LEVEL: 4.0           • F_BACK: 3.0         
+   • MODE: 500ms         
+--------------------------------------------------
+[REVERB] HALL MEDIUM 🎨
+   • DAMPING: 4.2           • DWELL: 4.0          
+   • HIGH_CUT: 6.1          • LEVEL: 4.6          
+   • LOW_CUT: 5.4           • TIME: 3.9           
+--------------------------------------------------

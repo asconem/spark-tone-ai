@@ -1,0 +1,86 @@
+{
+  "song": "Had To Cry Today.wav",
+  "date": "2026-03-28T11:40:28.332783",
+  "confidence": {
+    "tier": "A",
+    "label": "HIGH \u2014 Hand-curated artist preset",
+    "coherence_score": 100,
+    "coherence_grade": "A",
+    "coherence_flags": []
+  },
+  "dsp": {
+    "gain": 0.457,
+    "mids": 0.723,
+    "presence": 0.269,
+    "air": 0.362,
+    "width": 0.927,
+    "bpm": 107.7
+  },
+  "guitar": {
+    "guitar": "Mexican Strat (SSH)",
+    "pickup": "Bridge Humbucker",
+    "volume": 10,
+    "tone": 6.0
+  },
+  "guitar_source": "\ud83c\udfa8\ud83d\udd2c",
+  "rig": {
+    "gate": null,
+    "comp_wah": "J.H. Legendary Wah",
+    "drive": "Booster",
+    "amp": "Plexiglas",
+    "mod_eq": "Guitar EQ",
+    "delay": "Echo Tape",
+    "reverb": "Hall Natural"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": {
+      "AUTO_WAH_MODE": "1/4 Bar",
+      "AUTO_DETECT_SENSITIVITY": 6.0,
+      "BPM_MODE": "On"
+    },
+    "drive": {
+      "GAIN": 7.0
+    },
+    "amp": {
+      "GAIN": 4.0,
+      "BASS": 7.0,
+      "MIDDLE": 9.0,
+      "TREBLE": 4.6,
+      "VOLUME": 8.2
+    },
+    "mod_eq": {
+      "100HZ": -0.0,
+      "200HZ": -0.0,
+      "400HZ": 2.0,
+      "800HZ": 1.2,
+      "1600HZ": 4.3,
+      "3200HZ": -2.2,
+      "LEVEL": -0.6
+    },
+    "delay": {
+      "SUSTAIN": 4.9,
+      "VOLUME": 3.3,
+      "TONE": 3.5,
+      "SHORT/LONG": "1/8d",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 6.7,
+      "TIME": 3.9,
+      "DAMPING": 3.6,
+      "DWELL": 4.7,
+      "LOW_CUT": 4.8,
+      "HIGH_CUT": 6.5
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "\ud83c\udfa8",
+    "drive": "\ud83c\udfa8",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83c\udfa8"
+  }
+}

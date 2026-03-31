@@ -1,32 +1,32 @@
 🎸 SPARK 2 RECIPE (HYBRID MODE): crossroads.wav
-📅 Date: 2026-03-27 21:03:16
+📅 Date: 2026-03-28 12:02:38
 🎯 DSP Analysis: Gain 0.50 | Presence 0.26 | Air 0.41 | Mids 0.65 | Width 0.77 | BPM 65
-📊 Confidence: Tier C — LOW — Pure DSP analysis (no preset data)
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
 ✅ Coherence: Grade A (100/100)
 
 Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
 ==================================================
-[GUITAR] AMERICAN PRO II STRAT (SSS) 🔬
-   • PICKUP: Position 4 (Neck+Mid)
+[GUITAR] MEXICAN STRAT (SSH) 🎨🔬
+   • PICKUP: Bridge Humbucker
    • VOLUME: 10
    • TONE: 7
 --------------------------------------------------
-[AMP] JM45 🔬
-   • BASS: 7.0              • GAIN: 5.0           
+[AMP] PLEXIGLAS 🎨
+   • BASS: 7.5              • GAIN: 4.2           
    • MIDDLE: 9.0            • TREBLE: 5.5         
-   • VOLUME: 8.0         
+   • VOLUME: 8.2         
 --------------------------------------------------
 [MOD/EQ] GUITAR EQ 🔬
-   • 100HZ: 4.0             • 1600HZ: 0.8         
-   • 200HZ: 3.0             • 3200HZ: -2.5        
-   • 400HZ: 0.9             • 800HZ: 1.2          
+   • 100HZ: 0.0             • 1600HZ: 2.8         
+   • 200HZ: 0.0             • 3200HZ: -0.8        
+   • 400HZ: 1.3             • 800HZ: 0.8          
 --------------------------------------------------
 [DELAY] ECHO TAPE 🔬
    • BPM_MODE: On           • SHORT/LONG: 1/8d    
    • SUSTAIN: 4.7           • TONE: 4.2           
    • VOLUME: 3.2         
 --------------------------------------------------
-[REVERB] ROOM STUDIO A 🔬
+[REVERB] HALL NATURAL 🎨
    • DAMPING: 4.5           • DWELL: 4.5          
    • HIGH_CUT: 5.8          • LEVEL: 5.8          
    • LOW_CUT: 5.0           • TIME: 3.9           

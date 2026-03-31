@@ -1,0 +1,91 @@
+{
+  "song": "Runaway Jim.wav",
+  "date": "2026-03-28T10:23:16.394621",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)",
+    "coherence_score": 92,
+    "coherence_grade": "A",
+    "coherence_flags": [
+      "No gate on a drive+gain=0.60 recipe \u2014 expect audible noise between notes"
+    ]
+  },
+  "dsp": {
+    "gain": 0.603,
+    "mids": 0.705,
+    "presence": 0.269,
+    "air": 0.374,
+    "width": 0.479,
+    "bpm": 68.0
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 4 (Neck+Mid)",
+    "volume": 10,
+    "tone": 6.0
+  },
+  "guitar_source": "\ud83c\udfa8\ud83d\udd2c",
+  "rig": {
+    "gate": null,
+    "comp_wah": "Red Comp",
+    "drive": "Tube Drive",
+    "amp": "Black Duo",
+    "mod_eq": "Guitar EQ",
+    "delay": "Echo Tape",
+    "reverb": "Hall Medium"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": {
+      "OUTPUT": 6.0,
+      "SENSITIVITY": 4.0
+    },
+    "drive": {
+      "OVERDRIVE": 2.5,
+      "TONE": 3.8,
+      "LEVEL": 7.0
+    },
+    "amp": {
+      "GAIN": 6.9,
+      "TREBLE": 4.8,
+      "MIDDLE": 9.0,
+      "BASS": 7.5,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": 0.5,
+      "200HZ": 0.4,
+      "400HZ": 2.6,
+      "800HZ": 1.5,
+      "1600HZ": 5.7,
+      "3200HZ": -4.0,
+      "LEVEL": -0.8
+    },
+    "delay": {
+      "SUSTAIN": 3.8,
+      "VOLUME": 2.9,
+      "TONE": 3.6,
+      "SHORT/LONG": "1/8d",
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 4.1,
+      "TIME": 3.8,
+      "DAMPING": 3.8,
+      "DWELL": 4.0,
+      "LOW_CUT": 5.4,
+      "HIGH_CUT": 6.4
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "\ud83c\udfa8",
+    "drive": "\ud83d\udd2c",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83c\udfa8"
+  },
+  "real_world_amp": "Fender Twin Reverb",
+  "amp_manufacturer": "Fender"
+}

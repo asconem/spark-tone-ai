@@ -1,0 +1,79 @@
+{
+  "song": "Hypertension.wav",
+  "date": "2026-03-30T21:01:51.117220",
+  "confidence": {
+    "tier": "C",
+    "label": "LOW \u2014 Pure DSP analysis (no preset data)",
+    "coherence_score": 100,
+    "coherence_grade": "A",
+    "coherence_flags": []
+  },
+  "dsp": {
+    "gain": 0.548,
+    "mids": 0.631,
+    "presence": 0.279,
+    "air": 0.421,
+    "width": 0.71,
+    "bpm": 61.5
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 3 (Middle)",
+    "volume": 10,
+    "tone": 7.0
+  },
+  "guitar_source": "\ud83d\udd2c",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": null,
+    "amp": "Plexiglas",
+    "mod_eq": "Guitar EQ",
+    "delay": "Vintage Delay",
+    "reverb": "Room Studio A"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": null,
+    "amp": {
+      "GAIN": 4.6,
+      "TREBLE": 5.6,
+      "MIDDLE": 8.6,
+      "BASS": 7.1,
+      "VOLUME": 8.0
+    },
+    "mod_eq": {
+      "100HZ": 0.0,
+      "200HZ": 0.0,
+      "400HZ": 1.1,
+      "800HZ": 0.7,
+      "1600HZ": 2.4,
+      "3200HZ": -0.6,
+      "LEVEL": -0.4
+    },
+    "delay": {
+      "REPEAT_RATE": "1/8d",
+      "ECHO": 3.8,
+      "INTENSITY": 5.0,
+      "BPM_MODE": "On"
+    },
+    "reverb": {
+      "LEVEL": 5.3,
+      "TIME": 4.1,
+      "DAMPING": 4.6,
+      "DWELL": 4.3,
+      "LOW_CUT": 5.2,
+      "HIGH_CUT": 5.7
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "",
+    "amp": "\ud83d\udd2c",
+    "mod_eq": "\ud83d\udd2c",
+    "delay": "\ud83d\udd2c",
+    "reverb": "\ud83d\udd2c"
+  }
+}

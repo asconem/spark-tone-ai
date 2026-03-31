@@ -1,0 +1,40 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): Had To Cry Today.wav
+📅 Date: 2026-03-28 11:40:28
+🎯 DSP Analysis: Gain 0.46 | Presence 0.27 | Air 0.36 | Mids 0.72 | Width 0.93 | BPM 108
+📊 Confidence: Tier A — HIGH — Hand-curated artist preset
+✅ Coherence: Grade A (100/100)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] MEXICAN STRAT (SSH) 🎨🔬
+   • PICKUP: Bridge Humbucker
+   • VOLUME: 10
+   • TONE: 6
+--------------------------------------------------
+[COMP/WAH] J.H. LEGENDARY WAH 🎨
+   • AUTO_DETECT_SENSITIVITY: 6.0   • AUTO_WAH_MODE: 1/4 Bar
+   • BPM_MODE: On           • POWER: Off          
+--------------------------------------------------
+[DRIVE] BOOSTER 🎨
+   • GAIN: 7.0           
+--------------------------------------------------
+[AMP] PLEXIGLAS 🎨
+   • BASS: 7.0              • GAIN: 4.0           
+   • MIDDLE: 9.0            • TREBLE: 4.6         
+   • VOLUME: 8.2         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: -0.0            • 1600HZ: 4.3         
+   • 200HZ: -0.0            • 3200HZ: -2.2        
+   • 400HZ: 2.0             • 800HZ: 1.2          
+--------------------------------------------------
+[DELAY] ECHO TAPE 🔬
+   • BPM_MODE: On           • SHORT/LONG: 1/8d    
+   • SUSTAIN: 4.9           • TONE: 3.5           
+   • VOLUME: 3.3         
+--------------------------------------------------
+[REVERB] HALL NATURAL 🎨
+   • DAMPING: 3.6           • DWELL: 4.7          
+   • HIGH_CUT: 6.5          • LEVEL: 6.7          
+   • LOW_CUT: 4.8           • TIME: 3.9           
+--------------------------------------------------

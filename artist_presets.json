@@ -4301,5 +4301,186 @@
     },
     "real_world_amp": "EVH 5150 III 100S",
     "amp_manufacturer": "EVH"
+  },
+  "auto_down_with_disease_wav": {
+    "keywords": [
+      "down",
+      "with",
+      "disease",
+      "phish",
+      "hoist",
+      "trey",
+      "anastasio"
+    ],
+    "description": "Clean to slightly driven tone with chorus modulation, reverb, and delay for spacious texture",
+    "source": "auto",
+    "validated": false,
+    "confidence": "high",
+    "forced_gear": {
+      "amp": "Lux Verb",
+      "mod_eq": "Chorus",
+      "mod_settings": {
+        "E_LEVEL": 6.0,
+        "RATE": 4.0,
+        "DEPTH": 5.0,
+        "TONE": 7.0
+      },
+      "delay": "Digital Delay",
+      "delay_settings": {
+        "E_LEVEL": 4.0,
+        "F_BACK": 3.0,
+        "D_TIME": 50,
+        "MODE": "500ms"
+      },
+      "reverb": "Hall Medium",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 4 (Neck+Mid)",
+        "volume": 8,
+        "tone": 7
+      }
+    },
+    "real_world_amp": "Fender Deluxe Reverb",
+    "amp_manufacturer": "Fender"
+  },
+  "auto_runaway_jim_wav": {
+    "keywords": [
+      "runaway",
+      "jim",
+      "phish",
+      "lawn",
+      "boy"
+    ],
+    "description": "Clean to edge-of-breakup Stratocaster tone through a Fender Twin Reverb with subtle reverb and compression",
+    "source": "auto",
+    "validated": false,
+    "confidence": "high",
+    "forced_gear": {
+      "amp": "Black Duo",
+      "comp_wah": "Red Comp",
+      "comp_settings": {
+        "OUTPUT": 6.0,
+        "SENSITIVITY": 4.0
+      },
+      "reverb": "Hall Medium",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 4 (Neck+Mid)",
+        "volume": 8,
+        "tone": 7
+      }
+    },
+    "real_world_amp": "Fender Twin Reverb",
+    "amp_manufacturer": "Fender"
+  },
+  "clapton_blindfaith": {
+    "keywords": [
+      "had to cry today",
+      "cant find my way home",
+      "presence of the lord",
+      "sea of joy",
+      "sleeping in the ground",
+      "blind faith"
+    ],
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "amp_settings": {
+        "GAIN": 4.0,
+        "BASS": 7.0,
+        "MIDDLE": 9.0,
+        "TREBLE": 4.6,
+        "VOLUME": 8.2
+      },
+      "drive": "Booster",
+      "drive_settings": {
+        "GAIN": 7.0
+      },
+      "comp_wah": "J.H. Legendary Wah",
+      "comp_wah_settings": {
+        "AUTO_WAH_MODE": "1/4 Bar",
+        "AUTO_DETECT_SENSITIVITY": 6.0,
+        "BPM_MODE": "On"
+      },
+      "reverb": "Hall Natural",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 6
+      }
+    },
+    "description": "Forced Marshall + Wah + Booster (Clapton's Blind Faith Blues-Rock)"
+  },
+  "auto_crossroads_wav": {
+    "keywords": [
+      "crossroads",
+      "cream",
+      "clapton",
+      "blues",
+      "rock"
+    ],
+    "description": "Eric Clapton's legendary live blues-rock tone with Marshall stack crunch, warm sustain, and slight compression from tube saturation",
+    "source": "auto",
+    "validated": false,
+    "confidence": "high",
+    "forced_gear": {
+      "amp": "Plexiglas",
+      "reverb": "Hall Natural",
+      "guitar": {
+        "guitar": "Mexican Strat (SSH)",
+        "pickup": "Bridge Humbucker",
+        "volume": 10,
+        "tone": 8
+      }
+    },
+    "real_world_amp": "Marshall Super Lead 100",
+    "amp_manufacturer": "Marshall"
+  },
+  "auto_hypertension_wav": {
+    "keywords": [
+      "massive",
+      "attack",
+      "teardrop",
+      "mezzanine",
+      "trip",
+      "hop"
+    ],
+    "description": "Clean, atmospheric guitar with subtle effects processing and ambient reverb",
+    "source": "auto",
+    "validated": false,
+    "confidence": "medium",
+    "forced_gear": {
+      "amp": "Black Duo",
+      "mod_eq": "Chorus",
+      "mod_settings": {
+        "E_LEVEL": 3.0,
+        "RATE": 2.0,
+        "DEPTH": 4.0,
+        "TONE": 6.0
+      },
+      "delay": "Digital Delay",
+      "delay_settings": {
+        "E_LEVEL": 4.0,
+        "F_BACK": 3.0,
+        "D_TIME": 50,
+        "MODE": "500ms",
+        "BPM_MODE": "Off"
+      },
+      "comp_wah": "LA Comp",
+      "comp_settings": {
+        "GAIN": 3.0,
+        "PEAK_REDUCTION": 4.0,
+        "LIMIT_COMPRESS_TOGGLE": "Compress"
+      },
+      "reverb": "Hall Ambient",
+      "guitar": {
+        "guitar": "American Pro II Strat (SSS)",
+        "pickup": "Position 5 (Neck)",
+        "volume": 8,
+        "tone": 7
+      }
+    },
+    "real_world_amp": "Fender Twin Reverb",
+    "amp_manufacturer": "Fender"
   }
 }

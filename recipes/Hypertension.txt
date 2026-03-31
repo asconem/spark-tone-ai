@@ -1,0 +1,32 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): Hypertension.wav
+📅 Date: 2026-03-30 21:01:51
+🎯 DSP Analysis: Gain 0.55 | Presence 0.28 | Air 0.42 | Mids 0.63 | Width 0.71 | BPM 62
+📊 Confidence: Tier C — LOW — Pure DSP analysis (no preset data)
+✅ Coherence: Grade A (100/100)
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🔬
+   • PICKUP: Position 3 (Middle)
+   • VOLUME: 10
+   • TONE: 7
+--------------------------------------------------
+[AMP] PLEXIGLAS 🔬
+   • BASS: 7.1              • GAIN: 4.6           
+   • MIDDLE: 8.6            • TREBLE: 5.6         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: 0.0             • 1600HZ: 2.4         
+   • 200HZ: 0.0             • 3200HZ: -0.6        
+   • 400HZ: 1.1             • 800HZ: 0.7          
+--------------------------------------------------
+[DELAY] VINTAGE DELAY 🔬
+   • BPM_MODE: On           • ECHO: 3.8           
+   • INTENSITY: 5.0         • REPEAT_RATE: 1/8d   
+--------------------------------------------------
+[REVERB] ROOM STUDIO A 🔬
+   • DAMPING: 4.6           • DWELL: 4.3          
+   • HIGH_CUT: 5.7          • LEVEL: 5.3          
+   • LOW_CUT: 5.2           • TIME: 4.1           
+--------------------------------------------------

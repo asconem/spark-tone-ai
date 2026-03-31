@@ -1,0 +1,40 @@
+🎸 SPARK 2 RECIPE (HYBRID MODE): Runaway Jim.wav
+📅 Date: 2026-03-28 10:23:16
+🎯 DSP Analysis: Gain 0.60 | Presence 0.27 | Air 0.37 | Mids 0.71 | Width 0.48 | BPM 68
+📊 Confidence: Tier B — MEDIUM — API-researched preset (unverified)
+✅ Coherence: Grade A (92/100) — No gate on a drive+gain=0.60 recipe — expect audible noise between notes
+
+Legend: 🔬 = Analysis-Based | 🎨 = Artist Signature | 🤖 = API-Researched
+==================================================
+[GUITAR] AMERICAN PRO II STRAT (SSS) 🎨🔬
+   • PICKUP: Position 4 (Neck+Mid)
+   • VOLUME: 10
+   • TONE: 6
+--------------------------------------------------
+[COMP/WAH] RED COMP 🎨
+   • OUTPUT: 6.0            • SENSITIVITY: 4.0    
+--------------------------------------------------
+[DRIVE] TUBE DRIVE 🔬
+   • LEVEL: 7.0             • OVERDRIVE: 2.5      
+   • TONE: 3.8           
+--------------------------------------------------
+[AMP] BLACK DUO 🎨
+   • BASS: 7.5              • GAIN: 6.9           
+   • MIDDLE: 9.0            • TREBLE: 4.8         
+   • VOLUME: 8.0         
+--------------------------------------------------
+[MOD/EQ] GUITAR EQ 🔬
+   • 100HZ: 0.5             • 1600HZ: 5.7         
+   • 200HZ: 0.4             • 3200HZ: -4.0        
+   • 400HZ: 2.6             • 800HZ: 1.5          
+--------------------------------------------------
+[DELAY] ECHO TAPE 🔬
+   • BPM_MODE: On           • SHORT/LONG: 1/8d    
+   • SUSTAIN: 3.8           • TONE: 3.6           
+   • VOLUME: 2.9         
+--------------------------------------------------
+[REVERB] HALL MEDIUM 🎨
+   • DAMPING: 3.8           • DWELL: 4.0          
+   • HIGH_CUT: 6.4          • LEVEL: 4.1          
+   • LOW_CUT: 5.4           • TIME: 3.8           
+--------------------------------------------------

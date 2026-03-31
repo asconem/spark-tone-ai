@@ -1,0 +1,84 @@
+{
+  "song": "Down With Disease.wav",
+  "date": "2026-03-28T10:13:35.715438",
+  "confidence": {
+    "tier": "B",
+    "label": "MEDIUM \u2014 API-researched preset (unverified)",
+    "coherence_score": 92,
+    "coherence_grade": "A",
+    "coherence_flags": [
+      "No gate on a drive+gain=0.60 recipe \u2014 expect audible noise between notes"
+    ]
+  },
+  "dsp": {
+    "gain": 0.603,
+    "mids": 0.673,
+    "presence": 0.311,
+    "air": 0.395,
+    "width": 0.628,
+    "bpm": 61.5
+  },
+  "guitar": {
+    "guitar": "American Pro II Strat (SSS)",
+    "pickup": "Position 4 (Neck+Mid)",
+    "volume": 10,
+    "tone": 7.0
+  },
+  "guitar_source": "\ud83c\udfa8\ud83d\udd2c",
+  "rig": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": "Tube Drive",
+    "amp": "Lux Verb",
+    "mod_eq": "Chorus",
+    "delay": "Digital Delay",
+    "reverb": "Hall Medium"
+  },
+  "settings": {
+    "gate": null,
+    "comp_wah": null,
+    "drive": {
+      "OVERDRIVE": 2.5,
+      "TONE": 4.2,
+      "LEVEL": 7.0
+    },
+    "amp": {
+      "GAIN": 5.895904226821875,
+      "TREBLE": 4.3,
+      "MIDDLE": 9.8,
+      "BASS": 6.5,
+      "VOLUME": 7.9
+    },
+    "mod_eq": {
+      "E_LEVEL": 6.0,
+      "RATE": 4.0,
+      "DEPTH": 5.0,
+      "TONE": 7.0
+    },
+    "delay": {
+      "E_LEVEL": 4.0,
+      "F_BACK": 3.0,
+      "D_TIME": 50,
+      "MODE": "500ms"
+    },
+    "reverb": {
+      "LEVEL": 4.6,
+      "TIME": 3.9,
+      "DAMPING": 4.2,
+      "DWELL": 4.0,
+      "LOW_CUT": 5.4,
+      "HIGH_CUT": 6.1
+    }
+  },
+  "sources": {
+    "gate": "",
+    "comp_wah": "",
+    "drive": "\ud83d\udd2c",
+    "amp": "\ud83c\udfa8",
+    "mod_eq": "\ud83c\udfa8",
+    "delay": "\ud83c\udfa8",
+    "reverb": "\ud83c\udfa8"
+  },
+  "real_world_amp": "Fender Deluxe Reverb",
+  "amp_manufacturer": "Fender"
+}
