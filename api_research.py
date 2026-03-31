@@ -795,6 +795,14 @@ def save_preset(preset, song_name, presets_path="artist_presets.json"):
             print(f"   ⚠️ Hand-curated preset exists for this keyword. Use --compare instead.")
             return None
 
+    # Ensure the cleaned song name is always a keyword so check_artist_override
+    # can find this preset on re-lookup. The API may return unrelated keywords
+    # (e.g. wrong artist), but the song name itself must always match.
+    song_keyword = re.sub(r'\.(wav|mp3|flac|ogg|m4a)$', '', song_name.lower())
+    song_keyword = re.sub(r'[^a-z0-9]+', '', song_keyword)
+    if song_keyword and song_keyword not in [re.sub(r'[^a-z0-9]', '', kw.lower()) for kw in preset.get("keywords", [])]:
+        preset.setdefault("keywords", []).insert(0, song_keyword)
+
     presets[key] = preset
 
     with open(presets_path, 'w') as f:

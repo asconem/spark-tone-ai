@@ -70,6 +70,17 @@ MIDS_MIN = 0.30   # Scooped tones (metal, Muff-driven)
 MIDS_MAX = 0.65   # Mid-forward tones (blues, TS-driven)
 MIDS_RANGE = MIDS_MAX - MIDS_MIN  # 0.35
 
+# Observed typical ranges for split mids (×2.5 scaled sub-bands, 0-1 clipped).
+# Lower mids (500-1000Hz): body/warmth. Upper mids (1000-2000Hz): presence/bite.
+# Used by the EQ to target bands independently instead of collapsing all mids into one.
+# Initial estimates — will tighten after calibration runs on the full library.
+LOWER_MIDS_MIN = 0.25
+LOWER_MIDS_MAX = 0.75
+LOWER_MIDS_RANGE = LOWER_MIDS_MAX - LOWER_MIDS_MIN  # 0.50
+UPPER_MIDS_MIN = 0.20
+UPPER_MIDS_MAX = 0.65
+UPPER_MIDS_RANGE = UPPER_MIDS_MAX - UPPER_MIDS_MIN  # 0.45
+
 # Observed range for low energy ratio (80-500Hz proportion of total energy).
 # Used to normalize bass content to 0-1 for BASS knob and EQ formulas.
 BASS_MIN = 0.20   # Thin/bright tones
@@ -1107,20 +1118,26 @@ def analyze_tone(file_path):
     loud_energy = frame_energy[loud_mask]
     loud_weights = loud_energy / (np.sum(loud_energy) + 1e-10)
 
-    mids_range     = (freqs >= 500)  & (freqs <= 2000)
-    presence_range = (freqs >= 1200) & (freqs <= 2400)
-    air_range      = (freqs >= 2400) & (freqs <= 6800)
+    mids_range       = (freqs >= 500)  & (freqs <= 2000)
+    lower_mids_range = (freqs >= 500)  & (freqs <= 1000)   # body / warmth
+    upper_mids_range = (freqs >= 1000) & (freqs <= 2000)   # presence / bite
+    presence_range   = (freqs >= 1200) & (freqs <= 2400)
+    air_range        = (freqs >= 2400) & (freqs <= 6800)
 
     # Per-frame ratios for loud frames
     frame_totals = np.sum(S_loud, axis=0) + 1e-10  # per-frame total energy
-    mids_per_frame     = np.sum(S_loud[mids_range, :], axis=0) / frame_totals
-    presence_per_frame = np.sum(S_loud[presence_range, :], axis=0) / frame_totals
-    air_per_frame      = np.sum(S_loud[air_range, :], axis=0) / frame_totals
+    mids_per_frame       = np.sum(S_loud[mids_range, :], axis=0) / frame_totals
+    lower_mids_per_frame = np.sum(S_loud[lower_mids_range, :], axis=0) / frame_totals
+    upper_mids_per_frame = np.sum(S_loud[upper_mids_range, :], axis=0) / frame_totals
+    presence_per_frame   = np.sum(S_loud[presence_range, :], axis=0) / frame_totals
+    air_per_frame        = np.sum(S_loud[air_range, :], axis=0) / frame_totals
 
     # Energy-weighted average of loud frames
-    spark_mids     = float(np.clip(np.sum(mids_per_frame * loud_weights) * 1.5, 0, 1))
-    spark_presence = float(np.sum(presence_per_frame * loud_weights))
-    spark_air      = float(np.sum(air_per_frame * loud_weights))
+    spark_mids       = float(np.clip(np.sum(mids_per_frame * loud_weights) * 1.5, 0, 1))
+    spark_lower_mids = float(np.clip(np.sum(lower_mids_per_frame * loud_weights) * 2.5, 0, 1))
+    spark_upper_mids = float(np.clip(np.sum(upper_mids_per_frame * loud_weights) * 2.5, 0, 1))
+    spark_presence   = float(np.sum(presence_per_frame * loud_weights))
+    spark_air        = float(np.sum(air_per_frame * loud_weights))
 
     # Also compute global means for diagnostics (to see the shift)
     total_e = np.sum(S) + 1e-6
@@ -1135,7 +1152,7 @@ def analyze_tone(file_path):
     if abs(mids_shift) > 0.02 or abs(air_shift) > 0.02:
         shift_note = f"  (Δ from global mean: mids {mids_shift:+.3f}, air {air_shift:+.3f})"
 
-    print(f"   📊 Tonal: Mids={spark_mids:.3f} | Presence={spark_presence:.3f} | Air={spark_air:.3f}{shift_note}")
+    print(f"   📊 Tonal: Mids={spark_mids:.3f} (lo={spark_lower_mids:.3f} hi={spark_upper_mids:.3f}) | Presence={spark_presence:.3f} | Air={spark_air:.3f}{shift_note}")
     print(f"   📊 Loud frames: {np.sum(loud_mask)}/{S.shape[1]} ({np.sum(loud_mask)/S.shape[1]*100:.0f}%)")
 
     # === BPM DETECTION (B3) ===
@@ -1145,6 +1162,8 @@ def analyze_tone(file_path):
     return {
         'gain': spark_gain,
         'mids': spark_mids,
+        'lower_mids': spark_lower_mids,
+        'upper_mids': spark_upper_mids,
         'presence': spark_presence,
         'air': spark_air,
         'width': spark_width,
@@ -1203,56 +1222,61 @@ def score_recipe_coherence(rig, settings, features, sources):
     target_mids = features.get('mids', 0.5)
 
     # ----------------------------------------------------------
-    # CHECK 1: TREBLE vs air coherence
-    # TREBLE knob range 0-10. Expected: low air → low-mid TREBLE,
-    # high air → high TREBLE. Tolerance ±2.5 before flagging.
-    # Air range: 0.328 (dark) → 0.618 (bright)
-    # Mapped to expected TREBLE: 4.0 → 9.0
+    # CHECK 1: TREBLE vs air coherence (amp-relative formula)
+    # Expected: 5.0 + (air_norm - amp_base_treble) * K_treble_knob
+    # Tolerance ±3.0 before flagging (wider than before because
+    # relative formula produces a broader range of valid values).
     # ----------------------------------------------------------
     treble_val = amp_settings.get('TREBLE')
     if treble_val is not None and amp_obj:
         air_norm = max(0.0, min(1.0, (target_air - AIR_MIN) / AIR_RANGE))
-        expected_treble = 4.0 + air_norm * 5.0
+        amp_base_treble = amp_obj['base_tone'].get('treble', 0.5)
+        expected_treble = 5.0 + (air_norm - amp_base_treble) * 7.0
+        expected_treble = min(10.0, max(1.0, expected_treble))
         treble_delta = abs(float(treble_val) - expected_treble)
         if treble_delta > 3.0:
             direction = "too high" if float(treble_val) > expected_treble else "too low"
             flags.append(
-                f"TREBLE {treble_val:.1f} is {direction} for stem air={target_air:.3f} "
+                f"TREBLE {treble_val:.1f} is {direction} for stem air={target_air:.3f} on {amp_obj['name']} "
                 f"(expected ~{expected_treble:.1f}, delta={treble_delta:.1f})"
             )
             deductions += min(20, int(treble_delta * 4))
 
     # ----------------------------------------------------------
-    # CHECK 2: MIDDLE vs mids coherence
-    # Expected: mids normalized 0-1 → MIDDLE 2.0-9.0
+    # CHECK 2: MIDDLE vs mids coherence (amp-relative formula)
+    # Expected: 5.0 + (mids_norm - amp_base_mids) * K_mids_knob
     # ----------------------------------------------------------
     middle_val = amp_settings.get('MIDDLE')
-    if middle_val is not None:
+    if middle_val is not None and amp_obj:
         mids_norm = max(0.0, min(1.0, (target_mids - MIDS_MIN) / MIDS_RANGE))
-        expected_middle = 2.0 + mids_norm * 7.0
+        amp_base_mids = amp_obj['base_tone'].get('mids', 0.5)
+        expected_middle = 5.0 + (mids_norm - amp_base_mids) * 8.0
+        expected_middle = min(10.0, max(1.0, expected_middle))
         middle_delta = abs(float(middle_val) - expected_middle)
         if middle_delta > 3.0:
             direction = "too high" if float(middle_val) > expected_middle else "too low"
             flags.append(
-                f"MIDDLE {middle_val:.1f} is {direction} for stem mids={target_mids:.3f} "
+                f"MIDDLE {middle_val:.1f} is {direction} for stem mids={target_mids:.3f} on {amp_obj['name']} "
                 f"(expected ~{expected_middle:.1f}, delta={middle_delta:.1f})"
             )
             deductions += min(15, int(middle_delta * 3))
 
     # ----------------------------------------------------------
-    # CHECK 2B: BASS vs low_energy_ratio coherence
-    # Expected: low_energy normalized 0-1 (range 0.20-0.50) → BASS 2.5-7.5
+    # CHECK 2B: BASS vs low_energy_ratio coherence (amp-relative formula)
+    # Expected: 5.0 + (bass_norm - amp_base_bass) * K_bass_knob
     # ----------------------------------------------------------
     bass_val = amp_settings.get('BASS')
     target_low_energy = features.get('low_energy_ratio', 0.33)
-    if bass_val is not None:
+    if bass_val is not None and amp_obj:
         bass_norm = max(0.0, min(1.0, (target_low_energy - BASS_MIN) / BASS_RANGE))
-        expected_bass = 2.5 + bass_norm * 5.0
+        amp_base_bass = amp_obj['base_tone'].get('bass', 0.5)
+        expected_bass = 5.0 + (bass_norm - amp_base_bass) * 6.0
+        expected_bass = min(10.0, max(1.0, expected_bass))
         bass_delta = abs(float(bass_val) - expected_bass)
         if bass_delta > 2.5:
             direction = "too high" if float(bass_val) > expected_bass else "too low"
             flags.append(
-                f"BASS {bass_val:.1f} is {direction} for stem low_energy={target_low_energy:.3f} "
+                f"BASS {bass_val:.1f} is {direction} for stem low_energy={target_low_energy:.3f} on {amp_obj['name']} "
                 f"(expected ~{expected_bass:.1f}, delta={bass_delta:.1f})"
             )
             deductions += min(15, int(bass_delta * 3))
@@ -1604,6 +1628,8 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
     #   features['harmonic_coverage']   — fraction of frames with reliable pitch
     #   features['low_energy_ratio']    — proportion of energy in 80-500Hz band
     target_low_energy = features.get('low_energy_ratio', 0.33)
+    target_lower_mids = features.get('lower_mids', target_mids * 0.55)  # fallback: estimate from combined
+    target_upper_mids = features.get('upper_mids', target_mids * 0.45)
 
     db = load_gear_db()
     if not db: return
@@ -1844,48 +1870,39 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
             else:
                 # Family has no non-bass models — fall back to full pool
                 print(f"   ⚠️  No eligible amps in {constrained_amp_family} family after bass filter — using full pool")
-        # Normalize air to 0-1 scale for fair distance comparison against base_tone treble.
-        # Air (2400-6800Hz, range 0.328-0.618) replaces presence (1200-2400Hz, std=0.021)
-        # which had no discrimination across songs.
+        # Normalize features to 0-1 for fair distance comparison against base_tone.
         air_norm = float(np.clip((target_air - AIR_MIN) / AIR_RANGE, 0, 1))
+        mids_norm = float(max(0.0, min(1.0, (target_mids - MIDS_MIN) / MIDS_RANGE)))
+        bass_norm = float(max(0.0, min(1.0, (target_low_energy - BASS_MIN) / BASS_RANGE)))
 
-        # Harmonic type affinity: when harmonic analysis confidently identifies
-        # tube or solid-state character, penalize amps of the wrong type.
+        # Harmonic type affinity: penalize amp type mismatches.
         # Conservative: 0.3 penalty only fires on clear mismatches.
-        # Won't override a strong gain/treble/mids match, but breaks ties
-        # in favor of the right amp type.
-        #
-        # Guitar solid-state amps in the pool: Silver 120 (JC-120), Checkmate (Teisco)
-        # Everything else is tube. Most guitar tones should select tube, so this
-        # primarily prevents the JC-120 from being selected for warm tube recordings.
         harm_ratio = features.get('harmonic_ratio', 1.0)
 
         def amp_distance(a):
-            # L1: Non-linear gain model — sigmoid transform spreads the
-            # clean-to-crunch zone (0.20-0.50) where amp character matters most.
+            # Amp selection prioritizes TONAL CHARACTER over gain matching.
             #
-            # Without this, a song at gain=0.30 barely distinguishes between
-            # AC Boost (0.35) and Checkmate (0.40) — linear distance is 0.03 vs 0.07.
-            # The sigmoid centered at 0.45 with steepness 8 maps:
-            #   0.10 → 0.06   (clean amps spread apart)
-            #   0.25 → 0.15   
-            #   0.35 → 0.29   (crunch zone has maximum discrimination)
-            #   0.45 → 0.50
-            #   0.60 → 0.73
-            #   0.80 → 0.93   (high-gain amps compressed — gain dominates anyway)
-            #   0.95 → 0.98
+            # On a modeling amp, gain is easily adjusted with the GAIN knob.
+            # What you CAN'T change is the amp's fundamental voicing — how its
+            # EQ circuit shapes mids, treble, and bass. So we weight tonal
+            # dimensions (mids, air, bass) more heavily than gain.
             #
-            # Both song gain and amp base_tone gain go through the same transform
-            # so the distance is measured in sigmoid-space.
+            # Gain still uses a sigmoid transform to spread the clean-to-crunch
+            # zone where amp character distinctions matter most.
+            #
+            # Weights: gain 1.0, air 1.5, mids 1.5, bass 1.0
+            # This means a perfect tonal match with moderate gain offset beats
+            # a perfect gain match with poor tonal character.
             def gain_sigmoid(g):
                 return 1.0 / (1.0 + math.exp(-8.0 * (g - 0.45)))
 
             sg_song = gain_sigmoid(target_gain)
             sg_amp = gain_sigmoid(a['base_tone']['gain'])
 
-            d = (((sg_song - sg_amp)**2) * 3.0 +
-                 (air_norm - a['base_tone']['treble'])**2 +
-                 (target_mids - a['base_tone']['mids'])**2 * 0.5)
+            d = (((sg_song - sg_amp)**2) * 1.0 +
+                 (air_norm - a['base_tone']['treble'])**2 * 1.5 +
+                 (mids_norm - a['base_tone']['mids'])**2 * 1.5 +
+                 (bass_norm - a['base_tone']['bass'])**2 * 1.0)
             # Type mismatch penalty (only when harmonic analysis is confident)
             amp_type = a.get('type', 'Tube')
             if harm_ratio > 1.3 and amp_type == 'Solid State':
@@ -1894,8 +1911,18 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
                 d += 0.3  # hard-clip harmonics → penalize tube amps
             return d
 
-        rig['amp'] = min(all_amps, key=amp_distance)
-        sources['amp'] = "🔬"  # Analysis-based selection marker
+        # Rank all amps and show top 3 candidates with reasoning.
+        ranked_amps = sorted(all_amps, key=amp_distance)
+        rig['amp'] = ranked_amps[0]
+        sources['amp'] = "🔬"
+
+        # Amp selection transparency: show why this amp won
+        print(f"   📊 Amp selection (target: gain={target_gain:.2f} air_n={air_norm:.2f} mids_n={mids_norm:.2f} bass_n={bass_norm:.2f}):")
+        for rank, a in enumerate(ranked_amps[:3]):
+            bt = a['base_tone']
+            d = amp_distance(a)
+            tag = " ← SELECTED" if rank == 0 else ""
+            print(f"      {rank+1}. {a['name']:20s} d={d:.4f}  (g={bt['gain']:.2f} t={bt['treble']:.2f} m={bt['mids']:.2f} b={bt['bass']:.2f}){tag}")
 
     # ==========================================================
     # DSP-DRIVEN UTILITY EFFECTS
@@ -2914,73 +2941,86 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
                 else:
                     treble_comp = 0.0            # neutral, residual is accurate
 
-            # --- Last-Mile EQ: Residual gap between target and predicted rig output ---
+            # --- Last-Mile EQ: Post-Knob Residual Correction ---
             #
-            # Philosophy: The amp selection + knob formulas get the rig "close."
-            # The EQ is the final sharpening pass — it only corrects what the amp
-            # and drive leave uncovered. When the amp is well-matched, residuals
-            # are small and the EQ barely moves. When the amp is a poor character
-            # match (e.g. dark amp targeting a bright Brian May tone), residuals
-            # are large and the EQ does meaningful work.
+            # Philosophy: The amp knobs (TREBLE/MIDDLE/BASS) are set relative to
+            # the amp's base_tone to close the gap toward the target. But amp
+            # character resists — a dark Marshall pushed to TREBLE 9 won't be as
+            # bright as a Fender Twin at TREBLE 9. The EQ handles whatever gap
+            # the knobs couldn't fully close.
             #
-            # Formula:
-            #   residual = (target - amp_predicted_output) × (1 - AMP_KNOB_COVERAGE)
-            #   eq_band  = residual × K - drive_compensation
+            # Architecture:
+            #   1. Compute the gap between target and amp base_tone (normalized 0-1)
+            #   2. Model how much of that gap the amp knobs close (EFFECTIVENESS)
+            #   3. The residual (gap × (1 - EFFECTIVENESS)) is what the EQ corrects
             #
-            # AMP_KNOB_COVERAGE: fraction of the amp's base_tone→target gap that the
-            # amp's TREBLE/MIDDLE knobs actually close. The remainder is the EQ's job.
-            # Set conservatively (0.35) because amp character (e.g. a Marshall's natural
-            # darkness) resists the knob more than a simple linear correction implies.
-            AMP_KNOB_COVERAGE = 0.35
+            # This eliminates double-compensation: the knobs and EQ work on different
+            # portions of the same gap, not independently on the whole gap.
+            #
+            # AMP_KNOB_EFFECTIVENESS: fraction of the base→target gap that the amp's
+            # tone stack actually closes when the knob is set. 0.70 means knobs close
+            # 70% of the gap and the EQ handles the remaining 30%.
+            # Modeling amps have good knob response but amp character still resists,
+            # especially at extremes (dark amp won't get truly bright just from knobs).
+            AMP_KNOB_EFFECTIVENESS = 0.70
 
-            # Amp's natural predicted output in feature-space units.
-            # base_tone fields (0-1) map to the measured feature ranges.
+            # Gaps in normalized 0-1 space (same values the knob formulas use).
             amp_bt = rig['amp']['base_tone'] if rig['amp'] else {}
-            amp_predicted_air  = AIR_MIN  + amp_bt.get('treble', 0.5) * AIR_RANGE
-            amp_predicted_mids = MIDS_MIN + amp_bt.get('mids',   0.5) * MIDS_RANGE
-            amp_predicted_bass = BASS_MIN + amp_bt.get('bass',   0.5) * BASS_RANGE
+            amp_base_treble = amp_bt.get('treble', 0.5)
+            amp_base_mids   = amp_bt.get('mids',   0.5)
+            amp_base_bass   = amp_bt.get('bass',   0.5)
 
-            # Residuals: the gap left after the amp knobs do their best.
-            air_residual   = (target_air        - amp_predicted_air)  * (1.0 - AMP_KNOB_COVERAGE)
-            mids_residual  = (target_mids       - amp_predicted_mids) * (1.0 - AMP_KNOB_COVERAGE)
-            bass_residual  = (target_low_energy - amp_predicted_bass) * (1.0 - AMP_KNOB_COVERAGE)
+            eq_air_norm  = np.clip((target_air - AIR_MIN) / AIR_RANGE, 0, 1)
+            eq_bass_norm = max(0.0, min(1.0, (target_low_energy - BASS_MIN) / BASS_RANGE))
 
-            # Sensitivity constants: dB of EQ per unit of residual gap.
-            # Calibrated so a large mismatch (amp off by the full AIR_RANGE) yields
-            # ~8 dB of correction; a well-matched amp yields near-zero EQ.
-            # K_air  tuned for AIR_RANGE=0.290:  0.290 × 0.65 × K_air ≈ 8  → K≈42
-            # K_mids tuned for MIDS_RANGE=0.350: 0.350 × 0.65 × K_mids ≈ 7 → K≈31
-            # K_bass tuned for BASS_RANGE=0.300: 0.300 × 0.65 × K_bass ≈ 6 → K≈31
-            K_air  = 42.0
-            K_mids = 31.0
-            K_bass = 31.0
+            # Split mids: lower (500-1000Hz) and upper (1000-2000Hz) normalized
+            # independently. Both compared against the same amp base_tone.mids
+            # since the gear DB has a single mids value. The split lets the EQ
+            # distinguish warm/thick tones (high lower, low upper) from
+            # honky/cutting tones (low lower, high upper).
+            eq_lower_mids_norm = max(0.0, min(1.0, (target_lower_mids - LOWER_MIDS_MIN) / LOWER_MIDS_RANGE))
+            eq_upper_mids_norm = max(0.0, min(1.0, (target_upper_mids - UPPER_MIDS_MIN) / UPPER_MIDS_RANGE))
 
-            # 100Hz: drive bass compensation only — amp BASS knob tracks target.
-            # No residual term: the BASS knob formula maps target_low_energy directly,
-            # so the residual is near-zero for all non-preset songs.
-            eq_100 = round(np.clip(-bass_comp, -10.0, 10.0), 1)
+            treble_gap     = eq_air_norm        - amp_base_treble
+            lower_mids_gap = eq_lower_mids_norm - amp_base_mids
+            upper_mids_gap = eq_upper_mids_norm - amp_base_mids
+            bass_gap       = eq_bass_norm       - amp_base_bass
 
-            # 200Hz: bass compensation, slightly attenuated vs 100Hz
-            eq_200 = round(np.clip(-bass_comp * 0.8, -10.0, 10.0), 1)
+            # Post-knob residuals: what the knobs can't fully close.
+            # Well-matched amp (small gap): residuals near zero, EQ barely moves.
+            # Mismatched amp (large gap): residuals drive meaningful EQ correction.
+            air_residual        = treble_gap     * (1.0 - AMP_KNOB_EFFECTIVENESS)
+            lower_mids_residual = lower_mids_gap * (1.0 - AMP_KNOB_EFFECTIVENESS)
+            upper_mids_residual = upper_mids_gap * (1.0 - AMP_KNOB_EFFECTIVENESS)
+            bass_residual       = bass_gap       * (1.0 - AMP_KNOB_EFFECTIVENESS)
 
-            # 400Hz: lower-mids residual (46% weight).
-            # Factor calibrated so a full MIDS_RANGE gap yields ~4 dB correction.
-            eq_400 = round(np.clip(mids_residual * K_mids * 0.46, -10.0, 10.0), 1)
+            # Sensitivity constant: dB of EQ correction per unit of residual.
+            # Residuals are in normalized 0-1 units. Worst-case residual ≈ 0.3
+            # (full 1.0 gap × 0.30 leftover). K=35 gives 0.3 × 35 = 10.5 dB max,
+            # clamped to ±10. Well-matched amps: residual ≈ 0.03 → ~1 dB.
+            K_eq = 35.0
 
-            # 800Hz: mid residual (27% weight).
-            # Low factor because the amp MIDDLE knob targets 800Hz directly —
-            # it covers most of the gap, leaving little for the EQ.
-            eq_800 = round(np.clip(mids_residual * K_mids * 0.27, -10.0, 10.0), 1)
+            # 100Hz: bass residual + drive compensation.
+            eq_100 = round(np.clip(bass_residual * K_eq - bass_comp, -10.0, 10.0), 1)
 
-            # 1600Hz: upper-mids / bite (100% weight).
-            # Highest factor: presence range is least controlled by amp MIDDLE knob,
-            # and mids_residual captures the Muff scoop peak naturally.
-            eq_1600 = round(np.clip(mids_residual * K_mids * 1.00, -10.0, 10.0), 1)
+            # 200Hz: same as 100Hz but attenuated (upper bass rolls off)
+            eq_200 = round(np.clip(bass_residual * K_eq * 0.8 - bass_comp * 0.8, -10.0, 10.0), 1)
 
-            # 3200Hz: the Rangemaster zone — key last-mile treble correction.
-            # Dark amp + bright target → large air_residual → EQ cranked.
-            # treble_comp sign: negative = drive cuts treble → EQ adds more.
-            eq_3200 = round(np.clip(air_residual * K_air - treble_comp, -10.0, 10.0), 1)
+            # 400Hz: lower-mids — driven by lower_mids_residual (500-1000Hz).
+            # Weight 0.7: 400Hz is in the heart of the lower-mid band.
+            eq_400 = round(np.clip(lower_mids_residual * K_eq * 0.70, -10.0, 10.0), 1)
+
+            # 800Hz: bridges lower and upper mids — blend of both residuals.
+            # The amp MIDDLE knob targets this range directly, so weight is modest.
+            eq_800 = round(np.clip((lower_mids_residual * 0.5 + upper_mids_residual * 0.5) * K_eq * 0.35, -10.0, 10.0), 1)
+
+            # 1600Hz: upper-mids / bite — driven by upper_mids_residual (1000-2000Hz).
+            # Weight 0.9: presence range, least covered by amp MIDDLE knob.
+            eq_1600 = round(np.clip(upper_mids_residual * K_eq * 0.90, -10.0, 10.0), 1)
+
+            # 3200Hz: treble / air correction.
+            # treble_comp sign: negative = drive cut treble → EQ adds more.
+            eq_3200 = round(np.clip(air_residual * K_eq - treble_comp, -10.0, 10.0), 1)
 
             # LEVEL: output compensation based on total boost/cut.
             # Each dB of average boost should reduce output to maintain perceived
@@ -3006,64 +3046,73 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
     if not settings['amp']:
         drive_boost = rig['drive']['sonic_profile'].get('gain_boost', 0) if (rig['drive'] and 'sonic_profile' in rig['drive']) else 0
 
-        # Amp GAIN: how much the drive "takes over" the distortion role.
-        # Boosts (gb < 0.3): transparent, amp still does all the gain work.
-        # Overdrive (0.3-0.6): shared — drive colors, amp still matters.
-        # Fuzz/distortion (gb > 0.6): drive IS the distortion, amp provides body.
+        # Amp GAIN: same amp-relative approach as TREBLE/MIDDLE/BASS.
         #
-        # The old formula subtracted the full drive_boost from target_gain,
-        # treating amp+drive as additive (total = base + boost). This meant
-        # any moderate-gain song with a decent amp hit the 2.0 floor —
-        # Plexi(0.6) + TS(0.5) = 1.1 vs target 0.65 → amp slammed to minimum.
+        # Start at 5.0 (neutral). Adjust based on gap between the target gain
+        # (reduced by drive contribution) and the amp's base_tone gain.
         #
-        # New formula: graduated reduction based on drive character.
-        # A Muff (takeover=1.0, gb=0.9) reduces amp target by 0.36.
-        # A TS (takeover=0.4, gb=0.5) reduces amp target by only 0.08.
+        # Drive contribution: drives add gain on top of the amp. Subtract
+        # a portion of the drive's gain_boost so the amp isn't pushed too hard.
+        # Graduated: transparent boosts (gb < 0.3) don't reduce amp target.
+        # Heavy fuzz (gb > 0.8) takes over most of the distortion role.
         drive_takeover = min(1.0, max(0.0, (drive_boost - 0.3) / 0.5))
         amp_target = target_gain - (drive_takeover * drive_boost * 0.4)
-        # Gain multiplier: scales with the distance between target and base_tone.
-        # When the amp is well-matched (small delta), 10× is appropriate.
-        # When the amp is far off (large delta, e.g. Twin at 0.15 targeting 0.65),
-        # the raw 10× would slam to the ceiling. Soften the multiplier for large deltas
-        # using an inverse-distance curve: multiplier = 10 / (1 + |delta| * 3).
-        # Examples:
-        #   Plexi (base=0.6, target=0.65): delta=0.05, mult=9.5 → gain=5.5 ✓
-        #   Twin (base=0.15, target=0.55): delta=0.40, mult=4.5 → gain=6.8 (was 9.0)
-        #   Mesa (base=0.85, target=0.50): delta=-0.35, mult=4.8 → gain=3.3 (was 1.5)
-        base_tone_gain = rig['amp']['base_tone']['gain']
-        gain_delta = amp_target - base_tone_gain
-        gain_multiplier = 10.0 / (1.0 + abs(gain_delta) * 3.0)
-        amp_gain = 5.0 + gain_delta * gain_multiplier
 
-        gain_floor = 2.0 if rig['drive'] else 0.0
-        settings['amp']['GAIN'] = min(10.0, max(gain_floor, amp_gain))
-        # TREBLE: Driven by spark_air (2400-6800Hz energy ratio, range 0.328-0.618).
-        # Previous versions used spark_presence (1200-2400Hz) but that band has
-        # std=0.021 across 48 stems — no discrimination. Air has real spread and
-        # correctly ranks songs by brightness (Gravity=0.328 dark, Cherub Rock=0.618 bright).
+        # Linear mapping: K=7 means a 0.5-unit gap moves the knob 3.5 units.
+        # Examples:
+        #   Plexi (base=0.6, target=0.55): gap=-0.05 → GAIN=4.65
+        #   Twin (base=0.15, target=0.55): gap=+0.40 → GAIN=7.8
+        #   Mesa (base=0.85, target=0.50): gap=-0.35 → GAIN=2.55
+        base_tone_gain = rig['amp']['base_tone']['gain']
+        gain_gap = amp_target - base_tone_gain
+        K_gain_knob = 7.0
+        amp_gain = 5.0 + gain_gap * K_gain_knob
+
+        gain_floor = 2.0 if rig['drive'] else 0.5
+        settings['amp']['GAIN'] = round(min(10.0, max(gain_floor, amp_gain)), 1)
+        # TREBLE / MIDDLE / BASS: Amp-Relative Knob Formulas
         #
-        # Formula: 4.0 + air_normalized * 5.0 → range 4.0 (darkest) to 9.0 (brightest).
-        # Validated: Cherub Rock air=0.618 (air_normalized=1.0) → TREBLE 9.0 ✓
+        # On a modeling amp, knob response depends on the amp model's voicing.
+        # A Marshall Plexi at TREBLE 6 is darker than a Fender Twin at TREBLE 6
+        # because the Plexi's tone stack is voiced darker. The knob must account
+        # for the amp's natural character.
         #
-        # Intentionally decoupled from amp base_tone.treble. The amp's character is
-        # already expressed by which amp was selected (base_tone drives the distance
-        # formula). Using it again here double-counted and produced absurd values
-        # (TREBLE -3.5 → floored at 1.5) when a bright amp was chosen for a dark song.
-        # The knob should reflect the song's brightness, not punish the amp mismatch twice.
+        # Architecture: Start at 5.0 (neutral midpoint). Adjust up/down based on
+        # the GAP between the target tone and the amp's base_tone. A well-matched
+        # amp needs minimal correction (knobs near 5). A mismatched amp gets
+        # larger corrections.
+        #
+        # K factor: how many knob units per 1.0 unit of normalized gap.
+        # K=7 means a full 0→1 gap (darkest amp targeting brightest tone) produces
+        # a 7-unit swing (5.0 → 12.0, clamped to 10). Most real gaps are 0.1-0.4,
+        # producing 0.7-2.8 unit adjustments — well within the usable knob range.
+        #
+        # Examples with K_treble=7:
+        #   Plexi (base=0.4) targeting bright (air_norm=0.8): gap=+0.4 → TREBLE=7.8
+        #   Plexi (base=0.4) targeting dark (air_norm=0.3):   gap=-0.1 → TREBLE=4.3
+        #   Twin (base=0.75) targeting dark (air_norm=0.3):   gap=-0.45 → TREBLE=1.9
+        #   Insane (base=0.7) targeting bright (air_norm=0.8): gap=+0.1 → TREBLE=5.7
+
+        amp_bt = rig['amp']['base_tone'] if rig['amp'] else {}
+        amp_base_treble = amp_bt.get('treble', 0.5)
+        amp_base_mids = amp_bt.get('mids', 0.5)
+        amp_base_bass = amp_bt.get('bass', 0.5)
+
         air_normalized = np.clip((target_air - AIR_MIN) / AIR_RANGE, 0, 1)
-        settings['amp']['TREBLE'] = round(min(10.0, max(4.0, 4.0 + air_normalized * 5.0)), 1)
-        # MIDDLE: Driven by target_mids (500-2000Hz, typical range 0.30-0.65).
-        # Normalize mids to 0-1 using observed range, then map to full knob spread.
-        # Old formula (3.0 + target_mids * 6.0) only used 21% of knob range (4.8-6.9).
-        # New formula: normalize then spread across 2.0-9.0 (7-unit range).
         mids_normalized = max(0.0, min(1.0, (target_mids - MIDS_MIN) / MIDS_RANGE))
-        settings['amp']['MIDDLE'] = round(min(10.0, max(2.0, 2.0 + mids_normalized * 7.0)), 1)
-        # BASS: Driven by low_energy_ratio (80-500Hz energy proportion).
-        # Observed range ~0.20 (thin/bright) to ~0.50 (thick/heavy).
-        # Normalize to 0-1, then map to 2.5-7.5 knob range.
-        # Songs with more low-end energy get higher BASS; thin tones get less.
         bass_normalized = max(0.0, min(1.0, (target_low_energy - BASS_MIN) / BASS_RANGE))
-        settings['amp']['BASS'] = round(min(10.0, max(2.5, 2.5 + bass_normalized * 5.0)), 1)
+
+        K_treble_knob = 7.0
+        K_mids_knob = 8.0   # mids knob slightly more responsive (wider perceptual range)
+        K_bass_knob = 6.0   # bass knob conservative (low-end builds up fast on modelers)
+
+        treble_gap = air_normalized - amp_base_treble
+        mids_gap = mids_normalized - amp_base_mids
+        bass_gap = bass_normalized - amp_base_bass
+
+        settings['amp']['TREBLE'] = round(min(10.0, max(1.0, 5.0 + treble_gap * K_treble_knob)), 1)
+        settings['amp']['MIDDLE'] = round(min(10.0, max(1.0, 5.0 + mids_gap * K_mids_knob)), 1)
+        settings['amp']['BASS'] = round(min(10.0, max(1.0, 5.0 + bass_gap * K_bass_knob)), 1)
 
         # VOLUME: Scales inversely with gain — clean tones need more output
         # level, high-gain tones are inherently louder and need less.
@@ -3129,24 +3178,34 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
                 else:
                     v_treble_comp = 0.0
 
-            # Compute virtual EQ band values using the same formulas as the live EQ.
-            V_AMP_KNOB_COVERAGE = 0.35
+            # Compute virtual EQ band values using the same post-knob residual
+            # formulas as the live EQ section (see "Last-Mile EQ" above).
+            V_AMP_KNOB_EFFECTIVENESS = 0.70
             v_amp_bt = rig['amp']['base_tone'] if rig['amp'] else {}
-            v_amp_predicted_air  = AIR_MIN  + v_amp_bt.get('treble', 0.5) * AIR_RANGE
-            v_amp_predicted_mids = MIDS_MIN + v_amp_bt.get('mids',   0.5) * MIDS_RANGE
 
-            v_air_residual  = (target_air  - v_amp_predicted_air)  * (1.0 - V_AMP_KNOB_COVERAGE)
-            v_mids_residual = (target_mids - v_amp_predicted_mids) * (1.0 - V_AMP_KNOB_COVERAGE)
+            v_air_norm  = np.clip((target_air - AIR_MIN) / AIR_RANGE, 0, 1)
+            v_lower_mids_norm = max(0.0, min(1.0, (target_lower_mids - LOWER_MIDS_MIN) / LOWER_MIDS_RANGE))
+            v_upper_mids_norm = max(0.0, min(1.0, (target_upper_mids - UPPER_MIDS_MIN) / UPPER_MIDS_RANGE))
+            v_bass_norm = max(0.0, min(1.0, (target_low_energy - BASS_MIN) / BASS_RANGE))
 
-            V_K_air  = 42.0
-            V_K_mids = 31.0
+            v_treble_gap     = v_air_norm        - v_amp_bt.get('treble', 0.5)
+            v_lower_mids_gap = v_lower_mids_norm - v_amp_bt.get('mids', 0.5)
+            v_upper_mids_gap = v_upper_mids_norm - v_amp_bt.get('mids', 0.5)
+            v_bass_gap       = v_bass_norm       - v_amp_bt.get('bass', 0.5)
 
-            v_eq_100  = np.clip(-v_bass_comp,                    -10.0, 10.0)
-            v_eq_200  = np.clip(-v_bass_comp * 0.8,              -10.0, 10.0)
-            v_eq_400  = np.clip(v_mids_residual * V_K_mids * 0.46, -10.0, 10.0)
-            v_eq_800  = np.clip(v_mids_residual * V_K_mids * 0.27, -10.0, 10.0)
-            v_eq_1600 = np.clip(v_mids_residual * V_K_mids * 1.00, -10.0, 10.0)
-            v_eq_3200 = np.clip(v_air_residual  * V_K_air - v_treble_comp, -10.0, 10.0)
+            v_air_residual        = v_treble_gap     * (1.0 - V_AMP_KNOB_EFFECTIVENESS)
+            v_lower_mids_residual = v_lower_mids_gap * (1.0 - V_AMP_KNOB_EFFECTIVENESS)
+            v_upper_mids_residual = v_upper_mids_gap * (1.0 - V_AMP_KNOB_EFFECTIVENESS)
+            v_bass_residual       = v_bass_gap       * (1.0 - V_AMP_KNOB_EFFECTIVENESS)
+
+            V_K_eq = 35.0
+
+            v_eq_100  = np.clip(v_bass_residual * V_K_eq - v_bass_comp,                    -10.0, 10.0)
+            v_eq_200  = np.clip(v_bass_residual * V_K_eq * 0.8 - v_bass_comp * 0.8,        -10.0, 10.0)
+            v_eq_400  = np.clip(v_lower_mids_residual * V_K_eq * 0.70,                     -10.0, 10.0)
+            v_eq_800  = np.clip((v_lower_mids_residual * 0.5 + v_upper_mids_residual * 0.5) * V_K_eq * 0.35, -10.0, 10.0)
+            v_eq_1600 = np.clip(v_upper_mids_residual * V_K_eq * 0.90,                     -10.0, 10.0)
+            v_eq_3200 = np.clip(v_air_residual * V_K_eq - v_treble_comp,                   -10.0, 10.0)
 
             # Scale virtual EQ into amp knob adjustments.
             # Each EQ band is ±10dB. Amp knobs are 0-10 with ~3dB per unit
@@ -3218,6 +3277,50 @@ def build_rig(features, song_name="Unknown", skip_research=False, save_presets=T
         print(f"      ⚠️  {flag}")
     for fix in coherence["auto_fixed"]:
         print(f"      🔧 Auto-fixed: {fix}")
+
+    # --- Recipe Confidence Breakdown ---
+    # Predict what the recipe will deliver per dimension and compare to target.
+    # This tells the user BEFORE plugging in whether the recipe should match.
+    if rig['amp']:
+        amp_bt = rig['amp']['base_tone']
+        amp_s = settings.get('amp', {})
+        eff = 0.70  # AMP_KNOB_EFFECTIVENESS — must match EQ section
+
+        # Predict post-knob output per dimension
+        treble_knob = amp_s.get('TREBLE', 5.0)
+        middle_knob = amp_s.get('MIDDLE', 5.0)
+        bass_knob   = amp_s.get('BASS', 5.0)
+        gain_knob   = amp_s.get('GAIN', 5.0)
+
+        # Knob gap = (knob - 5.0) / K → the gap the knob is trying to close
+        # Predicted output = base + gap * effectiveness
+        pred_air  = amp_bt.get('treble', 0.5) + ((treble_knob - 5.0) / 7.0) * eff
+        pred_mids = amp_bt.get('mids', 0.5)   + ((middle_knob - 5.0) / 8.0) * eff
+        pred_bass = amp_bt.get('bass', 0.5)    + ((bass_knob - 5.0) / 6.0) * eff
+        pred_gain = amp_bt.get('gain', 0.5)    + ((gain_knob - 5.0) / 7.0) * eff
+
+        # Add drive contribution to gain prediction
+        if rig['drive'] and 'sonic_profile' in rig['drive']:
+            drive_gb = rig['drive']['sonic_profile'].get('gain_boost', 0)
+            pred_gain = min(1.0, pred_gain + drive_gb * 0.35)
+
+        # Normalize targets to 0-1 for comparison
+        tgt_air  = float(np.clip((target_air - AIR_MIN) / AIR_RANGE, 0, 1))
+        tgt_mids = float(max(0.0, min(1.0, (target_mids - MIDS_MIN) / MIDS_RANGE)))
+        tgt_bass = float(max(0.0, min(1.0, (target_low_energy - BASS_MIN) / BASS_RANGE)))
+        tgt_gain = target_gain
+
+        def match_label(target, predicted):
+            delta = abs(target - predicted)
+            if delta < 0.05: return "OK"
+            if delta < 0.12: return "CLOSE"
+            return f"OFF ({delta:+.2f})"
+
+        print(f"   🎯 Recipe vs Target: "
+              f"gain {match_label(tgt_gain, pred_gain)} ({tgt_gain:.2f}→{pred_gain:.2f}) | "
+              f"treble {match_label(tgt_air, pred_air)} ({tgt_air:.2f}→{pred_air:.2f}) | "
+              f"mids {match_label(tgt_mids, pred_mids)} ({tgt_mids:.2f}→{pred_mids:.2f}) | "
+              f"bass {match_label(tgt_bass, pred_bass)} ({tgt_bass:.2f}→{pred_bass:.2f})")
 
     # Build output with source indicators
     # Handle multi-section header formatting
